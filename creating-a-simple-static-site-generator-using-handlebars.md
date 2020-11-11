@@ -25,9 +25,9 @@ The only important line is I was looking for is
 
 ```js
 return Handlebars.compile(tpl)({
-		css: css,
-		resume: resume
-	});
+	css: css,
+	resume: resume
+});
 ```
 
 <hr>
@@ -86,9 +86,6 @@ But selecting the env everytime was bothering me. Alternatively you could create
 ```json
 // launch.json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
