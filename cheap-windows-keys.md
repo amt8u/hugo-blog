@@ -11,6 +11,7 @@ Here are some sites promoted by them.
 * https://www.urcdkey.com
 * https://www.whokeys.com
 * https://www.vip-scdkey.com
+* https://www.goodoffer24.com
 
 I gave a quick look on some of them and strangely enough all of them are registered with `GoDaddy`. Though it is possible but highly unlikely that every site is registered on same provider. That raises some eyebrows. 
 
@@ -19,6 +20,7 @@ I gave a quick look on some of them and strangely enough all of them are registe
 ![whois - kinguin](./images/cheap-windows-license/kinguin.net.png)
 ![whois - urcdkey](./images/cheap-windows-license/urcdkey.com.png)
 ![whois - vip-scdkey](./images/cheap-windows-license/vip-scdkey.com.png)
+![whois - goodoffer24](./images/cheap-windows-license/goodoffer24.com.png)
 
 Soon I realized, it is indeed the same company. If you look at the footer. Three of them are from same company. 
 
@@ -42,13 +44,13 @@ There is very limited information available regarding this. Still I tried to fin
 
 There are hundereds of hindi youtubers sharing those kind of sites on their channel. But that is acceptable as their target audience is a different set of people and maybe they themselves are not aware of how it works. But I didn't expect this from popular sources. These are some of the reliable sources available on youtube where I go and learn about various aspects of PC Building.
 
-* [Paul's Hardware](https://www.youtube.com/watch?v=yXTqz3Fd28M&t=119s)
+* [Paul's Hardware](https://www.youtube.com/watch?v=yXTqz3Fd28M&t=119s) - `www.kingiun.net`
 
-* [Indian Budget Gamer](https://www.youtube.com/watch?v=Y1EIrRhnilc&t=98s)
+* [Indian Budget Gamer](https://www.youtube.com/watch?v=Y1EIrRhnilc&t=98s) - `www.goodoffer24.com`
 
-* [Tech Deals](https://www.youtube.com/watch?v=vHS_3qi0kXg) Tech Deals even accepted the flaw in this video. Watch 5:40 to 5:50
+* [Tech Deals](https://youtu.be/vHS_3qi0kXg?t=325) - `www.urcdkey.com` Tech Deals even accepted the flaw in this video.
 
-* [Tech Yes City](https://www.youtube.com/watch?v=bm3mLBJWBhc&t=77s) The person here verified the license using Microsoft Support. But watching the full video, it feels more of a gimmick than actual verification to justify the endorsement(https://www.vip-scdkey.com/sk/BFTYC).
+* [Tech Yes City](https://www.youtube.com/watch?v=bm3mLBJWBhc&t=77s) - `www.vip-scdkey.com` The person here verified the license using Microsoft Support. But watching the full video, it feels more of a gimmick than actual verification to justify the endorsement
 
 Though I don't have all the time in the world, I did read some comments on most of the videos. It turns out that for a lot of people the keys **do work**. 
 
