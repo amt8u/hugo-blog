@@ -93,6 +93,14 @@ On a local network, you can test on your Android device using port forwarding to
 
 As a side note the warning screens that block you from visiting the pages are called `interstitials`. And the template for this is present in chromium [code](https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.html).
 
+**Update on 26 feb 2021**
+
+There is a small procedure which can be performed to remediate the certificate issue for self signed certificates on local system. You can import the certificate into your CA keychain which will make the certificate valid across browsers.
+
+Follow the [instructions here](https://www.nullalo.com/en/chrome-how-to-install-self-signed-ssl-certificates/).
+
+Once done, the browser will accept the connection as secure and you will no longer get SSL warning interstitials. Do note that you might need to do this for every domain.
+
 > End
 
 
