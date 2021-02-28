@@ -78,3 +78,21 @@ This totally depends on how many distros you want to have simultaneously and how
 
 # Drive temperature
 This is just an observation. I am not sure if its really an issue. Since there is continuous read/write to the USB drive, it becomes quite hot sometimes. Maybe not a good thing for a USB drive, but nevertheless I am gonna play with it.
+
+# Results
+For me persistence worked flawlessly. I didn't had any issues while booting too. Will try out more distros as and when I get time.
+
+**Update on 28 feb 2021**
+
+A few issues that I encountered while using Ventoy. 
+
+* **Adding ISO** - You need a different working system to add/update ventoy config. You cannot add new ISOs when you are booted in from Ventoy.
+
+* **using exFAT** - While using an exFAT partition seems to be a good idea as of now. You get the best compatibility across Linux and windows but somehow many distros yet not support exFAT repairing. Somehow I had a bad sector in the *ISO* directory where all the images are placed. Because of this the directory was not accessible and I was getting "Unknown file IO error" on entering the directory. Reading about the error, it seems that the only way to fix a broken exFAT partition is to repair it using Windows. `fscsk` just reports errors but couldn't fix them.
+
+Puppy linux couldn't read the directory
+Linux mint could but was not able to fix the errors
+
+Finally I had to install Ubuntu on a different drive and then deleted the corrupt file. I also noticed that there is a `Trash` directory which keeps the deleted files. It was taking huge space because I deleted many persistence files earlier.
+
+> End
