@@ -23,7 +23,7 @@ Quoting from the [GoAccess](https://goaccess.io/) site directly
 Of course, since it will be installed as a unix application you would need a VPS(Virtual Private Server) to install and use it. You cannot use it on shared hosting.
 
 # GoAccess for Ghost blog
-Ghostjs is essentially nginx in the background, we can configure goaccess to process them like any other nginx server. All the steps below are done on `ubuntu 18.04` with `Ghostjs 1.4`. Since goaccess if flexible enough, the steps would be similar to almost all web servers with slight changes.
+Ghostjs is essentially nginx in the background, we can configure goaccess to process them like any other nginx server. All the steps below are done on `ubuntu 18.04` with `Ghostjs 1.4`. Since goaccess is flexible enough, the steps would be similar to almost all web servers with slight changes.
 
 # Install
 Install goaccess as an app just like you do with other apps. Depending on your OS and requirements, you can also download and compile it. More info avaiable [here](https://goaccess.io/download#distro)
