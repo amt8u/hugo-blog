@@ -192,6 +192,8 @@ While its true PC is about the CPU, but if you have a powerful PC, your peripher
 
 * **[Corsair Mouse Pad](https://www.corsair.com/us/en/Categories/Products/Gaming-Mousepads/MM100-Cloth-Gaming-Mouse-Pad/p/CH-9100020-WW)** - [Corsair MM200](https://www.amazon.in/gp/product/B014W1Z890/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - [2 Year Warranty](https://www.corsair.com/us/en/Categories/Products/Gaming-Mousepads/MM100-Cloth-Gaming-Mouse-Pad/p/CH-9100020-WW#tab-tech-specs)
 
+* **[Corsair Harpoon Wireless](https://www.corsair.com/us/en/Categories/Products/Gaming-Mice/HARPOON-RGB-WIRELESS-Gaming-Mouse/p/CH-9311011-NA)** Wireless mouse with USB and bluetooth connectivity - [CH-9311011-NA](https://www.amazon.in/gp/product/B07MZFL4YL/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) - [2 Year Warranty](https://help.corsair.com/hc/en-us/articles/360033067832#h_f1c227ce-d769-479e-a268-48e7d9575e95)
+
 * **[Logitech G 102](https://www.logitechg.com/en-in/products/gaming-mice/g102-lightsync-rgb-gaming-mouse.html)** Prodigy Optical Gaming mouse - [G102 Lightsync ](https://www.amazon.in/gp/product/B01MYPU20Z/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - [2 Year Warranty](https://support.logi.com/hc/en-us/articles/360052803534-Warranty-G203)
 
 * **[Phanteks M1](http://phanteks.com/Neon.html)** NEON Digital-RGB LED - [PH-NELEDKT_M1](https://www.primeabgb.com/online-price-reviews-india/phanteks-neon-digital-rgb-m1-led-ph-neledkt_m1/) - [2 Year Warranty](https://www.primeabgb.com/online-price-reviews-india/phanteks-neon-digital-rgb-m1-led-ph-neledkt_m1/)
