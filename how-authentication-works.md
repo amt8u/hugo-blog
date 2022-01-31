@@ -2,7 +2,7 @@
 Lets learn about **authentication** in depth. At least the shallow depth that I can cover.
 
 # Need
-In one of my earlier posts, I covered  the difference between [authentication and authrorization](https://cybercafe.dev/authentication-vs-authorization/). I am always fascinated by how different websites try to secure the communication so as to make their platforms less susceptible to attacks. Obviously there is no one golden trick that can do that. You have to employ a plenty of different ways to prevent attacks.
+In one of my earlier posts, I covered  the difference between [authentication and authrorization](https://cybercafe.dev/authentication-vs-authorization/). Authentication is one of the most important aspects of web but is somehow strangely not in built into the web we use now a days. It needs a lot of effort just to add auth to your website, let alone the security of the system. I am always fascinated by how different websites try to secure the communication so as to make their platforms less susceptible to attacks. Obviously there is no one golden trick that can do that. You have to employ a plenty of different ways to prevent attacks. Lets try to understand how auth works in simple terms and what all companies are doing to secure there auth systems.
 
 # Intro
 Authentication seems simple at first but a lot happens in the backgound when you click on the login button.
