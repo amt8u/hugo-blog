@@ -83,7 +83,7 @@ You can directly run the file using the Run menu in VS Code. Just after selectin
 
 But selecting the env everytime was bothering me. Alternatively you could create a *launch.json* file in the project directory. Once done, you can quickly start your app in debug mode by pressing F5.
 
-```json
+```js
 // launch.json
 {
   "version": "0.2.0",
