@@ -56,11 +56,13 @@ There is a [workaround](https://github.com/facebook/create-react-app/issues/165)
 ## Final solution
 I am still trying to search for a better solution but for now I used the below approach to deal with it
 * Keep your repos as it is
-* Build projects locally
+* Build projects locally by changing the `homepage` in package.json to "."
 * Add the `build` folder to main repo
 * Update main repo with new links
 * Push the main repo
 * Netlify will auto deploy to one main site
+
+Do note that you may want to revert the `homepage` property change in package.json if you would like to keep the absolute URLs in your build. More info available on [CRA docs for relative paths](https://create-react-app.dev/docs/deployment/#building-for-relative-paths)
 
 With this procedure, there is only one caveat, that I will lose the netlify's auto build feature. But at least I would get the site to work as per my requirement.
 
