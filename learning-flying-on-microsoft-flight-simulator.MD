@@ -1,3 +1,6 @@
+# Excerpt
+Learning to fly on Microsoft Flight Simulator. From basic VFR in cessna to commercial IFR including VOR, ILS, RNAV and auto pilot.
+
 # Why
 As soon as I finished [building my PC](https://cybercafe.dev/building-a-gaming-pc-in-india/), I wanted to try out a flying sim, but couldn't afford purchasing one. I did try my hands on the free ones like DCS but it didn't have the kind of flying I wanted to learn. It's somewhat good as a free resource(two aircrafts with base game) but lacks anything in terms of training the digital instruments.
 
