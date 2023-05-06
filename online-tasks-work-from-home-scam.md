@@ -24,7 +24,7 @@ First connection           |Task objectives
 * Looking at the YouTube trends and knowing that genuine likes and views actually help in marketing, this seems to be a believable business. Even though we understand the like is kind of a fake one, but getting Rs50 for just one like looks very lucrative.
 * Upto this step I thought that this is some kind of marketing agency trying to get genuine likes on channels to promote them. So I wanted to check how do they verify if you really completed the task or not. They ask for the screenshot to check that you really liked the video. But a thing to note here is that this kind of verification isn't full-proof. I can always take the screenshot with the like and then after taking the screenshot I can remove the like(:-O). That's when I realized that this is not just a marketing job and the objective of these tasks is something else.
 
-### First salary
+### Lets discuss the salary for the job
 Telegram | Salary
 :---:    | :---:
 ![install-telegram](./images/online-tasks-work-from-home-scam/InstallTelegram.png) | ![salary-code](./images/online-tasks-work-from-home-scam/SalaryCode.png)
@@ -37,7 +37,7 @@ Account Details | Waiting for confirmation
 :---:           | :---:
 ![AccountDetails.png](images/online-tasks-work-from-home-scam/AccountDetails.png) | ![Waiting.png](images/online-tasks-work-from-home-scam/WaitingForFirstPayment.png)
 
-### Payment received
+### Will I get my salary?
 * Soon I received a message stating `Rs.150` has been credited. At first, I thought maybe they are mimicking the Bank credit messages and just sent me a fake message mentioning a fake credit to account. The message did include the account number, but I only provided them so that's not something I can vouch for.
 * I checked my account statement, and I was surprised to see `Rs. 150 credited`. At this point I was a little perplexed and started believing that maybe it is indeed an authentic job.
 
