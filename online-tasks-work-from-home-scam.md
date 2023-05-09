@@ -87,9 +87,11 @@ The unique thing about this is that you really get `paid`(Sometimes!) after comp
 The only solution for this is to just ignore these work-from-home jobs altogether. Yes there are legitimate jobs, but there are proper channels through which you should apply for and work. And yes, remember there is never an easy way to make money online. Specially not by liking or subscribing videos.
 
 # Here are a few events that happened recently. 
-* https://www.indiatoday.in/technology/news/story/a-pune-based-it-professional-lost-over-rs-1285-lakh-in-online-scam-2359715-2023-04-13
-* https://punemirror.com/pune/crime/pune-two-more-it-professionals-duped-for-rs-14-lakh-cybercrime-series-continues/cid1683349985.htm
-* https://www.timesnownews.com/mirror-now/crime/pune-it-professional-duped-of-rs-8-25-lakh-by-cyber-fraudsters-on-pretext-of-offering-job-to-give-online-reviews-article-98434455
-* https://www.thebridgechronicle.com/pune/pune-it-professional-from-hinjewadi-loses-whopping-rs-26-lakh-in-online-gift-scam
+* **With some details of how the scam is working** -  https://www.indiatoday.in/information/story/like-a-video-and-make-money-scam-all-about-the-cyber-fraud-on-whatsapp-2376044-2023-05-07
+* **Complaint from FITE** - https://www.mypunepulse.com/pune-fite-approaches-state-cyber-cell-over-cyber-attacks-on-it-employees/
+* **Rs 12 Lakhs** - https://www.indiatoday.in/technology/news/story/a-pune-based-it-professional-lost-over-rs-1285-lakh-in-online-scam-2359715-2023-04-13
+* **Rs 14 Lakh** - https://punemirror.com/pune/crime/pune-two-more-it-professionals-duped-for-rs-14-lakh-cybercrime-series-continues/cid1683349985.htm
+* **Rs 8.25 Lakhs** - https://www.timesnownews.com/mirror-now/crime/pune-it-professional-duped-of-rs-8-25-lakh-by-cyber-fraudsters-on-pretext-of-offering-job-to-give-online-reviews-article-98434455
+* ** Rs 26 Lakh** - https://www.thebridgechronicle.com/pune/pune-it-professional-from-hinjewadi-loses-whopping-rs-26-lakh-in-online-gift-scam
 
 > End
