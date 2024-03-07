@@ -233,4 +233,18 @@ Its a variable
 What is it?
 ```
 
+** Update 07 March 2024 **
+While browsing the internet I stumbled upon one SO question https://stackoverflow.com/questions/15005098/why-does-javascript-hoist-variables which refered to a couple of tweets by [@BrendonEich ](https://twitter.com/BrendanEich)
+
+* https://twitter.com/BrendanEich/status/522395336615428097
+* https://twitter.com/BrendanEich/status/522394590301933568
+
+Essentially what he wants to say is 
+* Functions were intentionally hoisted while `var` was an unintentional behaviour. The reasons that he gives are 
+  * `let rec` for free - It refers to some concept that exists in [scheme language](https://docs.racket-lang.org/reference/let.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._letrec%29%29) and I believe some of the inspiration for JS came from scheme
+  * `top down decomposition` - Didn't give much insights into it, but I guess it could be because he wanted to somehow get the top functions in the script first. Maybe for attaching the listeners to the DOM?
+  * `call before declare` - Again not clear why it would be needed, but I suppose it also boils down to the same reason. You would want to associate the functions with the DOM as and when you see them in the DOM attributes like `onclick`. So that it doesn't matter whether you keep your script at the top or bottom of the page.
+
+So the confusion I mentioned above in the [Got it](https://cybercafe.dev/understanding-javascript-hoisting/#gotit section actually is kind of a bug in the language. Maybe in later versions it should have been fixed, but to prevent the internet from going down, they kept it and now we are facing the consequences of that.
+
 > End
