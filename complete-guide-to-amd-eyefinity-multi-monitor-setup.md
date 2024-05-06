@@ -116,4 +116,16 @@ I don't have nvidia card so won't be able to comment on this, but reading about 
 * [PPI Definition](https://www.omnicalculator.com/other/pixels-per-inch#ppi-definition-what-is-ppi)
 * [PPI Calculator](https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php)
 
+*** ***Update 06 May 2024*** ***
+A few days ago, I got my hands on an Nvidia RTX4070ti from one of my friends. Though I didn't get much time, but there were a few notable features related to multimonitor that I would like to highlight
+
+* `Setup` - AMD hid their eyefinity configuration tool while NVidia proudly shows it upfront in the main config window. The reason is clear - NVidia does a better job. NVidia calls it Surround. The options are somewhat similar, like display arrangement and total resolution. But I observed that NVidia surround takes very less time to configure.
+* `Bezel correction` - In one of the points above I tried to explain how AMD has hidden their bezel correction tool deep inside and there is no way to do that in the main AMD Adrenalin UI. And even when you use AMD's bezel correction feature, its a very cumbersome UI. Everytime you need to change the offset, apply it, wait for around 5-10 seconds to realize that you have put a large number. Again do the same process. While in Nvidia, there is a small picture that pops up and lets you see in real time, how will the image look like after bezel correction. Its a very small thing, but just saves you a lot of trouble.
+![nvidia bezel correction](./images/complete-guide-to-eyefinity/nvidia%20bezel%20correction%20help.jpg)
+The road image you see in this photo gives you a live view when you change the offsets in the bezel correction boxes. You can create a perfect bezel corrected setup in a few seconds. Moreover, Nvidia provides this bezel corrected setup a different option in the dropdown, so if needed you can switch between regular surround and bezel corrected one quickly.
+![nvidia bezel corrected resolutions](./images/complete-guide-to-eyefinity/nvidia%20bezel%20corrected%20resolutions.png)
+
+* `Windows maximize` - Another very interesting feature that I liked in Nvidia. In AMD's eyefinity bezel corrected setup, if you maximize a window(maybe by double clicking on the title bar), the window will span across all the monitors which doesn't make much sense. Eventually you will always have to manually resize so that it nicely fits in one of the monitors and is usable. While in Nvidia, when you are running a bezel corrected setup, on maximizing the window, it spans across the respective monitor only. Huge advantage when you are working. This just makes it a breeze. You don't need to switch between surround and regular setup everytime. 
+
+
 > End
