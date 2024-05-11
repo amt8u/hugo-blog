@@ -1,5 +1,5 @@
 # A post in 2020 for a 2003 game, why?
-![Loading](./images/xiii-the-game/Loading.png)
+![Loading](./images/Loading.png)
 XIII had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a [remake](https://www.microids.com/game-xiii/) of the original game.
 
 I didn't play the remake but I did saw a lot of videos talking about it. Apparently it was [not received positively](https://mspoweruser.com/xiii-game-remake-crowned-worst-xbox-game-of-2020/) by the gaming community. After looking at responses and watching the gameplay, even I can understand the reasons for that.
@@ -15,16 +15,16 @@ After a few years, I did play the full game and indeed that was a lot of fun.
 
 Here are a few snapshots showcasing the artwork of the game.
 
-![Aim](./images/xiii-the-game/Aim.png)
+![Aim](./images/Aim.png)
 
-![Bomb](./images/xiii-the-game/Bomb.png)
+![Bomb](./images/Bomb.png)
 
-![Flashback](./images/xiii-the-game/Flashback.png)
+![Flashback](./images/Flashback.png)
 
 I was a kid in 2005, I didn't give much importance to the storyline but now that I read about it, I think I would give it a re-visit.
 
 # Playing XIII in 2021 - Nostalgia
-![Snow](./images/xiii-the-game/Snow.png)
+![Snow](./images/Snow.png)
 Just for the sake of nostalgia, I purchased the game on [steam](https://store.steampowered.com/app/1170760/XIII__Classic/) at ₹87(around 1$) a few days back and I guess it was worth spending that money. Though it didn't run out of the box, I had to install a [patch](https://xiii.opaquit.com/downloads-2020/Classic_XIII___Patch_by_Arthur_v1.4.2.1_2019-09-04.exe) from [here](https://xiii.opaquit.com/2020.php) to make the game run. It solved the resolution issue and most importantly mouse worked perfectly fine.
 
 <hr>
@@ -37,7 +37,7 @@ Apart from the already mentioned comic-styled gameplay, there are other few thin
 * **Background Score** - Every game has some kind of background music. But this one had something different. Whenever you indulge in a fight, the music just sets the mood for it. I kind of feel, its something similar to what Alejandro did with [Birdman](https://www.imdb.com/title/tt2562232/). I am no musician, but I just liked this concept.
 
 * **Physics** - At first you might say that there was not much to expect in terms of physics as everything was a cel shaded sketch. But while playing I realised that even though the characters, objects and environment in itself were 2D, but the mechanics were indeed well implemented. 
-![Kill](./images/xiii-the-game/Kill.png)
+![Kill](./images/Kill.png)
 One of the prime examples is recoil - Yes, the recoil was there and it felt real. Every weapon had its importance. Reloading the revolver every few shots! Breaking things like glasses, bottles, chairs etc. You could even take hostages and throw knives at the same time. Using a winch to go up and down and climb out. I don't know from which game it originated, but I guess hiding bodies was somthing unique. Its still a required tactic in Assasin's Creed.
 
 * **Inventory Management** - Somehow this game made the inventory management a lot of fun keeping it quite restrictive at the same place. You can only carry certain amount of ammo for each weapon. It really added a lot of excitement and the desire to search each and every corner of the location.
