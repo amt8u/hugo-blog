@@ -2,7 +2,7 @@
 # Astatine (see https://github.com/hugcis/hugo-astatine-theme).
 #
 # The URL from which the site will be served
-baseurl = "https://cybercafe.dev"
+baseurl = "https://amt8u-hugo-blog.netlify.app"
 # Language used
 languageCode = "en-us"
 # Website title
