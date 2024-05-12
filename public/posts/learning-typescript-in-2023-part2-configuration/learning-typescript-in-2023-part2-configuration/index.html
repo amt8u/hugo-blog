@@ -1,0 +1,428 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt In this article we will learn about Typescript configuration and various options provided to make our life easier while coding.
+watch mode Enabling watch mode with tsc compiler.
+tsc app.ts -w watch project Create a tsconfig.json file with some basic defaults. You can now run tsc -w to watch over the complete project and whenever a file changes, it will recognize that change and compile all the files.
+tsc --int Exclude Use exclude option in the tsconfig to exclude files that should not be compiled by tsc." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>In this article we will learn about Typescript configuration and various options provided to make our life easier while coding.</p>
+<h1 id="watch-mode">watch mode</h1>
+<p>Enabling watch mode with tsc compiler.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tsc app.ts -w
+</span></span></code></pre></div><h2 id="watch-project">watch project</h2>
+<p>Create a <code>tsconfig.json</code> file with some basic defaults. You can now run <code>tsc -w</code> to watch over the complete project and whenever a file changes, it will recognize that change and compile all the files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tsc --int
+</span></span></code></pre></div><h2 id="exclude">Exclude</h2>
+<p>Use exclude option in the <code>tsconfig</code> to exclude files that should not be compiled by tsc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;exclude&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;analytics.ts&#34;</span>, <span style="color:#75715e">// exclude single file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;analytics.dev.ts&#34;</span>, <span style="color:#75715e">// exclude some specific extension
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;*.dev.ts&#34;</span>, <span style="color:#75715e">// exclude all files with some specific extension
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;**/*/dev.ts&#34;</span>, <span style="color:#75715e">// exclude all files in all folders with specific extention
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;node_modules&#34;</span> <span style="color:#75715e">// exclude node_modules
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Do note that <code>node_modules</code> is by default excluded even if you don&rsquo;t have an exclude block. But if you have exclude block, then do remember to exclude <code>node_modules</code> explicitly.</p>
+<h2 id="include">Include</h2>
+<p>Set the include files when you want to specify the what should be compiled. And as it is with <code>exclude</code>, if you give the include list then you will have to provide all the files which you want to include.</p>
+<p>So basically it is Include first and then exclude and then compile.</p>
+<h2 id="files">files</h2>
+<p>You just specify the files and no folders. Its better to have set this via <code>include</code> as it is more flexible.</p>
+<h1 id="compiler-options">Compiler options</h1>
+<h2 id="target">target</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>   <span style="color:#e6db74">&#34;target&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;es2016&#34;</span>
+</span></span></code></pre></div><p>Set the javascript target like <code>es5</code>, <code>es6</code> etc as per your need. The more recent version you select, the less transpilation would occur. Depending on your project setup you may go for an older version like <code>es5</code> when you don&rsquo;t have babel setup, or <code>es6</code> when you are converting to js using some babel config after ts compilation.</p>
+<h2 id="module">module</h2>
+<h2 id="lib">lib</h2>
+<p>Allows to specify what features TS knows.</p>
+<p>Consider below example. How would TS know that there is a <code>document</code> identifier and then there is a function <code>addEventListener</code> which is available inside it? Yes ofcourse this is valid JS code when run in browser but while compiling too you need to know whether these browser objects are there or not. TS by default enables some <code>lib</code> support which allows us to write code without manually adding platform apis like dom. But if you really insist then there is <code>lib</code> config that you can override to let TS know about what features to enable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;policewala&#34;</span>)<span style="color:#f92672">!</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;click kiya gaya hai&#34;</span>);
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>By default below are the libs activated by TS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lib&#34;</span>: [
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;dom&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;es6&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;dom.iterable&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;scripthost&#34;</span>
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="other-config">other config</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;allowJs&#34;</span> : <span style="color:#66d9ef">true</span>, 	<span style="color:#75715e">// compile JS files too.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;checkJs&#34;</span> : <span style="color:#66d9ef">true</span>, 	<span style="color:#75715e">// report syntax errors in js files
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;jsx&#34;</span> : <span style="color:#e6db74">&#34;preserve&#34;</span>, 	<span style="color:#75715e">// helps with react js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;declaration&#34;</span> : <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;declarationMap&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// .dts files required when you are writing library code.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;sourceMap&#34;</span>: <span style="color:#66d9ef">true</span>, 	<span style="color:#75715e">// generates sourcemap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;outFile&#34;</span>: <span style="color:#e6db74">&#34;./&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;outDir&#34;</span>: <span style="color:#e6db74">&#34;dist&#34;</span>, 	<span style="color:#75715e">// where to store the compiled files
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">&#34;rootDir&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, 			<span style="color:#75715e">// set the source of TS files. It also make sure that the project structure in dist folder
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;removeComments&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// remove comments from TS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;noEmit&#34;</span>: <span style="color:#66d9ef">true</span>, 		<span style="color:#75715e">// just check if TS files are correct and do not create JS files
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;downllevelIteration&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// some odd behaving for loops when you are compiling for older js versions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;noEmitOnError&#34;</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e">// Thats whay I was thinking could be solved with config and it is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="strict-options">strict options</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;strict&#34;</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e">// set all strict to true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#34;noImplicitAny&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// prevents implicit any declarations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;strictNullCheck&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// warns for values that might potentially hold null values - kind of a null pointer exception prevention, you need to add a dynamic runtime check like if()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;strictFunctionTypes&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// will learn later
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;strictBindCallApply&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// checks the bind calls for parameter matching
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;alwaysStrict&#34;</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e">// makes sure generated js is also strict
+</span></span></span></code></pre></div><h2 id="code-quality-options">code quality options</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;noUnusedLocals&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// warns by default, but you can set to error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;noUnusedParameters&#34;</span> : <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// same as above
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;noUnusedReturns&#34;</span> : <span style="color:#66d9ef">true</span> <span style="color:#75715e">// checks if all branches in a function return some value. You can explicitly return undefined if needed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>Note that TS does not validate unUnsed globals because it cannot reliably do that.</p>
+<h1 id="debuggging">Debuggging</h1>
+<ul>
+<li><strong>Eslint</strong></li>
+<li><strong>Prettier</strong> to format</li>
+<li><strong><a href="https://code.visualstudio.com/docs/typescript/typescript-debugging">Debugger for chrome extension for VScode</a></strong> - Simulate running in browser with debugging in IDE</li>
+</ul>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><strong>Typescript docs</strong> - <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">https://www.typescriptlang.org/docs/handbook/tsconfig-json.html</a></li>
+<li><strong>Compiler config docs</strong> - <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">https://www.typescriptlang.org/docs/handbook/compiler-options.html</a></li>
+</ul>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/learning-flying-on-microsoft-flight-simulator/learning-flying-on-microsoft-flight-simulator/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/learning-typescript-in-2023-part3-classes-and-interfaces/learning-typescript-in-2023-part3-classes-and-interfaces/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="A personal blog"
+  />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+<div class="-mt-2 mb-16 flex items-center">
+  
+  <div
+    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]"
+  >
+    <img
+      class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon"
+      alt="amt8u"
+    />
+  </div>
+  
+  
+  <div>
+    <h1 class="mb-2 mt-3 text-[1.6rem] font-bold">amt8u</h1>
+    <div class="break-words">
+      Developer. Artist. Human.
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none">A revisit to a classic game - XIII</h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 5, 2021</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/">A revisit to a classic game - XIII</a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none">How to add gradient animation as site header in ghost blo</h2>
+  <time class="text-sm antialiased opacity-60"
+    >Oct 1, 2020</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/how-to-add-gradient-animation-as-background/">How to add gradient animation as site header in ghost blo</a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none">Add PWA support to ghost blog</h2>
+  <time class="text-sm antialiased opacity-60"
+    >Sep 13, 2020</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/">Add PWA support to ghost blog</a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none">Authentication vs Authorization</h2>
+  <time class="text-sm antialiased opacity-60"
+    >Sep 13, 2020</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/authentication-vs-authorization/">Authentication vs Authorization</a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/building-gaming-pc-in-india/building-gaming-pc-in-india/"></a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/cheap-windows-license/cheap-windows-keys/"></a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/"></a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/"></a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/cookies/cookies/"></a>
+</section>
+
+
+
+
+
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  
+  <h2 class="!my-0 pb-1 font-bold !leading-none"></h2>
+  <time class="text-sm antialiased opacity-60"
+    >Jan 1, 1</time
+  >
+  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/creating-a-simple-static-site-generator-using-handlebars/creating-a-simple-static-site-generator-using-handlebars/"></a>
+</section>
+
+
+
+
+<nav class="mt-16 flex">
+  
+  
+  <a class="btn ml-auto" href="/page/2/"
+    >Next Page →</a
+  >
+  
+</nav>
+
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

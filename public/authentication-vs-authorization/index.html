@@ -1,0 +1,459 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Authentication vs Authorization - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Authentication(प्रमाणीकरण) vs Authorization(प्राधिकरण) TLDR; Authentication - Check if the person is allowed to enter the system
+Authorization - Check if the entered person is allowed to perform specfific operation
+What others say about it This is again one of the topics which I put into the category where you will appreciate the definition after understanding the whole concept.
+Lets talk about why this is confusing for many. First of all numerous examples which do not describe the real usecase and present with irrelevant examples." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Authentication vs Authorization</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Sep 13, 2020</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="authenticationपरमणकरण-vs-authorizationपरधकरण">Authentication(प्रमाणीकरण) vs Authorization(प्राधिकरण)</h1>
+<h1 id="tldr">TLDR;</h1>
+<p><strong>Authentication</strong> - Check if the person is allowed to enter the system</p>
+<p><strong>Authorization</strong> - Check if the entered person is allowed to perform specfific operation</p>
+<h1 id="what-others-say-about-it">What others say about it</h1>
+<p>This is again one of the topics which I put into the category where you will appreciate the definition after understanding the whole concept.</p>
+<p>Lets talk about why this is confusing for many. First of all numerous examples which do not describe the real usecase and present with irrelevant examples.</p>
+<ul>
+<li><strong><a href="https://www.geeksforgeeks.org/difference-between-authentication-and-authorization/">GeekForGeeks</a></strong> - This is the first result when I search for &ldquo;Authentication vs Authorization&rdquo;. Either I am not qualified enough or it looks like somebody has intentionally written the bad text. It doesn&rsquo;t make any sense at all.</li>
+</ul>
+<blockquote>
+<p>Both Authentication and Authorization area unit utilized in respect of knowledge security that permits the safety on an automatic data system. Each area unit terribly crucial topics usually related to the online as key items of its service infrastructure. However, each the terms area unit terribly completely different with altogether different ideas. whereas it’s true that they’re usually employed in an equivalent context with an equivalent tool, they’re utterly distinct from one another.</p>
+</blockquote>
+<ul>
+<li><strong><a href="https://www.okta.com/identity-101/authentication-vs-authorization/">Okta</a></strong> - This page is better but still messed up while explaining the difference. In the start it says</li>
+</ul>
+<blockquote>
+<p>Authentication confirms that users are who they say they are.</p>
+</blockquote>
+<blockquote>
+<p>Authorization gives those users permission to access a resource.</p>
+</blockquote>
+<p>But then in the next section under Authentication they are saying</p>
+<blockquote>
+<p>Giving someone permission to download a particular file on a server or providing individual users with administrative access to an application are good examples of authentication.</p>
+</blockquote>
+<p>Giving someone permission comes under authorization and not authentication.</p>
+<ul>
+<li>
+<p><strong><a href="https://www.javatpoint.com/authentication-vs-authorization">Javatpoint</a></strong> - Another article which touches over the same definition. Though this one gives you some examples of authentication and authorization but that doesn&rsquo;t seem to help much.</p>
+</li>
+<li>
+<p><strong><a href="https://aboutssl.org/authentication-vs-authorization/">aboutssl.org</a></strong> - Mostly its the same as the javatpoint&rsquo;s article but with slight improments. There main takeaway is</p>
+</li>
+</ul>
+<blockquote>
+<p>Authentication is used for the verification process to identify user’s credentials, and Authorization is used for validating user’s rights to access the resource.</p>
+</blockquote>
+<blockquote>
+<p>Authentication is the first step, and after that, Authorization takes place.</p>
+</blockquote>
+<h1 id="is-authentication-related-to-authorization">Is authentication related to authorization?</h1>
+<p>Generally its said that authentication is followed by authorization which is because how most services or apps are developed. You can even perform authorization without authentication.</p>
+<h2 id="authorization-without-authentication">Authorization without authentication?</h2>
+<p>You want to create a web site whose admin page is only accessbile to people visiting from Europe servers. Though its totally an absurd requirement, but its just for understanding the concept.</p>
+<p>You can analyze the IP address and evaluate if this IP is in Europe or not, and thereby showing the visitor a different page. For all other outside users you can show another page where they won&rsquo;t be able to change anything.</p>
+<p>This is also kind of authrorization. We have not done any authentication, rather we are just checking the permissions of the users based on their IP addresses. Of course, anybody can use a VPN and switch to an Europian IP address, but then as I mentioned, its a non-sense requirement.</p>
+<h2 id="authorization-after-authentication">Authorization after authentication?</h2>
+<p>Lets say you unlock your mobile phone using your fingerprint. Is it authentication or authorization? If its authentication then any action after this would fall under authorization? After unlocking the phone, you try to access facebook app which is passcode protected, is it athentication or authorization? After unlocking the app you have to login with your facebook username and password. Is that again authentication?</p>
+<p>We need to understand that authentication and authorization are two independent processes which can occur many times based on what you are doing. Because of how our systems are built, mostly authorization comes after authentication but thats not always true.</p>
+<p>Quoting from <a href="https://tools.ietf.org/html/rfc7231#section-6.5.3">html spec for 403 Forbidden</a></p>
+<blockquote>
+<p>If authentication credentials were provided in the request, the server considers them insufficient to grant access.  The client SHOULD NOT automatically repeat the request with the same credentials.  The client MAY repeat the request with new or different credentials.  However, a request might be forbidden for reasons unrelated to the credentials.</p>
+</blockquote>
+<p>One more thing we need to understand is that when we say authorization comes after authentication, we generally put it from the perspective of one service/system. So in this example, the phone is one system in which there is app management system which then opens an app which itself could be called as a system. Even in this trivial example we can see 3 layers of systems. Here are a few actions that the user can do in different layers with authentication and authorization done.</p>
+<h3 id="mobile-phone-layer">Mobile Phone layer</h3>
+<ul>
+<li>
+<p><strong>Authenticated</strong></p>
+<ul>
+<li>Can access the phone homescreen</li>
+<li>Can click on icons</li>
+<li>Can see what is there on the homescreen</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorized</strong></p>
+<ul>
+<li>Can remove an app</li>
+<li>Can change the wallpaper</li>
+</ul>
+</li>
+</ul>
+<h3 id="app-layer">App Layer</h3>
+<ul>
+<li>
+<p><strong>Authenticated</strong></p>
+<ul>
+<li>Can see the app homepage</li>
+<li>Can switch to different screens within the app</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorized</strong></p>
+<ul>
+<li>Can post something from the app</li>
+<li>Can open camera from the app</li>
+</ul>
+</li>
+</ul>
+<h3 id="app-service-layer">App Service layer</h3>
+<ul>
+<li>
+<p><strong>Authenticated</strong></p>
+<ul>
+<li>Can see the homepage of the logged in user</li>
+<li>Can view profile page</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorized</strong></p>
+<ul>
+<li>Can update the own profile</li>
+</ul>
+</li>
+</ul>
+<p>The above points are just illustrations of what authentication and authorization would mean in general sense on every layer. When we are working with enterprise systems, there can be several layers and each layer could have its own authentication and authorization mechanism.</p>
+<h1 id="401-vs-403">401 vs 403</h1>
+<p>Lets come to the technical implementation for this concept. As always status codes are just standards that have been built over time so that its easy to integrate new systems. You can always have your own codes but while using any software you need to follow standards to achieve efficiency.</p>
+<p>HTTP spec gives us some special codes which determine whether the user is authenticated and authrorized. Sadly the naming has made it more confusing.</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc7235#section-3.1">HTTP 401</a> - Though this is about authentication, the status message is <code>401 Unauthorized</code>. This code represents that the system is unable to validate the user.</li>
+<li><a href="https://tools.ietf.org/html/rfc7231#section-6.5.3">HTTP 403</a> - The message is <code>403 Forbidden</code>. This code represents that the server got the request but because of some reasons like permissions etc, it is unable to process it.</li>
+</ul>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/"
+      ><span class="mr-1.5">←</span><span>Add PWA support to ghost blog</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/building-gaming-pc-in-india/building-gaming-pc-in-india/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

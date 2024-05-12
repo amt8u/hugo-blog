@@ -1,0 +1,566 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Add PWA support to ghost blog - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="What is PWA? Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. - Wikipedia
+As always, the definition does not serves any purpose in explaining the feature. You need to learn it to understand it.
+In simple terms PWA is a technique to make your website behave like an app." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Add PWA support to ghost blog</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Sep 13, 2020</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="what-is-pwa">What is PWA?</h1>
+<p>Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. - Wikipedia</p>
+<p>As always, the definition does not serves any purpose in explaining the feature. You need to learn it to understand it.</p>
+<p>In simple terms PWA is a technique to make your website behave like an app. To achieve this, you need to use a combination of features provided by the browser and the underlying operating system.</p>
+<p>A detailed introduction can be found on mozilla.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction">https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction</a></p>
+<h1 id="getting-started">Getting started</h1>
+<p><em>Since I didn&rsquo;t want to reinvent the wheel, I just copied the code from the below post which I referred to add PWA support on this site.Do check it out for more info.</em></p>
+<p><a href="https://bironthemes.com/blog/ghost-as-progressive-web-app/">https://bironthemes.com/blog/ghost-as-progressive-web-app/</a></p>
+<p>To start with we shall add offline support with a service worker to a ghost installation.</p>
+<p>Unlike wordpress Ghost has integrated SEO with a pretty fast nodejs based templating engine. But it does not provide PWA support out of the box. Maybe in future it might come. But for now you have to do it manually.</p>
+<p>There are 4 things that you need to do to convert your ghost blog into a PWA</p>
+<ul>
+<li>Convert your site into <code>https://</code> if not done yet</li>
+<li>Add a <code>manifest</code> file which describes various attributes for your app</li>
+<li>Add a service worker to your site which handles caching</li>
+<li>Enjoy</li>
+</ul>
+<h1 id="add-manifest-file">Add manifest file</h1>
+<p>Create a new file in the root of your theme. You can give any name. Most of the options are self-explanatory. Important ones are name and icons. The color will be used as background splash screen while your app opens.</p>
+<p>The display property handles how the app should be rendered. It has four options - <code>fullscreen</code>, <code>standalone</code>, <code>minimal-ui</code> and <code>browser</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Cybercafe.dev&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;short_name&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Cybercafe&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;A blog by z00md&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;lang&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;en&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;start_url&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;/&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;background_color&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;#ffffff&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;display&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;fullscreen&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;theme_color&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;#313b3f&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;icons&#34;</span><span style="color:#f92672">:</span>[
+</span></span><span style="display:flex;"><span>       {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;src&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/assets/icons/z00md_logo.png&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;image/png&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;sizes&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;200x200&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>More details about properties can be found here</p>
+<p><a href="https://web.dev/add-manifest/">https://web.dev/add-manifest/</a></p>
+<h1 id="add-service-worker">Add service worker</h1>
+<p>Manifest only provides basic settings for your app. To gain full control of the behavior, you need to manually add a service worker whose task is to determine what to do in case there is no network.</p>
+<p>To make your site <code>installable</code> as an app you need to have a service worker with a <code>fetch</code> handler.</p>
+<p>More details available on below page</p>
+<p><a href="https://web.dev/install-criteria/">https://web.dev/install-criteria/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PRECACHE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;precache&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">RUNTIME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;runtime&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// A list of local resources we always want to be cached.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PRECACHE_URLS</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/offline/&#39;</span>
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">OFFLINE_URL</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/offline/&#39;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// The install handler takes care of pre caching the resources we always need.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;install&#39;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">waitUntil</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">open</span>(<span style="color:#a6e22e">PRECACHE</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cache</span> =&gt; <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">addAll</span>(<span style="color:#a6e22e">PRECACHE_URLS</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">skipWaiting</span>())
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// The activate handler takes care of cleaning up old caches.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;activate&#39;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentCaches</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">PRECACHE</span>, <span style="color:#a6e22e">RUNTIME</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">waitUntil</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">keys</span>().<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cacheNames</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cacheNames</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">cacheName</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">currentCaches</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">cacheName</span>));
+</span></span><span style="display:flex;"><span>  }).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cachesToDelete</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">cachesToDelete</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">cacheToDelete</span> =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">cacheToDelete</span>);
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>  }).<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">clients</span>.<span style="color:#a6e22e">claim</span>())
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// The fetch handler serves responses for same-origin resources from a cache.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If no response is found, it populates the runtime cache with the response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// from the network before returning it to the page.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;fetch&#39;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Skip cross-origin requests, like those for Google Analytics.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">origin</span>)) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">respondWith</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cachedResponse</span> =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cachedResponse</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cachedResponse</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">open</span>(<span style="color:#a6e22e">RUNTIME</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cache</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// Put a copy of the response in the runtime cache.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">clone</span>()).<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>        }).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// Check if the user is offline first and is trying to navigate to a web page
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">OFFLINE_URL</span>);
+</span></span><span style="display:flex;"><span>        });;
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h1 id="update-defaulthbs">Update <code>default.hbs</code></h1>
+<p>Now that we have the <code>sw.js</code> and <code>manifest.webmanifest</code> handy, we need to tell the browser where to look for this. As we do with other resources like <code>css</code> we need to create a <code>link</code> tag with href to our manifest file. Note that I have shown the <code>&lt;head&gt;</code> section only below. Your <code>default.hbs</code> would have a lot of other code too.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-handlebars" data-lang="handlebars"><span style="display:flex;"><span>&lt;head&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{!-- Document Settings --}}</span>
+</span></span><span style="display:flex;"><span>    &lt;meta charset=&#34;utf-8&#34; /&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34; /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{!-- Base Meta --}}</span>
+</span></span><span style="display:flex;"><span>    &lt;title&gt;<span style="color:#75715e">{{</span>meta_title<span style="color:#75715e">}}</span>&lt;/title&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=&#34;HandheldFriendly&#34; content=&#34;True&#34; /&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{!-- Styles&#39;n&#39;Scripts --}}</span>
+</span></span><span style="display:flex;"><span>    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;<span style="color:#75715e">{{</span>asset <span style="color:#e6db74">&#34;built/screen.css&#34;</span><span style="color:#75715e">}}</span>&#34; /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{!-- This tag outputs SEO meta+structured data and other important settings --}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span>ghost_head<span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{!-- PWA --}}</span>
+</span></span><span style="display:flex;"><span>    &lt;link rel=&#34;manifest&#34; href=&#34;/manifest.webmanifest&#34;&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=&#34;theme-color&#34; content=&#34;#313b3f&#34;&gt;
+</span></span><span style="display:flex;"><span>    &lt;link rel=&#34;apple-touch-icon&#34; href=&#34;/assets/icons/z00md_logo.png&#34;&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/head&gt;
+</span></span></code></pre></div><p>We also need to tell the browser to register our service worker and start executing it. For this we can use browser&rsquo;s <code>navigator</code> api.</p>
+<p>Just goto the end of your body tag and add the below script. <code>navigator</code> is a browser api that gives a lot of information about the device, geolocation, cache, storage etc. We will use its <code>serviceWorker</code> object to register our <code>sw.js</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    {{!-- Service Worker for PWA --}}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;serviceWorker&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">navigator</span>) {
+</span></span><span style="display:flex;"><span>        window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;load&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">serviceWorker</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#39;/sw.js&#39;</span>);
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h1 id="create-offline-page">Create offline page</h1>
+<p>You need to create a page which will be shown whenever your app is unable to connect to your site. For this you can create a new page under ghost admin. You can edit the page as you like but just keep the url of the page same as what you have given in the service worker.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">OFFLINE_URL</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;/offline/&#39;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h1 id="run-it">Run it!</h1>
+<p>Now that everything is setup. Its time to build and run your app. Depending on the build theme and the build tool used by it, you might need to configure <code>package.json</code>. For me it worked by default.</p>
+<p>If you have a local ghost dev environment running and you have configured it to use local dev theme, you could just run below command and refresh the browser cache.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn dev
+</span></span></code></pre></div><p>You can always build your theme and then upload the built version on your local ghost instance or production instance.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn zip
+</span></span></code></pre></div><p>If everything runs fine, you should see a new action when you open your site on mobile browser - <code>Add to home screen</code>. You will be able to install your site as a native app on your device. And as you open various pages, they start getting cached. Try switching data/wifi off and load your app. You should still be able to navigate to the pages you visited. And for the rest of the URLs you should see the offline page which you created from ghost admin.</p>
+<p><img src="./images/add-progressive-web-app/home-screen-icon.jpg" alt="home-screen-icon">
+<img src="./images/add-progressive-web-app/fullscreen-app.jpg" alt="fullscreen-app">
+<img src="./images/add-progressive-web-app/fullscreen-app-article.jpg" alt="fullscreen-app-article">
+<img src="./images/add-progressive-web-app/app-offline-page.jpg" alt="app-offline-page"></p>
+<h1 id="things-to-note---my-observations--may-be-wrong">Things to note - My observations : may be wrong</h1>
+<h4 id="localhost-is-http">localhost is http</h4>
+<p>Service workers will only work on <code>https://</code> sites. And there is only once exception - <code>localhost</code>. If you are trying to test whether everything works locally, you need to use <code>http://localhost:&lt;port&gt;</code> URL. Other than <code>localhost</code> service workers don&rsquo;t work and manifest file is not downloaded. And of course you would also not get any errors. The <link> tag containing the manifest is ignored completely.</p>
+<h3 id="cache">Cache</h3>
+<p>Once the service worker is registered, it starts caching resources and will always serve from the service worker cache. Note that this is different from your browser based http cache. So even if you disable cache in dev tools, the files will continue to serve from service worker. You need to use the <code>Bypass for Network</code> option under the dev tools <code>Application</code> tab. You can also use the <code>Offline</code> option to simulate no network and test your app.</p>
+<h3 id="refresh-service-worker">Refresh service worker</h3>
+<p>Did not like the name or background color you gave to your app in the manifest. You changed it, build your theme and disabled all caches but still your changes does not seem to work? I am not sure about the expiry strategy for service workers but as per my observation, it doesn&rsquo;t refresh on disabling cache. You need to <code>unregister</code> the service worker to get your changes to reflect.</p>
+<h3 id="what-to-do-on-mobile-to-refresh-everything">What to do on mobile to refresh everything</h3>
+<p>Its really difficult to test on mobile devices since we don&rsquo;t have dev tools where we can just disable cache for that one particular tab. Also once you have installed the web app, its no longer a browser cache that needs to be cleared. For me I had to goto app manager on android and remove the data/cache from settings menu to get it to refresh. And of course you would need to clear your browser cache as well, otherwise your browser will just use its cached version and you will still not get your changes.</p>
+<p>Few steps that helped me troubleshooting on mobile</p>
+<ul>
+<li>Uninstall app</li>
+<li>Clear storage and cache for your app on android under settings</li>
+<li>Clear browser cache from browser settings for your site</li>
+<li>Reload in browser</li>
+<li>Again add your app to home screen via browser menu</li>
+</ul>
+<h2 id="further-reading">Further reading</h2>
+<p>Refresh service worker on demand</p>
+<ul>
+<li><a href="https://deanhume.com/displaying-a-new-version-available-progressive-web-app/">https://deanhume.com/displaying-a-new-version-available-progressive-web-app/</a></li>
+<li><a href="https://forum.ghost.org/t/progressive-web-app-version-of-ghost-blog-install-service-worker/2013/12">https://forum.ghost.org/t/progressive-web-app-version-of-ghost-blog-install-service-worker/2013/12</a></li>
+</ul>
+<h1 id="end-note">End note</h1>
+<p><img src="./images/add-progressive-web-app/lighthouse-score.png" alt="lighthouse-score"></p>
+<p>Progressive web apps is not just one property. Instead it is a set of techniques combined together to create a seamless user experience. Its still developing and will sure change in near future. Needless to say, not every platform supports every feature. Just be cautious about it.</p>
+<h1 id="update-on-13-sep-2020">Update on 13 Sep 2020</h1>
+<p>Because of the <code>cache first</code> strategy used in the service worker, I was having many issues</p>
+<h2 id="new-articles-wont-appear">New articles won&rsquo;t appear</h2>
+<p>This is due to the fact that Homepage was served from cache always. To overcome this, I updated the service worker to use <code>Network first</code> strategy which means show cached files only when network call fails. And present an offline page if both fail.</p>
+<p>This strategy has one disadvantage though - You need to wait for the network call to finish which loses the blazing fast caching feature. I guess, a cache first strategy will be more effective. Will try that out later.</p>
+<h2 id="ghost-admin-going-into-500-errors">Ghost admin going into 500 errors</h2>
+<p>This might be happening because all GET calls were being served from cache with inconsistent data.</p>
+<p>I added a check in the service worker to ignore all admin calls</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// The fetch handler serves responses for same-origin resources from a cache.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If no response is found, it populates the runtime cache with the response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// from the network before returning it to the page.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;fetch&#39;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Skip cross-origin requests, like those for Google Analytics.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Skip all ghost admin requests to prevent 500 errors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">origin</span>) <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">!</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">origin</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/ghost}`</span>))) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">respondWith</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cachedResponse</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">open</span>(<span style="color:#a6e22e">RUNTIME</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cache</span> =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Put a copy of the response in the runtime cache.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">clone</span>()).<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>          }).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Return cached reponse if network fails
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cachedResponse</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cachedResponse</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Return offline page if network and cache both fail
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">OFFLINE_URL</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          });;
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/how-to-add-gradient-animation-as-background/"
+      ><span class="mr-1.5">←</span><span>How to add gradient animation as site header in ghost blo</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/authentication-vs-authorization/"
+      ><span>Authentication vs Authorization</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

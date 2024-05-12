@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cybercafe.dev</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on cybercafe.dev</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright © 2019–2024, amt8u all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A revisit to a classic game - XIII</title>
+      <link>http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/</guid>
+      <description>A post in 2020 for a 2003 game, why? XIII had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a remake of the original game.&#xA;I didn&amp;rsquo;t play the remake but I did saw a lot of videos talking about it. Apparently it was not received positively by the gaming community. After looking at responses and watching the gameplay, even I can understand the reasons for that.</description>
+    </item>
+    <item>
+      <title>How to add gradient animation as site header in ghost blo</title>
+      <link>http://localhost:1313/how-to-add-gradient-animation-as-background/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-add-gradient-animation-as-background/</guid>
+      <description>Using Presets There is a great tool to start with. Head over to below link and create your gradient config. You can always modify everything later on.&#xA;https://www.gradient-animator.com/&#xA;Add to your site If you are using a ghost instance, there are two ways&#xA;Add to code injection Update the theme css files Code injection .css-selector { background: linear-gradient(308deg, #000000, #000000, #f75900, #000000); background-size: 800% 800%; -webkit-animation: z00md 21s ease infinite; -moz-animation: z00md 21s ease infinite; animation: z00md 21s ease infinite; } @-webkit-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @-moz-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } Inside the site header code injection box, add a new style tag and just paste the above css directly.</description>
+    </item>
+    <item>
+      <title>Add PWA support to ghost blog</title>
+      <link>http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/</guid>
+      <description>What is PWA? Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. - Wikipedia&#xA;As always, the definition does not serves any purpose in explaining the feature. You need to learn it to understand it.&#xA;In simple terms PWA is a technique to make your website behave like an app.</description>
+    </item>
+    <item>
+      <title>Authentication vs Authorization</title>
+      <link>http://localhost:1313/authentication-vs-authorization/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/authentication-vs-authorization/</guid>
+      <description>Authentication(प्रमाणीकरण) vs Authorization(प्राधिकरण) TLDR; Authentication - Check if the person is allowed to enter the system&#xA;Authorization - Check if the entered person is allowed to perform specfific operation&#xA;What others say about it This is again one of the topics which I put into the category where you will appreciate the definition after understanding the whole concept.&#xA;Lets talk about why this is confusing for many. First of all numerous examples which do not describe the real usecase and present with irrelevant examples.</description>
+    </item>
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/amt8u/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/amt8u/</guid>
+      <description>I use this Blog as a medium to capture my thoughts, opinions and learnings. The purpose of this self hosted Blog was to understand various aspects of web hosting and simultaneously share my experiences with others. Being an engineer most of my articles would be around technology with occasional post on miscellaneous things.&#xA;Other than my professional work, I like to&#xA;Play games on my PC Capture moments using my phone camera Play various sports Read random tech articles Listen to unusual rhythmic songs Argue with others(not like Arnab though!</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/linked-in-bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/linked-in-bio/</guid>
+      <description>Brief Summary I have been working as a software developer since the end of the world.&#xA;Tech traits If required, I don&amp;rsquo;t hesitate to learn a new framework or even a new language. I have experience in new generation products as well as legacy products Have worked in various domains like banking, supply chain, retail, ad-tech and cyber security Apart from the whole front-end world, in the past I have worked on mainframes, jsp, db2, j2ee, websphere etc I don&amp;rsquo;t have a personal favorite framework.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/offline-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/offline-page/</guid>
+      <description> Switch on your wifi/data Check all network cables Check if your wife has switched off the router :-P Try opening this site with other browsers Toggle offline mode if using Dev tools Wait for sometime if its an issue with cybercafe.dev servers Make coffee if nothing works </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/building-gaming-pc-in-india/building-gaming-pc-in-india/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-gaming-pc-in-india/building-gaming-pc-in-india/</guid>
+      <description>Why gaming PC? Of course to play games! While its true that the primary objective of a gaming PC is to play graphic intensive games. But for me there were more reasons&#xA;My current laptop was just not good enough for day to day tasks Being a developer and tech enthusiast I was always in need of more power Have never played games with high settings Besides gaming, a powerful system also increases your productivity.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/cheap-windows-license/cheap-windows-keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cheap-windows-license/cheap-windows-keys/</guid>
+      <description>Excerpt Have you ever wondered how some retailers offer Microsoft Windows at unbelievable prices like Rs 700(5$). In this post I shall try to explore the reasons for these deep discounts and there genuineness.&#xA;Dirt cheap Windows license Recently I have seen a large number of Youtube videos where people are promoting sites that lets you purchase Windows licenses on pretty cheap rates. You can get Windows from these sites for just around Rs.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/</guid>
+      <description>Excerpt Complete guide to using AMD eyefinity multimonitor setup&#xA;Really complete? Well, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.&#xA;Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/</guid>
+      <description>Excerpt Have you ever come across a requirement to create download functionality? This article will go over all the possible solutions.&#xA;Problem about downloading in 2020? Really? I have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.&#xA;Before I start with my findings, I would like to pinpoint the use case around saving files.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/cookies/cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cookies/cookies/</guid>
+      <description>Excerpt What is a cookie? Should you accept or reject them; Does it make any sense to reject a cookie? And are cookies really files?&#xA;Should you accept or reject cookies? I am sure you must have seen a dialog or a section asking for permission to save cookies when you visit a site for the first time.&#xA;And I am also sure that most of the time you just click Accept all and continue.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/creating-a-simple-static-site-generator-using-handlebars/creating-a-simple-static-site-generator-using-handlebars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/creating-a-simple-static-site-generator-using-handlebars/creating-a-simple-static-site-generator-using-handlebars/</guid>
+      <description>The need I was planning to create a pretty basic single page quiz application which I could deploy anywhere without any backend. All the questions would be in a json file.&#xA;Being familiar with frameworks my first obvious choice would be react. creating interactive apps is more intuitive to build with some help from a library like react or backbone. It gives you a handy way to manage the state and model.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/get-tata-nexon-ev-free/get-tata-nexon-ev-free/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/get-tata-nexon-ev-free/get-tata-nexon-ev-free/</guid>
+      <description>Excerpt This article is about how people are scammed using simple sites and new techniques that scammers employ to prevent fraud detection.&#xA;Bumper prize You might have seen sometimes people sharing apps and websites which claim to offer you a car if you answer a few questions correctly. You don&amp;rsquo;t want to leave this opportunity and grab the gift before anyone else could. But eventually you endup just sharing the site to your 10 whatsapp friends.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/ghost-markdown-guide/ghost-markdown-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ghost-markdown-guide/ghost-markdown-guide/</guid>
+      <description>After spending hours in configuring this blog its time to show some creativity. But before that there is one more thing to learn&#xA;Learning Markdown Started my journey from ghost markdown guide. Will be reading and side by side playing with the Markdown syntax which would enable me to write better articles(Hope!).&#xA;The first thing is as always Headings. There are many ways to create headings in any editor. The most simpler way is to convert the text to large size with bold characters but that permanently fixes the styling.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/hackerearth-environment-setup/hacker-earth-environment-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hackerearth-environment-setup/hacker-earth-environment-setup/</guid>
+      <description>Excerpt Setting up local environment to debug Hackerearth problems.&#xA;Intro Hackerearth is a cool place to practice various programming challenges across levels. You can use any language to write code to solve the challenges. Since I am more proficient in Javascript, I use Javascript(Nodejs).&#xA;All good but cannot debug! It provides a good interface and the online IDE also seems to do the job, but it lacks on one aspect. At least for practicing if not for competetive exams.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-authentication-works/how-authentication-works/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-authentication-works/how-authentication-works/</guid>
+      <description>Excerpt Lets learn about authentication in depth. At least the shallow depth that I can cover.&#xA;Need In one of my earlier posts, I covered the difference between authentication and authrorization. Authentication is one of the most important aspects of web but is somehow strangely not in built into the web we use now a days. It needs a lot of effort just to add auth to your website, let alone the security of the system.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/</guid>
+      <description>I don&amp;rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/</guid>
+      <description>Excerpt Lets learn about authentication in depth. At least the depth that I can cover.&#xA;Need In one of my earlier posts, I covered the difference between authentication and authrorization. In this one, I will dig deep into authentication.&#xA;Intro The Illusion of session Once you login into an application using your username and password, any page/link that you were not able to access now becomes accessible. For most of the web, the underlying protocol is HTTP which is stateless.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/</guid>
+      <description>Excerpt Ever in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.&#xA;Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.&#xA;Who needs custom pages?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-to-deploy-multiple-github-repos-on-single-netlify-site/how-to-deploy-multiple-github-repos-on-single-netlify-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-deploy-multiple-github-repos-on-single-netlify-site/how-to-deploy-multiple-github-repos-on-single-netlify-site/</guid>
+      <description>Warning First I will talk about the recommended way which apparently didn&amp;rsquo;t work for me, but I figured out another approach which was best suited for my requirement.&#xA;The need Since I have my blog up and running, I can now focus on creating articles which might involve some working examples. Its always helpful to present the reader with a live example where he could test out the working. I will be writing on various topics from simple javascript concepts like hoisting, inheritance etc to complex full scale apps involving various libraries and deployment cycles.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/</guid>
+      <description>In built pdf viewer Unlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.&#xA;The need One of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/how-to-open-website-in-fullscreen/how-to-open-website-in-fullscreen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-open-website-in-fullscreen/how-to-open-website-in-fullscreen/</guid>
+      <description>Excerpt In this article we will learn about how we can enable fullscreen in a web app. We will also learn its side effects and issues.&#xA;Demo You can see a quick live demo of a a simple utility to have black screen when needed. Long time back I did some experiment with styling native checkboxes. After learning about fullscreen, I enhanced it with fullscreen enabled. A quick demo for it is available here.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/http-vs-https-for-beginners/http-vs-https-for-beginners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/http-vs-https-for-beginners/http-vs-https-for-beginners/</guid>
+      <description>Excerpt This article explains two common questions - What is the difference between http and https. Why do some websites start with www while some do not.&#xA;What is http, https and why some sites start with www? Do you often ask yourself below questions when someone requests you to open a website? Hey buddy, quickly logon trymywebsite.com, there is something interesting.&#xA;Should I start with http:// or https://? Do I need to put a www before the website name?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/javascript-developer-learning-ruby-part-1/javascript-developer-learning-ruby-part-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript-developer-learning-ruby-part-1/javascript-developer-learning-ruby-part-1/</guid>
+      <description>The need Just browsing various software engineer roles around the globe, I often encountered ruby on rails requirements. I have experience in java based backends like REST apis, servlets etc. But never got a chance to work on ruby.&#xA;First question that popped up in my mind was - What is ruby exactly? Is it a framework or a language? And how does it work with the web? I had no idea.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/javascript-property-descriptors/javascript-property-descriptors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript-property-descriptors/javascript-property-descriptors/</guid>
+      <description>Intro We all know ==Javascript== is all about objects and functions. And an object is just a collection of properties. And of course every function is also a first class object so functions also can contain properties.&#xA;Below you can see a simple example of objects having properties and functions with properties.&#xA;var panel = { height : 600, width : 800, name : &amp;#34;modal&amp;#34; } function CreatePanel(h,w,n){ this.height = h; this.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/javascript-void-0/javascript-void-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript-void-0/javascript-void-0/</guid>
+      <description>Where have I seen this? Even if you have not worked as a front-end engineer, you might have seen this quirky syntax somewhere.&#xA;Lets take the example of w3shools.com.&#xA;When you hover over on menu items at the top, some browsers will show a preview of the link at the bottom left. But for some menu items instead of the link you will see javascript:void(0).&#xA;Lets Inspect&amp;lt;/&amp;gt; If you try to inspect the element in Dev tools, you shall see that the href itself is set to javascript:void(0).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-distributed-nodejs/learning-nodejs-distributed-systems-part-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-distributed-nodejs/learning-nodejs-distributed-systems-part-1/</guid>
+      <description>Excerpt I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.&#xA;JS is single threaded By nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can&amp;rsquo;t write threads like Java. More on this later.&#xA;As in example Maximum call stack in v8 is 15000 frames and after that you will get maximum call stack error which you might have seen writing some recursive function.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-flying-on-microsoft-flight-simulator/learning-flying-on-microsoft-flight-simulator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-flying-on-microsoft-flight-simulator/learning-flying-on-microsoft-flight-simulator/</guid>
+      <description>Excerpt Learning to fly on Microsoft Flight Simulator. From basic VFR in cessna to commercial IFR including VOR, ILS, RNAV and auto pilot.&#xA;Why As soon as I finished building my PC, I wanted to try out a flying sim, but couldn&amp;rsquo;t afford purchasing one. I did try my hands on the free ones like DCS but it didn&amp;rsquo;t have the kind of flying I wanted to learn. It&amp;rsquo;s somewhat good as a free resource(two aircrafts with base game) but lacks anything in terms of training the digital instruments.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-typescript-in-2023-part2-configuration/learning-typescript-in-2023-part2-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-typescript-in-2023-part2-configuration/learning-typescript-in-2023-part2-configuration/</guid>
+      <description>Excerpt In this article we will learn about Typescript configuration and various options provided to make our life easier while coding.&#xA;watch mode Enabling watch mode with tsc compiler.&#xA;tsc app.ts -w watch project Create a tsconfig.json file with some basic defaults. You can now run tsc -w to watch over the complete project and whenever a file changes, it will recognize that change and compile all the files.&#xA;tsc --int Exclude Use exclude option in the tsconfig to exclude files that should not be compiled by tsc.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-typescript-in-2023-part3-classes-and-interfaces/learning-typescript-in-2023-part3-classes-and-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-typescript-in-2023-part3-classes-and-interfaces/learning-typescript-in-2023-part3-classes-and-interfaces/</guid>
+      <description>Excerpt In this article we will learn about how classes&#xA;Classes Depending on the target you will have different code generated for class.&#xA;class Department { name: string = &amp;#34;DEFAULT&amp;#34;; constructor(n: string) { this.name = n; } } let d1 = new Department(&amp;#34;Looting&amp;#34;); The above code could be converted to functions if you set the target to &amp;lsquo;ES5&amp;rsquo;.&#xA;Methods class Department { name: string = &amp;#34;DEFAULT&amp;#34;; constructor(n: string) { this.name = n; } describe() { console.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/</guid>
+      <description>Excerpt In this article we will learn about some advanced typing constructs in TS.&#xA;Intersection Build new types with intersecting types&#xA;type Admin = { name: string; permissions: string[]; } type Employee = { name: string; startDate: Date; } type ElevatedEmployee = Admin &amp;amp; Employee; const e1: ElevatedEmployee = { name: &amp;#34;&amp;#34;, permissions: [&amp;#34;badalna&amp;#34;, &amp;#34;banana&amp;#34;, &amp;#34;hatana&amp;#34;], startDate: new Date() } Intersecting custom types Here numerical is number or string, while alphabetical is string, so their intersection is string and thus you get an error while assigning a number.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learning-typescript-in-2023/learning-typescript-in-2023/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/learning-typescript-in-2023/learning-typescript-in-2023/</guid>
+      <description>Excerpt Learning typescript part 1 - Just making a post on learning typescript in 2023 from scratch.&#xA;Why so late? TS was released when I started my career i.e. 2012. At that time I was doing the type checks with weird syntax using picture clause. After that I have worked on many projects, and incidentally I never got a chance to work on a project which uses typescript. I know that being a front-end dev, I must learn all the technologies around it but there are just too many things to keep up.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/my-experience-with-gaming-wheel/my-experience-with-gaming-wheel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/my-experience-with-gaming-wheel/my-experience-with-gaming-wheel/</guid>
+      <description>Excerpt If you like to play fast-paced racing games and want to experience realistic handling and controls, the answer is a racing wheel. I will talk about my first hand experience of using a Logitech G29 wheel.&#xA;The need Video games are considered a way to relax and enjoy. You can do things what you cannot do in reality. Some games are just meant for that while there are a few games which will fit in the simulation genre and give you a wholesome true experience.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/my-experience-with-google-ads/my-experience-with-google-ads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/my-experience-with-google-ads/my-experience-with-google-ads/</guid>
+      <description>The need I already have a full time job and any side income would always be appreciated but I want my blog to be clean and elegant.&#xA;But just out of curiosity I wanted to try out how google adsense works. Here I will summarize my experience using the service for the first time.&#xA;Open adsense account Of course you need to register for google adsense just like you do for any other service even if you have a google account.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/online-tasks-work-from-home-scam/online-tasks-work-from-home-scam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/online-tasks-work-from-home-scam/online-tasks-work-from-home-scam/</guid>
+      <description>Excerpt In this article I discuss about the modus operandi for the ongoing Work from home scam which is mostly targetted to urban people.&#xA;New scam In this article I want to discuss about a new scam in the market. Of course there are hundreds of scam running online now a days, but what makes this new scam special is that even IT guys are getting scammed by this.&#xA;Here is my first hand experience with some observations as why tech people are also falling for the trap.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/playing-days-gone/playing-days-gone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/playing-days-gone/playing-days-gone/</guid>
+      <description>Excerpt This is my experience of playing Days Gone including what did I enjoy and what I didn&amp;rsquo;t like.&#xA;Is it good or bad? And as they say - It depends! Being a casual gamer, I don&amp;rsquo;t have much experience with many AAA titles. For someone who might have played all the open-world games, Days Gone may just be a run-of-the-mill game, but for someone like me who played games like GTA and Assasin&amp;rsquo;s Creed, Days Gone brings in a breath of fresh air.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/playing-with-arrow-functions/playing-with-arrow-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/playing-with-arrow-functions/playing-with-arrow-functions/</guid>
+      <description>Quiz Before starting with the post, take a quick test to check your understanding about arrow functions.&#xA;Arrow functions Arrow functions came to Javascript with ES6. Also known as fat arrow functions, their primary aim is to replace function expressions with lexical this. A chapter from Axel&amp;rsquo;s exploringjs book is an excellent resource for more info on arrow functions.&#xA;Caution Some of the snippets are truly edge cases and we may not encounter them in real life.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/prevent-flash-of-default-style/prevent-flash-of-default-style/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/prevent-flash-of-default-style/prevent-flash-of-default-style/</guid>
+      <description>FOUC You must have heard about FOUC - Flash Of Unstyled Content. This has been there since ages. Read about it more on below articles&#xA;FOUC Problem&#xA;FOUC Solution&#xA;FODS After I added the user-chosen theme persistence using local storage, I started facing a similar problem. I don&amp;rsquo;t know if there is a name for this but I will name it Flash of Default Style - FODS.&#xA;Persisting theme preference The technique that I was using to achieve the theme persistence is below</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/recursion/recursion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/recursion/recursion/</guid>
+      <description>Excerpt Learn recursion.&#xA;If you understand recursion, its great. Otherwise click here to know more.&#xD;Image from Giphy</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/setup-basic-analytics-using-ghost-using-goaccess/setup-basic-analytics-using-ghost-using-goaccess/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setup-basic-analytics-using-ghost-using-goaccess/setup-basic-analytics-using-ghost-using-goaccess/</guid>
+      <description>Excerpt Setup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.&#xA;The need We all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts&#xA;Ad blockers - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/setup-mysql-and-sqldeveloper-in-macos/setup-mysql-and-sqldeveloper-in-macos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setup-mysql-and-sqldeveloper-in-macos/setup-mysql-and-sqldeveloper-in-macos/</guid>
+      <description>Excerpt Here is a mini guide to setup Mysql server community edition with oracle SQL Developer on MacOS.&#xA;Why Recently I wanted to refresh my SQL skills and needed a basic database setup on my Macbook Air. I remember from my school days that we could install oracle 6/7 free versions for personal use. Apparently oracle no longer offers free versions. Instead it(Oracle) now gives us mysql which is essentially the free one thereby eventually leading me to refresh not just &amp;ldquo;my sql&amp;rdquo; but &amp;ldquo;mysql&amp;rdquo; skills as well.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/simple-mock-server/simple-mock-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/simple-mock-server/simple-mock-server/</guid>
+      <description>Excerpt While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using nodejs http module having enough flexibility required for custom logic.&#xA;When do we need mock server? Sometimes its not possible to connect to the backend even if you are using a proxy. Having mock-apis in hand just makes UI development easier. Sometimes you need to test your screens for various error scenarios like 404, 504 etc.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/study-of-a-phishing-attack-on-paytm/study-of-a-phishing-attack-on-paytm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/study-of-a-phishing-attack-on-paytm/study-of-a-phishing-attack-on-paytm/</guid>
+      <description>Excerpt Detailed study of recent phishing attack using fake paytm KYC message. This is an in-depth analysis from a developer&amp;rsquo;s point of view.&#xA;Brief intro to Phishing In simple language its an attempt to trick a person into revealing private information. It could be online banking credentials, facebook password, username/password combination of any other popular site etc. Phishing attacks have grown exponentially with the popularity of online banking and social networking.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/styling-native-html-checkbox/styling-native-html-checkbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/styling-native-html-checkbox/styling-native-html-checkbox/</guid>
+      <description>The need While working with libraries like Bootstrap, Jquery UI etc you tend to forget even how native html elements look like. You would rarely see any popular site using the default look and feel of the browser.&#xA;Most of the libraries wrap native elements inside and create custom components using js and css. But just out of curiosity I wanted to checkout if the elements can be styled by just using css.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/the-contextual-bias/the-contextual-bias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-contextual-bias/the-contextual-bias/</guid>
+      <description>Excerpt The excerpt for this article should not give you any context or should it.&#xA;The problem People often watch various videos on social media platforms and complain about those who can be seen in it but not helping the victim.&#xA;Generally the comment is in one of the forms of&#xA;&amp;ldquo;Instead of recording, the person could have helped&amp;rdquo;&#xA;&amp;ldquo;Why is nobody helping the guy&amp;rdquo;&#xA;&amp;ldquo;All are just spectators. They should be put into jail&amp;rdquo;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/the-hazard-light-confusion-indian-roads/the-hazard-light-confusion-indian-roads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-hazard-light-confusion-indian-roads/the-hazard-light-confusion-indian-roads/</guid>
+      <description>Excerpt This post is about my experience of using Hazard Lights or Double indicators (as what we call it in India) in traffic. I also present some authentic guidelines from Motor vehicle act.&#xA;The confusion I have seen very often people using Hazard lights(both turn indicators flashing simultaneously) to indicate multiple scenarios while driving. A quick search gives many articles and questions related to same.&#xA;https://www.reddit.com/r/CarsIndia/comments/15g4xth/using_hazard_lights_while_driving_in_rain/ https://www.reddit.com/r/CarsIndia/comments/10qn5mz/using_your_hazard_lights_to_indicate_youll_go/ https://www.reddit.com/r/mumbai/comments/vglmhr/hazard_lights_on_cars/&#xA;The most common concern is, people tend to use HL in many circumstances where it&amp;rsquo;s use is ambiguous - Parking on road, going straight, going into tunnel, low visibility etc.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/this-is-unsafe/this-is-unsafe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/this-is-unsafe/this-is-unsafe/</guid>
+      <description>Excerpt thisisunsafe is a way to bypass security errors on chrome. In this article I will discuss about its usage and implications.&#xA;SSL Warnings Major browsers present you with a warning when you try to visit an insecure site. Even if the site is served with the secure url https://, the security depends on the certificate issued to the site and not whether the site is configured on port 80 or port 443.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/touch-typing-for-programmers/touch-typing-for-programmers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/touch-typing-for-programmers/touch-typing-for-programmers/</guid>
+      <description>What is touch typing? Just in case if you are not aware, touch typing means typing without looking at the keyboard. So that your eyes are on the screen and you don&amp;rsquo;t switch between keyboard and screen all the time.&#xA;One thing that most people fail to understand is that when you learn touch typing -&#xA;You don&amp;rsquo;t learn the position of keys. You learn patterns&#xA;You train your brain to identify the sequence of keys.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/trying-ventoy/trying-ventoy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/trying-ventoy/trying-ventoy/</guid>
+      <description>Multi boot system I am always interested in trying out new Linux Distros just to see whats new. Till now I have been doing it by creating single Live USB drives. Now that we have cheaper high capacity USB sticks, I thought to checkout a multi boot system. One multi boot project has been there for sometime but it seems that it is no longer maintained.&#xA;Ventoy From the comment I got to know that there is a new project called ventoy for the same use case.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/understanding-iife/understanding-iife/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/understanding-iife/understanding-iife/</guid>
+      <description>Excerpt IIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.&#xA;An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.&#xA;MDN&#xA;If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/</guid>
+      <description>Excerpt Hoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.&#xA;Can you guess the output for the below program? console.log(hoisting); var hoisting = &amp;#34;Its a variable&amp;#34; console.log(hoisting); function hoisting(){ return &amp;#34;Its a function&amp;#34;; } console.log(hoisting); var hoisting = &amp;#34;What is it?&amp;#34; console.log(hoisting); To know the actual answer you can go to the bottom of the post.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/using-svg-in-react/using-svg-in-react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-svg-in-react/using-svg-in-react/</guid>
+      <description>Excerpt There are many ways to use svg in React. We can directly use the svg as src in the img tag or we can create custom component to render the svg as paths in html. In this article we will create a simple React app using svg image.&#xA;Whats special about SVG with React At first it might feel a trivial task. But if you want interaction with svg elements, you need to create custom component so that the svgs are rendered as path and not just an image.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/why-phishing-is-still-successfull/why-phishing-is-still-successfull/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-phishing-is-still-successfull/why-phishing-is-still-successfull/</guid>
+      <description>Excerpt Almost all organizations spread awareness about phishing to their employees and customers but do they really help? Here is my opinion on why those prevention tips are not useful for people.&#xA;Why phishing is still successfull Because technology is not easy. Average user doesn&amp;rsquo;t know how websites work. Sometimes even developers can&amp;rsquo;t recognize let alone the layman. Almost all big organizations publish phishing prevention tips and techniques quite frequently to their employess as well as customers but still thousands of people get scammed daily.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/wierd-console-log-behavior/weird-console-log-behaviour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wierd-console-log-behavior/weird-console-log-behaviour/</guid>
+      <description>The behaviour Copy the code below and run it in a fresh browser window.&#xA;var obj = {a:22}; var p1 = new Promise((res, rej) =&amp;gt; { res(55); }).then((val) =&amp;gt; { obj.a = val; }); console.log(&amp;#34;obj object&amp;#34;, obj); console.log(&amp;#34;obj.a&amp;#34;, obj.a); The above snippet would output something like below&#xA;Since the assignment obj.a is within the then block, seeing value 22 in the logged output is perfectly fine. And of course once the promise is run, after that if you log the object you will see the updated value 55.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readme/</guid>
+      <description>blog I have started my blog few months back. Initially I was using wordpress but then soon switched to Ghostjs. I used to write in the ghost editor directly but after I got familiar with markdown, I guess I have never looked back. Markdown has all the options required for an article. The best part being the code highlighting. Coming from html and javascript world, it feels a little strqnge at first.</description>
+    </item>
+    <item>
+      <title>LinkedIn Bio</title>
+      <link>http://localhost:1313/linked-bio-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/linked-bio-page/</guid>
+      <description>Brief Summary I have been working as a software developer since the end of the world.&#xA;Have experience in the all stages of software development lifecycle including requirements, design, implementation and after sales support.&#xA;Having worked on various technologies, I have the right mix of understanding an enterprise level product.&#xA;Since the world wants to designate titles to quantify the skills, I would put myself as Senior Frontend Developer.&#xA;Tech traits If required, I don&amp;rsquo;t hesistate to learn a new framework or even a new language.</description>
+    </item>
+  </channel>
+</rss>

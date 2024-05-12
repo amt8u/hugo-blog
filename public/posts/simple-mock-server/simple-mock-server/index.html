@@ -1,0 +1,430 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using nodejs http module having enough flexibility required for custom logic.
+When do we need mock server? Sometimes its not possible to connect to the backend even if you are using a proxy. Having mock-apis in hand just makes UI development easier. Sometimes you need to test your screens for various error scenarios like 404, 504 etc." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using nodejs http module having enough flexibility required for custom logic.</p>
+<h1 id="when-do-we-need-mock-server">When do we need mock server?</h1>
+<p>Sometimes its not possible to connect to the backend even if you are using a proxy. Having mock-apis in hand just makes UI development easier. Sometimes you need to test your screens for various error scenarios like 404, 504 etc.</p>
+<h1 id="what-about-json-server">What about json-server?</h1>
+<p>Well, it all depends on your use case. If your app follows rest principles and api calls are structured accordingly, you can always just directly spawn a new instance of <a href="https://github.com/typicode/json-server">json-server</a> and it should be sufficient.</p>
+<p>But in practice, what you need is</p>
+<ul>
+<li>Lightweight server which should not need build/deploy etc</li>
+<li>Should be quick to start/restart so that any file change can be done quickly</li>
+<li>Can load data from files depending on the route</li>
+<li>Can simulate service errors like 400, 403, 500 etc</li>
+<li>Should be de-coupled from your dev server</li>
+</ul>
+<h1 id="nodejs-httphttpsnodejsdevlearnthe-nodejs-http-module-module">Nodejs <a href="https://nodejs.dev/learn/the-nodejs-http-module"><strong>http</strong></a> module</h1>
+<p>Of course you can use any tech stack for the above requirements but generally front-end devs are familiar with Javascript and having a node library for the same makes it a breeze.</p>
+<ul>
+<li>Import the <code>http</code> and <code>fs</code>(optional) modules. You can always use simple strings if you don&rsquo;t want to deal with files.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;http&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span></code></pre></div><ul>
+<li>Create constants or maybe a separate file altogether <code>mock-routes.json</code> to store the URL to data mapping.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;/user-service/user/1234567890&#34;</span>: <span style="color:#e6db74">&#34;user/data.json&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;/user-service/user/0987654321&#34;</span>: <span style="color:#e6db74">&#34;user/data2.json&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;/role-service/role/manager&#34;</span>: <span style="color:#e6db74">&#34;user/manager.json&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Use <code>createServer</code> method to create an instance of the server</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">routes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;mock-server/mock-routes.json&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">requestListener</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Set contentType properly as per need
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, {<span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;application/json&#34;</span>});
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Return response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">routes</span>[<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>], <span style="color:#e6db74">&#34;utf8&#34;</span>););
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// pass on the request listener
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#a6e22e">requestListener</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// set port number as per choice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">7000</span>);
+</span></span></code></pre></div><ul>
+<li>Log the routes to standard output for additional debugging</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;----- Routes -----&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">routes</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;----- Routes -----&#34;</span>);
+</span></span></code></pre></div><ul>
+<li>If you need custom headers. You can always put this in a conditional statement.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;custom-header&#34;</span>, <span style="color:#ae81ff">999999</span>);
+</span></span></code></pre></div><ul>
+<li>Optional fallback if no route matched</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#75715e">// Read file only if route matched
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">routes</span>[<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, {<span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;application/json&#34;</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">path</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">routes</span>[<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>], <span style="color:#e6db74">&#34;utf8&#34;</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">404</span>, {<span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;applciation/json&#34;</span>});
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><ul>
+<li>Set content type properly as per the resource if you want to serve data other than json</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#75715e">// For various static resources
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;fonts&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;application/x-font-ttf&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/fonts/&#34;</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;img&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;image/svg+xml&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/images/&#34;</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;png&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;image/png&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/images/&#34;</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;application/json&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">encoding</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;utf8&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><ul>
+<li>Optionally log the hits for troubleshooting</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#75715e">// Output redirection path
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>, <span style="color:#e6db74">&#34; -&gt; &#34;</span>, <span style="color:#a6e22e">routes</span>[<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>]);
+</span></span></code></pre></div><h1 id="start-the-server">Start the server</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node mock-server.js
+</span></span></code></pre></div><h1 id="output">Output</h1>
+<p><img src="./images/simple-mock-server-using-nodejs/mock-server-running.png" alt="Server running"></p>
+<h1 id="alternatives">Alternatives</h1>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/setup-mysql-and-sqldeveloper-in-macos/setup-mysql-and-sqldeveloper-in-macos/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/study-of-a-phishing-attack-on-paytm/study-of-a-phishing-attack-on-paytm/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

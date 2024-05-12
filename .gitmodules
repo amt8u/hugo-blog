@@ -1,3 +1,48 @@
 [submodule "themes/hugo-paper"]
 	path = themes/hugo-paper
 	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/gokarna"]
+	path = themes/gokarna
+	url = https://github.com/526avijitgupta/gokarna
+[submodule "themes/hugo-astatine-theme"]
+	path = themes/hugo-astatine-theme
+	url = https://github.com/hugcis/hugo-astatine-theme
+[submodule "themes/hugo-texify3"]
+	path = themes/hugo-texify3
+	url = https://github.com/michaelneuper/hugo-texify3
+[submodule "themes/hugo-theme-puppet"]
+	path = themes/hugo-theme-puppet
+	url = https://github.com/roninro/hugo-theme-puppet
+[submodule "themes/hinode"]
+	path = themes/hinode
+	url = https://github.com/gethinode/hinode
+[submodule "themes/hugo-theme-tailwind"]
+	path = themes/hugo-theme-tailwind
+	url = https://github.com/tomowang/hugo-theme-tailwind
+[submodule "themes/hugo-xterm"]
+	path = themes/hugo-xterm
+	url = https://github.com/manid2/hugo-xterm
+[submodule "themes/hugoplate"]
+	path = themes/hugoplate
+	url = https://github.com/zeon-studio/hugoplate
+[submodule "themes/hugo-clarity"]
+	path = themes/hugo-clarity
+	url = https://github.com/chipzoller/hugo-clarity
+[submodule "themes/hugo-theme-flat"]
+	path = themes/hugo-theme-flat
+	url = https://github.com/leafee98/hugo-theme-flat
+[submodule "themes/lekh"]
+	path = themes/lekh
+	url = https://github.com/ba11b0y/lekh
+[submodule "themes/simplog"]
+	path = themes/simplog
+	url = https://github.com/michimani/simplog
+[submodule "themes/hugo-theme-anubis2"]
+	path = themes/hugo-theme-anubis2
+	url = https://github.com/Junyi-99/hugo-theme-anubis2
+[submodule "themes/hugo-blog-awesome"]
+	path = themes/hugo-blog-awesome
+	url = https://github.com/hugo-sid/hugo-blog-awesome
+[submodule "themes/gruvhugo"]
+	path = themes/gruvhugo
+	url = https://gitlab.com/avron/gruvhugo

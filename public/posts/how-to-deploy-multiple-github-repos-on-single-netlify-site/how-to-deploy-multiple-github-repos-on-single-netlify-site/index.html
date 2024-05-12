@@ -1,0 +1,390 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Warning First I will talk about the recommended way which apparently didn&rsquo;t work for me, but I figured out another approach which was best suited for my requirement.
+The need Since I have my blog up and running, I can now focus on creating articles which might involve some working examples. Its always helpful to present the reader with a live example where he could test out the working. I will be writing on various topics from simple javascript concepts like hoisting, inheritance etc to complex full scale apps involving various libraries and deployment cycles." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="warning">Warning</h1>
+<p>First I will talk about the recommended way which apparently didn&rsquo;t work for me, but I figured out another approach which was best suited for my requirement.</p>
+<h1 id="the-need">The need</h1>
+<p>Since I have my blog up and running, I can now focus on creating articles which might involve some working examples. Its always helpful to present the reader with a live example where he could test out the working. I will be writing on various topics from simple javascript concepts like hoisting, inheritance etc to complex full scale apps involving various libraries and deployment cycles.</p>
+<p>For trivial things like code snippets, the best way right now would be a codepen snippet. Easily shareable and maintainable. With the amount of configuration available, you can tecnically create full projects on it too.</p>
+<p>But I wanted to have more control where I can host apps and maybe in future host services too, which would connect to the app for data management.</p>
+<h1 id="github-pages">Github pages</h1>
+<p>Github would be the best option if you have static files to deploy. It does provide jekyll build though. I have not used it till now and not sure if github supports npm/yarn builds. A good article about github pages can be found <a href="https://blog.kushalbhalaik.xyz/github-pages-a-comprehensive-guide-w-images-part-2/">here</a>.</p>
+<h1 id="netlify">Netlify</h1>
+<p>After using netlify for sometime, I could say that for static sites its one of the easiest platforms to use. Specially the interface. You just need to authorise your github account and done. With every push you will get a new build deployed.</p>
+<p>It supports various frameworks like <em>react</em>, <em>vue</em>, <em>next</em>, <em>gatsby</em> etc. I won&rsquo;t say it is a zero config platform, but definitely a convenient one. There are other features that I like about netlify -</p>
+<ul>
+<li>Auto deployment</li>
+<li>Free and <em>automatic</em> SSL configuration</li>
+<li>Smooth custom domain integration</li>
+<li>Generous limits for free tier</li>
+<li>Forms submission - Though I am yet to try it out</li>
+</ul>
+<p>So basically in layman terms - You commit your change in some <code>.jsx</code> file and push it to your repository, netlify will trigger the build on their server and publish the build folder to make your site live.</p>
+<h1 id="the-repository-connection">The repository connection</h1>
+<p>Netlify&rsquo;s model is built around the thought - <strong>One site for one repo</strong>. And my requirement contradicts that thought.</p>
+<ul>
+<li>Have single main repository deployed on one site</li>
+<li>Have other repositories deployed on sub-directories</li>
+</ul>
+<p>The second requirement cannot be fulfilled because netlify doesn&rsquo;t allow deploying on sub directories. Though with mono repo support just added which allows deploying parts of a single repo on different sites.</p>
+<h1 id="proxies">Proxies</h1>
+<p>While searching over my options I landed up on a community <a href="https://community.netlify.com/t/support-guide-can-i-deploy-multiple-repositories-in-a-single-site/179">post</a> which presented to me a new config option - Proxies.</p>
+<p>What proxy does is essentially re-directs your http request to another URL without changing the original URL. So for the browser it would look like that the response is from the same server but internally netlify connects with different website.</p>
+<p>At first glance it looked like this solved my problem. I could create re-direct rules in my main repo while I can host my other apps on netlify with their <code>.netlify.app</code> URL. The main repo will serve a homepage and sub-paths would serve other projects.</p>
+<h1 id="redirect-rule">Redirect rule</h1>
+<p>You need to create a plaintext file <code>_redirects</code> in your main repo. While deploying the repo, netlify will read the redirect configuration and will create internal redirects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">/speed-maths/*  https://speed-maths.netlify.app/:splat  200</span>
+</span></span></code></pre></div><p>But the problem with this approach is that the first page would be served perfectly, but the other links on the page will break. For example, the static file links such as css and js files will have a malformed URL.</p>
+<p>This problem could be solved by deploying the project in sub directory and would need changes in many places. It would also mean that you will have to change the config for each repo every time if you would want to deploy them on their own site.</p>
+<p>There is a <a href="https://github.com/facebook/create-react-app/issues/165">workaround</a> though but that also would need a sub-directory to be created.</p>
+<h1 id="final-solution">Final solution</h1>
+<p>I am still trying to search for a better solution but for now I used the below approach to deal with it</p>
+<ul>
+<li>Keep your repos as it is</li>
+<li>Build projects locally by changing the <code>homepage</code> in package.json to &ldquo;.&rdquo;</li>
+<li>Add the <code>build</code> folder to main repo</li>
+<li>Update main repo with new links</li>
+<li>Push the main repo</li>
+<li>Netlify will auto deploy to one main site</li>
+</ul>
+<p>Do note that you may want to revert the <code>homepage</code> property change in package.json if you would like to keep the absolute URLs in your build. More info available on <a href="https://create-react-app.dev/docs/deployment/#building-for-relative-paths">CRA docs for relative paths</a></p>
+<p>With this procedure, there is only one caveat, that I will lose the netlify&rsquo;s auto build feature. But at least I would get the site to work as per my requirement.</p>
+<p>Now my demo site to complement all my articles with its own namespace is <a href="https://cybr.cafe">live</a>.</p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

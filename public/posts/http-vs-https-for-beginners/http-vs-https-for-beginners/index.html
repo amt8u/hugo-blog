@@ -1,0 +1,409 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt This article explains two common questions - What is the difference between http and https. Why do some websites start with www while some do not.
+What is http, https and why some sites start with www? Do you often ask yourself below questions when someone requests you to open a website? Hey buddy, quickly logon trymywebsite.com, there is something interesting.
+Should I start with http:// or https://? Do I need to put a www before the website name?" />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>This article explains two common questions - What is the difference between http and https. Why do some websites start with www while some do not.</p>
+<h1 id="what-is-http-https-and-why-some-sites-start-with-www">What is http, https and why some sites start with www?</h1>
+<p>Do you often ask yourself below questions when someone requests you to open a website? Hey buddy, quickly logon <code>trymywebsite.com</code>, there is something interesting.</p>
+<ul>
+<li>Should I start with http:// or https://?</li>
+<li>Do I need to put a www before the website name?</li>
+</ul>
+<p>And if you don&rsquo;t have answers to above questions, your best bet is to just write the website name as it is in the URL address bar and hope <strong>google</strong> will figure out the correct link for you. Well for popular sites this is fine, but for sites which are very new, google would also not give you proper links.</p>
+<p>If you are into web development, you know the drill. You might as well be aware of redirects and the ever inessential <code>www</code> for every website. In this article I will try to answer the questions in simpler terms for people who are not developers. I will also try to explain in brief <code>why</code> and <code>how</code> of these terms.</p>
+<h1 id="http-vs-https">http:// vs https://</h1>
+<p>Although there is only a small variation of one character <code>&quot;s&quot;</code> between these two, there is a very big underlying <strong>difference</strong>.</p>
+<p>To start with, both are just protocols which basically say that I want to initiate an http based connection. You can start a connection from a browser, an app, maybe an embedded device etc. For more technical details see below link.</p>
+<p><a href="https://www.computerhope.com/jargon/h/http.htm">https://www.computerhope.com/jargon/h/http.htm</a></p>
+<p><code>https://</code> was introduced later when the web started using encryption. The <code>s</code> literally means <code>secured</code> and is implemented using public key cypher. What this means is that whatever you send from the browser to the server and any data that comes back to you is encrypted. Nobody in between can hijack your packets and read data until he has the key to decrypt. This whole setup is done using a technology called <code>SSL - Secure Sockets Layer</code>. The concept is : You create certificates with public and private keys. Encrypt the data with public key and decrypt with private key.</p>
+<p>Of course, everything comes at a price. There is a small fee that incurs when you add <code>SSL certificate</code> to your site. There will be different certificates for different sub-domains and with it you need to manage the certificates by yourself, their renewal etc. This all brings in a significant cost to the service.</p>
+<p>Learn more about https here - <a href="https://www.cloudflare.com/learning/ssl/what-is-https">https://www.cloudflare.com/learning/ssl/what-is-https</a></p>
+<p>Google has recently made a change to their browser chrome where secured sites will have a padlock icon while insecure sites will have a textual warning saying <code>Not secure</code>. Every browser has a different way to notify this.</p>
+<h3 id="an-example-of-secure-site">An example of secure site</h3>
+<p><img src="./images/http-vs-https-for-beginners/https-1.png" alt="https-1"></p>
+<h3 id="an-example-of-insecure-site">An example of insecure site</h3>
+<p><img src="./images/http-vs-https-for-beginners/http.png" alt="https-1"></p>
+<p>In a nutshell, if you are doing any financial transaction, or if you are logging into any application using username/password or if you are entering any personal information such as phone numbers, email, address etc make sure that the site is secured. Since this is being followed by almost everybody on the internet, its assumed that every big organization will have a <code>https://</code> connection.</p>
+<p>This is the first rule of internet security - ==NEVER== enter confidential information on insecured sites. Even if its a known site like <em>facebook.com</em>. If the padlock icon is missing, it means either somebody has already <code>hacked</code> you or your internet connection(router) or there is something wrong with facebook&rsquo;s servers. Maybe an ongoing attack.</p>
+<p>In some cases it is ok to browse insecure sites unless the are not asking any personal data. This can be observed frequently with government websites even though the Indian government has a dedicated IT team for all gov sites. We need to improve on this asap.</p>
+<p>Now you understand the risks, we can put a benign answer to our question. Yes, <code>http</code> and <code>https</code> are different. You need to know beforehand which one to use. So you need to ask the person who has given you the site to open - Is it secured or insecured?</p>
+<p>And this becomes cumbersome if you ask everytime what should I use, To overcome this there is a small trick that has been going on for decades which saves you from all this trouble.</p>
+<h1 id="the-magic">The magic</h1>
+<p>Redirect all requests for <code>http://</code> to <code>https://</code>.</p>
+<p>If you type in just the insecure URL in the address bar <code>http://cybercafe.dev</code>, the request goes to the server which in return responds with a message to your browser loosely translated as <code>Hey browser, I have my site setup on a secure channel, Please re-direct every other request to it and make sure to follow this for future requests as well</code></p>
+<p>Because of the above procedure, your browser will then automatically redirect from <code>http://amazon.in</code> to <code>https://amazon.in</code>. This happens in the background and is so fast that as a user you won&rsquo;t notice it.</p>
+<p><img src="./images/http-vs-https-for-beginners/amazon.in_large.png" alt="amazon.in"></p>
+<p>We can also observe what all requests the browser sends using a browser Dev tool. Checkout the above screenshot. You can see that even if you type <code>http://amazon.in</code> the browser initiates a request but in the response, the server says that please goto <code>https://amazon.in</code>. This information is present as a <code>Location</code> value as highlighted under the Response Headers section.</p>
+<p>This behaviour is server dependent and can change how site owners configure their websites but we can easily say that 99% of the sites use this technique.</p>
+<h1 id="what-about-the-promiscuous-www-that-we-used-to-put-before-every-url">What about the promiscuous www that we used to put before every URL?</h1>
+<p>Now coming to the second question. Do you need to put in <code>www</code> before the sitename? Sometimes you might have also seen <code>ww1</code> or <code>ww2</code> or some other crazy prefixes added in the sitename like <code>wwwhome.somewebsite.com</code> or commonly seen <code>accounts.google.com</code> or <code>maps.google.com</code>. In these types of URLs there are some distinguishing names</p>
+<ul>
+<li>Top level domain - <code>.com</code></li>
+<li>Second level domain - <strong><code>google</code></strong></li>
+<li>Subdomain - <code>accounts</code></li>
+<li>Path - /signin/v2/identifier?service=lh2&amp;passive=1209600&amp;continue=https%3A%2F%2Fphotos.google.com%2Fu%2F3%2Falbums&amp;followup=https%3A%2F%2Fphotos.google.com%2Fu%2F3%2Falbums&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin</li>
+</ul>
+<p><img src="./images/http-vs-https-for-beginners/accounts.google.com.png" alt="amazon.in"></p>
+<p>By looking at the URL you can instantly say that you are on the account section of <code>google.com</code>. As a user it doesn&rsquo;t make much difference but technically <code>google.com</code> and <code>accounts.google.com</code> are two completely different websites.</p>
+<p>These variations of a site are called <strong>subdomains</strong>. This is done to segregate various independent features. For eg. <em>ads.google.com</em> is totally a different application where you can manage Advertising.</p>
+<p>One more thing to note is the path which contains a pretty long string having some encoded text. In this case the path has more information like from where did the user come from and to where he should go next etc. In some cases these two can be hosted on different servers with different security mechanisms.</p>
+<p>Coming to the point, <code>www</code> is a subdomain of <code>google.com</code>. So basically <code>google.com</code> and <code>www.google.com</code> are two different websites. But still as a user you don&rsquo;t see any difference. Whatever you type in the URL, you always land on the same site. Remember the re-direct trick mentioned earlier. Website owners do the same magic and setup routing to re-direct the user to the default working site.</p>
+<p>Graphically speaking
+<code>https://google.com</code> -&gt; <code>https://www.google.com</code></p>
+<p><img src="./images/http-vs-https-for-beginners/google_to_www.png" alt="amazon.in"></p>
+<p>Also remember that the redirection can be setup as per liking of the website owner. There is no rule that the default site should be <code>www.google.com</code> or <code>google.com</code>. In my case I opted for <code>cybercafe.dev</code>. The  prefix <code>www</code> just feels redundant to me.</p>
+<p>Since I have not yet setup the <code>www</code> redirection yet, if you try to open <code>https://www.cybercafe.dev</code> right now, you might see that it doesn&rsquo;t work. Will do that in a few days.</p>
+<p>One more thing - Remember our SSL certificates we talked about. Every subdomain has a different certificate. Its quite possible(although highly unlikely with big brands) that <code>amazon.com</code> is secure but <code>payment.amazon.com</code> is not and you might see a warning for it. If this happens, you need to be extra cautious. It might not be a hack but prevention is better than cure. And you know; On the internet, once you lose money, there is only <code>.1%</code> chance that you will get it back. Its really difficult to track attacks and requires highly trained professionals to remediate those.</p>
+<p>So basically in other words all these are different websites. Its just about the server configuration that helps(read as fools:-P) you in connecting to one site using other URLs.</p>
+<ul>
+<li><a href="http://google.com">http://google.com</a></li>
+<li><a href="https://google.com">https://google.com</a></li>
+<li><a href="http://www.google.com">http://www.google.com</a></li>
+<li><a href="https://www.google.com">https://www.google.com</a></li>
+</ul>
+<p>A question would come to your mind, if every connection from the browser is http based, why do we need to put it explicitly? This goes long back with a gangling history. For now just lets just say that browsers provide you an opportunity to connect with different protocol if required. Maybe in future the browser vendors remove this and only show you the site name. Instead of showing <code>https://cybercafe.dev</code> they can just show <code>cybercafe.dev</code> with a secure icon.</p>
+<p>If you are interested to read more in depth, checkout below links</p>
+<ul>
+<li><a href="https://web.dev/why-https-matters/">https://web.dev/why-https-matters/</a></li>
+<li><a href="https://www.globalsign.com/en/blog/the-difference-between-http-and-https">https://www.globalsign.com/en/blog/the-difference-between-http-and-https</a></li>
+<li><a href="https://www.entrepreneur.com/article/281633">https://www.entrepreneur.com/article/281633</a></li>
+</ul>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/how-to-open-website-in-fullscreen/how-to-open-website-in-fullscreen/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/javascript-developer-learning-ruby-part-1/javascript-developer-learning-ruby-part-1/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

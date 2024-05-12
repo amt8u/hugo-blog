@@ -1,0 +1,422 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt thisisunsafe is a way to bypass security errors on chrome. In this article I will discuss about its usage and implications.
+SSL Warnings Major browsers present you with a warning when you try to visit an insecure site. Even if the site is served with the secure url https://, the security depends on the certificate issued to the site and not whether the site is configured on port 80 or port 443." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>thisisunsafe is a way to bypass security errors on chrome. In this article I will discuss about its usage and implications.</p>
+<h1 id="ssl-warnings">SSL Warnings</h1>
+<p>Major browsers present you with a warning when you try to visit an insecure site. Even if the site is served with the secure url <code>https://</code>, the security depends on the certificate issued to the site and not whether the site is configured on port 80 or port 443.</p>
+<p><img src="./images/this-is-unsafe/firefox-warning.png" alt="Firefox Warning"></p>
+<p><img src="./images/this-is-unsafe/chrome-warning.png" alt="Chrome Warning"></p>
+<p>There can be hundreds of reasons where your certificate goes invalid. For eg.</p>
+<ul>
+<li><strong>Certificate expired</strong> - Generally all SSL certificates have a expiry date even if you have purchased them. In most paid systems, they auto-renew while in free services you might need to manually renew them. Until then your visitors will receive a warning that your site is not secure.</li>
+<li><strong>Insecure links</strong> - Even if you have a properly working certificate for your site, some links on the site(images etc.) might not be using the <code>https://</code> scheme which in turn will make your site insecure.</li>
+<li><strong>Unknown Certificate Authority</strong> - These are the organisations which have already setup their network. Browsers are aware of them even before you install them. If you configure your own CA, maybe for a local network in an organisation, browsers would not rely on you, so they will still give SSL errors even if the ceritificate is configured properly.</li>
+</ul>
+<h1 id="thisisunsafe---bad-idea">thisisunsafe - bad idea?</h1>
+<p>As you can see, these are just warnings. Some browsers will let you go through after clicking on the <code>Accept and Continue</code> button. In some situations Chrome doesn&rsquo;t even present you with a <code>Continue</code> button. For those circumstances though, there is a bypass available. You can just type in <code>thisisunsafe</code> anywhere on the window and the browser will let you visit the page.</p>
+<p>The bypass adds an exception for that particular domain to chrome&rsquo;s internal memory. You can remove the exception by clicking on the padlock icon and <strong>Re-enable Warnings</strong> link. Same is true with Firefox albeit with slight change in the UI etc.</p>
+<p>The bypass has been put deliberately by the chrome dev team just for testing purposes. This can be seen in the code as well inside <a href="https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.js">handleKeypress()</a> function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * This allows errors to be skippped by typing a secret phrase into the page.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {string} e The key that was just pressed.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleKeypress</span>(<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// HTTPS errors are serious and should not be ignored. For testing purposes,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// other approaches are both safer and have fewer side-effects.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// See https://goo.gl/ZcZixP for more details.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">BYPASS_SEQUENCE</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">atob</span>(<span style="color:#e6db74">&#39;dGhpc2lzdW5zYWZl&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">BYPASS_SEQUENCE</span>.<span style="color:#a6e22e">charCodeAt</span>(<span style="color:#a6e22e">keyPressState</span>) <span style="color:#f92672">===</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keyPressState</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">keyPressState</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">BYPASS_SEQUENCE</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sendCommand</span>(<span style="color:#a6e22e">SecurityInterstitialCommandId</span>.<span style="color:#a6e22e">CMD_PROCEED</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">keyPressState</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keyPressState</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can see that the keyword is put as a base64 encoded string. <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob"><code>window.atob()</code></a> converts it to ASCII. If you are curious, there is a function <code>window.btoa()</code> that converts ASCII to base64.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>window.<span style="color:#a6e22e">atob</span>(<span style="color:#e6db74">&#39;dGhpc2lzdW5zYWZl&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;thisisunsafe&#34;</span>
+</span></span></code></pre></div><p>Earlier this bypass keyword was used to be <code>badidea</code>, but they updated it as its been taken as a method of abuse. This is noted in the <a href="https://chromium.googlesource.com/chromium/src/+/d8fc089b62cd4f8d907acff6fb3f5ff58f168697">commit here</a>.</p>
+<pre tabindex="0"><code>Rotate the interstitial bypass keyword
+
+The security interstitial bypass keyword hasn&#39;t changed in two years and
+awareness of the bypass has been increased in blogs and social media.
+Rotate the keyword to help prevent misuse.
+
+Bug: 797344
+Change-Id: I76213b05cc0fe8f23882123d0aeef668652dd89d
+Reviewed-on: https://chromium-review.googlesource.com/860418
+Reviewed-by: Adrienne Porter Felt &lt;felt@chromium.org&gt;
+Commit-Queue: Eric Lawrence &lt;elawrence@chromium.org&gt;
+Cr-Commit-Position: refs/heads/master@{#528371}
+</code></pre><p>Here is the <a href="https://stackoverflow.com/questions/35274659/when-you-use-badidea-or-thisisunsafe-to-bypass-a-chrome-certificate-hsts-err/35275060#35275060">stackoverflow answer</a> by <a href="https://stackoverflow.com/users/2144578/barry-pollard">Barry</a> from where I picked up the above info.</p>
+<p>The author also suggested to setup certificates properly instead of using the bypass everytime. He also mentioned about a bug where caching does not work properly with SSL errors. While caching issues can be dealt with but SSL errors needs to be taken seriously.</p>
+<p>Though you have the bypass available but that doesn&rsquo;t mean you start abusing it. If you are doing testing on your own sites, then its probably fine but applying this workaround on every other site is not a good idea.</p>
+<h1 id="testing-local-sites">Testing local sites</h1>
+<p>Chromium project has a <a href="https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins#TOC-Testing-Powerful-Features">page</a> which suggests alternatives to test features which require secure origins.</p>
+<p>Here is a snapshot from the page for testing secure origins witthout a commercial CA.</p>
+<ol>
+<li>
+<p>Secure the server with a publicly-trusted certificate. If the server is reachable from the Internet, several public CAs offer free, automatically-renewed server certificates.</p>
+</li>
+<li>
+<p>http://localhost is treated as a secure origin, so if you&rsquo;re able to run your server from localhost, you should be able to test the feature on that server.</p>
+</li>
+<li>
+<p>You can use chrome://flags/#unsafely-treat-insecure-origin-as-secure to run Chrome, or use the &ndash;unsafely-treat-insecure-origin-as-secure=&ldquo;<a href="http://example.com">http://example.com</a>&rdquo; flag (replacing &ldquo;example.com&rdquo; with the origin you actually want to test), which will treat that origin as secure for this session. Note that on Android and ChromeOS the command-line flag requires having a device with root access/dev mode.</p>
+</li>
+<li>
+<p>Create a self-signed certificate for temporary testing. Direct use of such a certificate requires clicking through an invalid certificate interstitial, which is otherwise not recommended. Note that because of this interstitial click-through (which also prevents HTTPS-response caching), we recommend options (1) and (2) instead, but they are difficult to do on mobile. See this post on setting up a self-signed certificate for a server for more information on how to do this.</p>
+</li>
+<li>
+<p>An alternative approach is to generate a self-signed root certificate which you place into the trust store of the developer PC/devices, and then issue one or more certificates for the test servers. Trusting the root certificate means that Chrome will treat the site as secure and load it without interstitials or impacting caching. One easy way of setting up and using a custom root certificate is to use the open source mkcert tool.</p>
+</li>
+</ol>
+<p>On a local network, you can test on your Android device using port forwarding to access a remote host as localhost.</p>
+<hr />
+<p>As a side note the warning screens that block you from visiting the pages are called <code>interstitials</code>. And the template for this is present in chromium <a href="https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.html">code</a>.</p>
+<p><strong>Update on 26 feb 2021</strong></p>
+<p>There is a small procedure which can be performed to remediate the certificate issue for self signed certificates on local system. You can import the certificate into your CA keychain which will make the certificate valid across browsers.</p>
+<p>Follow the <a href="https://www.nullalo.com/en/chrome-how-to-install-self-signed-ssl-certificates/">instructions here</a>.</p>
+<p>Once done, the browser will accept the connection as secure and you will no longer get SSL warning interstitials. Do note that you might need to do this for every domain.</p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/the-hazard-light-confusion-indian-roads/the-hazard-light-confusion-indian-roads/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/touch-typing-for-programmers/touch-typing-for-programmers/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

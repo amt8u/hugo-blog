@@ -1,3 +1,9 @@
+---
+title: LinkedIn Bio
+type: "post"
+showTableOfContents: true
+---
+
 # Brief Summary
 I have been working as a software developer since the [end of the world](https://www.imdb.com/title/tt1190080/). 
 

@@ -1,0 +1,444 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt Lets learn about authentication in depth. At least the shallow depth that I can cover.
+Need In one of my earlier posts, I covered the difference between authentication and authrorization. Authentication is one of the most important aspects of web but is somehow strangely not in built into the web we use now a days. It needs a lot of effort just to add auth to your website, let alone the security of the system." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>Lets learn about <strong>authentication</strong> in depth. At least the shallow depth that I can cover.</p>
+<h1 id="need">Need</h1>
+<p>In one of my earlier posts, I covered  the difference between <a href="https://cybercafe.dev/authentication-vs-authorization/">authentication and authrorization</a>. Authentication is one of the most important aspects of web but is somehow strangely not in built into the web we use now a days. It needs a lot of effort just to add auth to your website, let alone the security of the system. I am always fascinated by how different websites try to secure the communication so as to make their platforms less susceptible to attacks. Obviously there is no one golden trick that can do that. You have to employ a plenty of different ways to prevent attacks. Lets try to understand how auth works in simple terms and what all companies are doing to secure there auth systems.</p>
+<h1 id="intro">Intro</h1>
+<p>Authentication seems simple at first but a lot happens in the backgound when you click on the login button.</p>
+<h1 id="the-illusion-of-session">The Illusion of session</h1>
+<p>Once you login into an application <del>using</del> your username and password, any page/link that you were not able to access before, now becomes accessible. For stateful protocols(connections that make a tunnel from your computer to server), its just a matter of keeping a connection open always just like how it used to be with landline phones. When you called somebody, a line was dedicated for that particular connection. But for most of the web, the underlying protocol is <code>HTTP</code> which is <code>stateless</code>. Which means that every request is independent and there is nothing in the connection that identifies who created the request.</p>
+<p>So if you login on chrome and firefox with different accounts on the same computer, and you visit your settings page, you are actually requesting the exact same page.</p>
+<p>For the server these are just same requests coming from the same IP address and it cannot differentiate who initiated which request. But still somehow the correct page opens up in each browser.</p>
+<p>The magic is <code>session-id</code>.</p>
+<p>Every request that goes to the server contains a special value called session identifier which identifies who requested that page. The server compares it with its stored value and depending on that it returns the page. But then the question is where this value came from.</p>
+<p>The jist is that every request needs to be authenticated. There are two ways to achieve this</p>
+<ul>
+<li>Pass Credentials in every request</li>
+<li>Pass a mutually agreed key in every request</li>
+</ul>
+<p>Passing credentials in every request is not a good idea. You will have to ask username/password on every page which obviously nobody will like. You can always also save the credentials in browser storage like session storage or local storage but those are not the secure ones and potentially can cause more problems then solving the session issue. Moreover these apis came in later and the web already evolved with existing methods that were available at that time.</p>
+<p>So the web guys came up with a mechanism called <code>token</code>. On the first request which has your username and password, the server generates a fresh random string and sends back to the browser. The browser then stores that string into its memory(In <a href="https://en.wikipedia.org/wiki/Magic_cookie">cookie</a>, not <a href="https://en.wikipedia.org/wiki/Cookie">cookie</a>). For each subsequent request to the same domain(that is important!), the browser sends the stored <code>token</code> everytime. And yes everytime is again very important.</p>
+<p>In simpler terms, each page request(or api call if you work in SPA) needs its own authentication which is kind of overhead but thats how the protocol works.</p>
+<blockquote>
+<p>Thats how the users see it as session while in the background there is no such session.</p>
+</blockquote>
+<h1 id="session-id">Session Id</h1>
+<p>Mostly, the id we discussed in the above section is just a random unique value and nothing else. Unique only for the time its associated with your profile. Once it expires, it could repeat with other user&rsquo;s profile value. But of course, at that time you won&rsquo;t have the previous values with you. On every login, the server creates it and keeps a copy of
+it for validating future requests. The copy is maintained for a predefined period of time as per the server&rsquo;s policies. And that&rsquo;s why your session expires if you do not do any activity for sometime.</p>
+<p>So, if somebody, somehow manages to get your <code>token</code>, he/she/they can recreate your session in their computer. Without knowing the username/password the attacker is able to access your data. This technique is called <a href="https://en.wikipedia.org/wiki/Session_hijacking">session hijacking</a> and can easily be done if you are not connected via SSL connection. Anybody who can intercept your http request will be able to see your session id. How <code>SSL</code> prevents your request from being read by interceptor is a separate topic(infact a book) of discussion.</p>
+<blockquote>
+<p>Take your sessionId as seriously as you take your password.</p>
+</blockquote>
+<h1 id="http-authentication">HTTP authentication</h1>
+<p>The HTTP protocol defines how each request should be <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes">verified or authenticated</a>. But again its upto the server(the guys who create the servers) to implement how do they want to authenticate each request.</p>
+<p>You will find many schemes listed in the page, but most common ones are <code>basic</code> and <code>bearer</code>. You can read about them on the MDN page. But in simpler terms</p>
+<ul>
+<li><strong>basic</strong> - provide credentials with every request</li>
+<li><strong>bearer</strong> - provide a token with every request</li>
+</ul>
+<p>Basic auth is suitable for requests which generally will not have follow up calls. Like downloading a protected file on the internet.</p>
+<p>Bearer auth means that you will provide a token which server can validate. Of course, the token generation will need you to have the username/password in the first place. But once you get the token, you no longer need to pass in your credentials everytime.</p>
+<p>There is even an already defined <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate">header</a> in http protocol which says what all schemes are supported.</p>
+<p>But again, its upto the server to manage how the authentication is done. Big companies like facebook, netflix will have many layers of protection to avoid authentication breaches.</p>
+<h1 id="encrypting-password-before-sending">Encrypting password before sending</h1>
+<p>I recently observed that a few sites encrypt the user password using <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto">browser apis</a> before sending it to the server even if you are on a SSL connection. Of course not everybody is doing that. The question is why do you need to encrypt your password if you are already on <code>https</code> connection which means that every request is always encrypted.</p>
+<p>I am not sure about the use case of this approach and there seems to be very <a href="https://duckduckgo.com/?q=encrypt+password+before+sending+to+server&amp;t=brave&amp;ia=web">less information</a> about it available online. There are few <a href="https://security.stackexchange.com/questions/133453/is-encryption-of-passwords-needed-for-an-https-website">outdated debates</a> but I didn&rsquo;t find any strong evidence to support browser based password encryption.</p>
+<p>What I feel is - this helps in preventing credential theft from other techniques like installing malicious browser extentions. Sometimes people are also tricked into running javascript code which can inject functions in background and can intercept the login call even before its encrypted by the TLS session.</p>
+<p>Thats why you see a big warning when you open <code>console</code> on facebook.com.
+<img src="./images/how-authentication-works/facebook_console.png" alt="facebook-console-warning">
+Though the attackers are not totally wrong! At least someone is getting hacked :-P</p>
+<p>Here are some examples of how popular sites are sending user credentials to the server. Using a random username <code>asharma@gmail.com</code> and <code>cybercafe</code> as password. These are not actual values and of course will always lead to error.</p>
+<ul>
+<li><strong>Facebook</strong> - encrypts password using <a href="https://www.npmjs.com/package/tweetnacl">tweetnacl</a>. It also appends the timestamp(epoch) which changes the encrypted text everytime.</li>
+</ul>
+<p><img src="./images/how-authentication-works/facebook.com.png" alt="facebook.com"></p>
+<ul>
+<li><strong>Google</strong> - encrypts the password and its not even clear which field contains the password</li>
+<li></li>
+</ul>
+<p><img src="./images/how-authentication-works/google.com.png" alt="google.com"></p>
+<ul>
+<li><strong>Amazon</strong> - encrypts and sends the password in the encryptedPwd field in the form</li>
+</ul>
+<p><img src="./images/how-authentication-works/amazon.com.png" alt="amazon.com"></p>
+<ul>
+<li><strong>Flipkart</strong> - keeps it simple. The authentication is via a rest call <code>https://2.rome.api.flipkart.com/api/4/user/authenticate</code> without any encryption. In fact they keep the fieldNames also pretty clear.</li>
+</ul>
+<p><img src="./images/how-authentication-works/flipkart.com.png" alt="flipkart.com"></p>
+<ul>
+<li><strong>Apple</strong> - also sends the credentials in plaintext. For some reason they send the &ldquo;remember me&rdquo; setting in query params as well as form. And the value is different in both. Not sure why are they doing this.</li>
+</ul>
+<p><img src="./images/how-authentication-works/apple.com.png" alt="apple.com"></p>
+<ul>
+<li><strong>Twitter</strong> - works like a SPA and everything is an api call unlike amazon. They might have some kind of task manager in the backend. <code>Login</code> might be just another task with some input. And yes, they don&rsquo;t encrypt password, but they don&rsquo;t send the password with the username. Insted they create a pre-auth token for the user and then send password with that token. The token then identifies the user in the backend and authenticates the user with the password.</li>
+</ul>
+<p><img src="./images/how-authentication-works/twitter.com.png" alt="twitter.com"></p>
+<ul>
+<li><strong>Netflix</strong> - No encryption on creds and also mentions clearly what all fields are getting passed with a <code>withFields</code> param.</li>
+</ul>
+<p><img src="./images/how-authentication-works/netflix.com.png" alt="netflix.com"></p>
+<ul>
+<li><strong>Steam</strong> - Being a very popular platform, they do need to take utmost care. They also encrypt the password. Not sure which algorightm they use.</li>
+</ul>
+<p><img src="./images/how-authentication-works/steam.com.png" alt="steam.com"></p>
+<ul>
+<li><strong>Cybercafe.dev</strong> - Well, since no one logs in to my blog other than me, there is no need to add overhead to encrypt password on browser. In fact this is not something that I can work on. This is something that the platform manages. In my case it is <a href="https://ghost.org/docs/staff/">Ghostjs</a> Of course, the connection is over SSL so I am covered with the basics.</li>
+</ul>
+<p><img src="./images/how-authentication-works/cybercafe.dev.png" alt="cybercafe.dev"></p>
+<ul>
+<li><strong>Dev.to</strong> - does not encrypts the credentials, but they do have some additional authenticty token. Rest everything goes plaintext.</li>
+</ul>
+<p><img src="./images/how-authentication-works/dev.to.png" alt="dev.to"></p>
+<h1 id="jwt-sessionid-hash">JWT, sessionId, hash</h1>
+<p>JWT has gained popularity in recent years. Its another way to solve the authentication problem. As per their <a href="https://jwt.io/introduction">intro page</a>, JWTs use encryption and are more secure than your normal session identifiers. After doing some research and reading their doc carefully, what I understood is that your jwt is as much vulnerable as regular sessionIds.</p>
+<p>Though there is another advantage of using JWT but that again becomes a topic of another article(link will come here once I finish that).</p>
+<p>At the core all these methods are just creating a token which the client(browser) stores temporarily and sends back with each request so that the server can determine from whom the request is coming and thus what to respond.</p>
+<h1 id="multi-factor-authentication">Multi factor authentication</h1>
+<p>Whenever you are required to enter an OTP even after providing the correct username and password, you are using a variant of MFA. As its name suggests, MFA means authenticating the user by asking for another key other than the password.</p>
+<p>Even in MFA, once a user is authenticated, the rest of the flow is same. After initial authentication, a token is generated and is used for subsequent requests which is similar to how regular logins work. So, in case your session is compromised, the attacker can gain access to whatever you have access to.</p>
+<p>In some cases even 3 factors are used for initial authentication. Remember that the factors need to be independent of each other. Having two passwords on the same screen is not 2 factor authentication. The other password needs to come from another device other than user&rsquo;s memory.</p>
+<h1 id="sso---single-sign-on">SSO - Single Sign On</h1>
+<p>The term says, you sign in once and then you no longer need to sign in again. So how is it different than the regular sign in process using sessions? Isn&rsquo;t that also a single sign on. You are effectively signing in just once, for all subsequent requests, you don&rsquo;t need to enter credentials.</p>
+<p>Regular sessions work for logins on one website. If you try to access another website even if it is controlled by same organization, you would need to enter your credentials again.</p>
+<p>This used to happen in the past when google products were on different domains like <code>google.com</code> and <code>google.co.in</code>. You login on one site won&rsquo;t work on another. So they implemented SSO which means if you were logged into <code>gmail.com</code> you can navigate to <code>google.co.in</code> and you would not be required to enter login creds again.</p>
+<p>SSO solves this by doing additional tasks. In the backend the sites are interconnected and a token is generated which is shared by different sites in the backend.</p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/hackerearth-environment-setup/hacker-earth-environment-setup/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

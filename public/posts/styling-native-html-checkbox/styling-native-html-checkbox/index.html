@@ -1,0 +1,426 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="The need While working with libraries like Bootstrap, Jquery UI etc you tend to forget even how native html elements look like. You would rarely see any popular site using the default look and feel of the browser.
+Most of the libraries wrap native elements inside and create custom components using js and css. But just out of curiosity I wanted to checkout if the elements can be styled by just using css." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="the-need">The need</h2>
+<p>While working with libraries like Bootstrap, Jquery UI etc you tend to forget even how native html elements look like. You would rarely see any popular site using the default look and feel of the browser.</p>
+<p>Most of the libraries wrap native elements inside and create custom components using js and css. But just out of curiosity I wanted to checkout if the elements can be styled by just using css.</p>
+<p>I started tinkering with basic elements like checkbox, radio button etc. Trying to modify the colors, background colors, borders. etc. But it didn&rsquo;t work. I could change the height and width of the control only.</p>
+<h2 id="reference">Reference</h2>
+<p>With a quick duckduckgo search, I stumbled upon the below article which gave a quick idea how native elements can be styled.</p>
+<p>Just a quick read through the post and you will find that there are two important aspects to override native styles</p>
+<ul>
+<li>appearance property</li>
+<li>pseudo-class</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">switch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">appearance</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>appearance</code> property has other values but as suggested by the article, I used <code>none</code> to remove the default styling.</p>
+<h2 id="custom-style">Custom style</h2>
+<p>We can always add a css selector and apply some custom styles to setup our checkbox</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#switch {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#000</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">.5</span><span style="color:#66d9ef">rem</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#010405</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">appearance</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transition</span>: <span style="color:#ae81ff">.3</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="before">::before</h2>
+<p>Now we need something to show that the checkbox is selected. Since we have removed the default styling, we can use a pseudo element to our checkbox</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">input</span>#switch::<span style="color:#a6e22e">before</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">85</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">43</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">cornflowerblue</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#15191d</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">7</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">55</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transition</span>: <span style="color:#ae81ff">.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Most of the properties are just to add color to our control. The only required thing is to have <code>content</code> property set. You can also use <code>\2713</code> for content to display a tick mark. Rest of the things are optional. Since I am using the box to simulate the check, I kept the content empty.</p>
+<h2 id="checked">:checked</h2>
+<p>To differentiate between the checked and unchecked state, we can add some style to the <code>:checked</code> pseudo class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">input</span>#switch:<span style="color:#a6e22e">checked</span>::<span style="color:#a6e22e">before</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I am just changing the top property here to simulate a toggle button. You can pretty much do anything like changing the <code>content</code> or transition to a different color. Do note that I have added a <code>ease-in-out</code> transition just for visual touch.</p>
+<h2 id="hover">:hover</h2>
+<p>You can also add a <code>:hover</code> effect just like how you can do with any other element.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">input</span>#switch:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#3d4951</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="live-test">Live Test</h2>
+<p>Just for fun I created a small page with my custom styled checkbox. You can find it <a href="https://switchover.net">here</a>.</p>
+<p>The checkbox is completely a native checkbox. I added a small click listener to change the background of the page. For the background I created a small gradient animation to give some colors to otherwise empty page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">lava</span> #site-main {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: linear-gradient(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">deg</span>, <span style="color:#ae81ff">#ff0000</span>, <span style="color:#ae81ff">#ff6604</span>,<span style="color:#ae81ff">#f3fb1d</span>,<span style="color:#ae81ff">#40ffe6</span>,<span style="color:#ae81ff">#f7e941</span>,<span style="color:#ae81ff">#84eb3c</span>, <span style="color:#ae81ff">#1fe600</span>, <span style="color:#ae81ff">#ff743a</span>, <span style="color:#ae81ff">#ff0000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-size</span>: <span style="color:#ae81ff">800</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">800</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">animation</span>: AnimationName <span style="color:#ae81ff">40</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">animation</span>: AnimationName <span style="color:#ae81ff">40</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">animation</span>: AnimationName <span style="color:#ae81ff">5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">-webkit-keyframes</span> <span style="color:#f92672">AnimationName</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">-moz-keyframes</span> <span style="color:#f92672">AnimationName</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">AnimationName</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/study-of-a-phishing-attack-on-paytm/study-of-a-phishing-attack-on-paytm/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/the-contextual-bias/the-contextual-bias/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="The need I was planning to create a pretty basic single page quiz application which I could deploy anywhere without any backend. All the questions would be in a json file.
+Being familiar with frameworks my first obvious choice would be react. creating interactive apps is more intuitive to build with some help from a library like react or backbone. It gives you a handy way to manage the state and model." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="the-need">The need</h2>
+<p>I was planning to create a pretty basic single page quiz application which I could deploy anywhere without any backend. All the questions would be in a json file.</p>
+<p>Being familiar with frameworks my first obvious choice would be react. creating interactive apps is more intuitive to build with some help from a library like react or backbone. It gives you a handy way to manage the state and model.</p>
+<p>Also you don&rsquo;t have to deal with the nitty gritty of browser&rsquo;s apis. Thus it seemed an obvious choice. But that would have been an overkill for such kind of app. Having static site is the easiest and SEO friendly way to deploy apps.</p>
+<p>So I started to look around for a tool which can convert my json to html. I found plenty of Static Site Generators but all of them turned out to be too complex for such a basic need. And most of them were just converters for framework based apps such as React etc. After spending some time searching for such a solution, I stumbled upon some articles</p>
+<ul>
+<li>
+<p><a href="https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22/">https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22/</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/21617468/node-js-generate-html">https://stackoverflow.com/questions/21617468/node-js-generate-html</a></p>
+</li>
+</ul>
+<p>Method 2 from the stackoverflow answer was somewhat in line to what I was looking for. But creating html natively is daunting. Managing all the markup manually would be too much work.</p>
+<p>A popular templating tool Handlebars might have helped. Having some experience with it, I started looking for a solution involving handlebars. But most of the articles were expressjs+handlebars solutions.</p>
+<h2 id="a-good-find">A good find</h2>
+<p>A few days back one of my colleague introduced me to a trendy tool <a href="https://jsonresume.org/">jsonresume</a>. Though the idea is very basic, but the implementation would be complex. Looking at the github projects for this tool, I figured, it might be doing what I intend to do. The tool generates static html using resume data from json file.</p>
+<p>In just few minutes I got my solution in one of their projects. Coincidently  the project was also using handlebars. The relevant file is <a href="https://github.com/jsonresume/jsonresume-theme-boilerplate/blob/master/index.js">this</a></p>
+<p>The only important line is I was looking for is</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Handlebars</span>.<span style="color:#a6e22e">compile</span>(<span style="color:#a6e22e">tpl</span>)({
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">css</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resume</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">resume</span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><hr>
+<h2 id="setting-up-nodejs-project">Setting up nodejs project</h2>
+<p>Referring to the project above I created a new nodejs project. I wanted to keep it simple and modular enough so that I can create different quizes with different json data. Essentially I just need to build a script which would read my <code>.hbs</code> template and <code>.json</code> data from two different files and generate single html file.</p>
+<p>Obviously there would be some css and js that can be attached later on as it won&rsquo;t depend on the generated content.</p>
+<p>Also created <em>package.json</em> and added <em>handlebars</em> dependency.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// index.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Handlebars</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;handlebars&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Reading json data from &#34;</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">questionsJson</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>[<span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#34;utf-8&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// questionsJson is a buffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">buildHtml</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">questionsJson</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buildHtml</span>(<span style="color:#a6e22e">fileData</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">template</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;template.hbs&#39;</span>)), <span style="color:#e6db74">&#34;utf-8&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">renderTemplate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Handlebars</span>.<span style="color:#a6e22e">compile</span>(<span style="color:#a6e22e">template</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// console.log(fileData);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">renderTemplate</span>(<span style="color:#a6e22e">fileData</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Write to build folder. Copy the built file and deploy
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#34;./build/index.html&#34;</span>, <span style="color:#a6e22e">html</span>, <span style="color:#a6e22e">err</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;File written succesfully&#34;</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="running-the-project">Running the project</h2>
+<p>Now that I have my script ready which I can run by running nodejs manually</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node index.js /javascript/questions 
+</span></span></code></pre></div><p>But as expected I got errors and the way to get rid of them is to have debugging enabled.</p>
+<h2 id="enabling-debugging-in-vs-code">Enabling debugging in VS Code</h2>
+<p>You can directly run the file using the Run menu in VS Code. Just after selecting the start debugging option it will ask you to select the environment where you would like to run the script. There will be a few options like chrome, node etc. I chose node and it worked!</p>
+<p>But selecting the env everytime was bothering me. Alternatively you could create a <em>launch.json</em> file in the project directory. Once done, you can quickly start your app in debug mode by pressing F5.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;configurations&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;node&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;request&#34;</span>: <span style="color:#e6db74">&#34;launch&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Launch Program&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;skipFiles&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&lt;node_internals&gt;/**&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;cwd&#34;</span>: <span style="color:#e6db74">&#34;${workspaceFolder}&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;runtimeExecutable&#34;</span>: <span style="color:#e6db74">&#34;npm&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;runtimeArgs&#34;</span>: [<span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;build&#34;</span>, <span style="color:#e6db74">&#34;./javascript/questions.json&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="setting-up-npm-run-script">Setting up npm run script</h2>
+<p>Now I could debug and complete the project. But I wanted to pass in the questions json file dynamically so that I could just update the json data and run a command to build my html. The ideal candidate for this would be <em>npm script</em>.</p>
+<p>To achieve this I added a new script in <code>package.json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;node index.js&#34;</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p>Now I can different html quizes with just one command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run build ./javascript/questions
+</span></span><span style="display:flex;"><span>npm run build ./html/questions
+</span></span></code></pre></div><h2 id="publishing">Publishing</h2>
+<p>Now that I can generate html from json, I also need a way to deploy the generated content. Right now I haven&rsquo;t setup any automated scripts thus I need to manually copy all the built files to my other repo which I can then push to github and that eventually auto-deploys to a netlify site.</p>
+<p>You can take a look at the generated page <a href="https://cybr.cafe/arrow-functions">here</a></p>
+<p>The sourcecode for this project is present on my <a href="https://github.com/z00md/static-quiz-generator">github account</a></p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/cookies/cookies/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/get-tata-nexon-ev-free/get-tata-nexon-ev-free/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

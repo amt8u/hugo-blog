@@ -1,0 +1,419 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Multi boot system I am always interested in trying out new Linux Distros just to see whats new. Till now I have been doing it by creating single Live USB drives. Now that we have cheaper high capacity USB sticks, I thought to checkout a multi boot system. One multi boot project has been there for sometime but it seems that it is no longer maintained.
+Ventoy From the comment I got to know that there is a new project called ventoy for the same use case." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="multi-boot-system">Multi boot system</h1>
+<p>I am always interested in trying out new Linux Distros just to see whats new. Till now I have been doing it by creating single Live USB drives. Now that we have cheaper high capacity USB sticks, I thought to checkout a multi boot system. One multi boot project has been there for sometime but it seems that it is <a href="https://github.com/mbusb/multibootusb/issues/536">no longer maintained</a>.</p>
+<h1 id="ventoy">Ventoy</h1>
+<p>From the comment I got to know that there is a new project called <a href="https://www.ventoy.net/en/index.html">ventoy</a> for the same use case. Ventoy on <a href="https://github.com/ventoy/Ventoy">github</a>. Looking at the homepage of the project, it feels quite promising. But as you know managing linux distros is not that simple.</p>
+<h1 id="is-it-easy">Is it easy?</h1>
+<p>As per the <a href="https://www.ventoy.net/en/doc_start.html">documentation</a>, getting ventoy to run is quite simple. Of course, in case of issues, you have the forum and online help.</p>
+<p>For me it worked like a charm. Its just a two step process.</p>
+<ol>
+<li><strong>Install ventoy</strong> - Use the given script to install ventoy on the USB drive. Just make sure that you are using the correct drive identifier. There is an option <code>Ventoy2Disk.exe -U</code>to list all drives too while starting ventoy from CMD for windows. I installed ventoy via Ubuntu using <code>.sh</code> file.</li>
+</ol>
+<pre tabindex="0"><code>sh Ventoy2Disk.sh -i /dev/sdb1
+</code></pre><ol start="2">
+<li><strong>Copy ISO files</strong> - While it says that you can put <em>iso/wim/img/vhd(x)</em> files, I only tried it with ISO files. Once ventoy is installed, you just need to copy the <code>ISO</code> images on the stick and boot from the USB.</li>
+</ol>
+<h1 id="boot">Boot</h1>
+<p>Once you boot in to the Ventoy menu, you will see the list of all the distros that you copied.
+<img src="./images/trying-ventoy-multi-boot-usb/ventoyMenu.png" alt="ventoy menu"></p>
+<p>On selecting any of the OS, you go into the boot menu of the particular distro. From there you can choose the relevant option(Live/Install) etc.</p>
+<p>In a few moments you would be ready with the system. As always you can try out the interface and apps or you can go ahead and install it on your drive.</p>
+<p>Don&rsquo;t forget to checkout the <a href="https://www.ventoy.net/en/isolist.html">compatibility list</a> before trying out.</p>
+<h1 id="persistence">Persistence</h1>
+<p>Persistence is one of the amazing features that linux gives you. Basically in a live environment, you lose eveything once you <code>restart/shutdown</code> the system. Nothing is stored on the disk even if you are booting from a writable USB drive. With the power of persistence you can continue where you left. You will get your settings back after a restart. You can even install programs and they will be there across sessions. A fully featured operating system that can run anywhere with your installed programs is nothing more than magic.</p>
+<p>To use the power of persistence, you. Quoting the ventoy docs directly</p>
+<blockquote>
+<p>Now Ventoy brings a new feature here. You have no need to create any partition, no need to add persistent boot parameter. Just put a persistence data file in the 1st partition and tell Ventoy by the json configuration, and that&rsquo;s all.</p>
+</blockquote>
+<p>At first it would feel like a lot of work to achieve persistence. But once you get a hang of it, its not that difficult. The idea is that instead of a partition, you will have a persistence file that will be used as a file system on boot. Checkout the supported OS <a href="https://www.ventoy.net/en/plugin_persistence.html">here</a> before diving into the steps.</p>
+<p>Follow the steps below</p>
+<ul>
+<li><strong>persistence directory</strong> - You can place the persistence file anywhere and just put the correct path in the json config, but I kept all persistence files in a directory just to have a clean drive structure.</li>
+<li><strong>Create images</strong> - Persistence images are not just plain files. These are special files with fixed size and format. You have two options to create them - <code>Create using script</code> or <code>Download</code> from <a href="https://github.com/ventoy/backend/releases">here</a>. Just a point to note that the <code>images.zip</code> directory will have compressed <code>7z</code> images of various formats and sizes. You would need to extract individual image as required. Also note that, the compressed images are in Kilobytes while after extraction, the file size will be the actual size of the image as given in the filename. So the file <code>persistence_ext4_4GB_casper-rw.dat.7z</code> will occupy 4GB after extraction. You need to copy the 4GB file to the USB drive.</li>
+<li><strong>Create json config</strong> - Being a front-end developer, I was happy to see config in json format. Just makes it easy to understand. This config file is nothing but a map of the ISO files to the persistence images. It tells ventoy which persistence file is associated with which ISO. According to ventoy, even one persistence file can be shared across different OS(if supported by both). I am yet to try that out.</li>
+</ul>
+<p>Not just that it goes on to become more flexible. You can have multiple persistence files for single distro. Ventoy will ask you to chose from when you select <code>Boot with persistence</code> option in the ventoy boot menu. You can also choose not to use persistence even with the file present by chosing <code>Boot without persistence</code> option.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;persistence&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;image&#34;</span>: <span style="color:#e6db74">&#34;/ISO/MX-19.1_x64.iso&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;backend&#34;</span>: <span style="color:#e6db74">&#34;/persistence/MX-19.1_x64.dat&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;image&#34;</span>: <span style="color:#e6db74">&#34;/ISO/ubuntu-20.04-desktop-amd64.iso&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;backend&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;/persistence/ubuntu_20.04_1.dat&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;/persistence/ubuntu_20.04_2.dat&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;/persistence/ubuntu_20.04_3.dat&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;autosel&#34;</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        },        
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;image&#34;</span>: <span style="color:#e6db74">&#34;/linuxmint-19.3-xfce-64bit.iso&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;backend&#34;</span>: <span style="color:#e6db74">&#34;/persistence/linuxmint_19.03.dat&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;autosel&#34;</span>: <span style="color:#ae81ff">1</span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Ventoy tells you gracefully if you have messed up the json config. I accidentally left a trailing comma and it gave an error - <code>Invalid json config</code> on boot. You can name the persistence files as you want. Just remember to use the correct version for particular distro. For example, Mint will need <code>casper-rw</code> while MX-Linux will require <code>MX-Persist</code> label.</p>
+<h1 id="power-of-live-os">Power of live OS</h1>
+<p>You might not realize this at first but having a full fledged Operating System with a permanent storage is indeed powerful. Even if you are installing the OS on a USB drive, that particular installation is bound by that specific set of hardware in the system at the time of installiation. You can carry the bootable drive anywhere, but that installation will work only with the same set of hardware. While what we are talking here is an OS capable of booting into a different set of hardware with your settings, sessions and programs.</p>
+<h1 id="recommended-size-of-usb-stick">Recommended size of USB stick</h1>
+<p>This totally depends on how many distros you want to have simultaneously and how much space you want to reserve for the persistence file. Persistence file images are available from 356MB to 4GB on the github page. I didn&rsquo;t find any restriction specfic to the size. Probably you can create arbitary file depending on the space you have on the drive. My use case was to have around 4-5 distros with at least 1gb of persistence for each. That gives me around 15GB. So for me, a 32GB drive would be best choice.</p>
+<h1 id="drive-temperature">Drive temperature</h1>
+<p>This is just an observation. I am not sure if its really an issue. Since there is continuous read/write to the USB drive, it becomes quite hot sometimes. Maybe not a good thing for a USB drive, but nevertheless I am gonna play with it.</p>
+<h1 id="results">Results</h1>
+<p>For me persistence worked flawlessly. I didn&rsquo;t had any issues while booting too. Will try out more distros as and when I get time.</p>
+<p><strong>Update on 28 feb 2021</strong></p>
+<p>A few issues that I encountered while using Ventoy.</p>
+<ul>
+<li>
+<p><strong>Adding ISO</strong> - You need a different working system to add/update ventoy config. You cannot add new ISOs when you are booted in from Ventoy.</p>
+</li>
+<li>
+<p><strong>using exFAT</strong> - While using an exFAT partition seems to be a good idea as of now. You get the best compatibility across Linux and windows but somehow many distros yet not support exFAT repairing. Somehow I had a bad sector in the <em>ISO</em> directory where all the images are placed. Because of this the directory was not accessible and I was getting &ldquo;Unknown file IO error&rdquo; on entering the directory. Reading about the error, it seems that the only way to fix a broken exFAT partition is to repair it using Windows. <code>fscsk</code> just reports errors but couldn&rsquo;t fix them.</p>
+</li>
+</ul>
+<p>Puppy linux couldn&rsquo;t read the directory
+Linux mint could but was not able to fix the errors</p>
+<p>Finally I had to install Ubuntu on a different drive and then deleted the corrupt file. I also noticed that there is a <code>Trash</code> directory which keeps the deleted files. It was taking huge space because I deleted many persistence files earlier.</p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/touch-typing-for-programmers/touch-typing-for-programmers/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/understanding-iife/understanding-iife/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

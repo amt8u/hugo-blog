@@ -1,0 +1,545 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Why gaming PC? Of course to play games! While its true that the primary objective of a gaming PC is to play graphic intensive games. But for me there were more reasons
+My current laptop was just not good enough for day to day tasks Being a developer and tech enthusiast I was always in need of more power Have never played games with high settings Besides gaming, a powerful system also increases your productivity." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="why-gaming-pc">Why gaming PC?</h1>
+<p>Of course to play games! While its true that the primary objective of a gaming PC is to play graphic intensive games. But for me there were more reasons</p>
+<ul>
+<li>My current laptop was just not good enough for day to day tasks</li>
+<li>Being a developer and tech enthusiast I was always in need of more power</li>
+<li>Have never played games with high settings</li>
+</ul>
+<p>Besides gaming, a powerful system also increases your productivity. For instance when I wanted to try out android studio on my old laptop, I had to close almost all apps before starting the emulator. I wanted a system which could give me enough power so that I can</p>
+<ul>
+<li>have more than 50 tabs open in <strong>chrome</strong></li>
+<li>have more than 50 tabs open in <strong>firefox</strong></li>
+<li>run multiple <strong>local servers</strong></li>
+<li>open <strong>Dev tools</strong> on any page without thinking twice</li>
+<li>play games like <strong>GTA 5</strong> and can minimize the game instantly</li>
+<li>have <strong>VS Code</strong> run in background so that I can switch easily between working and gaming</li>
+<li>play around with power intensive applications like <strong>Video Editors, Emulators</strong> etc</li>
+<li><strong>compile</strong> v8 while watching a video</li>
+<li>and not worry about the <strong>high</strong> cpu usage**</li>
+</ul>
+<p>In this article I will write about the PC I built last year. This is <strong>not a guide</strong> per se, rather just my experience of building a PC in India. For PC building guides there are millions of articles and videos already available on internet. My favorite being the <a href="https://www.youtube.com/watch?v=2lmfF0k2UcU">Verge&rsquo;s PC Build</a> :-P.</p>
+<h1 id="console-vs-pc">Console vs PC</h1>
+<p>Everytime I mentioned gaming PC, somebody would come up with a question - <strong>Why not PS4?</strong>. While its true that <strong>console vs pc</strong> will be an always running battle, but in my opinion the comparison is <strong>apple vs pineapple</strong>.</p>
+<p>Still I will put forth some pointers that helped me decide whether I wanted a PS4 or PC</p>
+<ul>
+<li><strong>Price</strong> Price is the most important aspect of the comparison, but I believe it should be considered at last once you are done thinking about other points.</li>
+<li><strong>Gaming</strong> Remember, console&rsquo;s are for gaming whereas PCs can also play Games. If you are not a power user, you may go for a cheap laptop for your work, and a console for playing games. That way you could enjoy the best of both worlds. PC can only be justified if you are going to use it for more than games.</li>
+<li><strong>Flexibility</strong> Consoles are plug and play. You can put them by your TV and start playing. Moving a PC from your room to another is not a good idea.</li>
+<li><strong>Games</strong> You can always play pirated games on a PC, though I won&rsquo;t suggest that because of malware and viruses. Moreover, I have seen games are comparatively cheaper on PC than console. You have many places to buy from - Steam, EpicGames store, etc. Playing multiplayer is quick and free on PC while consoles <a href="https://www.playstation.com/en-in/ps-plus/">charge recurring premium payments</a>.</li>
+<li><strong>Setup</strong> To play games on console the only thing you would need is internet and of course purchased games. But on PC, you need to install windows, configure drivers before installing the game. And with experience I would say that its not always a breeze. You can end up in an error solving which would need a lot of patience.</li>
+<li><strong>MODs</strong> I am not sure if we can install Mods on a console. But on PC you can always MOD games as per your choice. I installed the reallife <a href="https://www.gta5-mods.com/scripts/manual-transmission-ikt">manual transmission MOD</a> in GTA5 to support my <a href="https://cybercafe.dev/my-experience-with-gaming-wheel/">Gaming Wheel</a>.</li>
+<li><strong>RGB</strong> Not sure if there is anything supported officialy for consoles. But you can light up your PC as bright as you want. Of course you would need to keep in mind that while purchasing the motherboard and supported hardware.</li>
+<li><strong>Graphics</strong> Now this is a variable with a large number of values. You can even install a cheap Rs 2000(30$) card on a PC or you can get yourself the beast GTX2080. There are just too many options to chose from. If you think about it, in a way, console is just another computer with a predefined set of components with limited software.</li>
+</ul>
+<p>At last I figured out, that for me, a PC would be a better choice even though it would cost me double the price of console. And indeed it came out to be the right decision.</p>
+<h1 id="pre-built-vs-assembling">Pre-built vs Assembling</h1>
+<p><strong>Assembling a PC is not easy</strong>. Even if you have a graduate degree in Computer Science, you might not be able to put all parts together without getting help. There are so many things that can go wrong. And if you are buying parts by yourself, the chances of getting incompatible parts is very high.</p>
+<p>If you have never built a PC or are not familiar with various connections, you might be better off buying a pre-built one. Generally its a good idea to connect with your local shop which can get the parts for you as well as assemble them. In terms of online solutions there is still scarcity. In India there are very limited options like <a href="https://prebuiltpc.in/">prebuiltpc</a> and <a href="https://www.themvp.in/prebuilt-gaming-pc">themvp</a>. I dont have any experience with them, but they popped out while I was searching for my parts.</p>
+<p>Since labour is cheap here, perhaps it would be a good idea to pay your local technician who can easily assemble the parts for around <strong>Rs. 500-2000($10-$30)</strong> saving you from all the hassle. But be careful chosing the guy, anybody who has not handled expensive parts can easily ruin your PC.</p>
+<p>While pre-built PCs relieve you from the incompatibillty issues, you miss out on an important aspect of Personal Computers. When you assemble the parts by yourself, you get a sense of uniqueness. Plus you are aware of every small part which helps you decide on the upgrade path in future.</p>
+<h1 id="where-to-start">Where to start</h1>
+<p>This is something that totally depends on your level of understanding and experience. In my case, I never built a PC from scratch, but I did play around many years back with my old P4 Computer. I also enjoyed fixing freind&rsquo;s problems, formatting systems, resetting RAM etc. And having interest in PC components I learned about new technology from various sources as and when I get time.</p>
+<p>Initially I was interested in a high end laptop rather than a desktop because of the obvious reasons. But with time while looking around I figured out that for the same cost, I&rsquo;ll get 10 times better performance with a PC than a laptop. Additionally, for casual tasks and browsing I had my work laptop.</p>
+<p>Though I wanted to have the computer years back, one thing was preventing me from getting it - <code>Money</code>. After watching hundreds of videos and reading many articles, one thing was clear. The components are way too <strong>expensive in India</strong>. I know that expensive itself is a relative word but the way I see it is, how the parts are priced compared to your salary if you are doing the same work outside India.</p>
+<p>Just for example, in US the starting salary of a software developer is easily around $2000(Rs1.5L converted to INR) per month while in India it&rsquo;s generally around $300(Rs25k). You can see the gap. And on top of that, the prices of PC components are even more in India than US because of the various taxes. So if you can get an item in $100 in US, it will most likely be priced in India for around Rs 10000($133).</p>
+<p>And that&rsquo;s just one part of the problem. The other issue is availability. Whatever amount of research you do, you might end up in frustration. Either your chosen part will not be available or will be there from some shady seller for double price. You have to continuously adjust your wishes with the market.</p>
+<p>Just like Javascript&rsquo;s frameworks, PC technology also updates at a fast pace. I had to keep myself updated. And for that there is no other better source than internet. I used to read online about what all is new.</p>
+<h1 id="watch-watch-watch">Watch watch watch</h1>
+<p>But the real help came from Youtube. Reading manuals and tutorials is one thing thing while watching a video is totally a different one. These are the days that you can potentially find a video about installing any part even if it is rare.</p>
+<p>These are some of the channels that I visited frequently to gain more understanding on the subject of PC building.</p>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/user/LinusTechTips">Linus Techtips</a> - You will find almost everything related to PC building on this channel. Lately his videos are more towards trying out super expensive hardware. But someone gotta do that. You might find him annoying sometimes but I like his <a href="https://www.youtube.com/user/Techquickie">techquickie</a> series.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/user/Jayztwocents">JayzTwocents</a> - Another good source. Though the guy doesn&rsquo;t look like a techie but he gives honest opinions.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/user/AwesomeSauceNews">Bitwit</a> - He puts in a lot of humour in his videos which makes it a lot of fun watching them.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/channel/UCCss3QxegBkF8BAetIo0qXA">Tech Deals</a> - By far the most detailed reviewer. His videos are mostly serious and to the point. But with the worst colors for overlay texts.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/channel/UCtZ1Pm42gx7yCSqR9w77Kew">Indian Gamer</a> - The only reliable channel in India. With his videos you get a decent idea about the Indian market and prices. I hope he gets a new jacket sometime:-P</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/channel/UChS8LiCDE_53ZyMeeN93vCQ">Techmart Unbox</a> - Even though at first his accent felt a little strange, but after watching many videos you will get accustomed to it. His videos are mostly focussed to budget PCs. And he makes sure in each video that we get the message - Prices fluctuate.</p>
+</li>
+</ul>
+<p>I spent a lot of time watching people assembling systems. Mostly the search would start with a budget like - Gaming PC under Rs. 50,000($700). And then you would just fall into the trap.</p>
+<h1 id="what-to-look-out-for">What to look out for?</h1>
+<p>For most of the part, your major concern would be around part compatibility. There are a lot of tips already available on internet like using <a href="https://pcpartpicker.com/">PC Partpicker</a> etc. so I won&rsquo;t be repeating them here. But here are a few off beat tips that might be helpful while choosing components.</p>
+<ul>
+<li>
+<p><strong>Read Manuals</strong> - Yes, it sounds silly. Why to read the manual at this time. Isn&rsquo;t the product spec page sufficient enough? The trick is that you would be aware of nuances beforehand. Manuals are generally considered the <code>source of truth</code> and you get detailed information. You get to know how exactly you would need to install and is there anything special that you might need like a specific screwdriver? You would also know what exactly will be inside the box. Some things come with the case, some connectors come with motherboard.</p>
+</li>
+<li>
+<p><strong>Connectors</strong> - A modern computer has like hudreds of connectors if I include the ones present on montherboard. You don&rsquo;t need to know all of them, but you should have an idea of what all is there. You can easily go wrong if you do not take care about this. Just for instance - By mistake you could order a graphic card without DVI port and after installing everything you realize that your monitor supports only DVI. You can very well use adapters but that can raise the overall cost of the system. Sometimes getting an answer for simple questions is also a struggle. The only place would be to checkout the full specs of each product.</p>
+</li>
+<li>
+<p><strong>Warranty</strong> - While it is assumed there will be warranty for every product, but each has different terms with varying periods. In fact within the same brand the warranty period could differ for various models. Although you might never need, but its a good idea to get some info about the service centers. Some brands might have service centers in selected cities only. Some might have affiliation with other service providers. Better to know beforehand than realizing later that a service can take weeks.</p>
+</li>
+<li>
+<p><strong>RAM compatibilty</strong> - Well it may not be a great deal now a days as it was before but can indeed end up in a dead system. Motherboards and RAMs are tightly coupled. Always look out for the exact model in the <a href="https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM4/ROG_STRIX_B450-E_GAMING/Memory_QVL_3rd_Gen_AMD_Ryzen_Processors.pdf">compatibilty table</a>. There are high chances that even though your RAM module is not in the list, it might work but having surety is good right?</p>
+</li>
+<li>
+<p><strong>RGB</strong> - As you know RGB helps in increasing the FPS, its a must:-P. Well, to be serious, RGB is all about personal preference. Some people just don&rsquo;t like lights while some like to celebrate Diwali with their PC. I would put myself somewhere in between but closer to the former. I find RGB too obtrusive in night but I do like the setup glow with some colors. This eliminated a lot of cases for me. Almost every case has illuminated fans which looks really terrible. Until I found Nzxt&rsquo;s minimalistic case with tempered glass. I did get a separate Addressable LED from Phanteks but I use it in a way to light up my inside of the cabinet without sticking bright light out of the case. A word of caution if you are planning to attach any RGB lights. There are two kinds of them - <code>Addressable</code> and <code>Non-Addressable</code>. Addressable ones gives you the power to control each LED individualy which means you can create patterns of moving lights etc which you see in demos. While with the non-addressable ones you can only control on/off. Also these two types use different headers so be sure to check out how many headers are there on the motherboard.</p>
+</li>
+<li>
+<p><strong>Overclocking</strong> - Overclocking is something that everybody wants, but not everybody needs. If you are buiding a PC for the first time, you might never need overclocking. You would be better off with factory defaults. But if you are remotely interested, you need to keep in mind while purchasing the parts. Not everything comes with support for overclocking. The first and foremost thing is checking the <code>Motherboard</code> and <code>Processor</code>. In order to achieve overclocking both should have support OC. Intel&rsquo;s CPUs which come with a &lsquo;K&rsquo; modifier support it, while with AMD every CPU supports OC. For motherboards you have to individually find whether the chipset supports OC or not. Also remember, OC is not just one step process, you would need to configure a lot of things before you can start overclocking.</p>
+</li>
+<li>
+<p><strong>Monitors</strong> you plan to connect - Many of you might have seen dual/triple monitor layouts. Some use it for gaming, while some want multiple monitors for workstations. At first you might find that its the same. Apparently its not a trivial task. There are many factors which decide number and quality of the graphics. While it seems to be an effortless task - Just check how many ports the motherboard has so that you can connect as many monitors as you want. In reality its a little complex. How many monitors you can connect is determined by your graphic chip. Not by your motherboard. I had already written a detailed article about this <a href="https://cybercafe.dev/my-experience-with-multi-monitor-configuration/">here</a></p>
+</li>
+</ul>
+<h1 id="where-to-buy">Where to buy?</h1>
+<p>While deciding your parts, the most important aspect is of course price. Most of the videos on youtube are international and reviews are based on US prices, you would have to do your own enquiries. If you are in one of the metro cities, you have the option to visit a local shop. Some markets are famous for their cheap prices like <code>Mumbai's Lamington Road</code> and <code>Delhi's Nehru Place</code>. But if you are not in a big city, your last hope will be online retailers only. In my city, when I went to one of the leading shops to enquire about parts, I was surprised to find out that he wasn&rsquo;t even aware of <strong>Nzxt</strong> brand.</p>
+<p>But if you are like me, who can&rsquo;t visit a shop every now and then, there are some online sites where you can shop safely. Even if you buy from other source, do remember to checkout the prices from these sites to get a fair idea about current prices. There are other sites like <a href="https://theitdepot.com">theitdepot</a> but I used only below sources to checkout the parts and prices.</p>
+<ul>
+<li>
+<p><strong><a href="https://amazon.in">Amazon</a></strong> - As always you might find everything but with a pinch of salt. Every part is around 10% expensive from other sources. But you get the reliability. If you receive a damaged product, you can easilly get a refund.</p>
+</li>
+<li>
+<p><strong><a href="https://www.flipkart.com">Flipkart</a></strong> - In terms of PC building its totally useless. You might find a product here and there but overall there is not much for us.</p>
+</li>
+<li>
+<p><strong><a href="https://techmartunbox.com">TehmartUnbox</a></strong> - As mentioned earlier, this site is owned by same person running the techmartunbox youtube channel. They have updated their site but still inventory is a little less. I even enquired them but they didn&rsquo;t have all the parts. Though the prices were competitive.</p>
+</li>
+<li>
+<p><strong><a href="https://www.mdcomputers.in">MD Computers</a></strong> - By far this site has the best inventory. Prices are always less than amazon. But they take shipping and gateway charges extra which will be determined at checkout. There is no free shipping whatever you order. They do have phone based customer support but the data they look regarding availability and prices is same what is available online. A year back there site was mostly static but now a days they seem quite active in updating homepage offers.</p>
+</li>
+<li>
+<p><strong><a href="https://www.primeabgb.com">Primeabgb</a></strong> - Ships from Mumbai. You can also visit the shop if you want. Site is not good as compared to mdcomputers but manageable.</p>
+</li>
+<li>
+<p><strong><a href="https://vedantcomputers.com">Vedant Computers</a></strong> - Ships from Kolkata. Does not take payment gateway charges. But parts availability is on the lower side.</p>
+</li>
+</ul>
+<p>Finally I ordered all the parts from <em>MD Computers</em> as everything was available and can be ordered in one shot. At first I was a little hesitant to order since it was a big amount and was skeptical if I would get used or fake products. A lot of your time also goes in researching whether you can order from these sites or not. I read reviews on various forums, youtube videos and gathered information as much as I can.</p>
+<p>Returns and refunds are a real hassle in India. Even currently I am struggling with a merchant to get a refund for a defective piece. Because of many frauds involved in online shoppig, retailers are pretty strict. Also there&rsquo;s a huge risk of losing your money to fake sites. You have to be 100% sure before placing order on new sites.</p>
+<p>Since I didn&rsquo;t had any spare PC where I could plugin and test the products independently after receiving, I had to order all at the same time. Finally I got the courage and placed the order for the mimimum PC components. Somethings like HDD etc could be bought later.</p>
+<h1 id="after-delivery">After delivery</h1>
+<p>Finally the day came when it was delivered to my door. There were three packages - one for the case, one for UPS and the other had everything else. Everything was packed nicely with so much covering material that there was no chance that anyone could break in and replace the parts.</p>
+<p>It was time to open. Needless to say, the most exciting part is always <strong>unboxing</strong>. Maybe for the retailer its a daily thing, but holding a brand new Graphic card in your hand feels thrilling. After that I verified if all the products are properly sealed and there is no observable damage. Since I watched almost all videos related to the parts I ordered, there were no surprises. I knew exactly what all will be there in the boxes.</p>
+<p>I have been receiving used products on Amazon quite frequently now a days. So it goes without saying that the second task would be to verify the authenticity of all products.</p>
+<p>Every product has a unique serial number. Some brands provide an online interface where you can put in the serial number and get its Manufacturing and warranty details. For others you might have to contact support via email.</p>
+<p>Some companies need you to register your product to enable the warranty while some are fine with the original bill of purchase. Make sure to check that too for each product.</p>
+<h1 id="assembling-the-pc">Assembling the PC</h1>
+<p>You need to watch at least 5 videos to get an idea, how to proceed with the build. What you need to install first. How do you open and close the case. Where do all the wires connect. Most importantly, you should know how to connect the front panel to the motherboard.</p>
+<p>Having said that I started putting all parts together. Mostly its in the below order</p>
+<pre tabindex="0"><code>1. Install CPU on motherboard
+2. Install CPU Cooler. For me it was the stock one that came with the processor.
+3. Install RAM sticks
+4. Install M.2 NVMe SSD
+5. Install the wifi card if required
+6. Install MB to the case/chassis(Many screws here)
+7. Install Graphic card
+8. Connect Chassis front panel
+9. Connect all power cables
+10. Reroute cables for better cable management
+11. Connect to UPS main power supply
+12. Forget to switch on the SMPS switch
+13. Push power button on chassis and gasp for a moment
+14. Switch on SMPS and then repeat step 13
+15. See glowing rainbow on RAM and Motherboard
+</code></pre><p>While anything can go wrong, you should be aware of the <strong>error codes</strong> for various faults like memory, power supply, display card issues etc. Every motherboard has beep codes and some might have led codes for these scenarios. Surpringly I managed to get to the POST screen on the first attempt. Its an achievement in itself. Since I was familiar with the older blue BIOSs, seeing a colorful mouse enabled BIOS was really delightful.</p>
+<p>I always wanted to have a motherboard where I can control every thing. This one had basic and advanced mode. I just glanced over all the settings and installed Windows from bootable drive. Then I installed all the required drivers.</p>
+<p>Once I was convinced that the system is running fine, I placed back the tempered glass and continued installing various softwares. Once drivers are fully installed, it was time to test whether the system is indeed powerful or not. I didn&rsquo;t had any game at hand to test out, so I puchased PUBG PC on steam and installed it. That was the first time I was playing a graphics intensive game at full quality. My 4:3 monitor prevented my from playing it at a good resolution but at least I could feel the power.</p>
+<p>Next I started playing around with various things like Asus Aura lighting and graphic card settings.</p>
+<h1 id="benchmarking">Benchmarking</h1>
+<p>The true power of the PC is realized only when you play games, but just to be sure you can always perform a stress test to check if all parts are working as expected on high loads too.</p>
+<h1 id="accessories-and-peripherals">Accessories and peripherals</h1>
+<p>While its true PC is about the CPU, but if you have a powerful PC, your peripherals should complement it and not bottleneck your performance. A basic example is using a cheap keyboard with such a PC. It works but you won&rsquo;t get the best results. You will realize this especially in games where you cannot press 4 keys simultaneously. Or even using a 720p 60Hz monitor just diminishes the performance. I bought various things at different times of the year so as to get them at the best deals.</p>
+<h1 id="my-pc">My PC</h1>
+<ul>
+<li>
+<p><strong><a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-2600">AMD Ryzen 5 2600</a></strong> 3.4 GHz 6-Core Processor - <a href="https://mdcomputers.in/amd-hexa-core-ryzen-5-2600.html">RYZEN-5-2600</a> - <a href="https://www.amd.com/en/support/kb/warranty-information/rma-03">3 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://rog.asus.com/motherboards/rog-strix/rog-strix-b450-e-gaming-model/spec/">Asus ROG Strix B450-E</a></strong> Gaming Wifi - <a href="https://mdcomputers.in/asus-rog-strix-b450-e-gaming.html">ROG-STRIX-B450-E-GAMING</a> - <a href="https://www.asus.com/in/support/warranty-status-inquiry/">3 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.asus.com/in/Graphics-Cards/DUAL-RX580-O8G/specifications/">Asus RX580</a></strong> Dual OC - <a href="https://mdcomputers.in/asus-dual-rx580-o8g.html">DUAL-RX580-O8G</a> - <a href="https://www.asus.com/in/support/warranty-status-inquiry/">3 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://shop.westerndigital.com/products/outlet/internal-drives/wd-black-nvme-2018-ssd#WDS250G2X0C">WESTERN DIGITAL</a></strong> Black 3D NAND 250GB M.2 NVMe Internal SSD - <a href="https://mdcomputers.in/western-digital-black-3d-nand-250gb-m-2-nvme-wds250g2x0c.html">WDS250G2X0C</a> - <a href="https://shop.westerndigital.com/products/outlet/internal-drives/wd-black-nvme-2018-ssd#WDS250G2X0C">5 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.nzxt.com/products/h510-matte-black-red">Nzxt H510</a></strong> (ATX) Mid Tower Cabinet With Tempered Glass Side Panel (Matte Black-Red) - <a href="https://mdcomputers.in/nzxt-h510-matte-black-red-tempered-glass-ca-h510b-br.html">CA-H510B-BR</a> - <a href="https://support.nzxt.com/hc/en-us/articles/360023111994-Warranty-Terms-By-Product">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.corsair.com/uk/en/Categories/Products/Power-Supply-Units/vs-series-config-2018/p/CP-9020172-UK">CORSAIR VS650</a></strong> SMPS 650 Watt PSU With Active PFC - <a href="https://mdcomputers.in/corsair-vs650-cp-9020172-uk.html">CP-9020172-UK</a> - <a href="https://help.corsair.com/hc/en-us/articles/360033067832#h_f1c227ce-d769-479e-a268-48e7d9575e95">3 Years Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.gskill.com/product/165/166/1536652516/F4-3000C16D-16GTZRTrident-Z-RGBDDR4-3000MHz-CL16-18-18-38-1.35V16GB-(2x8GB)">G.Skill Trident Z</a></strong> RGB Series 16GB (8GBx2) DDR4 3000MHz - <a href="https://mdcomputers.in/g-skill-trident-z-rgb-16gb-ddr4-3000mhz-f4-3000c16d-16gtzr.html">F4-3000C16D-16GTZR</a> - <a href="https://www.gskill.com/specification/165/166/1536652516/F4-3000C16D-16GTZR-Specification">Lifetime Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.apc.com/shop/in/en/products/APC-Back-UPS-1100VA-230V-without-auto-shutdown-software-India/P-BX1100C-IN">APC 1.1KVA</a></strong> Power Backup - <a href="https://mdcomputers.in/apc-1-1kva-230v-bx1100c-in.html">BX1100C-IN</a> - <a href="https://download.schneider-electric.com/files?p_File_Name=JGNY-A5UEFA_R0_EN.pdf&amp;p_Doc_Ref=SPD_JGNY-A5UEFA_EN&amp;p_enDocType=Warranty">1  Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.seagate.com/in/en/internal-hard-drives/hdd/barracuda/">Seagate 2TB</a></strong> Barracuda 7200 RPM <a href="https://mdcomputers.in/seagate-2tb-barracuda-st2000dm008.html?search=ST2000DM008&amp;category_id=0">ST2000DM008</a> - <a href="https://www.seagate.com/in/en/support/warranty-and-replacements/">2 Years Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://shop.westerndigital.com/products/internal-drives/wd-blue-desktop-sata-hdd#WD10EZEX">Western Digital</a></strong> WD10EZEX 1TB 7200rpm - <a href="https://www.amazon.in/gp/product/B0088PUEPK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">WD10EZEX</a> - <a href="https://shop.westerndigital.com/products/internal-drives/wd-blue-desktop-sata-hdd#WD10EZEX">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/RGB-Mechanical-Gaming-Keyboards/K70-RGB-MK-2/p/CH-9109012-NA">Corsair K70</a></strong> RGB MK.2 Mechanical Gaming Keyboard — CHERRY® MX Brown - <a href="https://www.amazon.in/gp/product/B07D5S5QKF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">CH-9109012-NA</a> - <a href="https://help.corsair.com/hc/en-us/articles/360033067832#h_f1c227ce-d769-479e-a268-48e7d9575e95">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.corsair.com/us/en/Categories/Products/Gaming-Mousepads/MM100-Cloth-Gaming-Mouse-Pad/p/CH-9100020-WW">Corsair Mouse Pad</a></strong> - <a href="https://www.amazon.in/gp/product/B014W1Z890/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">Corsair MM200</a> - <a href="https://www.corsair.com/us/en/Categories/Products/Gaming-Mousepads/MM100-Cloth-Gaming-Mouse-Pad/p/CH-9100020-WW#tab-tech-specs">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.corsair.com/us/en/Categories/Products/Gaming-Mice/HARPOON-RGB-WIRELESS-Gaming-Mouse/p/CH-9311011-NA">Corsair Harpoon Wireless</a></strong> Wireless mouse with USB and bluetooth connectivity - <a href="https://www.amazon.in/gp/product/B07MZFL4YL/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&amp;psc=1">CH-9311011-NA</a> - <a href="https://help.corsair.com/hc/en-us/articles/360033067832#h_f1c227ce-d769-479e-a268-48e7d9575e95">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.logitechg.com/en-in/products/gaming-mice/g102-lightsync-rgb-gaming-mouse.html">Logitech G 102</a></strong> Prodigy Optical Gaming mouse - <a href="https://www.amazon.in/gp/product/B01MYPU20Z/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">G102 Lightsync </a> - <a href="https://support.logi.com/hc/en-us/articles/360052803534-Warranty-G203">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="http://phanteks.com/Neon.html">Phanteks M1</a></strong> NEON Digital-RGB LED - <a href="https://www.primeabgb.com/online-price-reviews-india/phanteks-neon-digital-rgb-m1-led-ph-neledkt_m1/">PH-NELEDKT_M1</a> - <a href="https://www.primeabgb.com/online-price-reviews-india/phanteks-neon-digital-rgb-m1-led-ph-neledkt_m1/">2 Year Warranty</a></p>
+</li>
+<li>
+<p><strong><a href="https://www.dell.com/en-in/work/shop/dell-usb-slim-dvd-rw-drive-dw316/apd/429-aauq/storage-drives-media">Dell DW316</a></strong> - External USB Slim DVD R/W Optical Drive - <a href="https://www.amazon.in/Dell-DW316-External-Optical-429-AAUX/dp/B00VWVZ0V0/ref=sr_1_1?dchild=1&amp;keywords=429-AAUX&amp;qid=1608232436&amp;sr=8-1">429-AAUX</a> - <a href="https://www.dell.com/en-in/work/shop/dell-usb-slim-dvd-rw-drive-dw316/apd/429-aauq/storage-drives-media">1 Year Warranty</a></p>
+</li>
+</ul>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/authentication-vs-authorization/"
+      ><span class="mr-1.5">←</span><span>Authentication vs Authorization</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/cheap-windows-license/cheap-windows-keys/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on cybercafe.dev</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on cybercafe.dev</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A revisit to a classic game - XIII</title>
+      <link>http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/</guid>
+      <description>A post in 2020 for a 2003 game, why? XIII had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a remake of the original game.&#xA;I didn&amp;rsquo;t play the remake but I did saw a lot of videos talking about it. Apparently it was not received positively by the gaming community. After looking at responses and watching the gameplay, even I can understand the reasons for that.</description>
+    </item>
+    <item>
+      <title>How to add gradient animation as site header in ghost blo</title>
+      <link>http://localhost:1313/how-to-add-gradient-animation-as-background/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-add-gradient-animation-as-background/</guid>
+      <description>Using Presets There is a great tool to start with. Head over to below link and create your gradient config. You can always modify everything later on.&#xA;https://www.gradient-animator.com/&#xA;Add to your site If you are using a ghost instance, there are two ways&#xA;Add to code injection Update the theme css files Code injection .css-selector { background: linear-gradient(308deg, #000000, #000000, #f75900, #000000); background-size: 800% 800%; -webkit-animation: z00md 21s ease infinite; -moz-animation: z00md 21s ease infinite; animation: z00md 21s ease infinite; } @-webkit-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @-moz-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } Inside the site header code injection box, add a new style tag and just paste the above css directly.</description>
+    </item>
+    <item>
+      <title>Add PWA support to ghost blog</title>
+      <link>http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/</guid>
+      <description>What is PWA? Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. - Wikipedia&#xA;As always, the definition does not serves any purpose in explaining the feature. You need to learn it to understand it.&#xA;In simple terms PWA is a technique to make your website behave like an app.</description>
+    </item>
+    <item>
+      <title>Authentication vs Authorization</title>
+      <link>http://localhost:1313/authentication-vs-authorization/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/authentication-vs-authorization/</guid>
+      <description>Authentication(प्रमाणीकरण) vs Authorization(प्राधिकरण) TLDR; Authentication - Check if the person is allowed to enter the system&#xA;Authorization - Check if the entered person is allowed to perform specfific operation&#xA;What others say about it This is again one of the topics which I put into the category where you will appreciate the definition after understanding the whole concept.&#xA;Lets talk about why this is confusing for many. First of all numerous examples which do not describe the real usecase and present with irrelevant examples.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>Why gaming PC? Of course to play games! While its true that the primary objective of a gaming PC is to play graphic intensive games. But for me there were more reasons&#xA;My current laptop was just not good enough for day to day tasks Being a developer and tech enthusiast I was always in need of more power Have never played games with high settings Besides gaming, a powerful system also increases your productivity.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>Excerpt Have you ever wondered how some retailers offer Microsoft Windows at unbelievable prices like Rs 700(5$). In this post I shall try to explore the reasons for these deep discounts and there genuineness.&#xA;Dirt cheap Windows license Recently I have seen a large number of Youtube videos where people are promoting sites that lets you purchase Windows licenses on pretty cheap rates. You can get Windows from these sites for just around Rs.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>Excerpt Complete guide to using AMD eyefinity multimonitor setup&#xA;Really complete? Well, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.&#xA;Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>Excerpt Have you ever come across a requirement to create download functionality? This article will go over all the possible solutions.&#xA;Problem about downloading in 2020? Really? I have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.&#xA;Before I start with my findings, I would like to pinpoint the use case around saving files.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>Excerpt What is a cookie? Should you accept or reject them; Does it make any sense to reject a cookie? And are cookies really files?&#xA;Should you accept or reject cookies? I am sure you must have seen a dialog or a section asking for permission to save cookies when you visit a site for the first time.&#xA;And I am also sure that most of the time you just click Accept all and continue.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/</guid>
+      <description>The need I was planning to create a pretty basic single page quiz application which I could deploy anywhere without any backend. All the questions would be in a json file.&#xA;Being familiar with frameworks my first obvious choice would be react. creating interactive apps is more intuitive to build with some help from a library like react or backbone. It gives you a handy way to manage the state and model.</description>
+    </item>
+  </channel>
+</rss>

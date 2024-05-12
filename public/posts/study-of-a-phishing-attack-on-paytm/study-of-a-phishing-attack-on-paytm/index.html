@@ -1,0 +1,457 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt Detailed study of recent phishing attack using fake paytm KYC message. This is an in-depth analysis from a developer&rsquo;s point of view.
+Brief intro to Phishing In simple language its an attempt to trick a person into revealing private information. It could be online banking credentials, facebook password, username/password combination of any other popular site etc. Phishing attacks have grown exponentially with the popularity of online banking and social networking." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>Detailed study of recent phishing attack using fake paytm KYC message. This is an in-depth analysis from a developer&rsquo;s point of view.</p>
+<p><img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2000&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" alt="Feature Image"></p>
+<h1 id="brief-intro-to-phishing">Brief intro to Phishing</h1>
+<p>In simple language its an attempt to trick a person into revealing private information. It could be online banking credentials, facebook password, username/password combination of any other popular site etc. Phishing attacks have grown exponentially with the popularity of online banking and social networking.</p>
+<p>There is huge information available to read about Phishing. I will not repeat that here. It would be better to get the latest info directly. Some recommendations are -</p>
+<ul>
+<li>
+<p><a href="https://www.cisco.com/c/en/us/products/security/email-security/what-is-phishing.html">https://www.cisco.com/c/en/us/products/security/email-security/what-is-phishing.html</a></p>
+</li>
+<li>
+<p><a href="https://www.inc.com/will-yakowicz/biggest-email-phishing-scams-2018.html">https://www.inc.com/will-yakowicz/biggest-email-phishing-scams-2018.html</a></p>
+</li>
+<li>
+<p><a href="https://www.phishprotection.com/content/phishing-prevention/">https://www.phishprotection.com/content/phishing-prevention/</a></p>
+</li>
+</ul>
+<h1 id="current-phishing-attack">Current phishing attack</h1>
+<h3 id="brand-background">Brand background</h3>
+<p>Paytm is a big ecommerce based company in India. It started operations many years ago with just a wallet concept and now it has gone into ecommerce, banking retail eveywhere. With the demonetization of 2016, paytm grew exponentially where users could make small transactions easily without cash. The original site resides at below URL.</p>
+<p><a href="https://paytm.com/">https://paytm.com/</a></p>
+<p>Today I received a message to revalidate my KYC for paytm. Soon I realized that this is a phishing attack put together with a lof of efforts from attackers. There are many things which they have done to make this possible. Just for future reference, I have attached a lot of screenshots and code.</p>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/Screenshot_20200714-164444.jpg" alt="It all starts with a fake link"></p>
+<ol>
+<li>The sender is not a personal mobile number. In fact it looks like a commercial number designated for notifications like these. We generally receive alerts from these kind of numbers. The attackers must have purchased some marketing contacts probably.</li>
+<li>The message warns the user to take action as quickly as possible using sentences like &ldquo;<em>To avoid suspension</em>&rdquo;.</li>
+<li>The message is well formatted without spelling mistakes. Even punctuations are correct; which is often not the case with phishing attempts.</li>
+<li>The most important point is the website link given in the message.</li>
+<li>The website link starts with <strong>https://</strong> and uses a TLD <strong>.com</strong>.</li>
+<li>The website name feels proper and on a first look its not at all suspicious.</li>
+</ol>
+<p>Even a person having tech experience might not feel anything fishy. The only thing that made me skeptical here is that my KYC was done long back and since then there has been no change in government orders. I was not expecting a KYC update at this time. To infer this, you have to be aware of a lot of things, plus you also have to understand how kyc works, what is the purpose of it and why its needed by only a subset of companies.</p>
+<p>Nevertheless, being a software engineer I didn&rsquo;t stop there and just out of curiosity wanted to check out how sophisticated(promising) this one is.</p>
+<p>To my surprise, this attack has been one of the carefully crafted public attacks. Most of the time you can tell its a phishing attack by just looking at the website/message. But this one is different. Thereby giving me a motivation to write about it. Just to spread awareness about how a simple message can lead to financial loss.</p>
+<p>Its always advised not to click on suspicious links coming from messages like these. So if you are not sure, do ==NOT== open the link. Instead an alternative safe way is to open your app and then from there navigate to the required section. In this case <code>KYC</code>.</p>
+<p>Since I am familiar with these attacks, I can safely move forward in my investigation.</p>
+<h1 id="fake-website-with-real-names">Fake website with real names</h1>
+<p>Once you click on the link, you will see below page in the browser.</p>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/Screenshot_20200714-164515-1.jpg" alt="Fake login page for paytm"></p>
+<p>There are a lot of things which we can talk about. Lets start</p>
+<h3 id="url">URL</h3>
+<p>The URL shown in the address bar has changed. Instead of <code>paytm-kyc.com</code> it is <code>paytm.help</code> now. But most of the genuine websites also use this technique to <strong>re-direct</strong> users to other pages of their site. For example, in the message, you will see a shorterned version of URLs like <code>bit.ly/Bvgd1</code>. And thats why this is an acceptable behaviour now a days.</p>
+<h3 id="https">https://</h3>
+<p>As you can see that this site is using an <code>https://</code> connection. The attackers made sure that the users believe this is the official site. If you want to know about https, checkout my previous post - <a href="https://cybercafe.dev/http-vs-https-for-beginners/">https://cybercafe.dev/http-vs-https-for-beginners/</a></p>
+<h3 id="url-ending-with-help">URL ending with .help</h3>
+<p>If you notice carefully, the URL has <code>.help</code> top level domain. This not necessarily means that something is wrong but raises some questions. This is a common trick the attackers have been using. Creating websites with popular brands using new extensions. As a non-technical user, you can easily assume this is the official site.</p>
+<p><code>.help</code> is a different kind of TLD. You can easily get a new domain name with <code>.help</code> extention with just around Rs 4k($60). Even for popular brands like SBI bank etc. There is a cost associated with renewals as well but if you are planning an attack at a very high level, this is like pennies for attackers.</p>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/sbi.help.png" alt=""></p>
+<p><code>sbi.help</code> available for purchase as on 14 July 2020</p>
+<h3 id="verification">Verification</h3>
+<p>Now since everything looks fine and as user, your next step would be to enter mobile number and password. The whole page is basically a copy of actual paytm website. This can be easily done in a few minutes. Even the icons and layout is proper. Also the links are original paytm links like <code>Terms and Conditions</code>/<code>Privacy Policy</code>. This forces the user to believe its a genuine site.</p>
+<h3 id="otp">OTP</h3>
+<p>Once the user enters his information and clicks on the button <code>Login Securely</code>, the mobile number with password is sent to the attacker&rsquo;s server.</p>
+<p>Fake OTP request page</p>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/on_submit-1.png" alt="Fake OTP"></p>
+<p>There is a form which submits to below link.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>https://www.paytm.help/verify/onetime.php
+</span></span></code></pre></div><p>On successful submission, you will be shown an OTP page. Since I put in a wrong number and password, I didn&rsquo;t receive the OTP, but if you would have entered valid info, its quite possible that they might have triggered a fake transaction in the background. And if you enter the OTP and click <code>OK</code>, they would receive it and just use it to complete the transaction in the backgound.</p>
+<p>Secondly the user is also re-directed to original paytm website. This happens so fast that you don&rsquo;t even realize that you have entered your password on a fake site.</p>
+<h3 id="attack-concealment">Attack concealment</h3>
+<p>As you are aware browsers keep your login <code>session</code> for days. And since most of the users might already be logged in on their browser, when the <code>re-direct</code> happens, the user gets to the actual paytm page and thinks that the action was successful. This prevents him from reporting the incident as a fraud site. He would never know that his details have been taken.</p>
+<p>And if you are one of those who have same password on all sites, just think that now the attacker can login to other portals with this password and even create more elaborate attacks using your identity like facebook profile to hack into your contacts.</p>
+<h3 id="recovery">Recovery</h3>
+<p>Because the user is not even aware of the hack and can only judge if he loses money or sees any suspicious activity on his other profiles. If you do realize that your account has been compromised, the actions should be in below order -</p>
+<ol>
+<li><strong>Change your password</strong></li>
+<li><strong>Logout from all devices</strong></li>
+<li><strong>Change password on all applications which are using the same password</strong></li>
+</ol>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/change_password.png" alt=""></p>
+<h1 id="lets-go-technical">Lets go technical</h1>
+<p>Upon understanding this could be a phishing attack you can lookout for information as mentioned below to analyze if this is indeed an attack or its just that you are being paranoid.</p>
+<h3 id="domain-name-verification">Domain name verification</h3>
+<p>Whenever in doubt, just quickly look out <code>whois</code> information for the domain. As can be seen in the below snapshots, there are a few pointers which can indicate a fraud site.</p>
+<ol>
+<li>The domains were registered recently. In fact one of them was registered today.</li>
+<li>There is no contact information. Not always necessary but can have brand&rsquo;s support email.</li>
+<li>The Ip Address has only 1 more site.</li>
+<li>IP Location is in Canada. Official paytm is hosted in Signapore.</li>
+<li>Registrant Name should be <em>One97 Communications Limited</em></li>
+</ol>
+<h2 id="fake-websites">Fake websites</h2>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/paytm-kyc_whois_snapshot.png" alt="">
+<img src="./images/study-of-a-phishing-attack-on-paytm/paytm.help_snapshot.png" alt=""></p>
+<h2 id="official-website">Official website</h2>
+<p><img src="https://cybercafe.dev/content/images/2020/07/paytm_offical_whois_snapshot.png" alt=""></p>
+<h3 id="html-inspection">HTML inspection</h3>
+<p>Html code for the page is as simple as a <code>Hello World</code> program. Of course there are a lot of things. But just looking at the DOM, you can sense that this is not an official website. Meta tag says it all. Just to compare if you look at the DOM for original paytm site, the &lt;head&gt; itself is like 200 lines long.</p>
+<p>HTML Dom for fake website <a href="https://paytm.help/verify/">https://paytm.help/verify/</a>
+<img src="./images/study-of-a-phishing-attack-on-paytm/html_elements.png" alt=""></p>
+<h3 id="javascript">Javascript</h3>
+<p>Since the attackers wanted to make the login page as real as they can. They even placed minor validations like the mobile number should be a 10 digit number. The password and mobile number cannot be empty. And on entering valid input, the error goes away. Giving you a feeling that your number is indeed getting verified.</p>
+<p>Client side validations on fake website</p>
+<p><img src="./images/study-of-a-phishing-attack-on-paytm/js_validtions.png" alt=""></p>
+<h1 id="reporting">Reporting</h1>
+<p>After I captured all screenshots, I communicated about the attack to paytm through their Contact us page. Lets hope they can take action as soon as possible.</p>
+<p>Phising report
+<img src="./images/study-of-a-phishing-attack-on-paytm/phishing_report.png" alt=""></p>
+<h2 id="latest-news">Latest news</h2>
+<p>As per recent news, I can see that paytm and telecom companies are fighting over to blame each other for this situation. In fact paytm has filed a petition with a 100 Crore loss in damages against telecom companies. Sadly its the customers that are at loss.</p>
+<p><a href="https://economictimes.indiatimes.com/industry/telecom/telecom-news/paytm-trying-to-shift-blame-for-its-own-lapses-on-telcos-jio/articleshow/76473143.cms">https://economictimes.indiatimes.com/industry/telecom/telecom-news/paytm-trying-to-shift-blame-for-its-own-lapses-on-telcos-jio/articleshow/76473143.cms</a></p>
+<p><a href="https://inc42.com/buzz/after-jio-vodafone-idea-blames-paytm-for-phishing-frauds/">https://inc42.com/buzz/after-jio-vodafone-idea-blames-paytm-for-phishing-frauds/</a></p>
+<h2 id="update-on-phishing-report">Update on phishing report</h2>
+<p>Well, as expected the reply from Paytm cybercell is lethargic and hysterical. Given that phishing has increased on paytm platform in recent months, this attitude shall not help.</p>
+<p>Paytm&rsquo;s response
+<img src="./images/study-of-a-phishing-attack-on-paytm/Paytm_response_to_phishing.png" alt=""></p>
+<p>Instead of acknowledging the inputs and forwarding it to their support/security team to confirm the attack and potentially draft a notice or alert customers to be safe, they came up with their inessential <em>Do not share</em> list.</p>
+<p>I understand that for every incident they have the same email response template (carefully crafted by product managers:-D) and its difficult to respond with custom message on a short notice. But still be true to yourself at least. I am sure replying them with another mail highlighting the below issues won&rsquo;t make much of an impact but still I will try.</p>
+<h3 id="improper-links">Improper links</h3>
+<p>The link text says <code>www.Paytm.com</code> while the actual link is <code>www.paytm.com</code>. For people like me, who know how links work, its fine. But for general public, this is confusing. You would ask why? Recently some someone was trying to impersonate a popular coding website <code>github.com</code> as <code>glthub.com</code>. Did you notice the minute difference? The second character is small case <code>L</code> in the illicit URL. That&rsquo;s why these things matter.</p>
+<p>You would also say that the link is correct and it doesn&rsquo;t matter what the text says. That is also technically true. But this is an html feature which allows you to show arbitray text/image while keeping the link in the background. This helps reducing the clutter and makes it easier to read. But in that case, the text should not contain <code>www</code> and <code>.com</code>. It should simply say <code>Paytm</code> to avoid any confusion.</p>
+<h3 id="irony-at-its-best">Irony at its best</h3>
+<p>Another important point to note is that the link that they have given is <code>http://</code> while apparently on the same line they recommended to use <code>https://</code>.</p>
+<h3 id="not-that-helpful-for-this-type-of-incident">Not that helpful for this type of incident</h3>
+<p>Except point no. 4, the rest of the advice is not helpful in this particular kind of incident. The user is tricked into believing that he is logging in official paytm site. Phishing has a lot of varieties and this is one of them. Its also a pretty common one too, still not much importance given to it. Maybe providing with a link to a support article where user can learn more about this can help.</p>
+<p>By reporting a fresh phishing site, I am trying to save thousands of customers getting robbed of their money, while paytm is easily ignoring threats.</p>
+<blockquote>
+<p>End</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/simple-mock-server/simple-mock-server/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/styling-native-html-checkbox/styling-native-html-checkbox/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

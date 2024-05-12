@@ -1,0 +1,509 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - cybercafe.dev</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Excerpt In this article we will learn about how classes
+Classes Depending on the target you will have different code generated for class.
+class Department { name: string = &#34;DEFAULT&#34;; constructor(n: string) { this.name = n; } } let d1 = new Department(&#34;Looting&#34;); The above code could be converted to functions if you set the target to &lsquo;ES5&rsquo;.
+Methods class Department { name: string = &#34;DEFAULT&#34;; constructor(n: string) { this.name = n; } describe() { console." />
+  <meta name="author" content="amt8u" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.125.7">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >cybercafe.dev</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/amt8u/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/amt8u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h1 id="excerpt">Excerpt</h1>
+<p>In this article we will learn about how classes</p>
+<h1 id="classes">Classes</h1>
+<p>Depending on the target you will have different code generated for class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DEFAULT&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">n</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Department</span>(<span style="color:#e6db74">&#34;Looting&#34;</span>);
+</span></span></code></pre></div><p>The above code could be converted to functions if you set the target to &lsquo;ES5&rsquo;.</p>
+<h1 id="methods">Methods</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DEFAULT&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">n</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">describe() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Describing &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>There is special syntax to specify <code>this</code> for a function inside class</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">describe</span>(<span style="color:#66d9ef">this</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Department</span>) { <span style="color:#75715e">// this should refer to Department kind of object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Department is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And you can also mark fields as private by using private keyword. While in [S, there is a provision to mark <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">private fields</a> by using <code>#</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">describe</span>(<span style="color:#66d9ef">this</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Department</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Department is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="initialization-shortcut">Initialization shortcut</h2>
+<p>Shortcut declaration of properties in the constructor allows you to skip writing declarations. Do note that this is just a TS feature, the generated JS still has the declarations and assignments.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// private id: string;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// private name: string;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// You also don&#39;t need to assign the values within the constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// this.id = id;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// this.name = name;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="readonly">readonly</h2>
+<p>Allows you to create field which gets a value at the time of initialization and cannot be changed later. Again this is a TS feature and not JS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="inheritance">inheritance</h2>
+<p>Just like regular inheritance, use <code>extends</code>. Only thing to take care is that <code>super()</code> needs to be called first before operating on any property. If we are using the shortcut syntax in the constructor then it&rsquo;s automatically handled by TS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChildDepartment</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Department</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">reports</span>: <span style="color:#66d9ef">string</span>[]) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#39;Child&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="protected">protected</h2>
+<p>Making a field <code>private</code> only allow access to that field in the base class. To access the field in the child class, mark it as <code>protected</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">address</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChildDepartment</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Department</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">reports</span>: <span style="color:#66d9ef">string</span>[]) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#39;Child&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">changeAddress</span>(<span style="color:#a6e22e">add</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="abstract-classes">abstract classes</h2>
+<p>You can mark methods as abstract to force implementations to write the logic for those methods. Do note that you need to mark the class as abstract too in this case. And if you don&rsquo;t provide the implementation, you will get TS error.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Department</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">address</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#a6e22e">describe</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChildDepartment</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Department</span>{ <span style="color:#75715e">// Method describe from class Department is not implemented
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">reports</span>: <span style="color:#66d9ef">string</span>[]) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#39;Child&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">changeAddress</span>(<span style="color:#a6e22e">add</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="interface">Interface</h1>
+<p>An interface describes the structure of an object. Not sure how it is different from <code>type</code> but will see if it is. You can use <code>readonly</code> to mark fields as to be set only once.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">phrase</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user1</span>: <span style="color:#66d9ef">Person</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">user1</span> <span style="color:#f92672">=</span> {}; <span style="color:#75715e">// TS2739: Type &#39;{}&#39; is missing the following properties from type &#39;Person&#39;: name, age, greet
+</span></span></span></code></pre></div><h1 id="interface-vs-type">interface vs type</h1>
+<ul>
+<li>interface is clear</li>
+<li>interface can be used to create classes with multiple inheritance</li>
+<li>You can extend an interface with other interfaces</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Greetable</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">phrase</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">GoodGreetable</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Greetable</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">goodGreet</span>(<span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">GoodGreetable</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">goodGreet</span>(<span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;good&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">greet() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;hi&#34;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="function-interface">Function interface</h2>
+<p>You can define an interface for functions too below syntax. This now seems to be a stretch. Looks like TS wants to &ldquo;interfacialize&rdquo; everything that is there in JS :-P. It would be better to use custom <code>type</code> instead as this interface makes it more complex and confusing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">AddFn</span> {
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">b</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">add</span>: <span style="color:#66d9ef">AddFn</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">n1</span>: <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">n2</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n2</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div><h2 id="optional-properties">optional properties</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name?</span>: <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">phrase</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">age</span>:<span style="color:#66d9ef">number</span>) {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user1</span>: <span style="color:#66d9ef">Person</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">user1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#34;ola&#34;</span>, <span style="color:#ae81ff">34</span>);
+</span></span></code></pre></div><h1 id="summary">Summary</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#e6db74">&#34;JS&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;TS&#34;</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;Java&#34;</span>
+</span></span></code></pre></div><h1 id="compatability-table">Compatability table</h1>
+<p>Check what all features are compatible across JS and TS.
+<a href="https://kangax.github.io/compat-table/es6/">https://kangax.github.io/compat-table/es6/</a></p>
+<h1 id="next-gen-js">Next gen JS</h1>
+<ul>
+<li>Arrow functions</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span><span style="color:#a6e22e">number</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span><span style="color:#a6e22e">number</span>) =&gt; <span style="color:#a6e22e">a</span><span style="color:#f92672">+</span><span style="color:#a6e22e">b</span>;
+</span></span></code></pre></div></section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/learning-typescript-in-2023-part2-configuration/learning-typescript-in-2023-part2-configuration/"
+      ><span class="mr-1.5">←</span><span></span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/"
+      ><span></span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
