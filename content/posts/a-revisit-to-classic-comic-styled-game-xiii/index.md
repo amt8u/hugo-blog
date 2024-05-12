@@ -9,7 +9,7 @@ draft : false
 
 # A post in 2020 for a 2003 game, why?
 ![Loading](./images/Loading.png)
-XIII had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a [remake](https://www.microids.com/game-xiii/) of the original game.
+XIII(Say 13) had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a [remake](https://www.microids.com/game-xiii/) of the original game.
 
 I didn't play the remake but I did saw a lot of videos talking about it. Apparently it was [not received positively](https://mspoweruser.com/xiii-game-remake-crowned-worst-xbox-game-of-2020/) by the gaming community. After looking at responses and watching the gameplay, even I can understand the reasons for that.
 
