@@ -1,292 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="In built pdf viewerLink to headingUnlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.
+The needLink to headingOne of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="In built pdf viewerLink to headingUnlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.
+The needLink to headingOne of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark.">
+
+<meta property="og:url" content="//localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="In built pdf viewerLink to headingUnlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.
+The needLink to headingOne of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="In built pdf viewer Unlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.
-The need One of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/how-to-extend-firefox-in-built-pdf-viewer/how-to-extend-firefox-in-built-pdf-viewer/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="in-built-pdf-viewer">In built pdf viewer</h1>
+      <div class="post-content">
+        
+        <h1 id="in-built-pdf-viewer">
+  In built pdf viewer
+  <a class="heading-link" href="#in-built-pdf-viewer">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Unlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the page with the pdf content but as an html document. You can modify the css for any part and get a custom page layout with custom colors.</p>
-<h1 id="the-need">The need</h1>
+<h1 id="the-need">
+  The need
+  <a class="heading-link" href="#the-need">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>One of my friends was checking out some pdf files on firefox and identified a need to modify the background colors of white pages so he could read the pdfs in dark.</p>
 <p>Quickly he discovered that the html rendered can easily be changed by applying some styles in the dev tools. But doing this everytime on page load was becoming a little cumbersome for him.</p>
 <p>Soon he found out a small script which can do the same task by running a small js code that can change the color after loading the page.</p>
-<h1 id="using-script">Using script</h1>
+<h1 id="using-script">
+  Using script
+  <a class="heading-link" href="#using-script">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>The crux of the script is to update the stylesheet information for the document.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">styleSheets</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">insertRule</span>(<span style="color:#e6db74">&#34;.textLayer {background: rgba(1,1,1,0.8);}&#34;</span>, <span style="color:#ae81ff">1</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">styleSheets</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">insertRule</span><span class="p">(</span><span class="s2">&#34;.textLayer {background: rgba(1,1,1,0.8);}&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </span></span></code></pre></div><p>Basically it just adds a new css rule for <code>.textLayer</code> class with a background color value. This class holds the page&rsquo;s background when the pdf is rendered as html on the page. You can always change the color to anything you like and also update any other elements on page such as titles, headings etc.</p>
-<h1 id="page-reload">Page reload</h1>
+<h1 id="page-reload">
+  Page reload
+  <a class="heading-link" href="#page-reload">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Since we are just injecting some styles on the page, on page reload or navigation to other pages, the styles are lost. It doesn&rsquo;t matter whether you are changing the style in the inspector or using javascript code to inject the style. The changes are always lost. This is by design.</p>
 <p>Now the requirement comes in to make the script run everytime whenever any page is opened. This called for an extension. Since I have never created one but being a front-end developer I knew that this could be done using a firefox extension.</p>
-<h1 id="building-the-extension">Building the extension</h1>
-<p>With one search you land up on the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">firefox guide</a> to create new extension from scratch.</p>
+<h1 id="building-the-extension">
+  Building the extension
+  <a class="heading-link" href="#building-the-extension">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>With one search you land up on the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension"  class="external-link" target="_blank" rel="noopener">firefox guide</a> to create new extension from scratch.</p>
 <p>The steps are quite simple.</p>
 <ul>
 <li>Create a <code>manifest.json</code> file to add all extension related metadata</li>
@@ -295,84 +241,134 @@ The need One of my friends was checking out some pdf files on firefox and identi
 <li>Add an icon to the extension</li>
 </ul>
 <p>You can goto <code>about:debugging</code> in firefox and then Load your extension temporarily for testing.</p>
-<h1 id="created-a-local-extension">Created a local extension</h1>
-<p>I created a simple extension with the script to change the color of the <code>textLayer</code> element and loaded it into firefox for local testing. I encountered an error related to pattern matching but for now I fixed it by using <code>&lt;all_urls&gt;</code>. More details <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">here</a>.</p>
-<h1 id="didnt-work">Didn&rsquo;t work</h1>
+<h1 id="created-a-local-extension">
+  Created a local extension
+  <a class="heading-link" href="#created-a-local-extension">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>I created a simple extension with the script to change the color of the <code>textLayer</code> element and loaded it into firefox for local testing. I encountered an error related to pattern matching but for now I fixed it by using <code>&lt;all_urls&gt;</code>. More details <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"  class="external-link" target="_blank" rel="noopener">here</a>.</p>
+<h1 id="didnt-work">
+  Didn&rsquo;t work
+  <a class="heading-link" href="#didnt-work">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>I opened up a pdf file and discovered that my extension is not working. There are no changes on the <code>textLayer</code> class. Somehow extension was not getting loaded. Just to verify the same, I added a <code>console log</code> statement in the extension script.</p>
 <p>Reloaded the extension and then refreshed the page. Still no luck. I tried to open another page and while looking at the console I can see the log from my extension.</p>
 <p>After some investigation I found that the extension is working for all sites except the one which I was checking. I tried with other pdf links from other random sites but the same issue.</p>
 <p>Apparently when you open a pdf link on any site, firefox downloads the file temporarily on your system. The URL will point to the site, but the file will be loaded from the local disk. And on clicking the site information button you will see the message - &ldquo;This file is stored on your computer&rdquo;.</p>
-<p>So now my intuition lead me to search for - &ldquo;How to enable extension for schemes such as <code>file://</code>. Soon I discovered the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> page. It did have some explicit permissions but didn&rsquo;t had what I needed to fix my issue.</p>
-<h1 id="pdf-viewer---extensions-not-allowed">PDF viewer - Extensions not allowed</h1>
-<p>While looking out for solution, I stumbled upon a <a href="https://pncnmnp.github.io/blogs/firefox-dark-mode.html#">blog post</a> by Parth which explicitly mentioned that extensions are not allowed for firefox in built pdf viewer. This ended my journey to create an extension.</p>
-<p>It also mentions that firefox has added this feature after version 60. Some discussion around the same available on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1454760">bugzilla</a>.</p>
+<p>So now my intuition lead me to search for - &ldquo;How to enable extension for schemes such as <code>file://</code>. Soon I discovered the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"  class="external-link" target="_blank" rel="noopener">permissions</a> page. It did have some explicit permissions but didn&rsquo;t had what I needed to fix my issue.</p>
+<h1 id="pdf-viewer---extensions-not-allowed">
+  PDF viewer - Extensions not allowed
+  <a class="heading-link" href="#pdf-viewer---extensions-not-allowed">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>While looking out for solution, I stumbled upon a <a href="https://pncnmnp.github.io/blogs/firefox-dark-mode.html#"  class="external-link" target="_blank" rel="noopener">blog post</a> by Parth which explicitly mentioned that extensions are not allowed for firefox in built pdf viewer. This ended my journey to create an extension.</p>
+<p>It also mentions that firefox has added this feature after version 60. Some discussion around the same available on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1454760"  class="external-link" target="_blank" rel="noopener">bugzilla</a>.</p>
 <p>The post also prescribed an alternate way to achieve the same but I haven&rsquo;t tried it yet.</p>
-<h1 id="workaround">Workaround</h1>
-<p>One workaround suggested by some user on the bugzilla thread is to use the firefox <a href="https://mozilla.github.io/pdf.js/web/viewer.html">pdf viewer&rsquo;s web version</a>. Since it will be just another site and extensions should work for this site, you can get the custom css loaded here.</p>
+<h1 id="workaround">
+  Workaround
+  <a class="heading-link" href="#workaround">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>One workaround suggested by some user on the bugzilla thread is to use the firefox <a href="https://mozilla.github.io/pdf.js/web/viewer.html"  class="external-link" target="_blank" rel="noopener">pdf viewer&rsquo;s web version</a>. Since it will be just another site and extensions should work for this site, you can get the custom css loaded here.</p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-to-deploy-multiple-github-repos-on-single-netlify-site/how-to-deploy-multiple-github-repos-on-single-netlify-site/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-to-open-website-in-fullscreen/how-to-open-website-in-fullscreen/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

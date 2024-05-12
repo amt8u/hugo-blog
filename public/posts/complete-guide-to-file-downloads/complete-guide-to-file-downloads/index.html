@@ -1,281 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingHave you ever come across a requirement to create download functionality? This article will go over all the possible solutions.
+Problem about downloading in 2020? Really?Link to headingI have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.
+Before I start with my findings, I would like to pinpoint the use case around saving files.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingHave you ever come across a requirement to create download functionality? This article will go over all the possible solutions.
+Problem about downloading in 2020? Really?Link to headingI have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.
+Before I start with my findings, I would like to pinpoint the use case around saving files.">
+
+<meta property="og:url" content="//localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingHave you ever come across a requirement to create download functionality? This article will go over all the possible solutions.
+Problem about downloading in 2020? Really?Link to headingI have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.
+Before I start with my findings, I would like to pinpoint the use case around saving files.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Have you ever come across a requirement to create download functionality? This article will go over all the possible solutions.
-Problem about downloading in 2020? Really? I have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.
-Before I start with my findings, I would like to pinpoint the use case around saving files." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              9-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Have you ever come across a requirement to create download functionality? This article will go over all the possible solutions.</p>
-<h1 id="problem-about-downloading-in-2020-really">Problem about downloading in 2020? Really?</h1>
+<h1 id="problem-about-downloading-in-2020-really">
+  Problem about downloading in 2020? Really?
+  <a class="heading-link" href="#problem-about-downloading-in-2020-really">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>I have been using internet for more than 15 years and might have downloaded gazillion files. Downloading should be a piece of cake in 2020 looking at the pace web browsers have evolved.</p>
 <p>Before I start with my findings, I would like to pinpoint the use case around saving files. There are two ways by which you can open a file from any site.</p>
 <ul>
@@ -283,13 +213,25 @@ Before I start with my findings, I would like to pinpoint the use case around sa
 <li>Download the file directly to the directory without opening</li>
 </ul>
 <p>The first method is quite simple and works like a charm. This article is about the second approach.</p>
-<p>Apparently <a href="https://html.spec.whatwg.org/multipage/links.html#downloading-resources">downloading a file is not as simple as you might think</a>.</p>
-<h1 id="searching-for-answers">Searching for answers</h1>
+<p>Apparently <a href="https://html.spec.whatwg.org/multipage/links.html#downloading-resources"  class="external-link" target="_blank" rel="noopener">downloading a file is not as simple as you might think</a>.</p>
+<h1 id="searching-for-answers">
+  Searching for answers
+  <a class="heading-link" href="#searching-for-answers">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>As usual, I started looking with basic keywords like <code>download file</code>, <code>how to download file</code> etc. which gave me little hope to find an answer. The results mostly were around how to download a file and not - how to implement the download feature.</p>
-<p>With some highly advanced searching skills:-P, I looked for <code>how to download file on button click</code> and there I found my first relevant post - <a href="https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript">a stackoverflow question</a>.</p>
+<p>With some highly advanced searching skills:-P, I looked for <code>how to download file on button click</code> and there I found my first relevant post - <a href="https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript"  class="external-link" target="_blank" rel="noopener">a stackoverflow question</a>.</p>
 <p>Aptly the first comment on the question says - <em>Thanks to you &ldquo;how to trigger a file download in javascript&rdquo; would give answers much faster for any future searcher.</em></p>
 <p>If you read the answers and respective comments, you will find that there is no one straight forward way. There are some limitations for every use case. In this article I shall try to cover all approaches and discuss their consequences.</p>
-<h1 id="is-downloading-a-front-end-task">Is downloading a front-end task?</h1>
+<h1 id="is-downloading-a-front-end-task">
+  Is downloading a front-end task?
+  <a class="heading-link" href="#is-downloading-a-front-end-task">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Though at first, it seems downloading is something that belongs to the front-end world. Since you have the complete file URL, you should be able to tell the browser to download the file instead of displaying it in the browser window. But.</p>
 <blockquote>
 <p>Enabling download is a server functionality and not front-end</p>
@@ -298,188 +240,250 @@ Before I start with my findings, I would like to pinpoint the use case around sa
 <p>As per my understanding this limitation is purposely put to prevent security issues. If you allow unrestricted downloading, it would increase the risk of people getting infected with malware etc.</p>
 <p>There are already some mechanisms built into the browser by their developers. Its upto the browser to prevent abuse while keeping the functionality intact. A simple example that I could think of is - When you try to download <code>.exe</code> files, chrome warns you that it could harm your computer.</p>
 <p>Another feature you might have observed is that whenever you click on a file, or click <em>Save As</em> option, the browser doesn&rsquo;t instantaneously downloads, rather presents you with a Save As dialog on which you need to click <em>OK</em> which gets enabled only after a few seconds. Also consecutive downloads trigger a warning - <em>Prevent additional dialogs to open</em>.</p>
-<h1 id="content-disposition-header">content-disposition header</h1>
+<h1 id="content-disposition-header">
+  content-disposition header
+  <a class="heading-link" href="#content-disposition-header">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Whether the file will open in a window or download depends on a very important header - <code>content-disposition</code>. I don&rsquo;t know why this header was named like this. Perhaps it would have been easier if the header could be called - <code>allow-content-download</code> or something similar.</p>
 <p>This header needs to be set in the response with a value from a predifined set. Whenever you click on a URL, the server responds with the data(which could be a file) including the http headers. If the <code>content-disposition</code> header is set to <code>attachment</code>, the file will be downloaded irrespective of the filetype. But if its not set, the browser will check the mime type of the file and if it thinks it can open it, it will, otherwise it will just download the file.</p>
 <p>That&rsquo;s why you see that installers and zip files don&rsquo;t need this header. A simple link to the file will download it. While for files like pdf and images, the browsers are capable and thereby open them in a new window or same window depending on how you created the link.</p>
-<p>I would recommend reading the <a href="https://tools.ietf.org/html/rfc6266">content-disposition rfc</a> to better understand the header. Other than the disposition there are a few important parameters like filename etc.</p>
-<h1 id="downloading-via-javascript">Downloading via javascript?</h1>
+<p>I would recommend reading the <a href="https://tools.ietf.org/html/rfc6266"  class="external-link" target="_blank" rel="noopener">content-disposition rfc</a> to better understand the header. Other than the disposition there are a few important parameters like filename etc.</p>
+<h1 id="downloading-via-javascript">
+  Downloading via javascript?
+  <a class="heading-link" href="#downloading-via-javascript">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>When we say downloading via javascript, the ask is whether there is a way so that we can write code like below. Basically triggering the download without manipulating the existing DOM.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;https://path-to-some-endpoint&#34;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// some api which allows saving the response to file
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  window.<span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">data</span>);
-</span></span><span style="display:flex;"><span>})
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;https://path-to-some-endpoint&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// some api which allows saving the response to file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nb">window</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><p>Apparently giving javascript the power to handle user&rsquo;s system files is not a great idea. So the answer to the question - Can you download using javascript? is <em>NO</em>.</p>
 <blockquote>
 <p>With great power comes great responsibility!</p>
 </blockquote>
 <p>But then again you will see various posts describing how to achieve the &ldquo;download with javascript&rdquo; using similar syntax like below. Technically its just creating a link and simlulating the click.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadFile</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#34;</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>)
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;/&#39;</span>).<span style="color:#a6e22e">pop</span>()
-</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">a</span>)
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">click</span>()
-</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">a</span>)
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">downloadFile</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&#34;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">a</span><span class="p">.</span><span class="nx">download</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">).</span><span class="nx">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">a</span><span class="p">.</span><span class="nx">click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Similarly there are other tricks that you can use but ultimately its just simulating the browser&rsquo;s default link behavior. Do note that it will depend on the response if it has the right <code>content-disposition</code> header, otherwise the file won&rsquo;t download, instead will open in the window.</p>
 <ul>
 <li>Using window.open method</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>   Button with onclick
-</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;window.open(&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;)&#34;</span>&gt;Download!&lt;/<span style="color:#f92672">button</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">   Button with onclick
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.open(&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;)&#34;</span><span class="p">&gt;</span>Download!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><ul>
 <li>Modifying window.location property</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>   Button with onclick - open file in same window
-</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;window.location =&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;&#34;</span>&gt;Download!&lt;/<span style="color:#f92672">button</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">   Button with onclick - open file in same window
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location =&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;&#34;</span><span class="p">&gt;</span>Download!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><ul>
 <li>Using iframe</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  Button click
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;downloadFileUsingIframe()&#34;</span>&gt;Download&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;invisible&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display:none;&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">Script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadFileUsingIframe</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">iframe</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;invisible&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">iframe</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#34;</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">Script</span>&gt;
-</span></span></code></pre></div><h1 id="download-attribute-solves-evertything-or-does-it">download attribute solves evertything or does it?</h1>
-<p>You may have seen this as a solution for the download problem on many sites. This attribute was added with HTML5. Using it is not straight forward. You might get confused if you start adding it without understanding the limitations. Thats why you see many people in stackoverflow responding to answers suggesting not to use it. I would recommend reading the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">MDN page</a> first.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  Button click
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;downloadFileUsingIframe()&#34;</span><span class="p">&gt;</span>Download<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invisible&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display:none;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">downloadFileUsingIframe</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;invisible&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">iframe</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&#34;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h1 id="download-attribute-solves-evertything-or-does-it">
+  download attribute solves evertything or does it?
+  <a class="heading-link" href="#download-attribute-solves-evertything-or-does-it">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>You may have seen this as a solution for the download problem on many sites. This attribute was added with HTML5. Using it is not straight forward. You might get confused if you start adding it without understanding the limitations. Thats why you see many people in stackoverflow responding to answers suggesting not to use it. I would recommend reading the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"  class="external-link" target="_blank" rel="noopener">MDN page</a> first.</p>
 <p>To summarize here are the pointers from the above page</p>
 <ul>
 <li>download only works for same-origin URLs, or the blob: and data: schemes. - This one is very important. You cannot enable download from a link to a document on some other site from your app. But if the linked file has <code>content-disposition</code> header set to <code>attachment</code>, you don&rsquo;t even need to use this attribute</li>
 <li>The filename is determined by an algorithm that maybe imlemented differently in different browsers</li>
 <li>Another important point is what if <code>content-disposition</code> is <code>inline</code> and you use the download attribute? - In that case again, browsers behave differently. In fact firefox version before 82 prioritize the header rather than the attribute.</li>
 </ul>
-<h1 id="progress-bar-for-downloading-large-files">Progress bar for downloading large files?</h1>
+<h1 id="progress-bar-for-downloading-large-files">
+  Progress bar for downloading large files?
+  <a class="heading-link" href="#progress-bar-for-downloading-large-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Though it might seem trivial, but getting hold of the download process is not possible at all. The download is done by the browser and there is no way to communicate back to the requester(which would be our link in our page) to inform about the download. Whether it failed or was successful.</p>
-<h1 id="creating-files-without-server">Creating files without server</h1>
+<h1 id="creating-files-without-server">
+  Creating files without server
+  <a class="heading-link" href="#creating-files-without-server">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>As we have discussed, handling the file system using javascript can be hazardous. But there are few ways by which we can create files without the need of server. Obviously these are not suitable for the general purpose download but maybe for some unique use-cases these can be an option</p>
 <p>There are a couple of ways to create files</p>
 <ul>
 <li>Using createObjectUrl</li>
 <li>Using data:scheme</li>
 </ul>
-<p>You can create a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">blob</a> on the UI with any data in it. Once you have the blob ready, you can use a static method <code>URL.createObjectUrl()</code> to create a DOMString. Now you can just use this new URL to create new links and simulate a click with download attribute. Since this blob will have the same origin, the download attribute will work and you can save your content as file. Of course, the browser will ask for the permission to save.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;downloadFileWithObjectUrl()&#34;</span>&gt;Using object URL&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadFileWithObjectUrl</span>() {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;</span>)
-</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resp</span> =&gt; <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">blob</span>())
-</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">blob</span> =&gt; {
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">blob</span>);
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>;
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
-</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// the filename you want
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;custom-name&#39;</span>;
-</span></span><span style="display:flex;"><span>          document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">a</span>);
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">click</span>();
-</span></span><span style="display:flex;"><span>          window.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">revokeObjectURL</span>(<span style="color:#a6e22e">url</span>);
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;File download done&#39;</span>);
-</span></span><span style="display:flex;"><span>        })
-</span></span><span style="display:flex;"><span>        .<span style="color:#66d9ef">catch</span>(() =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Error while downloading&#39;</span>));
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">script</span>&gt;
+<p>You can create a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob"  class="external-link" target="_blank" rel="noopener">blob</a> on the UI with any data in it. Once you have the blob ready, you can use a static method <code>URL.createObjectUrl()</code> to create a DOMString. Now you can just use this new URL to create new links and simulate a click with download attribute. Since this blob will have the same origin, the download attribute will work and you can save your content as file. Of course, the browser will ask for the permission to save.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;downloadFileWithObjectUrl()&#34;</span><span class="p">&gt;</span>Using object URL<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">downloadFileWithObjectUrl</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">resp</span> <span class="p">=&gt;</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">blob</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">blob</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">a</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// the filename you want
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">a</span><span class="p">.</span><span class="nx">download</span> <span class="o">=</span> <span class="s1">&#39;custom-name&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">a</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">revokeObjectURL</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;File download done&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="k">catch</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error while downloading&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>You can also achieve the same using the data:scheme. The idea is same - Create a link with download attribute and simulate the click.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  Using data scheme
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;initiateDownloadByData()&#34;</span>&gt;Download by data&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadByData</span>(<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">text</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;href&#39;</span>, <span style="color:#e6db74">&#39;data:text/plain;charset=utf-8,&#39;</span> <span style="color:#f92672">+</span> encodeURIComponent(<span style="color:#a6e22e">text</span>));
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;download&#39;</span>, <span style="color:#a6e22e">filename</span>);
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>;
-</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">element</span>);
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">click</span>();
-</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">element</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initiateDownloadByData</span>() {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">downloadByData</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>,<span style="color:#e6db74">&#34;This is the content of my file :)&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  Using data scheme
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;initiateDownloadByData()&#34;</span><span class="p">&gt;</span>Download by data<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">downloadByData</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">element</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;data:text/plain;charset=utf-8,&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">text</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">element</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;download&#39;</span><span class="p">,</span> <span class="nx">filename</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">element</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">initiateDownloadByData</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">downloadByData</span><span class="p">(</span><span class="s2">&#34;hello.txt&#34;</span><span class="p">,</span><span class="s2">&#34;This is the content of my file :)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>All these js based solutions are merely tricks and should be avoidable for majority of usecases. Unless you are doing something which requires a file to be downloaded on UI. Maybe some configuration user has created on UI and would like to save that. Instead of passing the whole config to server, we can use the above methods to create file locally.</p>
-<h1 id="third-party-options">Third party options</h1>
-<p>Of course being a very tedious task to implement every trick and fall back, there is a third party option available. - <a href="https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js">File Saver.js</a></p>
-<p>But if you look at the source code, essentially it is doing the same thing. Utilizing the download attribute and simlulating click event on a background link. But they have also created a <a href="https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file">quick wiki</a> to help you out identify your use case.</p>
-<p>Another more advanced way is using <a href="https://github.com/jimmywarting/StreamSaver.js">StreamSaver.js</a>. Unfortunately this requires a lot of setup and I was not able to test its efficiency. But you can very well read its <a href="https://github.com/jimmywarting/StreamSaver.js#how-does-it-work">README</a> to understand how it works.</p>
+<h1 id="third-party-options">
+  Third party options
+  <a class="heading-link" href="#third-party-options">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Of course being a very tedious task to implement every trick and fall back, there is a third party option available. - <a href="https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js"  class="external-link" target="_blank" rel="noopener">File Saver.js</a></p>
+<p>But if you look at the source code, essentially it is doing the same thing. Utilizing the download attribute and simlulating click event on a background link. But they have also created a <a href="https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file"  class="external-link" target="_blank" rel="noopener">quick wiki</a> to help you out identify your use case.</p>
+<p>Another more advanced way is using <a href="https://github.com/jimmywarting/StreamSaver.js"  class="external-link" target="_blank" rel="noopener">StreamSaver.js</a>. Unfortunately this requires a lot of setup and I was not able to test its efficiency. But you can very well read its <a href="https://github.com/jimmywarting/StreamSaver.js#how-does-it-work"  class="external-link" target="_blank" rel="noopener">README</a> to understand how it works.</p>
 <p>All mentioned links</p>
-<p><a href="https://html.spec.whatwg.org/multipage/links.html#downloading-resources">HTML spec</a></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">createObjectUrl</a></p>
-<p><a href="https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript">Stackoverflow Question</a></p>
-<p><a href="https://tools.ietf.org/html/rfc6266">content-disposition RFC</a></p>
-<p><a href="https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg">Unsplash photo with content-disposition:attachment</a></p>
-<p><a href="https://unsplash.com/photos/BHrA5cSuDq4/download">Unsplash photo without content-disposition:attachment</a></p>
-<p><a href="https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file">FileSaver quick wiki</a></p>
+<p><a href="https://html.spec.whatwg.org/multipage/links.html#downloading-resources"  class="external-link" target="_blank" rel="noopener">HTML spec</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL"  class="external-link" target="_blank" rel="noopener">createObjectUrl</a></p>
+<p><a href="https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript"  class="external-link" target="_blank" rel="noopener">Stackoverflow Question</a></p>
+<p><a href="https://tools.ietf.org/html/rfc6266"  class="external-link" target="_blank" rel="noopener">content-disposition RFC</a></p>
+<p><a href="https://images.unsplash.com/photo-1594535483297-b23201bee10f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;dl=z00md-BHrA5cSuDq4-unsplash.jpg"  class="external-link" target="_blank" rel="noopener">Unsplash photo with content-disposition:attachment</a></p>
+<p><a href="https://unsplash.com/photos/BHrA5cSuDq4/download"  class="external-link" target="_blank" rel="noopener">Unsplash photo without content-disposition:attachment</a></p>
+<p><a href="https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file"  class="external-link" target="_blank" rel="noopener">FileSaver quick wiki</a></p>
 <p>PS - Most of the above solutions are taken from various posts and stackoverflow answers.</p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/cookies/cookies/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

@@ -1,322 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingHoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.
+Can you guess the output for the below program?Link to headingconsole.log(hoisting); var hoisting = &#34;Its a variable&#34; console.log(hoisting); function hoisting(){ return &#34;Its a function&#34;; } console.log(hoisting); var hoisting = &#34;What is it?&#34; console.log(hoisting); To know the actual answer you can go to the bottom of the post.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingHoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.
+Can you guess the output for the below program?Link to headingconsole.log(hoisting); var hoisting = &#34;Its a variable&#34; console.log(hoisting); function hoisting(){ return &#34;Its a function&#34;; } console.log(hoisting); var hoisting = &#34;What is it?&#34; console.log(hoisting); To know the actual answer you can go to the bottom of the post.">
+
+<meta property="og:url" content="//localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingHoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.
+Can you guess the output for the below program?Link to headingconsole.log(hoisting); var hoisting = &#34;Its a variable&#34; console.log(hoisting); function hoisting(){ return &#34;Its a function&#34;; } console.log(hoisting); var hoisting = &#34;What is it?&#34; console.log(hoisting); To know the actual answer you can go to the bottom of the post.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Hoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.
-Can you guess the output for the below program? console.log(hoisting); var hoisting = &#34;Its a variable&#34; console.log(hoisting); function hoisting(){ return &#34;Its a function&#34;; } console.log(hoisting); var hoisting = &#34;What is it?&#34; console.log(hoisting); To know the actual answer you can go to the bottom of the post." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              9-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Hoisting is an advanced and difficult to understand concept of Javascript. It becomes more challenging to follow when you deal with multiple scopes and declarations.</p>
-<h1 id="can-you-guess-the-output-for-the-below-program">Can you guess the output for the below program?</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">hoisting</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hoisting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Its a variable&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">hoisting</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hoisting</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Its a function&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">hoisting</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hoisting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;What is it?&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">hoisting</span>);
+<h1 id="can-you-guess-the-output-for-the-below-program">
+  Can you guess the output for the below program?
+  <a class="heading-link" href="#can-you-guess-the-output-for-the-below-program">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hoisting</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">hoisting</span> <span class="o">=</span> <span class="s2">&#34;Its a variable&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hoisting</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">hoisting</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;Its a function&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hoisting</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">hoisting</span> <span class="o">=</span> <span class="s2">&#34;What is it?&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hoisting</span><span class="p">);</span>
 </span></span></code></pre></div><p>To know the actual answer you can go to the bottom of the post. If you are starting with javascript and cannot digest the answer, this post is for you.</p>
 <p>To start with, hoisting is defined by the dictionary as <em>Hoisting to raise or lift, especially by some mechanical appliance</em> which basically means <em>to move up</em>.</p>
 <p><code>Hoisting</code> is JavaScript&rsquo;s default behavior of moving declarations to the top.*</p>
 <blockquote>
 <p>w3schools.com</p>
 </blockquote>
-<h1 id="why-do-you-need-to-move">Why do you need to move?</h1>
+<h1 id="why-do-you-need-to-move">
+  Why do you need to move?
+  <a class="heading-link" href="#why-do-you-need-to-move">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Lets start with simplest example. Fire up your devtools and type in the below line.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Uncaught ReferenceError: someRandomName is not defined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someRandomName</span>); 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Uncaught ReferenceError: someRandomName is not defined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">someRandomName</span><span class="p">);</span> 
 </span></span></code></pre></div><p>In the above case you will get an error while in the below example you will get <code>undefined</code> as return value.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someRandomName</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">someRandomName</span>;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">someRandomName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">someRandomName</span><span class="p">;</span>
 </span></span></code></pre></div><p>For somebody who is starting to learn JS, this is just totally illogical. At first glance you will say &ldquo;ah.. declarations are given priority&rdquo;. Great. But then if you run the below example, your start losing trust.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someRandomName</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">someRandomName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Are you trying to find logic here?&#34;</span>;
-</span></span></code></pre></div><h1 id="whats-wrong">Whats wrong?</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">someRandomName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">someRandomName</span> <span class="o">=</span> <span class="s2">&#34;Are you trying to find logic here?&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h1 id="whats-wrong">
+  Whats wrong?
+  <a class="heading-link" href="#whats-wrong">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Before I explain what hoisting is, you need to unlearn the definition that you have been fed from various sources - Hoisting is <em>not</em> moving the variable declarations to the top. Though once you understand the concept, you would probably agree to the definition. But the problem is when you haven&rsquo;t yet understood, the definition brings more confusion rather than clarity.</p>
-<h1 id="javascript-is-interpreted-languange">Javascript is interpreted languange?</h1>
-<p>Its <a href="https://softwareengineering.stackexchange.com/questions/138521/is-javascript-interpreted-by-design">debatable</a>, but the simple answer is - its <strong>NOT</strong>. Javascript is also not a typical compiled language. It lies somewhere in  between.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Before :&#34;</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;In between :&#34;</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;After :&#34;</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Before</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> <span style="color:#66d9ef">undefined</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">In</span> <span style="color:#a6e22e">between</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">undefined</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>
-</span></span></code></pre></div><h1 id="what-is-it-then">What is it then?</h1>
+<h1 id="javascript-is-interpreted-languange">
+  Javascript is interpreted languange?
+  <a class="heading-link" href="#javascript-is-interpreted-languange">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Its <a href="https://softwareengineering.stackexchange.com/questions/138521/is-javascript-interpreted-by-design"  class="external-link" target="_blank" rel="noopener">debatable</a>, but the simple answer is - its <strong>NOT</strong>. Javascript is also not a typical compiled language. It lies somewhere in  between.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Before :&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;In between :&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">y</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;After :&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Before</span> <span class="o">:</span> <span class="kc">undefined</span> <span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="nx">In</span> <span class="nx">between</span> <span class="o">:</span> <span class="mi">1</span> <span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="nx">After</span> <span class="o">:</span> <span class="mi">1</span> <span class="mi">2</span>
+</span></span></code></pre></div><h1 id="what-is-it-then">
+  What is it then?
+  <a class="heading-link" href="#what-is-it-then">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>When you supply the script to the js engine, which in most cases would be a browser, it would first parse your script. It will read your script line by line and find out all the declarations made in the scope. Remember it only looks for declarations in the current scope. So by default when it loads the script, it only looks in the global scope.</p>
-<h1 id="what-all-it-looks-for">What all it looks for?</h1>
+<h1 id="what-all-it-looks-for">
+  What all it looks for?
+  <a class="heading-link" href="#what-all-it-looks-for">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>The parser would look for all <code>var</code> and <code>function</code> declarations. With ES6, it will also look for <code>const</code> and <code>let</code>. But its mostly the same approach except one edge case which we shall cover in a minute. A simple statement like <code>var x=6</code> has two parts -</p>
 <ul>
 <li>declaration - <code>var x</code></li>
@@ -325,59 +283,83 @@ Can you guess the output for the below program? console.log(hoisting); var hoist
 <p>Only the declarations are read, assignments are <em>NOT</em>. Assignments are just statements which will be run only in the second stage.</p>
 <p>Once all the declarations are identified, the parser keeps a note in memory and asks the engine to start executing the same script line by line. So basically the same code is read twice. Though it will not be technically correct, we can say the first pass is compilation and the second pass is execution of the same code. In traditional compiled languages, compiled version of the original code is executed.</p>
 <p>Thats why it doesn&rsquo;t matter where you declare the variable or function. If there is any <code>var</code> anywhere, it will be registered as declared without a value which by default is represented by <code>undefined</code>. But if its a function, the function definition also becomes a part of declaration and is stored at the same time.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Move it&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span><span class="o">=</span><span class="s2">&#34;Move it&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 </span></span></code></pre></div><p>Above code can also be represented as below snippet. Many tutorials/articles say that above code gets translated into the below code. That does not happen. This is just an illustration. The parser does not alter/modify your code. <strong>Its just how the code is read two times which makes you feel as if the declarations moved from their original location in the code to the top of the function.</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Move it&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</span></span></code></pre></div><h1 id="got-it">Got it?</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;Move it&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span></code></pre></div><h1 id="got-it">
+  Got it?
+  <a class="heading-link" href="#got-it">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Now that you understand how a script is read and parsed, its time for another confusion</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is a function.&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Are you kidding!&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;This is a function.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s2">&#34;Are you kidding!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
 </span></span></code></pre></div><p>As per our understanding till now, the above code should output as below</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">undefined</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Are</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">kidding</span><span style="color:#f92672">!</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Are</span> <span class="nx">you</span> <span class="nx">kidding</span><span class="o">!</span>
 </span></span></code></pre></div><p>Instead you will get the below output</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">ƒ</span> <span style="color:#a6e22e">foo</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is a function.&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Are</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">kidding</span><span style="color:#f92672">!</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">ƒ</span> <span class="nx">foo</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;This is a function.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Are</span> <span class="nx">you</span> <span class="nx">kidding</span><span class="o">!</span>
 </span></span></code></pre></div><p>In the first parse, the engine will identify that there is a <code>foo</code> function declaration, so it assigns an identifier and also associates a function definition to it. Remember function <em>declarations</em> are read differently than <em>assignments</em> as mentioned earlier.</p>
 <p>On encountering the second declaration for the same keyword <code>foo</code>, the engine should override the previously identified function right? But that doesn&rsquo;t happen. Function declarations are always given priority over var declarations. It doesn&rsquo;t matter how many times you write var, after the first parse, only function declaration will be kept.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span>  <span style="color:#ae81ff">56</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">99</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bar</span>(){ <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Function is high priority&#34;</span>;}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Assign some string&#34;</span>;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span>  <span class="mi">56</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">bar</span><span class="p">(){</span> <span class="k">return</span> <span class="s2">&#34;Function is high priority&#34;</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s2">&#34;Assign some string&#34;</span><span class="p">;</span>
 </span></span></code></pre></div><p>But what about this case? Multiple function declarations with same name. This time your intuition is right. The last one is taken into account.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>()
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;First one&#34;</span>);}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>()
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Again!&#34;</span>);}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>()
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Not again!&#34;</span>);}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>()
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Not</span> <span style="color:#a6e22e">again</span><span style="color:#f92672">!</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Not</span> <span style="color:#a6e22e">again</span><span style="color:#f92672">!</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Not</span> <span style="color:#a6e22e">again</span><span style="color:#f92672">!</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Not</span> <span style="color:#a6e22e">again</span><span style="color:#f92672">!</span>
-</span></span></code></pre></div><h1 id="is-there-any-other-catch">Is there any other catch?</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;First one&#34;</span><span class="p">);}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Again!&#34;</span><span class="p">);}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Not again!&#34;</span><span class="p">);}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Not</span> <span class="nx">again</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Not</span> <span class="nx">again</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Not</span> <span class="nx">again</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Not</span> <span class="nx">again</span><span class="o">!</span>
+</span></span></code></pre></div><h1 id="is-there-any-other-catch">
+  Is there any other catch?
+  <a class="heading-link" href="#is-there-any-other-catch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p><strong>let</strong> there be. When you ask what is the difference between let and var, a common accepted answer is - <code>let/const</code> declarations are not hoisted. Consider the below example. If we go by the accepted answer, <code>let</code> declaration will be ignored in the first parse. In the execution phase, line#1 should create a global variable and assign a string &ldquo;Gotcha!&rdquo; to it. And then of course, it would print that value and on line#3 there will be a new local block scoped variable created and assigned a value &ldquo;Bad karma!&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Gotcha!&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bad karma!&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">foo</span> <span class="o">=</span> <span class="s2">&#34;Gotcha!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s2">&#34;Bad karma!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
 </span></span></code></pre></div><p>But if you run the code in a fresh window, you will see that it gives an error. A special kind of error.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Uncaught</span> <span style="color:#a6e22e">ReferenceError</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Cannot</span> <span style="color:#a6e22e">access</span> <span style="color:#e6db74">&#39;foo&#39;</span> <span style="color:#a6e22e">before</span> <span style="color:#a6e22e">initialization</span>
-</span></span></code></pre></div><h2 id="it-turns-out-that-letconst-declarations-are-also-hoisted-but-assigning-values-to-them-is-restricted-until-the-line-where-the-declaration-is-made-gets-executed">It turns out that <code>let/const</code> declarations are also hoisted but assigning values to them is <em>restricted</em> until the line where the declaration is made, gets executed.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Uncaught</span> <span class="nx">ReferenceError</span><span class="o">:</span> <span class="nx">Cannot</span> <span class="nx">access</span> <span class="s1">&#39;foo&#39;</span> <span class="nx">before</span> <span class="nx">initialization</span>
+</span></span></code></pre></div><h2 id="it-turns-out-that-letconst-declarations-are-also-hoisted-but-assigning-values-to-them-is-restricted-until-the-line-where-the-declaration-is-made-gets-executed">
+  It turns out that <code>let/const</code> declarations are also hoisted but assigning values to them is <em>restricted</em> until the line where the declaration is made, gets executed.
+  <a class="heading-link" href="#it-turns-out-that-letconst-declarations-are-also-hoisted-but-assigning-values-to-them-is-restricted-until-the-line-where-the-declaration-is-made-gets-executed">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>The above phoenomenon is called as Temporal Dead Zone. And is only applicable to <code>let/const</code> block scoped variables.</p>
-<h1 id="but-why-god-why">But why god why?</h1>
+<h1 id="but-why-god-why">
+  But why god why?
+  <a class="heading-link" href="#but-why-god-why">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Now that we know what hoisting is, we shall also dig into - Why its there?</p>
 <ul>
 <li>Whats the purpose of having such a confusing feature?</li>
@@ -389,116 +371,154 @@ Can you guess the output for the below program? console.log(hoisting); var hoist
 <p>Javascript was for content writers. NOT programmers.</p>
 </blockquote>
 <p>When Brendan was asked to come up with a scripting language, the whole idea was to give some control to the HTML creators so that they can create simple actions on the client side. You must have seen code like this on legacy products</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;showUserData()&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;getdata&#34;</span>&gt;Show User Details&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showUserData</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// update the DOM to show user data on screen.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#34;showUserData()&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;getdata&#34;</span><span class="p">&gt;</span>Show User Details<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">showUserData</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// update the DOM to show user data on screen.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div><p>The function <code>showUserData</code> just toggles some div on the UI. This function can be called from many places, and not just the click event. Some other event can also trigger this function. To make it simple for the creators where they should not worry about defining the variables and functions before using them, Brendon might have come up with this approach.</p>
 <p>This method would have made sense at that time when scripts were like 100-200 lines. Only a small set of functions to manage which can be used anywhere in the script as well as html easily.</p>
 <p>But slowly <code>JS</code> started to grow because of the endless possibilities and the rich interactions it provided which <code>HTML</code> was unable to offer. We started writing scripts with 1000 lines of code and of course imposing practices from other languages which do not fit with the JS design, we have the end result where every thing which was a feature at some point of time is now considered a bad design.</p>
 <p>Nevertheless, if you understand the base concept, it becomes easy to program and helps in understanding other&rsquo;s code as well.</p>
-<h1 id="further-reading">Further reading</h1>
+<h1 id="further-reading">
+  Further reading
+  <a class="heading-link" href="#further-reading">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <ul>
 <li>
-<p>A good article about TDZ can be found at <a href="http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified">jsrocks.org</a></p>
+<p>A good article about TDZ can be found at <a href="http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified"  class="external-link" target="_blank" rel="noopener">jsrocks.org</a></p>
 </li>
 <li>
 <p>Another excellent in-depth read about hoisting-
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch5.md#chapter-5-the-not-so-secret-lifecycle-of-variables">https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch5.md#chapter-5-the-not-so-secret-lifecycle-of-variables</a></p>
+<a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch5.md#chapter-5-the-not-so-secret-lifecycle-of-variables"  class="external-link" target="_blank" rel="noopener">https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch5.md#chapter-5-the-not-so-secret-lifecycle-of-variables</a></p>
 </li>
 <li>
-<p>Some more gotcha moments here on Axel&rsquo;s blog - <a href="https://2ality.com/2015/10/why-tdz.html">https://2ality.com/2015/10/why-tdz.html</a></p>
+<p>Some more gotcha moments here on Axel&rsquo;s blog - <a href="https://2ality.com/2015/10/why-tdz.html"  class="external-link" target="_blank" rel="noopener">https://2ality.com/2015/10/why-tdz.html</a></p>
 </li>
 </ul>
-<h1 id="output-of-the-code-at-the-top-of-the-article">Output of the code at the top of the article</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Answer to the code sample on the top of the page
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">ƒ</span> <span style="color:#a6e22e">hoisting</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Its a function&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Its</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">variable</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Its</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">variable</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">What</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">it</span><span style="color:#f92672">?</span>
+<h1 id="output-of-the-code-at-the-top-of-the-article">
+  Output of the code at the top of the article
+  <a class="heading-link" href="#output-of-the-code-at-the-top-of-the-article">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Answer to the code sample on the top of the page
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">ƒ</span> <span class="nx">hoisting</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;Its a function&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Its</span> <span class="nx">a</span> <span class="nx">variable</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Its</span> <span class="nx">a</span> <span class="nx">variable</span>
+</span></span><span class="line"><span class="cl"><span class="nx">What</span> <span class="nx">is</span> <span class="nx">it</span><span class="o">?</span>
 </span></span></code></pre></div><p>** Update 07 March 2024 **
-While browsing the internet I stumbled upon one SO question <a href="https://stackoverflow.com/questions/15005098/why-does-javascript-hoist-variables">https://stackoverflow.com/questions/15005098/why-does-javascript-hoist-variables</a> which refered to a couple of tweets by <a href="https://twitter.com/BrendanEich">@BrendonEich </a></p>
+While browsing the internet I stumbled upon one SO question <a href="https://stackoverflow.com/questions/15005098/why-does-javascript-hoist-variables"  class="external-link" target="_blank" rel="noopener">https://stackoverflow.com/questions/15005098/why-does-javascript-hoist-variables</a> which refered to a couple of tweets by <a href="https://twitter.com/BrendanEich"  class="external-link" target="_blank" rel="noopener">@BrendonEich </a></p>
 <ul>
-<li><a href="https://twitter.com/BrendanEich/status/522395336615428097">https://twitter.com/BrendanEich/status/522395336615428097</a></li>
-<li><a href="https://twitter.com/BrendanEich/status/522394590301933568">https://twitter.com/BrendanEich/status/522394590301933568</a></li>
+<li><a href="https://twitter.com/BrendanEich/status/522395336615428097"  class="external-link" target="_blank" rel="noopener">https://twitter.com/BrendanEich/status/522395336615428097</a></li>
+<li><a href="https://twitter.com/BrendanEich/status/522394590301933568"  class="external-link" target="_blank" rel="noopener">https://twitter.com/BrendanEich/status/522394590301933568</a></li>
 </ul>
 <p>Essentially what he wants to say is</p>
 <ul>
 <li>Functions were intentionally hoisted while <code>var</code> was an unintentional behaviour. The reasons that he gives are
 <ul>
-<li><code>let rec</code> for free - It refers to some concept that exists in <a href="https://docs.racket-lang.org/reference/let.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._letrec%29%29">scheme language</a> and I believe some of the inspiration for JS came from scheme</li>
+<li><code>let rec</code> for free - It refers to some concept that exists in <a href="https://docs.racket-lang.org/reference/let.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._letrec%29%29"  class="external-link" target="_blank" rel="noopener">scheme language</a> and I believe some of the inspiration for JS came from scheme</li>
 <li><code>top down decomposition</code> - Didn&rsquo;t give much insights into it, but I guess it could be because he wanted to somehow get the top functions in the script first. Maybe for attaching the listeners to the DOM?</li>
 <li><code>call before declare</code> - Again not clear why it would be needed, but I suppose it also boils down to the same reason. You would want to associate the functions with the DOM as and when you see them in the DOM attributes like <code>onclick</code>. So that it doesn&rsquo;t matter whether you keep your script at the top or bottom of the page.</li>
 </ul>
 </li>
 </ul>
-<p>So the confusion I mentioned above in the [Got it](<a href="https://cybercafe.dev/understanding-javascript-hoisting/#gotit">https://cybercafe.dev/understanding-javascript-hoisting/#gotit</a> section actually is kind of a bug in the language. Maybe in later versions it should have been fixed, but to prevent the internet from going down, they kept it and now we are facing the consequences of that.</p>
+<p>So the confusion I mentioned above in the [Got it](<a href="https://cybercafe.dev/understanding-javascript-hoisting/#gotit"  class="external-link" target="_blank" rel="noopener">https://cybercafe.dev/understanding-javascript-hoisting/#gotit</a> section actually is kind of a bug in the language. Maybe in later versions it should have been fixed, but to prevent the internet from going down, they kept it and now we are facing the consequences of that.</p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/understanding-iife/understanding-iife/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/using-svg-in-react/using-svg-in-react/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

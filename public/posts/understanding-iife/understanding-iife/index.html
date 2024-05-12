@@ -1,291 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
-
-  
-  
-  
-  
-  <meta name="description" content="Excerpt IIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingIIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.
 An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
 MDN
-If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined." />
-  <meta name="author" content="amt8u" />
-  
+If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingIIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+MDN
+If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined.">
+
+<meta property="og:url" content="//localhost:1313/posts/understanding-iife/understanding-iife/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingIIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+MDN
+If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+
+
+
+<link rel="canonical" href="//localhost:1313/posts/understanding-iife/understanding-iife/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
 
   
   
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/understanding-iife/understanding-iife/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              14-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>IIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.</p>
-<p><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2000&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" alt="Feature Image"></p>
+<p><img alt="Feature Image" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ"></p>
 <p>An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
 <blockquote>
 <p>MDN</p>
 </blockquote>
 <p>If we take the above definition into account then what about the below scenario? We are running a function as soon as it is defined. There is no statement between the definition and the call. Does that make an IIFE?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printGreeting</span>(<span style="color:#a6e22e">x</span>){
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printGreeting</span>(<span style="color:#e6db74">&#34;Baby&#34;</span>); <span style="color:#75715e">// prints Hello Baby
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">printGreeting</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello &#34;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">printGreeting</span><span class="p">(</span><span class="s2">&#34;Baby&#34;</span><span class="p">);</span> <span class="c1">// prints Hello Baby
 </span></span></span></code></pre></div><p>The first <code>I</code> in <em>IIFE</em> stands for <code>immediately</code> but it does not signifies that immediately running a function makes the function an IIFE. I am also intrigued by the use case everybody uses in their tutorials - <em>If you want to write a function and call it immediately</em>. Did you ever come across such a scenario? Functions are there for a purpose. They give you the power of <strong>reusability</strong>. If you write a function that means you want to re-use it.</p>
 <p>In this article I shall try to explain the practical use case of IIFEs and where they fit in our day to day development. I have read almost all the articles which appear on the first page of google on searching for <code>IIFE</code>. I have watched many videos on youtube explaining IIFE. And it turns out that each of them fails to explain the idea behind IIFE and its use case.</p>
 <p>IIFEs are hard to grasp because it requires a deep understanding of other Javascript concepts. You need to know below items before you can start appreciating IIFEs.</p>
@@ -301,92 +227,104 @@ If we take the above definition into account then what about the below scenario?
 <li>Javascript&rsquo;s non-modular architecture(Prior to ES6 Modules)</li>
 </ul>
 <p>Almost everyone focuses on the scope created by the IIFE. Though in reality its about the parent scope. We shall learn every bit in a minute. Web is filled with contrived examples like below which work but miss the point of having an IIFE.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Logs &#39;10&#39; ten times because of closure
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Creates a timeout for each iteration with a new function 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// but all the new functions have closure on &#39;i&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// all functions refer to the same value of &#39;i&#39; after 1 second of timeout
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>	}, <span style="color:#ae81ff">1000</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Logs &#39;10&#39; ten times because of closure
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Creates a timeout for each iteration with a new function 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// but all the new functions have closure on &#39;i&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// all functions refer to the same value of &#39;i&#39; after 1 second of timeout
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>A common way to solve the above problem is to add an IIFE to the code.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Logs numbers from 0 to 10
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// IIFE creates new function for each iteration
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">x</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// x now keeps a local copy of i for each iteration
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// remember that if you use &#39;i&#39; here, you will still have the same problem
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// as the function will have closure on parent scope
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    	<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
-</span></span><span style="display:flex;"><span>        	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</span></span><span style="display:flex;"><span>		}, <span style="color:#ae81ff">1000</span>)
-</span></span><span style="display:flex;"><span>	})(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Logs numbers from 0 to 10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// IIFE creates new function for each iteration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// x now keeps a local copy of i for each iteration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// remember that if you use &#39;i&#39; here, you will still have the same problem
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// as the function will have closure on parent scope
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    	<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">})(</span><span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>This works but its not because of IIFE. You can achieve it using regular functions also. All you need to do is to remove the closure of <code>i</code> so that the setTimeout function gets a different value each time.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Logs numbers from 0 to 10
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// declare a function for each iteration
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">customPrint</span>(<span style="color:#a6e22e">x</span>){
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// x now keeps a local value of i for each iteration
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// this gets rid of the closure on i
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 		<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>        	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);
-</span></span><span style="display:flex;"><span>		}, <span style="color:#ae81ff">1000</span>)
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// call the function with current value of i
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">customPrint</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Logs numbers from 0 to 10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// declare a function for each iteration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">customPrint</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// x now keeps a local value of i for each iteration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// this gets rid of the closure on i
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> 		<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// call the function with current value of i
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">customPrint</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Similarly there are number of articles which talk about other things like advantage of having a private scope with IIFE. Yes, that is true but its just that all those advantages are just because == every IIFE is a function ==.</p>
 <p>Another improper representation of iife</p>
-<p><img src="https://cybercafe.dev/content/images/2020/08/Medium.png" alt="Medium"></p>
+<p><img alt="Medium" src="https://cybercafe.dev/content/images/2020/08/Medium.png"></p>
 <p>My intention is not to ridicule but you can see that almost 3k people liked the above post. They all are now mis-informed that the whole purpose of IIFE is to protect its scope and variables in it. When I started learning javascript and encountered IIFE first time, the question that came to my mind is what Michael asked on this post.</p>
-<p><img src="https://cybercafe.dev/content/images/2020/08/medium_question-1.png" alt="Ultimate question about iife"></p>
-<p>Apparently, there is only a single post from the hundreds which actually explains IIFE in its entirety with purpose and usefulness. And surprisingly its from 2010 by <a href="https://www.linkedin.com/in/benalman/">Bel Alman</a>. Do check it out. It even gives an intro why we call this concept as IIFE.</p>
-<p><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">http://benalman.com/news/2010/11/immediately-invoked-function-expression/</a></p>
-<h1 id="the-need">The Need</h1>
+<p><img alt="Ultimate question about iife" src="https://cybercafe.dev/content/images/2020/08/medium_question-1.png"></p>
+<p>Apparently, there is only a single post from the hundreds which actually explains IIFE in its entirety with purpose and usefulness. And surprisingly its from 2010 by <a href="https://www.linkedin.com/in/benalman/"  class="external-link" target="_blank" rel="noopener">Bel Alman</a>. Do check it out. It even gives an intro why we call this concept as IIFE.</p>
+<p><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/"  class="external-link" target="_blank" rel="noopener">http://benalman.com/news/2010/11/immediately-invoked-function-expression/</a></p>
+<h1 id="the-need">
+  The Need
+  <a class="heading-link" href="#the-need">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Libraries like Jquery need to instantiate only once and return a variable like <code>$</code> or <code>jquery</code> to the global scope, they need a mechanism for this. And before ES6 it was only possible with IIFEs. We will go in-depth in a minute.</p>
 <p>With ES6 modules you no longer need IIFEs for the most part. Thus they were mostly reserved for library creators or framework architects. As an application developer you would not use IIFE in your day to day work.</p>
-<h1 id="the-scope-dilemma">The Scope dilemma</h1>
+<h1 id="the-scope-dilemma">
+  The Scope dilemma
+  <a class="heading-link" href="#the-scope-dilemma">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>One aspect that I think everybody gets wrong about IIFE is the clause - <code>prevents global scope pollution</code>. Though its true but it does not gives you the differentiating factor. There are several caveats attached to it.</p>
 <p>Lets understand the whole scope pollution thing in detail. Every where its mentioned that <code>any variable declared inside an IIFE is local to it and does not pollute the global scope</code>.</p>
 <p>The statement is factually correct <em>BUT</em> remember that every <strong>IIFE</strong> is just another function. So as a result anything declared inside an <strong>IIFE</strong> will be available only inside the function body and will not be visible outside thereby preventing the outside scope to get modified. There is nothing special here. Every function has the same characteristic.</p>
 <p><em>Thats the whole purpose of having functions in a language.</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Regular function
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">regularFunction</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>; <span style="color:#75715e">// a is visible only within the function
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">regularFunction</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// IIFE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span> (){
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>; <span style="color:#75715e">// a is visible only within the function
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>);
-</span></span><span style="display:flex;"><span>})()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Regular function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">regularFunction</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// a is visible only within the function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">*</span><span class="nx">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">regularFunction</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// IIFE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(</span><span class="kd">function</span> <span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// a is visible only within the function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">*</span><span class="nx">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})()</span>
 </span></span></code></pre></div><p>In fact you can accidentally create global variables in IIFE just how you would do in a regular function. Thereby modifying(you can say polluting) the parent scope.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">accident</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">someTypo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">43</span>; <span style="color:#75715e">// accidentally create a global variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">accident</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// IIFE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(){
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">someType</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">43</span>; <span style="color:#75715e">// accidentally create a global variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>})()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">accident</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">someTypo</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">// accidentally create a global variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">accident</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// IIFE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">someType</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">// accidentally create a global variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})()</span>
 </span></span></code></pre></div><p>You can also modify the parent scope with arguments just as what you can do with normal functions.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">accident</span>(<span style="color:#a6e22e">win</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;What are you doing?&#34;</span>; <span style="color:#75715e">// overriding window.$ with a string
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">accident</span>(window);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">$</span>); <span style="color:#75715e">// $ is now just a string
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// IIFE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">win</span>){
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;What are you doing?&#34;</span>; <span style="color:#75715e">// overriding window.$ with a string
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>})(window)
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">$</span>); <span style="color:#75715e">// $ is now just a string
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">accident</span><span class="p">(</span><span class="nx">win</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">win</span><span class="p">.</span><span class="nx">$</span> <span class="o">=</span> <span class="s2">&#34;What are you doing?&#34;</span><span class="p">;</span> <span class="c1">// overriding window.$ with a string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">accident</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">);</span> <span class="c1">// $ is now just a string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// IIFE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">win</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">win</span><span class="p">.</span><span class="nx">$</span> <span class="o">=</span> <span class="s2">&#34;What are you doing?&#34;</span><span class="p">;</span> <span class="c1">// overriding window.$ with a string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})(</span><span class="nb">window</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">);</span> <span class="c1">// $ is now just a string
 </span></span></span></code></pre></div><p>Remember IIFEs are just functions. So everything that is applicable to functions is valid for IIFEs. Then what&rsquo;s the fuss?</p>
 <p>##Its all in the name</p>
 <p>There are two ways to declare new functions in javascript.</p>
@@ -395,254 +333,304 @@ If we take the above definition into account then what about the below scenario?
 <li>Function expression</li>
 </ul>
 <p>In the declaration you are creating a function named loadData which will be available in the parent scope. The parent scope could be global or it could be another function scope.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// loadData is defined at this point because of function hoisting
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">loadData</span>) <span style="color:#75715e">// logs function body
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadData</span>(<span style="color:#a6e22e">id</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ... some code
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// loadData is defined at this point
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">loadData</span>) <span style="color:#75715e">// logs function body
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// identifier available in parent scope
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">loadData</span>(<span style="color:#ae81ff">1234</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// loadData is defined at this point because of function hoisting
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">loadData</span><span class="p">)</span> <span class="c1">// logs function body
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">loadData</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ... some code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// loadData is defined at this point
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">loadData</span><span class="p">)</span> <span class="c1">// logs function body
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// identifier available in parent scope
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">loadData</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span>
 </span></span></code></pre></div><p>In the expression, its slightly different, but still you are creating a variable named <code>loadData</code> in the parent scope. The only difference is that the value of the variable will be a function and will only be assigned to the variable after the assignment statement executes.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// loadData is undefined at this point because of variable hoisting
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">loadData</span>) <span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loadData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">id</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ... some code
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// loadData is now defined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">loadData</span>) <span style="color:#75715e">// logs the function body
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// identifier available in parent scope
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">loadData</span>(<span style="color:#ae81ff">1234</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// loadData is undefined at this point because of variable hoisting
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">loadData</span><span class="p">)</span> <span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">loadData</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ... some code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// loadData is now defined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">loadData</span><span class="p">)</span> <span class="c1">// logs the function body
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// identifier available in parent scope
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">loadData</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span>
 </span></span></code></pre></div><p>As you can see in both of them, you are eventually creating an identifier <code>loadData</code> in the parent scope. In essence whatever you do, you would have to ultimately modify(you can say pollute) the parent scope to run your code.</p>
 <p>This is where IIFE comes into picture. IIFE gives you the power to run code without modifying the parent scope. And this is the only thing that makes it different from regular functions. Everything else is just a side-effect of being a function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// parent scope before IIFE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">id</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ... some code
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>})(<span style="color:#ae81ff">1234</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// parent scope after IIFE remains as it is 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// parent scope before IIFE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ... some code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})(</span><span class="mi">1234</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// parent scope after IIFE remains as it is 
 </span></span></span></code></pre></div><p>Any other characteristic is just an utility of IIFE. For example its said that if you want to run some code exactly once, you should use IIFE. <em>No. You don&rsquo;t need to use IIFE.</em> You can always write your code within a function(which makes it modular) and just call it once in your application.</p>
 <p>Unless you are creating a library or creating a module, 99% of the time you would not need an IIFE. You could, but you should not!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// declare your function anywhere
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setupPageWidth</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#main&#34;</span>).<span style="color:#a6e22e">style</span>({<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;800px&#34;</span>});
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// run this once in your project
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">setupPageWidth</span>();
-</span></span></code></pre></div><h1 id="practical-use-case-of-iife">Practical use case of IIFE</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// declare your function anywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">setupPageWidth</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#main&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">({</span><span class="nx">width</span><span class="o">:</span> <span class="s2">&#34;800px&#34;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// run this once in your project
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setupPageWidth</span><span class="p">();</span>
+</span></span></code></pre></div><h1 id="practical-use-case-of-iife">
+  Practical use case of IIFE
+  <a class="heading-link" href="#practical-use-case-of-iife">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Jquery uses IIFE to instantiate itself. Remember that jquery does modify the parent scope but it does so without adding any function identifier. Depending on whether you are using the <code>noConflict</code> flag, jquery will add <code>$</code> or <code>jquery</code> to the window object.</p>
 <p>Below is the trimmed down version of jquery.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/*!
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * jQuery JavaScript Library v3.5.1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * https://jquery.com/
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Includes Sizzle.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * https://sizzlejs.com/
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Copyright JS Foundation and other contributors
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Released under the MIT license
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * https://jquery.org/license
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Date: 2020-05-04T22:49Z
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span>( <span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">global</span>, <span style="color:#a6e22e">factory</span> ) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;use strict&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> ( <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">module</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;object&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;object&#34;</span> ) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// For CommonJS and CommonJS-like environments where a proper `window`
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// is present, execute the factory and get jQuery.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// For environments that do not have a `window` with a `document`
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// (such as Node.js), expose a factory as module.exports.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// This accentuates the need for the creation of a real `window`.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// e.g. var jQuery = require(&#34;jquery&#34;)(window);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// See ticket #14549 for more info.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">global</span>.document <span style="color:#f92672">?</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">factory</span>( <span style="color:#a6e22e">global</span>, <span style="color:#66d9ef">true</span> ) <span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">w</span> ) {
-</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">w</span>.document ) {
-</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error( <span style="color:#e6db74">&#34;jQuery requires a window with a document&#34;</span> );
-</span></span><span style="display:flex;"><span>				}
-</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">factory</span>( <span style="color:#a6e22e">w</span> );
-</span></span><span style="display:flex;"><span>			};
-</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">factory</span>( <span style="color:#a6e22e">global</span> );
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Pass this if window is not defined yet
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} )( <span style="color:#66d9ef">typeof</span> window <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;undefined&#34;</span> <span style="color:#f92672">?</span> window <span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>, <span style="color:#66d9ef">function</span>(window, <span style="color:#a6e22e">noGlobal</span>){} );
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/*!
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * jQuery JavaScript Library v3.5.1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * https://jquery.com/
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Includes Sizzle.js
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * https://sizzlejs.com/
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright JS Foundation and other contributors
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Released under the MIT license
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * https://jquery.org/license
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Date: 2020-05-04T22:49Z
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">global</span><span class="p">,</span> <span class="nx">factory</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;use strict&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">module</span> <span class="o">===</span> <span class="s2">&#34;object&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">===</span> <span class="s2">&#34;object&#34;</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// For CommonJS and CommonJS-like environments where a proper `window`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// is present, execute the factory and get jQuery.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// For environments that do not have a `window` with a `document`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// (such as Node.js), expose a factory as module.exports.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// This accentuates the need for the creation of a real `window`.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// e.g. var jQuery = require(&#34;jquery&#34;)(window);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// See ticket #14549 for more info.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">global</span><span class="p">.</span><span class="nb">document</span> <span class="o">?</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">factory</span><span class="p">(</span> <span class="nx">global</span><span class="p">,</span> <span class="kc">true</span> <span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="cl">			<span class="kd">function</span><span class="p">(</span> <span class="nx">w</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">w</span><span class="p">.</span><span class="nb">document</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span> <span class="s2">&#34;jQuery requires a window with a document&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="k">return</span> <span class="nx">factory</span><span class="p">(</span> <span class="nx">w</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">};</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">factory</span><span class="p">(</span> <span class="nx">global</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Pass this if window is not defined yet
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="p">)(</span> <span class="k">typeof</span> <span class="nb">window</span> <span class="o">!==</span> <span class="s2">&#34;undefined&#34;</span> <span class="o">?</span> <span class="nb">window</span> <span class="o">:</span> <span class="k">this</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="nx">noGlobal</span><span class="p">){}</span> <span class="p">);</span>
 </span></span></code></pre></div><p>You can see that jquery covers all its code inside an IIFE. In the parameters it passes the window object and the factory function. The factory function itself is an anonymous function expression but within jquery code it is referred to as variable <code>factory</code>.</p>
 <p>After removing the comments it becomes easier to identify the IIFE.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>( <span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">global</span>, <span style="color:#a6e22e">factory</span> ) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">factory</span>( <span style="color:#a6e22e">global</span> ); <span style="color:#75715e">// Add jquery to global object
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} )( <span style="color:#a6e22e">global</span>, <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">factory</span>(window, <span style="color:#a6e22e">noGlobal</span>){} );
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">global</span><span class="p">,</span> <span class="nx">factory</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">factory</span><span class="p">(</span> <span class="nx">global</span> <span class="p">);</span> <span class="c1">// Add jquery to global object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="p">)(</span> <span class="nx">global</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">factory</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="nx">noGlobal</span><span class="p">){}</span> <span class="p">);</span>
 </span></span></code></pre></div><p>Further if I rename the variables, you can easily make out the structure of the function. <code>x</code> and <code>y</code> are values passed in from the parent scope as arguments to the IIFE.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// IIFE 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( <span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> ) {
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// all the code goes here...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} )( <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// IIFE 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// all the code goes here...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="p">)(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
 </span></span></code></pre></div><p>The IIFE function does not change the parent scope. So you do not have to do something like this in your script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">jquery</span>();
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">jquery</span><span class="p">();</span>
 </span></span></code></pre></div><p>Since IIFE accepts arguments just like a regular function and then operates on those arguments thereafter. In this case the first parameter is the global object and second parameter is the factory function. It doesn&rsquo;t matter if parent scope is <code>window</code> or <code>global</code> or anything else. Within the function its always referred to as <code>a</code>.</p>
 <p>Do remember that since <code>a</code> is just a reference to the outer scope value, you can still modify it. And that&rsquo;s what jquery does. It attaches itself to the <code>window</code>/<code>gloabl</code> object. Now you must have understood that using an IIFE just makes it possible to run the whole code without creating a function identifier in the scope.</p>
-<h1 id="other-examples">Other examples</h1>
+<h1 id="other-examples">
+  Other examples
+  <a class="heading-link" href="#other-examples">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Almost every library would use IIFE to setup initially which is required to be run only once when you load the appliaction.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">//     Backbone.js 1.4.0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//     (c) 2010-2019 Jeremy Ashkenas and DocumentCloud
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//     Backbone may be freely distributed under the MIT license.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//     For all details and documentation:
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//     http://backbonejs.org
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">factory</span>) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Establish the root object, `window` (`self`) in the browser, or `global` on the server.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// We use `self` instead of `window` for `WebWorker` support.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">self</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">self</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">self</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">self</span> <span style="color:#f92672">||</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">global</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">global</span>.<span style="color:#a6e22e">global</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">global</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">global</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Set up Backbone appropriately for the environment. Start with AMD.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">define</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">define</span>.<span style="color:#a6e22e">amd</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">define</span>([<span style="color:#e6db74">&#39;underscore&#39;</span>, <span style="color:#e6db74">&#39;jquery&#39;</span>, <span style="color:#e6db74">&#39;exports&#39;</span>], <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">$</span>, <span style="color:#a6e22e">exports</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Export global even in AMD case in case this script is loaded with
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// others that may still expect a global Backbone.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Backbone</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">factory</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">exports</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">$</span>);
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Next for Node.js or CommonJS. jQuery may not be needed as a module.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">exports</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;undefined&#39;</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;underscore&#39;</span>), <span style="color:#a6e22e">$</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> { <span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;jquery&#39;</span>); } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {}
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">factory</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">exports</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">$</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Finally, as a browser global.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Backbone</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">factory</span>(<span style="color:#a6e22e">root</span>, {}, <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">jQuery</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Zepto</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">ender</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">$</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>})(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">Backbone</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">$</span>) { <span style="color:#75715e">/* library code */</span>});
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/** vim: et:ts=4:sw=4:sts=4
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @license RequireJS 2.3.6 Copyright jQuery Foundation and other contributors.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Released under MIT license, https://github.com/requirejs/requirejs/blob/master/LICENSE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//Not using strict: uneven strict support in browsers, #392, and causes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//problems with requirejs.exec()/transpiler plugins that may not be strict.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/*jslint regexp: true, nomen: true, sloppy: true */</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/*global window, navigator, document, importScripts, setTimeout, opera */</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">requirejs</span>, <span style="color:#a6e22e">require</span>, <span style="color:#a6e22e">define</span>;
-</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">global</span>, <span style="color:#a6e22e">setTimeout</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* library code*/</span>
-</span></span><span style="display:flex;"><span>}(<span style="color:#66d9ef">this</span>, (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">setTimeout</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;undefined&#39;</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">setTimeout</span>)));
-</span></span></code></pre></div><h1 id="so-many-ways-to-create">So many ways to create</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//     Backbone.js 1.4.0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//     (c) 2010-2019 Jeremy Ashkenas and DocumentCloud
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     Backbone may be freely distributed under the MIT license.
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     For all details and documentation:
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     http://backbonejs.org
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">factory</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Establish the root object, `window` (`self`) in the browser, or `global` on the server.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// We use `self` instead of `window` for `WebWorker` support.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">root</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">self</span> <span class="o">==</span> <span class="s1">&#39;object&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span><span class="p">.</span><span class="nx">self</span> <span class="o">===</span> <span class="nx">self</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">            <span class="k">typeof</span> <span class="nx">global</span> <span class="o">==</span> <span class="s1">&#39;object&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">global</span><span class="p">.</span><span class="nx">global</span> <span class="o">===</span> <span class="nx">global</span> <span class="o">&amp;&amp;</span> <span class="nx">global</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Set up Backbone appropriately for the environment. Start with AMD.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">define</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">define</span><span class="p">([</span><span class="s1">&#39;underscore&#39;</span><span class="p">,</span> <span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;exports&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">$</span><span class="p">,</span> <span class="nx">exports</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Export global even in AMD case in case this script is loaded with
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// others that may still expect a global Backbone.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">root</span><span class="p">.</span><span class="nx">Backbone</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exports</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Next for Node.js or CommonJS. jQuery may not be needed as a module.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">exports</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;underscore&#39;</span><span class="p">),</span> <span class="nx">$</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">factory</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exports</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Finally, as a browser global.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">root</span><span class="p">.</span><span class="nx">Backbone</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="p">{},</span> <span class="nx">root</span><span class="p">.</span><span class="nx">_</span><span class="p">,</span> <span class="nx">root</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nx">root</span><span class="p">.</span><span class="nx">Zepto</span> <span class="o">||</span> <span class="nx">root</span><span class="p">.</span><span class="nx">ender</span> <span class="o">||</span> <span class="nx">root</span><span class="p">.</span><span class="nx">$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">})(</span><span class="kd">function</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">Backbone</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">$</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* library code */</span><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/** vim: et:ts=4:sw=4:sts=4
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @license RequireJS 2.3.6 Copyright jQuery Foundation and other contributors.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Released under MIT license, https://github.com/requirejs/requirejs/blob/master/LICENSE
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//Not using strict: uneven strict support in browsers, #392, and causes
+</span></span></span><span class="line"><span class="cl"><span class="c1">//problems with requirejs.exec()/transpiler plugins that may not be strict.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*jslint regexp: true, nomen: true, sloppy: true */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*global window, navigator, document, importScripts, setTimeout, opera */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">requirejs</span><span class="p">,</span> <span class="nx">require</span><span class="p">,</span> <span class="nx">define</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">global</span><span class="p">,</span> <span class="nx">setTimeout</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* library code*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">}(</span><span class="k">this</span><span class="p">,</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">setTimeout</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">?</span> <span class="kc">undefined</span> <span class="o">:</span> <span class="nx">setTimeout</span><span class="p">)));</span>
+</span></span></code></pre></div><h1 id="so-many-ways-to-create">
+  So many ways to create
+  <a class="heading-link" href="#so-many-ways-to-create">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Now you know that you can create an IIFE by just surrounding any function with parenthesis and another set of parenthesis to call that function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(){})()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(){})()</span>
 </span></span></code></pre></div><p>But this is not the only way to create an IIFE. You can use below techniques as well</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(){}()) <span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">~</span><span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// -1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">!</span><span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// true
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">+</span><span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">-</span><span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">true</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">function</span>(){}() <span style="color:#75715e">// undefined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Are you nuts?&#34;</span>}() <span style="color:#75715e">// undefined but assigns string to result
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>;(<span style="color:#66d9ef">function</span>(){})() <span style="color:#75715e">// Just to make sure that after minification you don&#39;t execute the previous statement as function
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(){}())</span> <span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">~</span><span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// -1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span><span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">+</span><span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span><span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">void</span> <span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kd">function</span><span class="p">(){}()</span> <span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="s2">&#34;Are you nuts?&#34;</span><span class="p">}()</span> <span class="c1">// undefined but assigns string to result
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">;(</span><span class="kd">function</span><span class="p">(){})()</span> <span class="c1">// Just to make sure that after minification you don&#39;t execute the previous statement as function
 </span></span></span></code></pre></div><p>What you can derive from the above snippet is that you just need to tell the javascript engine that please take my function as an expression and not declaration. Anything that converts your function into an expression is a possible candidate to create an IIFE. The most common method to tell the parser that you are writing an expression is to put everything in parenthesis <code>(</code> and <code>)</code>.</p>
 <p>And that&rsquo;s why mostly IIFEs are created using parenthesis. This method also has two varieties.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>() {}())
-</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>() {})()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{}())</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{})()</span>
 </span></span></code></pre></div><p>The difference is whether you want to call the expression result or the function expression individually. This is better understood when there are more expressions in a group.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(){}, <span style="color:#e6db74">&#34;str&#34;</span>)() <span style="color:#75715e">// Uncaught TypeError: ((intermediate value) , &#34;str&#34;) is not a function at &lt;anonymous&gt;:1:22
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(){},</span> <span class="s2">&#34;str&#34;</span><span class="p">)()</span> <span class="c1">// Uncaught TypeError: ((intermediate value) , &#34;str&#34;) is not a function at &lt;anonymous&gt;:1:22
 </span></span></span></code></pre></div><p>In the above example the group has two expressions. One is a function and the second is a string. Yes an individual string is also a valid expression. More on that in a different article. Grouping operator works from left to right and will return the last expression result. So in this case it returns a string <code>str</code>. That expression result is then called because of the outer parenthesis. Since <code>str</code> is not callable, this goes into error.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(){}(), <span style="color:#e6db74">&#34;str&#34;</span>) <span style="color:#75715e">// returns &#34;str&#34;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(){}(),</span> <span class="s2">&#34;str&#34;</span><span class="p">)</span> <span class="c1">// returns &#34;str&#34;
 </span></span></span></code></pre></div><p>If you move the parenthesis inside the group, you segregate the expression call. Your first expression in the group becomes an IIFE and second expression is just a string. On completion of all the expressions in the group, the result is the value of the last expression which here is a string. Now we are not doing anything with this result and therefore we do not get any error.</p>
 <p>The former is the most used method but Crockford recommends the latter one. Maybe its because you can mess up the IIFE the moment you add another expression to the group.</p>
-<p>Crockford&rsquo;s view on IIFE - <a href="https://www.youtube.com/watch?v=eGArABpLy0k">https://www.youtube.com/watch?v=eGArABpLy0k</a></p>
-<h1 id="named-iife-vs-anonymous-iife">Named IIFE vs Anonymous IIFE</h1>
+<p>Crockford&rsquo;s view on IIFE - <a href="https://www.youtube.com/watch?v=eGArABpLy0k"  class="external-link" target="_blank" rel="noopener">https://www.youtube.com/watch?v=eGArABpLy0k</a></p>
+<h1 id="named-iife-vs-anonymous-iife">
+  Named IIFE vs Anonymous IIFE
+  <a class="heading-link" href="#named-iife-vs-anonymous-iife">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Another confusing thing about IIFEs is the name of the function. As mentioned earlier that the whole idea behind using an IIFE is that it saves you from declaring a name in the parent scope. Then if we give a name to the function does it stop being an iife and gets converted into a normal function?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isThisAnIIFE</span>(){})()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span> <span class="nx">isThisAnIIFE</span><span class="p">(){})()</span>
 </span></span></code></pre></div><p>The answer is <strong>No</strong>. The name that we have given to the function is only for its own scope. This name does not go out to parent scope. You would ask then is there any benefit of giving a name like this? Yes, the name can be then used within the function if required.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">x</span>){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// Logs current value of x
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    	<span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e">// Recursive call to itself
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>}(<span style="color:#ae81ff">10</span>))
-</span></span></code></pre></div><p>Below is another good read to understand how functions work - <a href="http://kangax.github.io/nfe/">http://kangax.github.io/nfe/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// Logs current value of x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    	<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Recursive call to itself
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}(</span><span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><p>Below is another good read to understand how functions work - <a href="http://kangax.github.io/nfe/"  class="external-link" target="_blank" rel="noopener">http://kangax.github.io/nfe/</a></p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/trying-ventoy/trying-ventoy/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/understanding-javascript-hoisting/understanding-javascript-hoisting/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

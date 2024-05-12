@@ -1,297 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingComplete guide to using AMD eyefinity multimonitor setup
+Really complete?Link to headingWell, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.
+Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingComplete guide to using AMD eyefinity multimonitor setup
+Really complete?Link to headingWell, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.
+Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.">
+
+<meta property="og:url" content="//localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingComplete guide to using AMD eyefinity multimonitor setup
+Really complete?Link to headingWell, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.
+Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Complete guide to using AMD eyefinity multimonitor setup
-Really complete? Well, not literally a complete guide, but some useful information that may help people who are trying to configure AMD eyefinity desktop with multiple monitors.
-Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/complete-guide-to-eyefinity/complete-guide-to-amd-eyefinity-multi-monitor-setup/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              10-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Complete guide to using AMD eyefinity multimonitor setup</p>
-<h1 id="really-complete">Really complete?</h1>
+<h1 id="really-complete">
+  Really complete?
+  <a class="heading-link" href="#really-complete">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Well, not literally a <em>complete</em> guide, but some useful information that may help people who are trying to configure <strong>AMD eyefinity</strong> desktop with multiple monitors.</p>
 <p>Officially there is very less information, and searching on internet gives you bits and pieces which is not sufficient enough to understand how exactly eyefinity works. This is also acceptable since not everyone has all kinds of monitors to test around.</p>
 <p>Before starting, just for reference here is the Official eyefinity guides</p>
 <ul>
-<li><a href="https://www.amd.com/en/support/kb/faq/dh2-014">Setting Up and Configuring Multiple Displays to Run in AMD Eyefinity Mode </a> - Radeon 2020 and above</li>
-<li><a href="https://www.amd.com/en/support/kb/faq/dh-014">Set Up and Configure AMD Eyefinity</a> - Radeon 2019 and below</li>
+<li><a href="https://www.amd.com/en/support/kb/faq/dh2-014"  class="external-link" target="_blank" rel="noopener">Setting Up and Configuring Multiple Displays to Run in AMD Eyefinity Mode </a> - Radeon 2020 and above</li>
+<li><a href="https://www.amd.com/en/support/kb/faq/dh-014"  class="external-link" target="_blank" rel="noopener">Set Up and Configure AMD Eyefinity</a> - Radeon 2019 and below</li>
 </ul>
-<h1 id="is-eyefinity-really-worth">Is eyefinity really worth?</h1>
-<p><img src="./images/complete-guide-to-eyefinity/dirt-rally-2-thirdperson-view.jpg" alt="Dirt Rally 2"></p>
+<h1 id="is-eyefinity-really-worth">
+  Is eyefinity really worth?
+  <a class="heading-link" href="#is-eyefinity-really-worth">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><img alt="Dirt Rally 2" src="./images/complete-guide-to-eyefinity/dirt-rally-2-thirdperson-view.jpg"></p>
 <p>Well, it totally depends on the use case and available hardware, but yes configuring eyefinity is a challenge and requires a lot of setup before you can <em>really</em> make use of it. If you ask me, it seems that eyefinity is best suited for sim games like <code>Dirt Rally</code>, <code>WRC</code> where you need a wide angle cockpit view to really feel the immersion.</p>
-<p><img src="./images/complete-guide-to-eyefinity/dirt-rally-2-cockpit-view.jpg" alt="Dirt Rally 2"></p>
+<p><img alt="Dirt Rally 2" src="./images/complete-guide-to-eyefinity/dirt-rally-2-cockpit-view.jpg"></p>
 <p>Yes, you can enable eyefinity and play any game that supports wide resolution like <code>GTA5</code>, but it will take a toll on your Graphics card and to support the eyefinity resolutions, you might have to compromise graphics and physics quality which I believe is the point of playing games like GTA.</p>
 <p>For work eyefinity does not make any sense. In fact its better to have multiple independent monitors. Its easier to move, maximise and restore windows.</p>
-<h1 id="everyone-uses-multi-monitors-now-a-days-why-is-it-so-difficult-then">Everyone uses multi monitors now a days, why is it so difficult then?</h1>
+<h1 id="everyone-uses-multi-monitors-now-a-days-why-is-it-so-difficult-then">
+  Everyone uses multi monitors now a days, why is it so difficult then?
+  <a class="heading-link" href="#everyone-uses-multi-monitors-now-a-days-why-is-it-so-difficult-then">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>People have been using multi monitors for more than two decades and almost all offices have multi monitors for their employees to work. The setup is quite easy - You just need to plugin with the supported port and the system recognizes it automatically. You go to the display settings section and just rearrange based on the physical layout and you are done.</p>
-<p>In this kind of setup, every monitor runs at <strong>different</strong> <a href="https://www.viewsonic.com/library/tech/monitor-resolution-aspect-ratio/"><strong>resolution</strong></a> and probably at <strong>different</strong> <a href="https://www.windowscentral.com/how-set-custom-display-scaling-setting-windows-10"><strong>scaling</strong></a> which allows you to utilize the monitors to their fullest, like 27 inch 4k with 150% and 24 inch 1080 with 100%. You get almost similar fonts with the 4k being more crispier.</p>
+<p>In this kind of setup, every monitor runs at <strong>different</strong> <a href="https://www.viewsonic.com/library/tech/monitor-resolution-aspect-ratio/"  class="external-link" target="_blank" rel="noopener"><strong>resolution</strong></a> and probably at <strong>different</strong> <a href="https://www.windowscentral.com/how-set-custom-display-scaling-setting-windows-10"  class="external-link" target="_blank" rel="noopener"><strong>scaling</strong></a> which allows you to utilize the monitors to their fullest, like 27 inch 4k with 150% and 24 inch 1080 with 100%. You get almost similar fonts with the 4k being more crispier.</p>
 <p>But when it comes to eyefinity, you don&rsquo;t have the option to configure monitors individually and of course any scaling or custom resolution will be applied on the full virtual monitor that the graphics card simulates. Because of this, <em>you can only use <code>eyefinity</code> with native resolutions</em>. And thats the reason why you can&rsquo;t use the below setup which seems feasible at first look but is <strong>NOT</strong>.</p>
 <ul>
 <li>24 inch 1080p</li>
@@ -299,11 +241,17 @@ Officially there is very less information, and searching on internet gives you b
 <li>24 inch 1080p</li>
 </ul>
 <p>The above setup will create a virtual monitor with empty space on the 4k assuming you selected <code>fit</code> in the settings(more on that later). If you select <code>expand</code> then the image will cutoff from the other side monitors. We&rsquo;ll see in later sections what I mean here exactly.</p>
-<h1 id="basic-setup">Basic setup</h1>
+<h1 id="basic-setup">
+  Basic setup
+  <a class="heading-link" href="#basic-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>The ideal condition would be to have 3 identical monitors. You will not get any stretching, cutoff issues and all will work seamlessly. You might need to rearrange them based on their physical location on the desk.</p>
 <p>But there is still one small issue with this ideal setup - <code>Bezels</code>. Whatever the manufacturer advertises, bezels are not going anywhere. For a straight line you may not notice, but with 3d graphics and tilted lines, you will observe that the lines are not aligned properly. And when bezels are big(in case you are using cheap monitors :-P), this distortion feels apparent and is quite a big distraction when you are gaming.</p>
 <p>To overcome this, AMD has provided a utility for <code>bezel correction</code>. But somehow they are not proud of this and have hidden it from the main menu. You have to navigate to the AMD installation directory and open <code>eyefinitypro.exe</code>. There are some options available like the layout method, offsets and re arrangement.</p>
-<p><img src="./images/complete-guide-to-eyefinity/eyefinity-config.png" alt="Eyefinity Pro tool"></p>
+<p><img alt="Eyefinity Pro tool" src="./images/complete-guide-to-eyefinity/eyefinity-config.png"></p>
 <ul>
 <li><code>Layout</code> - Quickly switch to a different layout like 1x3 to 3x1 etc.</li>
 <li><code>Orientation/Rotation</code> - You can select displays indepedently in portrait or landscape mode. This is useful when you want to create eyefinity desktop with side monitors as portrait coz their horizontal resolution matches your center&rsquo;s vertical resolution. But beware, it may not work for you(More on that later too).</li>
@@ -323,7 +271,13 @@ Officially there is very less information, and searching on internet gives you b
 <li><strong>No quick toggle</strong> - There is no way to toggle eyefininty off and back on when you need it. If you disable eyefinity from this tool, you have to re configure everything and start from scratch. Though there is a workaround to this- After creating eyefinity config from this tool, enable and disable using the AMD radeon quick setup button. That way somehow it remembers the bezel correction settings.</li>
 </ul>
 <p>We shall learn more about these settings later with examples which will help in understanding which one could be a fit for you.</p>
-<h1 id="what-if-my-monitors-are-different">What if my monitors are different?</h1>
+<h1 id="what-if-my-monitors-are-different">
+  What if my monitors are different?
+  <a class="heading-link" href="#what-if-my-monitors-are-different">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Here is where it all becomes interesting. As I said earlier, managing multiple displays independently is quite easy, but with eyefinity its a big challenge. Lets understand this with an example</p>
 <p>Consider I have three monitors. Even though their diagonal size is different but their height are all same physically.</p>
 <ol>
@@ -335,19 +289,25 @@ Officially there is very less information, and searching on internet gives you b
 <ul>
 <li>How AMD shows you the <code>layout</code> preview</li>
 </ul>
-<p><img src="./images/complete-guide-to-eyefinity/eyefinity-layout.png" alt="Layout view"></p>
+<p><img alt="Layout view" src="./images/complete-guide-to-eyefinity/eyefinity-layout.png"></p>
 <ul>
 <li>How the <code>system</code> sees the virtual monitor</li>
 </ul>
-<p><img src="./images/complete-guide-to-eyefinity/eyefinity-screenshot.png" alt="Virtual monitor view"></p>
+<p><img alt="Virtual monitor view" src="./images/complete-guide-to-eyefinity/eyefinity-screenshot.png"></p>
 <ul>
 <li>How <code>you</code> see the actual displays</li>
 </ul>
-<p><img src="./images/complete-guide-to-eyefinity/eyefinity-actual-view.png" alt="Virtual monitor view"></p>
+<p><img alt="Virtual monitor view" src="./images/complete-guide-to-eyefinity/eyefinity-actual-view.png"></p>
 <p>In this case it will be (1280+1920+1280)x(1024) i.e <code>4480</code> x <code>1024</code>. The vertical size is 1024 which is good for your side monitors but the middle has 1080 physical pixels. There is a difference of 56 pixels. If you chose <code>fit</code> in the layout mode, you will see black area at the bottom in the center monitor coz it will only utilize 1024 pixels vertically. And with this you will realize that even though all three monitors are around same size physically but because of different native resolution, the actual display area will not match. Thus you will have distorted lines as you go from top to bottom.</p>
 <p>Apparently there is no way to actually preview how it will look in reality because it also depends on your physical size of the monitor. The layout preview that you see in the <code>eyefininty</code> tool just works on the resolution parameter. It does not have any information on the actual physical size of the monitors which some what makes this totally unintuitive.</p>
 <p>To make it more realistic, we would need a tool that can also read your monitors physical size, if not automatically, but with a way to input them so that we can see the final output.</p>
-<h1 id="does-this-mean-that-i-cannot-use-eyefinity-with-different-monitors-at-all">Does this mean that I cannot use eyefinity with different monitors at all?</h1>
+<h1 id="does-this-mean-that-i-cannot-use-eyefinity-with-different-monitors-at-all">
+  Does this mean that I cannot use eyefinity with different monitors at all?
+  <a class="heading-link" href="#does-this-mean-that-i-cannot-use-eyefinity-with-different-monitors-at-all">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>To get the best output without distorted lines and with the options available in the tool, I have come up with my own theory</p>
 <ul>
 <li>Resolutions doesn&rsquo;t matter</li>
@@ -355,19 +315,31 @@ Officially there is very less information, and searching on internet gives you b
 <li>Physical size doesn&rsquo;t matter</li>
 <li>What matters is the <code>ppi</code></li>
 </ul>
-<p>Yes, it may sound weird, but with my experience that is the parameter you should look for. <a href="https://www.omnicalculator.com/other/pixels-per-inch#ppi-definition-what-is-ppi"><code>PPI</code></a> or Pixel Per Inch means the number of physical pixels per inch on the display.</p>
+<p>Yes, it may sound weird, but with my experience that is the parameter you should look for. <a href="https://www.omnicalculator.com/other/pixels-per-inch#ppi-definition-what-is-ppi"  class="external-link" target="_blank" rel="noopener"><code>PPI</code></a> or Pixel Per Inch means the number of physical pixels per inch on the display.</p>
 <p>If the PPI is same for all the monitors, irrespective of their sizes or native resolution, you can get a working eyefinity desktop. Yes, there would be empty areas or some cut off depending on how you arrange the monitors, but you will get un-distorted lines which means functional enlarged view.</p>
-<p>PPI depends on the physical screen size and the resolution of both axes. You can always calculate it by yourself or use a <a href="https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php">simple calculator</a> to evaluate it.</p>
+<p>PPI depends on the physical screen size and the resolution of both axes. You can always calculate it by yourself or use a <a href="https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php"  class="external-link" target="_blank" rel="noopener">simple calculator</a> to evaluate it.</p>
 <p>Just for illustration a 24 inch Full HD monitor has a ppi of <code>91</code> while Macbook M1 retina display has ppi of <code>227</code>.</p>
 <p>So, to summarize, you will not get a useful eyefinity desktop if your monitors are of different sizes but with same resolution.</p>
-<h1 id="what-about-nvidia-surround">What about Nvidia surround</h1>
-<p>I don&rsquo;t have nvidia card so won&rsquo;t be able to comment on this, but reading about extended display setups it feels <a href="https://www.reddit.com/r/pcgaming/comments/1b6t9d/nvidia_surround_with_different_sizeresolution/"><em>Nvidia is way more strict than AMD</em></a> when it comes to handling extended desktops. Maybe its for good as this prevents users from creating non-functional layouts and then getting frustated. But I hope this information should be available somewhere in the official documentation.</p>
-<h1 id="external-helpful-content">External helpful content</h1>
+<h1 id="what-about-nvidia-surround">
+  What about Nvidia surround
+  <a class="heading-link" href="#what-about-nvidia-surround">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>I don&rsquo;t have nvidia card so won&rsquo;t be able to comment on this, but reading about extended display setups it feels <a href="https://www.reddit.com/r/pcgaming/comments/1b6t9d/nvidia_surround_with_different_sizeresolution/"  class="external-link" target="_blank" rel="noopener"><em>Nvidia is way more strict than AMD</em></a> when it comes to handling extended desktops. Maybe its for good as this prevents users from creating non-functional layouts and then getting frustated. But I hope this information should be available somewhere in the official documentation.</p>
+<h1 id="external-helpful-content">
+  External helpful content
+  <a class="heading-link" href="#external-helpful-content">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <ul>
-<li><a href="https://www.eteknix.com/testing-mixed-resolution-amd-eyefinity-6400x1080/">A good article on layout modes</a></li>
-<li><a href="https://linustechtips.com/topic/1145506-eyefinity-multi-resolution-display-setup-help/">Some discussion over custom resolution with eyefinity</a></li>
-<li><a href="https://www.omnicalculator.com/other/pixels-per-inch#ppi-definition-what-is-ppi">PPI Definition</a></li>
-<li><a href="https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php">PPI Calculator</a></li>
+<li><a href="https://www.eteknix.com/testing-mixed-resolution-amd-eyefinity-6400x1080/"  class="external-link" target="_blank" rel="noopener">A good article on layout modes</a></li>
+<li><a href="https://linustechtips.com/topic/1145506-eyefinity-multi-resolution-display-setup-help/"  class="external-link" target="_blank" rel="noopener">Some discussion over custom resolution with eyefinity</a></li>
+<li><a href="https://www.omnicalculator.com/other/pixels-per-inch#ppi-definition-what-is-ppi"  class="external-link" target="_blank" rel="noopener">PPI Definition</a></li>
+<li><a href="https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php"  class="external-link" target="_blank" rel="noopener">PPI Calculator</a></li>
 </ul>
 <p>*** <em><strong>Update 06 May 2024</strong></em> ***
 A few days ago, I got my hands on an Nvidia RTX4070ti from one of my friends. Though I didn&rsquo;t get much time, but there were a few notable features related to multimonitor that I would like to highlight</p>
@@ -377,9 +349,9 @@ A few days ago, I got my hands on an Nvidia RTX4070ti from one of my friends. Th
 </li>
 <li>
 <p><code>Bezel correction</code> - In one of the points above I tried to explain how AMD has hidden their bezel correction tool deep inside and there is no way to do that in the main AMD Adrenalin UI. And even when you use AMD&rsquo;s bezel correction feature, its a very cumbersome UI. Everytime you need to change the offset, apply it, wait for around 5-10 seconds to realize that you have put a large number. Again do the same process. While in Nvidia, there is a small picture that pops up and lets you see in real time, how will the image look like after bezel correction. Its a very small thing, but just saves you a lot of trouble.
-<img src="./images/complete-guide-to-eyefinity/nvidia%20bezel%20correction%20help.jpg" alt="nvidia bezel correction">
+<img alt="nvidia bezel correction" src="./images/complete-guide-to-eyefinity/nvidia%20bezel%20correction%20help.jpg">
 The road image you see in this photo gives you a live view when you change the offsets in the bezel correction boxes. You can create a perfect bezel corrected setup in a few seconds. Moreover, Nvidia provides this bezel corrected setup a different option in the dropdown, so if needed you can switch between regular surround and bezel corrected one quickly.
-<img src="./images/complete-guide-to-eyefinity/nvidia%20bezel%20corrected%20resolutions.png" alt="nvidia bezel corrected resolutions"></p>
+<img alt="nvidia bezel corrected resolutions" src="./images/complete-guide-to-eyefinity/nvidia%20bezel%20corrected%20resolutions.png"></p>
 </li>
 <li>
 <p><code>Windows maximize</code> - Another very interesting feature that I liked in Nvidia. In AMD&rsquo;s eyefinity bezel corrected setup, if you maximize a window(maybe by double clicking on the title bar), the window will span across all the monitors which doesn&rsquo;t make much sense. Eventually you will always have to manually resize so that it nicely fits in one of the monitors and is usable. While in Nvidia, when you are running a bezel corrected setup, on maximizing the window, it spans across the respective monitor only. Huge advantage when you are working. This just makes it a breeze. You don&rsquo;t need to switch between surround and regular setup everytime.</p>
@@ -388,67 +360,93 @@ The road image you see in this photo gives you a live view when you change the o
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/cheap-windows-license/cheap-windows-keys/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/complete-guide-to-file-downloads/complete-guide-to-file-downloads/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

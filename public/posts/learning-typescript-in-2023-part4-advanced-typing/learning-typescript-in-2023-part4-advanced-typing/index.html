@@ -1,499 +1,527 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingIn this article we will learn about some advanced typing constructs in TS.
+IntersectionLink to headingBuild new types with intersecting types
+type Admin = { name: string; permissions: string[]; } type Employee = { name: string; startDate: Date; } type ElevatedEmployee = Admin &amp; Employee; const e1: ElevatedEmployee = { name: &#34;&#34;, permissions: [&#34;badalna&#34;, &#34;banana&#34;, &#34;hatana&#34;], startDate: new Date() } Intersecting custom typesLink to headingHere numerical is number or string, while alphabetical is string, so their intersection is string and thus you get an error while assigning a number.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingIn this article we will learn about some advanced typing constructs in TS.
+IntersectionLink to headingBuild new types with intersecting types
+type Admin = { name: string; permissions: string[]; } type Employee = { name: string; startDate: Date; } type ElevatedEmployee = Admin &amp; Employee; const e1: ElevatedEmployee = { name: &#34;&#34;, permissions: [&#34;badalna&#34;, &#34;banana&#34;, &#34;hatana&#34;], startDate: new Date() } Intersecting custom typesLink to headingHere numerical is number or string, while alphabetical is string, so their intersection is string and thus you get an error while assigning a number.">
+
+<meta property="og:url" content="//localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingIn this article we will learn about some advanced typing constructs in TS.
+IntersectionLink to headingBuild new types with intersecting types
+type Admin = { name: string; permissions: string[]; } type Employee = { name: string; startDate: Date; } type ElevatedEmployee = Admin &amp; Employee; const e1: ElevatedEmployee = { name: &#34;&#34;, permissions: [&#34;badalna&#34;, &#34;banana&#34;, &#34;hatana&#34;], startDate: new Date() } Intersecting custom typesLink to headingHere numerical is number or string, while alphabetical is string, so their intersection is string and thus you get an error while assigning a number.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt In this article we will learn about some advanced typing constructs in TS.
-Intersection Build new types with intersecting types
-type Admin = { name: string; permissions: string[]; } type Employee = { name: string; startDate: Date; } type ElevatedEmployee = Admin &amp; Employee; const e1: ElevatedEmployee = { name: &#34;&#34;, permissions: [&#34;badalna&#34;, &#34;banana&#34;, &#34;hatana&#34;], startDate: new Date() } Intersecting custom types Here numerical is number or string, while alphabetical is string, so their intersection is string and thus you get an error while assigning a number." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/learning-typescript-in-2023-part4-advanced-typing/learning-typescript-in-2023-part4-advanced-typing/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>In this article we will learn about some advanced typing constructs in TS.</p>
-<h1 id="intersection">Intersection</h1>
+<h1 id="intersection">
+  Intersection
+  <a class="heading-link" href="#intersection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Build new types with intersecting types</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Admin</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">permissions</span>: <span style="color:#66d9ef">string</span>[];
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">startDate</span>: <span style="color:#66d9ef">Date</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ElevatedEmployee</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Admin</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">Employee</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">e1</span>: <span style="color:#66d9ef">ElevatedEmployee</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">permissions</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;badalna&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;hatana&#34;</span>],
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">startDate</span>: <span style="color:#66d9ef">new</span> Date()
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="intersecting-custom-types">Intersecting custom types</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Admin</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">permissions</span>: <span class="kt">string</span><span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Employee</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">startDate</span>: <span class="kt">Date</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">ElevatedEmployee</span> <span class="o">=</span> <span class="nx">Admin</span> <span class="o">&amp;</span> <span class="nx">Employee</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">e1</span>: <span class="kt">ElevatedEmployee</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">permissions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;badalna&#34;</span><span class="p">,</span> <span class="s2">&#34;banana&#34;</span><span class="p">,</span> <span class="s2">&#34;hatana&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">startDate</span>: <span class="kt">new</span> <span class="nb">Date</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="intersecting-custom-types">
+  Intersecting custom types
+  <a class="heading-link" href="#intersecting-custom-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>Here numerical is <code>number</code> or <code>string</code>, while <code>alphabetical</code> is string, so their intersection is <code>string</code> and thus you get an error while assigning a <code>number</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">numerical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">alphabetical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">alphanumerical</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numerical</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">alphabetical</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value1</span>: <span style="color:#66d9ef">alphanumerical</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value2</span>: <span style="color:#66d9ef">alphanumerical</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// TS2322: Type &#39;number&#39; is not assignable to type &#39;string&#39;.
-</span></span></span></code></pre></div><h1 id="type-guards">Type guards</h1>
-<h2 id="using-typeof">Using typeof</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">numerical</span> <span class="o">=</span> <span class="kt">number</span> <span class="o">|</span> <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">alphabetical</span> <span class="o">=</span> <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">alphanumerical</span> <span class="o">=</span> <span class="nx">numerical</span> <span class="o">&amp;</span> <span class="nx">alphabetical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">value1</span>: <span class="kt">alphanumerical</span> <span class="o">=</span> <span class="s2">&#34;1&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">value2</span>: <span class="kt">alphanumerical</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// TS2322: Type &#39;number&#39; is not assignable to type &#39;string&#39;.
+</span></span></span></code></pre></div><h1 id="type-guards">
+  Type guards
+  <a class="heading-link" href="#type-guards">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="using-typeof">
+  Using typeof
+  <a class="heading-link" href="#using-typeof">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>When TS cannot infer types automatically, you can add custom logic to infer the type and then operate on the values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Alphabetical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Numerical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">boolean</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Alphanumerical</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Alphabetical</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">Numerical</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">Alphanumerical</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span>; <span style="color:#75715e">// TS2339: Property &#39;length&#39; does not exist on type &#39;number&#39;.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Alphabetical</span> <span class="o">=</span> <span class="kt">string</span> <span class="o">|</span> <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Numerical</span> <span class="o">=</span> <span class="kt">number</span> <span class="o">|</span> <span class="kr">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Alphanumerical</span> <span class="o">=</span> <span class="nx">Alphabetical</span> <span class="o">&amp;</span> <span class="nx">Numerical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span>: <span class="kt">Alphanumerical</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="c1">// TS2339: Property &#39;length&#39; does not exist on type &#39;number&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div><p>You can add a typeguard using <code>typeof</code> in above code</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Alphabetical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Numerical</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">boolean</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Alphanumerical</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Alphabetical</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">Numerical</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">Alphanumerical</span>, <span style="color:#a6e22e">b</span>:<span style="color:#66d9ef">Alphanumerical</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">toString</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">toString</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="using-in">Using <code>in</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Alphabetical</span> <span class="o">=</span> <span class="kt">string</span> <span class="o">|</span> <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Numerical</span> <span class="o">=</span> <span class="kt">number</span> <span class="o">|</span> <span class="kr">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Alphanumerical</span> <span class="o">=</span> <span class="nx">Alphabetical</span> <span class="o">&amp;</span> <span class="nx">Numerical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span>: <span class="kt">Alphanumerical</span><span class="p">,</span> <span class="nx">b</span>:<span class="kt">Alphanumerical</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">a</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">b</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="nx">b</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="using-in">
+  Using <code>in</code>
+  <a class="heading-link" href="#using-in">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>Sometimes <code>typeof</code> isn&rsquo;t perfect and may not be sufficient to deduce types. For e.g. below we cannot determine actor is of type <code>Killer</code> or <code>Saver</code> by using <code>typeof</code> since for both <code>typeof</code> will return <code>object</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Killer</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">kills</span>: <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Saver</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">saves</span>: <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">UnknownActor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Killer</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Saver</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printActorInformation</span>(<span style="color:#a6e22e">actor</span>: <span style="color:#66d9ef">UnknownActor</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">actor</span>.<span style="color:#a6e22e">kills</span>); <span style="color:#75715e">// TS2339: Property &#39;kills&#39; does not exist on type &#39;UnknownActor&#39;. Property &#39;kills&#39; does not exist on type &#39;Saver&#39;.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Killer</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">kills</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Saver</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">saves</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">UnknownActor</span> <span class="o">=</span> <span class="nx">Killer</span> <span class="o">|</span> <span class="nx">Saver</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">printActorInformation</span><span class="p">(</span><span class="nx">actor</span>: <span class="kt">UnknownActor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">actor</span><span class="p">.</span><span class="nx">kills</span><span class="p">);</span> <span class="c1">// TS2339: Property &#39;kills&#39; does not exist on type &#39;UnknownActor&#39;. Property &#39;kills&#39; does not exist on type &#39;Saver&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div><p>You may think that we can just use the truthy check for this, but TS still warns us because we are tyring to access something which does not exist.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// also cannot be used since TS tries to warn that kills is not available
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">actor</span>.<span style="color:#a6e22e">kills</span>) {} 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// also cannot be used since TS tries to warn that kills is not available
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nx">actor</span><span class="p">.</span><span class="nx">kills</span><span class="p">)</span> <span class="p">{}</span> 
 </span></span></code></pre></div><p>In this case we can use some cool JS tactics to type guard our code</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printActorInformation</span>(<span style="color:#a6e22e">actor</span>: <span style="color:#66d9ef">UnknownActor</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// by using this mechanism we can skip TS to check for kills under actor
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;kills&#34;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">actor</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">actor</span>.<span style="color:#a6e22e">kills</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="using-instanceof">Using <code>instanceOf</code></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Truck</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">drive() {</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Driving truck&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loadCargo() {</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Loading cargo&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Vehicle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Truck</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">v1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Car</span>();
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">v2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Truck</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">useVehicle</span>(<span style="color:#a6e22e">veh</span>: <span style="color:#66d9ef">Vehicle</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">veh</span>.<span style="color:#a6e22e">drive</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">veh</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Truck</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">veh</span>.<span style="color:#a6e22e">loadCargo</span>(); <span style="color:#75715e">// loadCargo is fine here, coz we already checked if veh is an instanceOf Truck
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">useVehicle</span>(<span style="color:#a6e22e">v1</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">useVehicle</span>(<span style="color:#a6e22e">v2</span>);
-</span></span></code></pre></div><h1 id="discriminated-unions">Discriminated Unions</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">printActorInformation</span><span class="p">(</span><span class="nx">actor</span>: <span class="kt">UnknownActor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// by using this mechanism we can skip TS to check for kills under actor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="s2">&#34;kills&#34;</span> <span class="k">in</span> <span class="nx">actor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">actor</span><span class="p">.</span><span class="nx">kills</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="using-instanceof">
+  Using <code>instanceOf</code>
+  <a class="heading-link" href="#using-instanceof">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Truck</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">drive() {</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Driving truck&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loadCargo() {</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Loading cargo&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Vehicle</span> <span class="o">=</span> <span class="nx">Car</span> <span class="o">|</span> <span class="nx">Truck</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Truck</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">useVehicle</span><span class="p">(</span><span class="nx">veh</span>: <span class="kt">Vehicle</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">veh</span><span class="p">.</span><span class="nx">drive</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">veh</span> <span class="k">instanceof</span> <span class="nx">Truck</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">veh</span><span class="p">.</span><span class="nx">loadCargo</span><span class="p">();</span> <span class="c1">// loadCargo is fine here, coz we already checked if veh is an instanceOf Truck
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">useVehicle</span><span class="p">(</span><span class="nx">v1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">useVehicle</span><span class="p">(</span><span class="nx">v2</span><span class="p">);</span>
+</span></span></code></pre></div><h1 id="discriminated-unions">
+  Discriminated Unions
+  <a class="heading-link" href="#discriminated-unions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Pattern which makes using typeguards easier. While the name is confusing, the approach is pretty easy to understand.
 Basically what we do here is assign a specific property to the <code>interface</code> which we can then use while doing our type checks</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Killer</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;killer&#34;</span>; <span style="color:#75715e">// assign a type property with some string value
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">kills</span>: <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Saver</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;saver&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">saves</span>: <span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Mafia</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Killer</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Saver</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printMafia</span>(<span style="color:#a6e22e">p</span>: <span style="color:#66d9ef">Mafia</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">p</span>.<span style="color:#66d9ef">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;killer&#34;</span>) { <span style="color:#75715e">// check for that custom property
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">kills</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">interface</span> <span class="nx">Killer</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;killer&#34;</span><span class="p">;</span> <span class="c1">// assign a type property with some string value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">kills</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">interface</span> <span class="nx">Saver</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;saver&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">saves</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Mafia</span> <span class="o">=</span> <span class="nx">Killer</span> <span class="o">|</span> <span class="nx">Saver</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">printMafia</span><span class="p">(</span><span class="nx">p</span>: <span class="kt">Mafia</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="kr">type</span> <span class="o">===</span> <span class="s2">&#34;killer&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for that custom property
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">kills</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Now if we try to pass something which is not present in the interface, TS recognizes it</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">printMafia</span>({<span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;killer&#34;</span>, <span style="color:#a6e22e">kills</span>: <span style="color:#66d9ef">22</span>}) <span style="color:#75715e">// works fine
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printMafia</span>({<span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;killer&#34;</span>, <span style="color:#a6e22e">saves</span>: <span style="color:#66d9ef">33</span>}) <span style="color:#75715e">// TS2345: Argument of type &#39;{ type: &#34;killer&#34;; saves: number; }&#39; is not assignable to parameter of type &#39;Mafia&#39;. Object literal may only specify known properties, and &#39;saves&#39; does not exist in type &#39;Killer&#39;.
-</span></span></span></code></pre></div><h1 id="type-casting">type casting</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">printMafia</span><span class="p">({</span><span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;killer&#34;</span><span class="p">,</span> <span class="nx">kills</span>: <span class="kt">22</span><span class="p">})</span> <span class="c1">// works fine
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">printMafia</span><span class="p">({</span><span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;killer&#34;</span><span class="p">,</span> <span class="nx">saves</span>: <span class="kt">33</span><span class="p">})</span> <span class="c1">// TS2345: Argument of type &#39;{ type: &#34;killer&#34;; saves: number; }&#39; is not assignable to parameter of type &#39;Mafia&#39;. Object literal may only specify known properties, and &#39;saves&#39; does not exist in type &#39;Killer&#39;.
+</span></span></span></code></pre></div><h1 id="type-casting">
+  type casting
+  <a class="heading-link" href="#type-casting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>When you want to convert a type to another type</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// cast HTMLElement to HTMLInputElement explicitly because by default TS will not be able to make out if its an Input element
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> &lt;<span style="color:#f92672">HTMLInputElement</span>&gt;document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;someInputBox&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;someInputBox&#34;</span>) <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">HTMLInputElement</span>; <span style="color:#75715e">// For react files  since &lt;&gt; conflicts with react jsx
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">inputElement</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">HTMLInputElement</span>; <span style="color:#75715e">//  you can type cast anytime
-</span></span></span></code></pre></div><h1 id="index-properties">Index properties</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// cast HTMLElement to HTMLInputElement explicitly because by default TS will not be able to make out if its an Input element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">HTMLInputElement</span><span class="p">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;someInputBox&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">element2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;someInputBox&#34;</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLInputElement</span><span class="p">;</span> <span class="c1">// For react files  since &lt;&gt; conflicts with react jsx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">inputElement</span> <span class="o">=</span> <span class="nx">element</span> <span class="kr">as</span> <span class="nx">HTMLInputElement</span><span class="p">;</span> <span class="c1">//  you can type cast anytime
+</span></span></span></code></pre></div><h1 id="index-properties">
+  Index properties
+  <a class="heading-link" href="#index-properties">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>When you want to make objects, and you don&rsquo;t know even the keys that may come. Kind of ironic here that you are creating a type for something that you don&rsquo;t know. Types exist because you know what structure would be there. Never mind.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">DynamicObject</span> {
-</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">prop</span>: <span style="color:#66d9ef">string</span>]<span style="color:#f92672">:</span> <span style="color:#66d9ef">string</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ekdumDynamicObject</span>: <span style="color:#66d9ef">DynamicObject</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">songName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;keh ke lunga&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;varun grover&#34;</span>
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><h1 id="function-overloading">Function overloading</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">interface</span> <span class="nx">DynamicObject</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">prop</span>: <span class="kt">string</span><span class="p">]</span><span class="o">:</span> <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">ekdumDynamicObject</span>: <span class="kt">DynamicObject</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span><span class="o">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">songName</span><span class="o">:</span> <span class="s2">&#34;keh ke lunga&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">writer</span><span class="o">:</span> <span class="s2">&#34;varun grover&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h1 id="function-overloading">
+  Function overloading
+  <a class="heading-link" href="#function-overloading">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>When you want to make it clear when functions have different types</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">n</span>: <span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span><span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">b</span>:<span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span><span style="color:#66d9ef">number</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">b</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span><span style="color:#66d9ef">string</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="optional-chaining-and-nullish-coalescing">Optional chaining and Nullish Coalescing</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">n</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">b</span>:<span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">b</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="kt">string</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h1 id="optional-chaining-and-nullish-coalescing">
+  Optional chaining and Nullish Coalescing
+  <a class="heading-link" href="#optional-chaining-and-nullish-coalescing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>As of today both are available in plain JS too. Looks like these two came from TS only.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">work</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">name</span>; <span style="color:#75715e">// check for existence before getting the property
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">work</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">??</span> <span style="color:#e6db74">&#34;NO_WORK&#34;</span>; <span style="color:#75715e">// check if value is &#34;null&#34; or &#34;undefined&#34;. 
-</span></span></span></code></pre></div><h1 id="generics">Generics</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">work</span><span class="o">?</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// check for existence before getting the property
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">work</span><span class="o">?</span><span class="p">.</span><span class="nx">name</span> <span class="o">??</span> <span class="s2">&#34;NO_WORK&#34;</span><span class="p">;</span> <span class="c1">// check if value is &#34;null&#34; or &#34;undefined&#34;. 
+</span></span></span></code></pre></div><h1 id="generics">
+  Generics
+  <a class="heading-link" href="#generics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>A generic type is a type which is kind of connected with some other type and is really flexible regarding which exact type the other type is</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">names</span>: <span style="color:#66d9ef">Array</span>&lt;<span style="color:#f92672">string</span>&gt; <span style="color:#f92672">=</span> []; <span style="color:#75715e">// you can write this as string[] as well
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">names</span>: <span class="kt">Array</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// you can write this as string[] as well
 </span></span></span></code></pre></div><p>If we specify the type of return data of the promise, then TS will start complaining if we try to perform operations on the return data which are not compatible with that type. This is kind of a good feature. I always end up doing a <code>typeof</code> check in these situations. It helps in making it clear what are we expecting in the return data.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// TS2345: Argument of type &#39;string&#39; is not assignable to parameter of type &#39;number | PromiseLike &#39;.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promise</span>: <span style="color:#66d9ef">Promise</span>&lt;<span style="color:#f92672">number</span>&gt; <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Promise</span>((<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">rej</span>) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>(<span style="color:#e6db74">&#34;kaat daalo is string ko&#34;</span>);
-</span></span><span style="display:flex;"><span>});
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TS2339: Property &#39;split&#39; does not exist on type &#39;number&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;&#34;</span>));
-</span></span><span style="display:flex;"><span>})
-</span></span></code></pre></div><h2 id="generic-function">generic function</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// TS2345: Argument of type &#39;string&#39; is not assignable to parameter of type &#39;number | PromiseLike &#39;.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">promise</span>: <span class="kt">Promise</span><span class="p">&lt;</span><span class="nt">number</span><span class="p">&gt;</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">,</span> <span class="nx">rej</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">res</span><span class="p">(</span><span class="s2">&#34;kaat daalo is string ko&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// TS2339: Property &#39;split&#39; does not exist on type &#39;number&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><h2 id="generic-function">
+  generic function
+  <a class="heading-link" href="#generic-function">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>When you don&rsquo;t want to force types in the function parameters. Basically instead of mentioning the types, you make it <code>generic</code> and say whatever type it is, just return a value of that type.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">merge</span>&lt;<span style="color:#f92672">Type1</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">Type2</span>&gt;(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">Type1</span>, <span style="color:#a6e22e">b</span>:<span style="color:#66d9ef">Type2</span>) {
-</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">merge</span>([<span style="color:#e6db74">&#34;yeh array hai&#34;</span>],{<span style="color:#a6e22e">b</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;yeh object hai&#34;</span>}));
-</span></span></code></pre></div></section>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">merge</span><span class="p">&lt;</span><span class="nt">Type1</span><span class="err">,</span> <span class="na">Type2</span><span class="p">&gt;(</span><span class="nx">a</span>: <span class="kt">Type1</span><span class="p">,</span> <span class="nx">b</span>:<span class="kt">Type2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">merge</span><span class="p">([</span><span class="s2">&#34;yeh array hai&#34;</span><span class="p">],{</span><span class="nx">b</span><span class="o">:</span><span class="s2">&#34;yeh object hai&#34;</span><span class="p">}));</span>
+</span></span></code></pre></div>
+      </div>
 
-  
-  
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/learning-typescript-in-2023-part3-classes-and-interfaces/learning-typescript-in-2023-part3-classes-and-interfaces/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/learning-typescript-in-2023/learning-typescript-in-2023/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

@@ -1,281 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingI read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
+JS is single threadedLink to headingBy nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can&rsquo;t write threads like Java. More on this later.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingI read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
+JS is single threadedLink to headingBy nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can&rsquo;t write threads like Java. More on this later.">
+
+<meta property="og:url" content="//localhost:1313/posts/learning-distributed-nodejs/learning-nodejs-distributed-systems-part-1/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingI read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
+JS is single threadedLink to headingBy nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can’t write threads like Java. More on this later.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/learning-distributed-nodejs/learning-nodejs-distributed-systems-part-1/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
-JS is single threaded By nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can&rsquo;t write threads like Java. More on this later.
-As in example Maximum call stack in v8 is 15000 frames and after that you will get maximum call stack error which you might have seen writing some recursive function." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/learning-distributed-nodejs/learning-nodejs-distributed-systems-part-1/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              12-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.</p>
-<h2 id="js-is-single-threaded">JS is single threaded</h2>
+<h2 id="js-is-single-threaded">
+  JS is single threaded
+  <a class="heading-link" href="#js-is-single-threaded">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>By nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can&rsquo;t write threads like Java. More on this later.</p>
 <p>As in example Maximum call stack in v8 is 15000 frames and after that you will get maximum call stack error which you might have seen writing some recursive function.</p>
 <p>There are a few ways to achieve(lets say emulate) multi threading, like different nodejs instances but there is no data sharing between them. We need to use message passing to share serialized objects between instances. <code>SharedArrayBuffer</code> can be shared between instances with worker_threads by passing message from one thread to another using postMessage(value) method</p>
@@ -323,15 +250,27 @@ As in example Maximum call stack in v8 is 15000 frames and after that you will g
 <p>For instance, libuv maintains a thread of I/O operations. From outside, nodejs may not be multi threaded but because of this, it can perform certain operations parallely.</p>
 <p>The libuv thread pool size defaults to 4 and max is 1024. Can be overwritten by using env variable UV_THREADPOOL_SIZE=threads. Generally its fine to run with 4 threads. If the need comes to increase it, you need to do a perf test on productino like env first.</p>
 <p>Nodejs process will exit if there are no more tasks on the queue. Threre are many nodejs api calls that result in creation of objects that keep the process alive. There are certain methods that can be used to force the object to no longer keep the process alive.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">t1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; {}, <span style="color:#ae81ff">1000000</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">t2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; {}, <span style="color:#ae81ff">2000000</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">unref</span>(); <span style="color:#75715e">// t1 timer is unreferenced. The callback can still run in 1000 seconds, but it won&#39;t keep the process alive.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">t2</span>); <span style="color:#75715e">// t2 time has been cleared and will never run. It no longer keeps the process alive
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{},</span> <span class="mi">1000000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{},</span> <span class="mi">2000000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">t1</span><span class="p">.</span><span class="nx">unref</span><span class="p">();</span> <span class="c1">// t1 timer is unreferenced. The callback can still run in 1000 seconds, but it won&#39;t keep the process alive.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">t2</span><span class="p">);</span> <span class="c1">// t2 time has been cleared and will never run. It no longer keeps the process alive
 </span></span></span></code></pre></div><p>A point to note - <code>setTimeout()</code> returns an object in nodejs while in browsers it returns an integer and thats why we are able to call t1.unref() in nodejs.</p>
-<h1 id="event-loop">Event loop</h1>
+<h1 id="event-loop">
+  Event loop
+  <a class="heading-link" href="#event-loop">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Though its similar in browsers and nodejs, it is optimized differently for the respective platforms.</p>
-<h2 id="event-loop-phases">Event loop phases</h2>
+<h2 id="event-loop-phases">
+  Event loop phases
+  <a class="heading-link" href="#event-loop-phases">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>In nodejs there are different phases of event loop.</p>
 <ul>
 <li><strong>Poll</strong> - I/O related callbacks</li>
@@ -348,88 +287,142 @@ As in example Maximum call stack in v8 is 15000 frames and after that you will g
 <blockquote>
 <p>Callbacks in the microtask queues take priority over callbacks in the phases&rsquo;s normal queue. Callbacks in next tick microtask queue run before callbacks in the promise microtask queue</p>
 </blockquote>
-<h3 id="when-event-looop-gets-to-a-phase-it-will-run-all-the-callbacks-in-that-phasess-queue-once-all-the-callbacks-in-a-given-phase-are-exhausted-the-event-loop-then-moves-to-next-phase">When event looop gets to a phase, it will run all the callbacks in that phases&rsquo;s queue. Once all the callbacks in a given phase are exhausted, the event loop then moves to next phase`.</h3>
-<br />
+<h3 id="when-event-looop-gets-to-a-phase-it-will-run-all-the-callbacks-in-that-phasess-queue-once-all-the-callbacks-in-a-given-phase-are-exhausted-the-event-loop-then-moves-to-next-phase">
+  When event looop gets to a phase, it will run all the callbacks in that phases&rsquo;s queue. Once all the callbacks in a given phase are exhausted, the event loop then moves to next phase`.
+  <a class="heading-link" href="#when-event-looop-gets-to-a-phase-it-will-run-all-the-callbacks-in-that-phasess-queue-once-all-the-callbacks-in-a-given-phase-are-exhausted-the-event-loop-then-moves-to-next-phase">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<!-- raw HTML omitted -->
 <p>Try coming up with the output before running the program and see if you understand the phases correctly.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setImmediate</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">1</span>));
-</span></span><span style="display:flex;"><span>Promise.<span style="color:#a6e22e">resolve</span>().<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">2</span>));
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">3</span>));
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">__filename</span>, () =&gt; {
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span>));
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setImmediate</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">6</span>));
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">7</span>));
-</span></span><span style="display:flex;"><span>});
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">8</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">setImmediate</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">process</span><span class="p">.</span><span class="nx">nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">__filename</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">setImmediate</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">process</span><span class="p">.</span><span class="nx">nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">7</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
 </span></span></code></pre></div><p>The outputs 8 3 2 1 4 7 6 5. Surprisingly I got the answer right.</p>
 <p>Just a side note - <code>tick</code> is a complete pass, through the event loop. <code>setImmediate()</code> takes a tick to run, whereas <code>process.nextTick()</code> is more immediate - Confusing names!`</p>
 <p>And of course <code>async</code> and <code>await</code> are just syntactic sugar for code that uses nested callbacks.</p>
-<h2 id="async-and-sync-callbacks">async and sync Callbacks</h2>
+<h2 id="async-and-sync-callbacks">
+  async and sync Callbacks
+  <a class="heading-link" href="#async-and-sync-callbacks">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>If you are passing a callback to a function, make sure that the callback either runs asynchrounously or synchronously and not both.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateSomeValue</span>(<span style="color:#a6e22e">count</span>, <span style="color:#a6e22e">callbackFn</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">callbackFn</span>(<span style="color:#e6db74">&#34;Not allowed&#34;</span>); <span style="color:#75715e">// calling callback synchronously
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">someAsyncOperation</span>(<span style="color:#a6e22e">count</span>, <span style="color:#a6e22e">callbackFn</span>); <span style="color:#75715e">// calling callback asynchrounously
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">updateSomeValue</span><span class="p">(</span><span class="nx">count</span><span class="p">,</span> <span class="nx">callbackFn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">callbackFn</span><span class="p">(</span><span class="s2">&#34;Not allowed&#34;</span><span class="p">);</span> <span class="c1">// calling callback synchronously
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">someAsyncOperation</span><span class="p">(</span><span class="nx">count</span><span class="p">,</span> <span class="nx">callbackFn</span><span class="p">);</span> <span class="c1">// calling callback asynchrounously
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>By doing this you are introducing a scenario where the callback can update a value present in parent scope which may or may not be updated depending on how you called that callback function which can lead to confusing bugs.</p>
-<h2 id="creating-application">Creating application</h2>
+<h2 id="creating-application">
+  Creating application
+  <a class="heading-link" href="#creating-application">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>Let&rsquo;s start by creating a basic structure of the application that will be used in later chapters. All the code that we will write will go inside these two directories. You can have a parent directory named <code>learning nodejs</code> so that the common files can go there.</p>
 <ul>
 <li><code>web-api</code> - server from browser pov</li>
 <li><code>recipe-api</code> - server from web-api pov</li>
 </ul>
-<h1 id="scaling">Scaling</h1>
-<h3 id="cluster-module">Cluster module</h3>
+<h1 id="scaling">
+  Scaling
+  <a class="heading-link" href="#scaling">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h3 id="cluster-module">
+  Cluster module
+  <a class="heading-link" href="#cluster-module">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Cluster module allows running multiple copies of a Node.js application on the same machine, dispatching incoming network messages to the copies. Its similar to <code>child_process</code> module which provides a <code>fork()</code> method for spawning Node.js sub process. But cluster modules also provides a mechanism for routing incoming requests.</p>
-<h4 id="creating-cluster">Creating cluster</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env node
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cluster</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cluster&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`master pid=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">pid</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cluster</span>.<span style="color:#a6e22e">setupMaster</span>({
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">exec</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__dirname</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/producer-http-basic.js&#39;</span>
-</span></span><span style="display:flex;"><span>})
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cluster</span>.<span style="color:#a6e22e">fork</span>();
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cluster</span>.<span style="color:#a6e22e">fork</span>();
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cluster</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;disconnect&#34;</span>, <span style="color:#a6e22e">worker</span> =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;disconnect&#34;</span>, <span style="color:#a6e22e">workder</span>.<span style="color:#a6e22e">id</span>);
-</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;exit&#34;</span>, (<span style="color:#a6e22e">worker</span>,<span style="color:#a6e22e">code</span>, <span style="color:#a6e22e">signal</span>) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;exit&#34;</span>, <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">code</span>, <span style="color:#a6e22e">signal</span>);
-</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;listening&#34;</span>, (<span style="color:#a6e22e">worker</span>, {<span style="color:#a6e22e">address</span>, <span style="color:#a6e22e">port</span>}) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;listening&#34;</span>, <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">id</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">address</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">port</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
-</span></span><span style="display:flex;"><span>})
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>master pid<span style="color:#f92672">=</span><span style="color:#ae81ff">30839</span>
-</span></span><span style="display:flex;"><span>worker pid<span style="color:#f92672">=</span><span style="color:#ae81ff">30840</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>node:30840<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>FSTDEP011<span style="color:#f92672">]</span> FastifyDeprecation: Variadic listen method is deprecated. Please use <span style="color:#e6db74">&#34;.listen(optionsObject)&#34;</span> instead. The variadic signature will be removed in <span style="color:#e6db74">`</span>fastify@5<span style="color:#e6db74">`</span>.
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>Use <span style="color:#e6db74">`</span>node --trace-warnings ...<span style="color:#e6db74">`</span> to show where the warning was created<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Producer running at http://127.0.0.1:4000
-</span></span><span style="display:flex;"><span>listening <span style="color:#ae81ff">1</span> 127.0.0.1:4000
-</span></span><span style="display:flex;"><span>worker pid<span style="color:#f92672">=</span><span style="color:#ae81ff">30841</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>node:30841<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>FSTDEP011<span style="color:#f92672">]</span> FastifyDeprecation: Variadic listen method is deprecated. Please use <span style="color:#e6db74">&#34;.listen(optionsObject)&#34;</span> instead. The variadic signature will be removed in <span style="color:#e6db74">`</span>fastify@5<span style="color:#e6db74">`</span>.
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>Use <span style="color:#e6db74">`</span>node --trace-warnings ...<span style="color:#e6db74">`</span> to show where the warning was created<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Producer running at http://127.0.0.1:4000
-</span></span><span style="display:flex;"><span>listening <span style="color:#ae81ff">2</span> 127.0.0.1:4000
+<h4 id="creating-cluster">
+  Creating cluster
+  <a class="heading-link" href="#creating-cluster">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env node
+</span></span></span><span class="line"><span class="cl"><span class="ch"></span><span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cluster&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`master pid=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">pid</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cluster</span><span class="p">.</span><span class="nx">setupMaster</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">exec</span><span class="o">:</span> <span class="nx">__dirname</span><span class="o">+</span><span class="s1">&#39;/producer-http-basic.js&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cluster</span><span class="p">.</span><span class="nx">fork</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cluster</span><span class="p">.</span><span class="nx">fork</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cluster</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;disconnect&#34;</span><span class="p">,</span> <span class="nx">worker</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;disconnect&#34;</span><span class="p">,</span> <span class="nx">workder</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;exit&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">worker</span><span class="p">,</span><span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;exit&#34;</span><span class="p">,</span> <span class="nx">worker</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;listening&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">worker</span><span class="p">,</span> <span class="p">{</span><span class="nx">address</span><span class="p">,</span> <span class="nx">port</span><span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;listening&#34;</span><span class="p">,</span> <span class="nx">worker</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">address</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">master <span class="nv">pid</span><span class="o">=</span><span class="m">30839</span>
+</span></span><span class="line"><span class="cl">worker <span class="nv">pid</span><span class="o">=</span><span class="m">30840</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>node:30840<span class="o">)</span> <span class="o">[</span>FSTDEP011<span class="o">]</span> FastifyDeprecation: Variadic listen method is deprecated. Please use <span class="s2">&#34;.listen(optionsObject)&#34;</span> instead. The variadic signature will be removed in <span class="sb">`</span>fastify@5<span class="sb">`</span>.
+</span></span><span class="line"><span class="cl"><span class="o">(</span>Use <span class="sb">`</span>node --trace-warnings ...<span class="sb">`</span> to show where the warning was created<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Producer running at http://127.0.0.1:4000
+</span></span><span class="line"><span class="cl">listening <span class="m">1</span> 127.0.0.1:4000
+</span></span><span class="line"><span class="cl">worker <span class="nv">pid</span><span class="o">=</span><span class="m">30841</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>node:30841<span class="o">)</span> <span class="o">[</span>FSTDEP011<span class="o">]</span> FastifyDeprecation: Variadic listen method is deprecated. Please use <span class="s2">&#34;.listen(optionsObject)&#34;</span> instead. The variadic signature will be removed in <span class="sb">`</span>fastify@5<span class="sb">`</span>.
+</span></span><span class="line"><span class="cl"><span class="o">(</span>Use <span class="sb">`</span>node --trace-warnings ...<span class="sb">`</span> to show where the warning was created<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Producer running at http://127.0.0.1:4000
+</span></span><span class="line"><span class="cl">listening <span class="m">2</span> 127.0.0.1:4000
 </span></span></code></pre></div><p>Now if you run <code>ps</code> command you will see 3 processes. One for master.js and two for basic.js.</p>
-<h4 id="request-dispatching">Request dispatching</h4>
+<h4 id="request-dispatching">
+  Request dispatching
+  <a class="heading-link" href="#request-dispatching">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>On macOS and Linux the requests will be dispatched round-robin to the workers by default. On windows the request will be dispatched depending on which worker is least busy.</p>
 <p>Now try and hit the service</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://localhost:4000/recipes/42
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://localhost:4000/recipes/42
 </span></span></code></pre></div><p>In the logs you should see that the workers are hit in round robin</p>
 <pre tabindex="0"><code>worker request pid=30840
 worker request pid=30841
 worker request pid=30840
 worker request pid=30841
 </code></pre><p>You can now kill one of the worker nodes and the master should still be running with the remaining workers and serve the request from it. If you kill all child workers, the master also exits.</p>
-<h4 id="cons-of-cluster-module">Cons of cluster module</h4>
+<h4 id="cons-of-cluster-module">
+  Cons of cluster module
+  <a class="heading-link" href="#cons-of-cluster-module">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <ul>
 <li>Kind of an anti pattern as scalability is better done by an external tool which gives more visiblity while running instances</li>
 <li>This works at the later 4 TCP/UDP and not layer 7.</li>
 <li>Performance is not good on single cpu machine as the cpu is shared and for a high load, the worker threads will have to wait for cpu cycle</li>
 <li>Lastly cluster module only dispatches incoming requests to processes running on same machine.</li>
 </ul>
-<h1 id="reverse-proxy">Reverse Proxy</h1>
+<h1 id="reverse-proxy">
+  Reverse Proxy
+  <a class="heading-link" href="#reverse-proxy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Sits between the backend service and the clients. It will redirect the incoming requests to running services and will also direct the response from the service to the client back.</p>
 <p>There are multiple ways reverse proxies can redirect requests</p>
 <ul>
@@ -440,23 +433,35 @@ worker request pid=30841
 <li>proxy can poll the backend and redirect to the ones which are healthy</li>
 </ul>
 <p>One of the popular proxies is HAProxy.</p>
-<h3 id="installing-haproxy">Installing HAProxy.</h3>
+<h3 id="installing-haproxy">
+  Installing HAProxy.
+  <a class="heading-link" href="#installing-haproxy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>For Linux you can use distro&rsquo;s in-built repo to install or compile from source.</p>
 <p>For macbook you can install using brew</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install haproxy@2.1.8
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install haproxy@2.1.8
 </span></span></code></pre></div><p>Run below to check if HAProxy was installed correctly</p>
 <pre tabindex="0"><code>$ haproxy -v
 HAProxy version 2.8.2-61a0f57 2023/08/09 - https://haproxy.org/
 Status: long-term supported branch - will stop receiving fixes around Q2 2028.
 Known bugs: http://www.haproxy.org/bugs/bugs-2.8.2.html
 Running on: Darwin 22.6.0 Darwin Kernel Version 22.6.0: Wed Jul  5 22:22:05 PDT 2023; root:xnu-8796.141.3~6/RELEASE_ARM64_T6000 arm64
-</code></pre><h4 id="start-haproxy">Start HAProxy</h4>
+</code></pre><h4 id="start-haproxy">
+  Start HAProxy
+  <a class="heading-link" href="#start-haproxy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>Create a config file <code>haproxy/stats.cfg</code> and add below content to it. Make sure to add a new line at the end.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#a6e22e">frontend inbound</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mode http</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">bind localhost:8000</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">stats enable</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">stats uri /admin?stats</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="line"><span class="cl"><span class="na">frontend inbound</span>
+</span></span><span class="line"><span class="cl">    <span class="na">mode http</span>
+</span></span><span class="line"><span class="cl">    <span class="na">bind localhost:8000</span>
+</span></span><span class="line"><span class="cl">    <span class="na">stats enable</span>
+</span></span><span class="line"><span class="cl">    <span class="na">stats uri /admin?stats</span>
 </span></span></code></pre></div><p>Now start HAProxy</p>
 <pre tabindex="0"><code>$haproxy -f haproxy/stats.cfg
 </code></pre><p>You should see below logs</p>
@@ -467,117 +472,147 @@ Running on: Darwin 22.6.0 Darwin Kernel Version 22.6.0: Wed Jul  5 22:22:05 PDT 
    | with such a configuration. To fix this, please ensure that all following
    | timeouts are set to a non-zero value: &#39;client&#39;, &#39;connect&#39;, &#39;server&#39;.
 </code></pre><p>Now if you hit the below URL, you should see a dashboard</p>
-<p><img src="/images/learning-distributed-nodejs/HAProxyDashboard.png" alt="HAProxyDashboard"></p>
+<p><img alt="HAProxyDashboard" src="/images/learning-distributed-nodejs/HAProxyDashboard.png"></p>
 <p>If you setup HAProxy with multiple routes, you will see a dashboard like below
-<img src="/images/learning-distributed-nodejs/HAProxyDashboardMultiRoute.png" alt="HAProxyDashboardMultiRoute"></p>
-<h4 id="haproxy-alternatives">HAProxy alternatives</h4>
+<img alt="HAProxyDashboardMultiRoute" src="/images/learning-distributed-nodejs/HAProxyDashboardMultiRoute.png"></p>
+<h4 id="haproxy-alternatives">
+  HAProxy alternatives
+  <a class="heading-link" href="#haproxy-alternatives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>Nginx, ELB, Traefik, Kong Gateway.</p>
 <p>One point to note about <code>Nginx</code>. It can also act as a web server while <code>HAProxy</code> can&rsquo;t. Nginx can map requests to files on disk.</p>
 <p>Configuring HAProxy with multiple backends. Create a config file like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">defaults</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">mode http</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">timeout connect 5000ms</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">timeout client 50000ms</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">timeout server 550000ms</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">frontend inbound</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">bind localhost:3000</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">default_backend web-api</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">stats enable</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">stats uri /admin?stats</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">backend web-api</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">option httpchk GET /health</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">server web-api-1 localhost:3001 check</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">server web-api-2 localhost:3002 check</span>
-</span></span></code></pre></div><p>If we compare this to node&rsquo;s cluster module, we don&rsquo;t need a third nodejs process running. Instead the routing will be handled by HAProxy process. Moreover, now using HAProxy we can route requests to outside the machine which is what generally a use case for all scalable solutions in the cloud.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">defaults</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">mode http</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">timeout connect 5000ms</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">timeout client 50000ms</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">timeout server 550000ms</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">frontend inbound</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">bind localhost:3000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">default_backend web-api</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">stats enable</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">stats uri /admin?stats</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">backend web-api</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">option httpchk GET /health</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">server web-api-1 localhost:3001 check</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">server web-api-2 localhost:3002 check</span><span class="w">
+</span></span></span></code></pre></div><p>If we compare this to node&rsquo;s cluster module, we don&rsquo;t need a third nodejs process running. Instead the routing will be handled by HAProxy process. Moreover, now using HAProxy we can route requests to outside the machine which is what generally a use case for all scalable solutions in the cloud.</p>
 <p>Now to test the setup perform below opeerations</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node recipe-api/producer-http-basic.js                      // start nodejs backend
-</span></span><span style="display:flex;"><span>PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3001</span> node web-api/consumer-http-healthendpoint.js      // start api-1
-</span></span><span style="display:flex;"><span>PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3002</span> node web-api/consumer-http-healthendpoint.js      // start api-2
-</span></span><span style="display:flex;"><span>haproxy -f ./haproxy/load-balance.cfg                       // start HAProxy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node recipe-api/producer-http-basic.js                      // start nodejs backend
+</span></span><span class="line"><span class="cl"><span class="nv">PORT</span><span class="o">=</span><span class="m">3001</span> node web-api/consumer-http-healthendpoint.js      // start api-1
+</span></span><span class="line"><span class="cl"><span class="nv">PORT</span><span class="o">=</span><span class="m">3002</span> node web-api/consumer-http-healthendpoint.js      // start api-2
+</span></span><span class="line"><span class="cl">haproxy -f ./haproxy/load-balance.cfg                       // start HAProxy
 </span></span></code></pre></div><p>Run below command multiple times to see that response is coming from api-1 and api-2 in round-robin method.</p>
-<p><img src="./images/learning-distributed-nodejs/HAProxySetup.png" alt="HAProxy"></p>
+<p><img alt="HAProxy" src="./images/learning-distributed-nodejs/HAProxySetup.png"></p>
 <p>If you close one of the processes, HAProxy will redirect the requests to remaining processes. Same can be observed on the HAProxy Dashboard page.</p>
 <p>And if all api endpoints go down, you will endup in error which can be seen in HAPRoxy logs as well.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>15:29:59 distributed-nodejs $ curl http://localhost:3000
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;html&gt;&lt;body&gt;&lt;h1&gt;503 Service Unavailable&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>No server is available to handle this request.
-</span></span><span style="display:flex;"><span>&lt;/body&gt;&lt;/html&gt;
-</span></span></code></pre></div><h4 id="compression">Compression</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">15:29:59 distributed-nodejs $ curl http://localhost:3000
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;html&gt;&lt;body&gt;&lt;h1&gt;503 Service Unavailable&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">No server is available to handle this request.
+</span></span><span class="line"><span class="cl">&lt;/body&gt;&lt;/html&gt;
+</span></span></code></pre></div><h4 id="compression">
+  Compression
+  <a class="heading-link" href="#compression">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>HAProxy can do compression as well. You can configure HAProxy to compress the response before sending to the client. There are multiple config options.</p>
 <p>Configure the compression by adding below lines to HAProxy config</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>backend web-api
-</span></span><span style="display:flex;"><span>    compression offload
-</span></span><span style="display:flex;"><span>    compression algo gzip
-</span></span><span style="display:flex;"><span>    compression type application/json text/plain
-</span></span><span style="display:flex;"><span>    server web-api-1 localhost:3001
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">backend web-api
+</span></span><span class="line"><span class="cl">    compression offload
+</span></span><span class="line"><span class="cl">    compression algo gzip
+</span></span><span class="line"><span class="cl">    compression <span class="nb">type</span> application/json text/plain
+</span></span><span class="line"><span class="cl">    server web-api-1 localhost:3001
 </span></span></code></pre></div><p>And you can test by running below commands</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ node recipe-api/producer-http-basic.js
-</span></span><span style="display:flex;"><span>$ PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3001</span> node web-api/consumer-http-basic.js
-</span></span><span style="display:flex;"><span>$ haproxy -f haproxy/compression.cfg
-</span></span><span style="display:flex;"><span>$ curl http://localhost:3000/
-</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#e6db74">&#39;Accept-Encoding: gzip&#39;</span> http://localhost:3000/ | gunzip
-</span></span></code></pre></div><h4 id="tls-termination">TLS Termination</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ node recipe-api/producer-http-basic.js
+</span></span><span class="line"><span class="cl">$ <span class="nv">PORT</span><span class="o">=</span><span class="m">3001</span> node web-api/consumer-http-basic.js
+</span></span><span class="line"><span class="cl">$ haproxy -f haproxy/compression.cfg
+</span></span><span class="line"><span class="cl">$ curl http://localhost:3000/
+</span></span><span class="line"><span class="cl">$ curl -H <span class="s1">&#39;Accept-Encoding: gzip&#39;</span> http://localhost:3000/ <span class="p">|</span> gunzip
+</span></span></code></pre></div><h4 id="tls-termination">
+  TLS Termination
+  <a class="heading-link" href="#tls-termination">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>HAProxy can do encryption as well. You need to generate a <code>.pem</code> certificate first.</p>
 <p>Generate certificate and private key. Combine both to one file <code>combined.pem</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -nodes -new -x509 -keyout haproxy/private.key -out haproxy/certificate.cert
-</span></span><span style="display:flex;"><span>cat haproxy/certificate.cert haproxy/private.key &gt; haproxy/combined.pem
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl req -nodes -new -x509 -keyout haproxy/private.key -out haproxy/certificate.cert
+</span></span><span class="line"><span class="cl">cat haproxy/certificate.cert haproxy/private.key &gt; haproxy/combined.pem
 </span></span></code></pre></div><p>Configure HAProxy like below to use the <code>.pem</code> file for SSL</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>global
-</span></span><span style="display:flex;"><span>    tune.ssl.default-dh-param <span style="color:#ae81ff">2048</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>frontend inbound
-</span></span><span style="display:flex;"><span>    bind localhost:3000 ssl crt haproxy/combined.pem
-</span></span><span style="display:flex;"><span>    default_backend web-api
-</span></span></code></pre></div><p>And test it out by using a curl command. You will need to use <code>--insecure</code> because the certificate is still self signed. If you use a certificate from a known CA, you do not need this flag. One of my earlier posts around related topic - <a href="https://cybercafe.dev/thisisunsafe-bypassing-chrome-security-warnings/">thisisunsafe</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>15:49:57 distributed-nodejs $ curl --insecure https://localhost:3000/
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span><span style="color:#e6db74">&#34;consumer_pid&#34;</span>:42250,<span style="color:#e6db74">&#34;producer_data&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;producer_pid&#34;</span>:42054,<span style="color:#e6db74">&#34;recipe&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;id&#34;</span>:42,<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Chicken Tikka Masala&#34;</span>,<span style="color:#e6db74">&#34;steps&#34;</span>:<span style="color:#e6db74">&#34;Throw it in a pot...&#34;</span>,<span style="color:#e6db74">&#34;ingredients&#34;</span>:<span style="color:#f92672">[{</span><span style="color:#e6db74">&#34;id&#34;</span>:1,<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Chicken&#34;</span>,<span style="color:#e6db74">&#34;quantity&#34;</span>:<span style="color:#e6db74">&#34;1 lb&#34;</span><span style="color:#f92672">}</span>,<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;id&#34;</span>:2,<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Sauce&#34;</span>,<span style="color:#e6db74">&#34;quantity&#34;</span>:<span style="color:#e6db74">&#34;2 cups&#34;</span><span style="color:#f92672">}]}}}</span>%
-</span></span></code></pre></div><h4 id="rate-limiting">Rate limiting</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">global
+</span></span><span class="line"><span class="cl">    tune.ssl.default-dh-param <span class="m">2048</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">frontend inbound
+</span></span><span class="line"><span class="cl">    <span class="nb">bind</span> localhost:3000 ssl crt haproxy/combined.pem
+</span></span><span class="line"><span class="cl">    default_backend web-api
+</span></span></code></pre></div><p>And test it out by using a curl command. You will need to use <code>--insecure</code> because the certificate is still self signed. If you use a certificate from a known CA, you do not need this flag. One of my earlier posts around related topic - <a href="https://cybercafe.dev/thisisunsafe-bypassing-chrome-security-warnings/"  class="external-link" target="_blank" rel="noopener">thisisunsafe</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">15:49:57 distributed-nodejs $ curl --insecure https://localhost:3000/
+</span></span><span class="line"><span class="cl"><span class="o">{</span><span class="s2">&#34;consumer_pid&#34;</span>:42250,<span class="s2">&#34;producer_data&#34;</span>:<span class="o">{</span><span class="s2">&#34;producer_pid&#34;</span>:42054,<span class="s2">&#34;recipe&#34;</span>:<span class="o">{</span><span class="s2">&#34;id&#34;</span>:42,<span class="s2">&#34;name&#34;</span>:<span class="s2">&#34;Chicken Tikka Masala&#34;</span>,<span class="s2">&#34;steps&#34;</span>:<span class="s2">&#34;Throw it in a pot...&#34;</span>,<span class="s2">&#34;ingredients&#34;</span>:<span class="o">[{</span><span class="s2">&#34;id&#34;</span>:1,<span class="s2">&#34;name&#34;</span>:<span class="s2">&#34;Chicken&#34;</span>,<span class="s2">&#34;quantity&#34;</span>:<span class="s2">&#34;1 lb&#34;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&#34;id&#34;</span>:2,<span class="s2">&#34;name&#34;</span>:<span class="s2">&#34;Sauce&#34;</span>,<span class="s2">&#34;quantity&#34;</span>:<span class="s2">&#34;2 cups&#34;</span><span class="o">}]}}}</span>%
+</span></span></code></pre></div><h4 id="rate-limiting">
+  Rate limiting
+  <a class="heading-link" href="#rate-limiting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
 <p>If you need to limit the server to handle only a max number of connections at a given time, use below to achieve it</p>
 <p>One way is to do this with the nodejs http server.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;current conn&#34;</span>, <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">_connections</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#e6db74">&#34;OK&#34;</span>), <span style="color:#ae81ff">10_000</span>);
-</span></span><span style="display:flex;"><span>});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">maxConnections</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// rate limiting the server itself
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">3020</span>, <span style="color:#e6db74">&#39;localhost&#39;</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;current conn&#34;</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">_connections</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s2">&#34;OK&#34;</span><span class="p">),</span> <span class="mi">10_000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">server</span><span class="p">.</span><span class="nx">maxConnections</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// rate limiting the server itself
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3020</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">);</span>
 </span></span></code></pre></div><p>But this would mean a hard limit to all the servers that you start.</p>
 <p>Here HAProxy can help. It can queue the requests for the application as well. So the server not necessarily needs to be limited to a fixed number. This approach makes it easy to configure the scaling when you are using external tools for service orchestration like k8s etc.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">defaults</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">maxconn</span> <span style="color:#ae81ff">8</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mode</span> <span style="color:#a6e22e">http</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">frontend</span> <span style="color:#a6e22e">inbound</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">bind</span> <span style="color:#a6e22e">localhost</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3010</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">default_backend</span> <span style="color:#a6e22e">web_api</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">backend</span> <span style="color:#a6e22e">web_api</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">option</span> <span style="color:#a6e22e">httpclose</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">server</span> <span style="color:#a6e22e">web</span><span style="color:#f92672">-</span><span style="color:#a6e22e">api</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#a6e22e">localhost</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3020</span> <span style="color:#a6e22e">maxconn</span> <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">defaults</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxconn</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mode</span> <span class="nx">http</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">frontend</span> <span class="nx">inbound</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">bind</span> <span class="nx">localhost</span><span class="o">:</span><span class="mi">3010</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">default_backend</span> <span class="nx">web_api</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">backend</span> <span class="nx">web_api</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">option</span> <span class="nx">httpclose</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">server</span> <span class="nx">web</span><span class="o">-</span><span class="nx">api</span><span class="o">-</span><span class="mi">1</span> <span class="nx">localhost</span><span class="o">:</span><span class="mi">3020</span> <span class="nx">maxconn</span> <span class="mi">2</span>
 </span></span></code></pre></div><p>global maxconn includes incoming and outgoing backend connections</p>
 <p>Now start HAProxy with new config and run some curl commands parallely. You will see that the server is able to serve more than 2 requests. The requests holds with HAProxy and only goto nodejs when the count comes below the threshold.</p>
-<h1 id="sla-and-load-testing">SLA and Load Testing</h1>
+<h1 id="sla-and-load-testing">
+  SLA and Load Testing
+  <a class="heading-link" href="#sla-and-load-testing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>To start load testing we need to install autocannon. There are many alternatives to autocannon like Apache Bench(ab), wrk, and Siege.</p>
 <p><code>npm install -g autocannon</code></p>
 <p>Create new directory <code>benchmark/</code> and create a file <code>native-http.js</code> within it with below contents</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env node
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">HOST</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">HOST</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;127.0.0l1&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PORT</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">PORT</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">4000</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;http&#34;</span>).<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#e6db74">&#34;ok&#34;</span>);
-</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">PORT</span>, () =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Producer running at http://</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">HOST</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">PORT</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
-</span></span><span style="display:flex;"><span>});
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env node
+</span></span></span><span class="line"><span class="cl"><span class="ch"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">HOST</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">HOST</span> <span class="o">||</span> <span class="s1">&#39;127.0.0l1&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">4000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;http&#34;</span><span class="p">).</span><span class="nx">createServer</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s2">&#34;ok&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Producer running at http://</span><span class="si">${</span><span class="nx">HOST</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">PORT</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div><p>Now first start the service and then run autocannon to start a loastest.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node benchmark/native-http.js
-</span></span><span style="display:flex;"><span>autocannon -d <span style="color:#ae81ff">60</span> -c <span style="color:#ae81ff">10</span> -l http://localhost:4000/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node benchmark/native-http.js
+</span></span><span class="line"><span class="cl">autocannon -d <span class="m">60</span> -c <span class="m">10</span> -l http://localhost:4000/
 </span></span></code></pre></div><p><code>-d</code>: set the overall duration of the test
 <code>-c</code>: set the concurrent connections
 <code>-l</code>: display a latency histogram</p>
@@ -590,7 +625,13 @@ Running on: Darwin 22.6.0 Darwin Kernel Version 22.6.0: Wed Jul  5 22:22:05 PDT 
   address: &#39;127.0.0.1&#39;,
   port: 3001
 }
-</code></pre><h3 id="reverse-proxy-concerns">Reverse proxy concerns</h3>
+</code></pre><h3 id="reverse-proxy-concerns">
+  Reverse proxy concerns
+  <a class="heading-link" href="#reverse-proxy-concerns">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Create a HAProxy config to test out perf difference with and without proxy</p>
 <pre tabindex="0"><code>defaults
     mode http
@@ -627,67 +668,93 @@ backend server-api
 </code></pre><blockquote>
 <p>To be continued with part-2&hellip;</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/javascript-void-0/javascript-void-0/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/learning-flying-on-microsoft-flight-simulator/learning-flying-on-microsoft-flight-simulator/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

@@ -1,281 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingSetup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.
+The needLink to headingWe all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts
+Ad blockers - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingSetup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.
+The needLink to headingWe all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts
+Ad blockers - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page.">
+
+<meta property="og:url" content="//localhost:1313/posts/setup-basic-analytics-using-ghost-using-goaccess/setup-basic-analytics-using-ghost-using-goaccess/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingSetup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.
+The needLink to headingWe all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts
+Ad blockers - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/setup-basic-analytics-using-ghost-using-goaccess/setup-basic-analytics-using-ghost-using-goaccess/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Setup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.
-The need We all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts
-Ad blockers - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/setup-basic-analytics-using-ghost-using-goaccess/setup-basic-analytics-using-ghost-using-goaccess/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Setup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.</p>
-<h1 id="the-need">The need</h1>
+<h1 id="the-need">
+  The need
+  <a class="heading-link" href="#the-need">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>We all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts</p>
 <ul>
 <li><strong>Ad blockers</strong> - If you are someone who knows how these analytics platform work, you should know that it needs a thirdparty js file to be downloaded along with your page. And because of ad blockers and privacy focused browsers, these files are not allowed thereby completely rendering them useless.</li>
@@ -288,127 +218,219 @@ Ad blockers - If you are someone who knows how these analytics platform work, yo
 <li><strong>ELK</strong> - This looks the best solution which can maintain history and you can probably easily perform search and aggregate operations on demandm but beware! This demands a lot of resources. At least 4GB of RAM. On Digital Ocean this will cost you around 20$(Rs 1500) per month. And also it will require extensive setup.</li>
 <li><strong>Go Access</strong> - On visiting various sites and forums, a few recommended goaccess for ghost blog. On reading more, I found that its basically a log parser written in <code>C</code> which processes server logs like apache, nginx etc and can run as a terminal process and prepare statistics real time.</li>
 </ul>
-<h1 id="goaccess">GoAccess</h1>
-<p>Quoting from the <a href="https://goaccess.io/">GoAccess</a> site directly</p>
+<h1 id="goaccess">
+  GoAccess
+  <a class="heading-link" href="#goaccess">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Quoting from the <a href="https://goaccess.io/"  class="external-link" target="_blank" rel="noopener">GoAccess</a> site directly</p>
 <blockquote>
 <p>GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser. It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly.</p>
 </blockquote>
 <p>Of course, since it will be installed as a unix application you would need a VPS(Virtual Private Server) to install and use it. You cannot use it on shared hosting.</p>
-<h1 id="goaccess-for-ghost-blog">GoAccess for Ghost blog</h1>
+<h1 id="goaccess-for-ghost-blog">
+  GoAccess for Ghost blog
+  <a class="heading-link" href="#goaccess-for-ghost-blog">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Ghostjs is essentially nginx in the background, we can configure goaccess to process them like any other nginx server. All the steps below are done on <code>ubuntu 18.04</code> with <code>Ghostjs 1.4</code>. Since goaccess is flexible enough, the steps would be similar to almost all web servers with slight changes.</p>
-<h1 id="install">Install</h1>
-<p>Install goaccess as an app just like you do with other apps. Depending on your OS and requirements, you can also download and compile it. More info avaiable <a href="https://goaccess.io/download#distro">here</a></p>
+<h1 id="install">
+  Install
+  <a class="heading-link" href="#install">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Install goaccess as an app just like you do with other apps. Depending on your OS and requirements, you can also download and compile it. More info avaiable <a href="https://goaccess.io/download#distro"  class="external-link" target="_blank" rel="noopener">here</a></p>
 <p>For ubuntu you can use</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install goaccess
-</span></span></code></pre></div><h1 id="run-goaccess">Run GoAccess</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get install goaccess
+</span></span></code></pre></div><h1 id="run-goaccess">
+  Run GoAccess
+  <a class="heading-link" href="#run-goaccess">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>GoAccess generates html file which you can open in a browser. If you want the html output to be available from outside world like &ldquo;example.com/admin&rdquo;, you would need to put it in the <code>www</code> folder and also configure your web server to point to that location.</p>
-<h2 id="create-a-directoy-under-www">Create a directoy under <code>www</code></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir /var/www/static/report
-</span></span></code></pre></div><h3 id="setup-location-in-the-server-config-add-an-entry-in-the-conf-file-of-your-nginx-server-the-conf-will-be-located-under-varwwwghostsystemfiles-edit-the-respective-file-according-to-your-current-config">Setup location in the server config. Add an entry in the <code>.conf</code> file of your nginx server. The conf will be located under <code>/var/www/ghost/system/files</code>. Edit the respective file according to your current config.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	location /admin <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        alias /var/www/static/report;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="test-run">Test run</h2>
+<h2 id="create-a-directoy-under-www">
+  Create a directoy under <code>www</code>
+  <a class="heading-link" href="#create-a-directoy-under-www">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir /var/www/static/report
+</span></span></code></pre></div><h3 id="setup-location-in-the-server-config-add-an-entry-in-the-conf-file-of-your-nginx-server-the-conf-will-be-located-under-varwwwghostsystemfiles-edit-the-respective-file-according-to-your-current-config">
+  Setup location in the server config. Add an entry in the <code>.conf</code> file of your nginx server. The conf will be located under <code>/var/www/ghost/system/files</code>. Edit the respective file according to your current config.
+  <a class="heading-link" href="#setup-location-in-the-server-config-add-an-entry-in-the-conf-file-of-your-nginx-server-the-conf-will-be-located-under-varwwwghostsystemfiles-edit-the-respective-file-according-to-your-current-config">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">	location /admin <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">alias</span> /var/www/static/report<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span></code></pre></div><h2 id="test-run">
+  Test run
+  <a class="heading-link" href="#test-run">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>On running GoAccess, it should generate a html file. To test if all permissions are setup correctly, just run the below command. Do note that by default nginx logs are owned by adm user and www_data group, you might not have permission to read them. You can try using root account to run goaccess in that case. The <code>--log-format</code> parameter determines which logs you are trying to ingest. &ldquo;COMBINED&rdquo; will work for various logs.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo goaccess access.log -o /var/www/static/report/index.html --log-format<span style="color:#f92672">=</span>COMBINED
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo goaccess access.log -o /var/www/static/report/index.html --log-format<span class="o">=</span>COMBINED
 </span></span></code></pre></div><p>If required, you can also add permissions to the access.log so that other users can read the files too. But remember aftet log rotation, the permissions are reset because new logfile is created, while the existing one is renamed to <code>access.log.1</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	cd /var/log/nginx
-</span></span><span style="display:flex;"><span>	sudo chmod o+r access.log
-</span></span></code></pre></div><h2 id="view-report">View report</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">	<span class="nb">cd</span> /var/log/nginx
+</span></span><span class="line"><span class="cl">	sudo chmod o+r access.log
+</span></span></code></pre></div><h2 id="view-report">
+  View report
+  <a class="heading-link" href="#view-report">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>Navigate to the path that you have given in the <code>.conf</code> file and see if the report is loading for you. In case you are getting <code>404</code>, maybe your nginx config is not proper or the output is not generated in the right directory.</p>
-<h1 id="automate-report-generation">Automate report generation</h1>
+<h1 id="automate-report-generation">
+  Automate report generation
+  <a class="heading-link" href="#automate-report-generation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>You need to run GoAccess manually everytime to process the new records. To automate this so that you don&rsquo;t need to login to your server and the report gets generated automatically, we can use the &ldquo;Cron&rdquo; facility provided by the unix systems.</p>
-<p>I referred <a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804">this article</a> for setting up cron on my server.</p>
+<p>I referred <a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804"  class="external-link" target="_blank" rel="noopener">this article</a> for setting up cron on my server.</p>
 <p>Check what all cron jobs you have right now</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -l
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -l
 </span></span></code></pre></div><p>Root entries can be read from</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /var/spool/cron/crontabs
-</span></span><span style="display:flex;"><span>cat root
-</span></span></code></pre></div><p>Since cron jobs are user specific, and you may not have permission to the <code>access.log</code> file, it would be better if you create the cron with your root user. The alternative way would be to configure the nginx server to create log files with <a href="https://serverfault.com/questions/694707/what-should-be-the-right-logs-permissions-for-nginx-on-centos">custom permissions</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /var/spool/cron/crontabs
+</span></span><span class="line"><span class="cl">cat root
+</span></span></code></pre></div><p>Since cron jobs are user specific, and you may not have permission to the <code>access.log</code> file, it would be better if you create the cron with your root user. The alternative way would be to configure the nginx server to create log files with <a href="https://serverfault.com/questions/694707/what-should-be-the-right-logs-permissions-for-nginx-on-centos"  class="external-link" target="_blank" rel="noopener">custom permissions</a>.</p>
 <p>Login as root and use crontab editor to add new cron jobs. First time it will ask you to choose an editor.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su
-</span></span><span style="display:flex;"><span>crontab -e
-</span></span></code></pre></div><p>Setup the cron command which also constitutes the cron job expression. In this exapmle, it says that run the job every 5 minutes. You can get cron expressions easily from <a href="https://crontab.tech/every-4-hours">here</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>*/5 * * * * goaccess /var/log/nginx/access.log -o /var/www/static/report/index.html --log-format<span style="color:#f92672">=</span>COMBINED
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl">crontab -e
+</span></span></code></pre></div><p>Setup the cron command which also constitutes the cron job expression. In this exapmle, it says that run the job every 5 minutes. You can get cron expressions easily from <a href="https://crontab.tech/every-4-hours"  class="external-link" target="_blank" rel="noopener">here</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">*/5 * * * * goaccess /var/log/nginx/access.log -o /var/www/static/report/index.html --log-format<span class="o">=</span>COMBINED
 </span></span></code></pre></div><p>Once you have successfully edited the file, you should be able to see the entry with</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -l
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -l
 </span></span></code></pre></div><p>Now that you have the cron setup done, you need to check the status of the job. For this you can use the below command</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status cron
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl status cron
 </span></span></code></pre></div><p>It might happen that your cron job is running, but the command is not working properly. You can use the cron status check to see if there are any errors. You can also just execute the command directly in the terminal to see if its working fine. Sometimes you might have mixed up paths in the command.</p>
 <p>If everything works fine, you should be able to see basic analytics generated after every 5 minutes.</p>
-<h1 id="realtime-analytics">Realtime analytics</h1>
+<h1 id="realtime-analytics">
+  Realtime analytics
+  <a class="heading-link" href="#realtime-analytics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>GoAccess also provides real time reporting. You need to open up a <code>web-socket</code> which should be accessible from outside. For me it didn&rsquo;t work. Will look into it later. But for now this static batch job works for me.</p>
-<h1 id="summary-and-limitations">Summary and limitations</h1>
+<h1 id="summary-and-limitations">
+  Summary and limitations
+  <a class="heading-link" href="#summary-and-limitations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <ul>
 <li><strong>Persistence</strong> - With the above setup you can get daily analytics because your log file will contain daily logs. On executing the goaccess command, it will generate report for the current <code>access.log</code> file. But what about the history? Any analytics tool would need to store the history so that even after the logs are gone, you can see/search the entries. For this to work you need to have a complete E2E solution like ELK stack.</li>
 <li><strong>Drill down</strong> - I don&rsquo;t know if its there or not, but I wasn&rsquo;t able to find any setting that would allow me drill down to the records where I can see indicidual entries. For example if I want to see from where do the <em>404</em> requests are coming, I cannot. I would need to <code>grep</code> the access.log file to get all the <code>404</code> entries.</li>
 </ul>
 <p>Here is a screnshot of the dashboard after setup.</p>
-<p><img src="./images/basic-analytics-using-goaccess/GoAccessTopBrowsers.png" alt="GoAccessDashboard"></p>
+<p><img alt="GoAccessDashboard" src="./images/basic-analytics-using-goaccess/GoAccessTopBrowsers.png"></p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/recursion/recursion/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/setup-mysql-and-sqldeveloper-in-macos/setup-mysql-and-sqldeveloper-in-macos/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

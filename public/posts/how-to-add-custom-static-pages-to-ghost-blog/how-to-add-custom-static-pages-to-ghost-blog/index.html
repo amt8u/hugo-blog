@@ -1,283 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingEver in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.
+Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingEver in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.
+Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.">
+
+<meta property="og:url" content="//localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingEver in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.
+Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Ever in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.
-Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.
-Who needs custom pages?" />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Ever in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.</p>
-<p><img src="https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2000&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" alt="Feature Image"></p>
+<p><img alt="Feature Image" src="https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ"></p>
 <p>Ghost has a feature in the admin area to create custom pages. But those pages are only limited to ghost editor. You can add content to those pages in the same way as you edit a post.</p>
-<h1 id="who-needs-custom-pages">Who needs custom pages?</h1>
+<h1 id="who-needs-custom-pages">
+  Who needs custom pages?
+  <a class="heading-link" href="#who-needs-custom-pages">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>If you want to create an alternate site structure or if you want to have a personalized homepage with animations and all, maybe to demo your working examples or as some experiments you are doing, you need to integrate those with ghost system.</p>
 <p>Of course when the hosting is under your control, you can always put in your static pages directly on the server and add links in any of the posts. You can even put your pages on a totally different sub domain.</p>
 <p>But in that case, your pages will be totally outside ghost and there will be no integration possible except link sharing. Having pages as a part of ghost gives you a better integration and easier maintainability.</p>
@@ -288,174 +215,230 @@ Who needs custom pages?" />
 <li>Static pages will get all the metadata automatically for SEO</li>
 <li>And the most important thing is every page will be a part of the site</li>
 </ul>
-<p>A live demo for a static custom page on my blog <a href="https://cybercafe.dev/game/cricket-fielding-positions/">cybercafe.dev</a></p>
-<h1 id="step-by-step-guide-to-build-a-custom-page-for-ghost-blog">Step by step guide to build a custom page for ghost blog.</h1>
-<h3 id="step-1---custom-routes">Step 1 - custom routes</h3>
+<p>A live demo for a static custom page on my blog <a href="https://cybercafe.dev/game/cricket-fielding-positions/"  class="external-link" target="_blank" rel="noopener">cybercafe.dev</a></p>
+<h1 id="step-by-step-guide-to-build-a-custom-page-for-ghost-blog">
+  Step by step guide to build a custom page for ghost blog.
+  <a class="heading-link" href="#step-by-step-guide-to-build-a-custom-page-for-ghost-blog">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h3 id="step-1---custom-routes">
+  Step 1 - custom routes
+  <a class="heading-link" href="#step-1---custom-routes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Custom routes gives you the power to create custom templates within the theme and map specific URLs to a template. As you must already be aware that a template is nothing but a handlebars file <code>.hbs</code>. You can write anything in the page and the route will load that page for you. To add new entries to your routes, download the current <code>routes.yaml</code> file from Admin&rsquo;s Labs page under Beta feature category.</p>
 <p>It should be something like below. <code>routes</code> will be empty if you haven&rsquo;t yet setup any pages before.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">routes</span>:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">collections</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">permalink</span>: <span style="color:#ae81ff">/{slug}/</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">index</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">taxonomies</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">/tag/{slug}/</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">author</span>: <span style="color:#ae81ff">/author/{slug}/</span>
-</span></span></code></pre></div><p>Add new entry to routes like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">routes</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/any/url/you/like</span>: <span style="color:#ae81ff">custom-template</span>
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">collections</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permalink</span><span class="p">:</span><span class="w"> </span><span class="l">/{slug}/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l">index</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">taxonomies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">/tag/{slug}/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">/author/{slug}/</span><span class="w">
+</span></span></span></code></pre></div><p>Add new entry to routes like below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/any/url/you/like</span><span class="p">:</span><span class="w"> </span><span class="l">custom-template</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>URL can be anything that does not conflict with any existing page</li>
 <li><code>custom-template</code> can be any template you created in the theme</li>
 <li>The template does not needs <code>.hbs</code> extension</li>
 </ul>
-<p>After this the url will behave as a permalink to your custom-template page. Learn more about custom routes on official docs <a href="https://ghost.org/docs/api/v3/handlebars-themes/routing/routes/">https://ghost.org/docs/api/v3/handlebars-themes/routing/routes/</a></p>
-<h3 id="step-2---custom-template">Step 2 - Custom template</h3>
+<p>After this the url will behave as a permalink to your custom-template page. Learn more about custom routes on official docs <a href="https://ghost.org/docs/api/v3/handlebars-themes/routing/routes/"  class="external-link" target="_blank" rel="noopener">https://ghost.org/docs/api/v3/handlebars-themes/routing/routes/</a></p>
+<h3 id="step-2---custom-template">
+  Step 2 - Custom template
+  <a class="heading-link" href="#step-2---custom-template">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Create a file in the theme directory with the <code>custom-template.hbs</code>. Add generic header and footer partials if you intend to have a consistent look. Otherwise you can always ignore that.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-handlebars" data-lang="handlebars"><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">!--</span>
-</span></span><span style="display:flex;"><span>Author<span style="color:#960050;background-color:#1e0010">:</span> z00md
-</span></span><span style="display:flex;"><span>Date<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">28</span> July <span style="color:#ae81ff">2020</span>
-</span></span><span style="display:flex;"><span>This template is used for custom page<span style="color:#960050;background-color:#1e0010">.</span> If you would like to render this as a page-template<span style="color:#960050;background-color:#1e0010">,</span> 
-</span></span><span style="display:flex;"><span>create a page <span style="color:#66d9ef">with</span> the same slug that this template will be using <span style="color:#66d9ef">in</span> the routes.yaml
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">--</span><span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">!--</span> The tag below means<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">in</span>sert everything <span style="color:#66d9ef">in</span> this file
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">in</span>to the <span style="color:#960050;background-color:#1e0010">{</span>body<span style="color:#960050;background-color:#1e0010">}</span> of the default.hbs template <span style="color:#960050;background-color:#1e0010">--</span><span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{!&lt; default}}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{!-- Special header.hbs partial to generate the &lt;header&gt; tag --}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#a6e22e">#page</span><span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span><span style="color:#66d9ef">&gt;</span> site-header<span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#a6e22e">/page</span><span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{!-- The main content area --}}</span>
-</span></span><span style="display:flex;"><span>&lt;main id=&#34;site-main&#34; class=&#34;site-main outer&#34;&gt;
-</span></span><span style="display:flex;"><span>        &lt;h2 class=&#34;game-header&#34;&gt;Do you know all cricket positions?&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>        &lt;div class=&#34;container&#34; &gt;
-</span></span><span style="display:flex;"><span>            &lt;section id=&#34;chart-container&#34;&gt;&lt;/section&gt;
-</span></span><span style="display:flex;"><span>            &lt;section id=&#34;score-container&#34;&gt;&lt;/section&gt;
-</span></span><span style="display:flex;"><span>        &lt;/div&gt;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>&lt;/main&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;https://code.highcharts.com/highcharts.js&#34;&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;../../assets/js/game/cricket/data.js&#34; defer&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;../../assets/js/game/cricket/index.js&#34; defer&gt;&lt;/script&gt;
-</span></span></code></pre></div><p>Since I am not using any module manager for this example, I had to include the <code>defer</code> attribute so that my custom scripts run only after the scripts from CDN are executed. But hold on, this would not work now. We need to update our <code>gulpfile</code> to enable the task runner to bundle our custom assets in the built directory. We would see that in the next step.</p>
-<h3 id="step-3---add-assets">Step 3 - Add assets</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-handlebars" data-lang="handlebars"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">!--</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Author</span><span class="err">:</span> <span class="nv">z00md</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Date</span><span class="err">:</span> <span class="m">28</span> <span class="nv">July</span> <span class="m">2020</span>
+</span></span><span class="line"><span class="cl"><span class="nv">This</span> <span class="nv">template</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">for</span> <span class="nv">custom</span> <span class="nv">page</span><span class="err">.</span> <span class="nv">If</span> <span class="nv">you</span> <span class="nv">would</span> <span class="nv">like</span> <span class="nv">to</span> <span class="nv">render</span> <span class="nv">this</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">page-template</span><span class="err">,</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">create</span> <span class="nv">a</span> <span class="nv">page</span> <span class="k">with</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">slug</span> <span class="nv">that</span> <span class="nv">this</span> <span class="nv">template</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">using</span> <span class="k">in</span> <span class="nv">the</span> <span class="nv">routes.yaml</span>
+</span></span><span class="line"><span class="cl"><span class="err">--</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="err">!--</span> <span class="nv">The</span> <span class="nv">tag</span> <span class="nv">below</span> <span class="nv">means</span><span class="err">:</span> <span class="k">in</span><span class="nv">sert</span> <span class="nv">everything</span> <span class="k">in</span> <span class="nv">this</span> <span class="nv">file</span>
+</span></span><span class="line"><span class="cl"><span class="k">in</span><span class="nv">to</span> <span class="nv">the</span> <span class="err">{</span><span class="nv">body</span><span class="err">}</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">default.hbs</span> <span class="nv">template</span> <span class="err">--</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="c">{{!&lt; default}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="c">{{!-- Special header.hbs partial to generate the &lt;header&gt; tag --}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="nf">#page</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">  </span><span class="cp">{{</span><span class="k">&gt;</span> <span class="nv">site-header</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="nf">/page</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="c">{{!-- The main content area --}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;main id=&#34;site-main&#34; class=&#34;site-main outer&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">        &lt;h2 class=&#34;game-header&#34;&gt;Do you know all cricket positions?&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">        &lt;div class=&#34;container&#34; &gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">            &lt;section id=&#34;chart-container&#34;&gt;&lt;/section&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">            &lt;section id=&#34;score-container&#34;&gt;&lt;/section&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">        &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">    
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;/main&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;script src=&#34;https://code.highcharts.com/highcharts.js&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;script src=&#34;../../assets/js/game/cricket/data.js&#34; defer&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;script src=&#34;../../assets/js/game/cricket/index.js&#34; defer&gt;&lt;/script&gt;
+</span></span></span></code></pre></div><p>Since I am not using any module manager for this example, I had to include the <code>defer</code> attribute so that my custom scripts run only after the scripts from CDN are executed. But hold on, this would not work now. We need to update our <code>gulpfile</code> to enable the task runner to bundle our custom assets in the built directory. We would see that in the next step.</p>
+<h3 id="step-3---add-assets">
+  Step 3 - Add assets
+  <a class="heading-link" href="#step-3---add-assets">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Now that we have created a custom template, its time to add other assets like js files.</p>
 <p>Create few js files under any directory. I used the <code>/assets/js/game</code> directory.</p>
 <p>One way to add static assets is to just add new files under <code>/assets</code> directory, but with that done, your js bundle will become larger and will be downloaded everytime with every page. What you need is that download scripts only when the page is loaded.</p>
 <p>Here you can utilize the power of bundler tool whichever you are using or the theme came with. Since <code>casper</code> uses gulp as a task runner, we need to update our <code>gulpfile.js</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">customjs</span>(<span style="color:#a6e22e">done</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pump</span>([
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">src</span>([
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// pull in all custom js files
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#e6db74">&#39;assets/js/game/*/*.js&#39;</span>
-</span></span><span style="display:flex;"><span>        ], {<span style="color:#a6e22e">sourcemaps</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>}),
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">dest</span>(<span style="color:#e6db74">&#39;assets/built/custom&#39;</span>, {<span style="color:#a6e22e">sourcemaps</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;.&#39;</span>}),
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">livereload</span>()
-</span></span><span style="display:flex;"><span>    ], <span style="color:#a6e22e">handleError</span>(<span style="color:#a6e22e">done</span>));
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">customjs</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pump</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">src</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// pull in all custom js files
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;assets/js/game/*/*.js&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span> <span class="p">{</span><span class="nx">sourcemaps</span><span class="o">:</span> <span class="kc">false</span><span class="p">}),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">dest</span><span class="p">(</span><span class="s1">&#39;assets/built/custom&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">sourcemaps</span><span class="o">:</span> <span class="s1">&#39;.&#39;</span><span class="p">}),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">livereload</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span> <span class="nx">handleError</span><span class="p">(</span><span class="nx">done</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>As a side note, since this is for demo purpose, I have removed the <strong>uglify</strong> and <strong>concat</strong> tasks which are used by the existing <code>jsWatcher</code> in the <code>gulpfile.js</code>.</p>
 <p>Add a watcher if you want to reload the build everytime you make a change in any custom file</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">customjsWatcher</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">watch</span>(<span style="color:#e6db74">&#39;assets/js/**&#39;</span>, <span style="color:#a6e22e">customjs</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">customjsWatcher</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">watch</span><span class="p">(</span><span class="s1">&#39;assets/js/**&#39;</span><span class="p">,</span> <span class="nx">customjs</span><span class="p">);</span>
 </span></span></code></pre></div><p>Add the custom files to existing watcher</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">watcher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parallel</span>(<span style="color:#a6e22e">cssWatcher</span>, <span style="color:#a6e22e">hbsWatcher</span>, <span style="color:#a6e22e">jsWatcher</span>, <span style="color:#a6e22e">customjsWatcher</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">parallel</span><span class="p">(</span><span class="nx">cssWatcher</span><span class="p">,</span> <span class="nx">hbsWatcher</span><span class="p">,</span> <span class="nx">jsWatcher</span><span class="p">,</span> <span class="nx">customjsWatcher</span><span class="p">);</span>
 </span></span></code></pre></div><p>Add the customjs task to build task so that the files will be added while building the project. If you ignore this, your local live environment will work, but your theme&rsquo;s zip file will not have the required js files.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">css</span>, <span style="color:#a6e22e">js</span>, <span style="color:#a6e22e">customjs</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">build</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">css</span><span class="p">,</span> <span class="nx">js</span><span class="p">,</span> <span class="nx">customjs</span><span class="p">);</span>
 </span></span></code></pre></div><p>Once this is done, your page is ready to load. Start your ghost instance and theme dev tool</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ghost start
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn dev
-</span></span></code></pre></div><h3 id="step-4---deploy-theme">Step 4 - Deploy theme</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ghost start
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn dev
+</span></span></code></pre></div><h3 id="step-4---deploy-theme">
+  Step 4 - Deploy theme
+  <a class="heading-link" href="#step-4---deploy-theme">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>Create a zip file for your theme using</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn zip
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn zip
 </span></span></code></pre></div><p>Upload the theme using the Ghost admin panel and it should work. Couple of points though. For me the header was not rendering. To get that to work, I had to render the page with a page-template. This can be done as below</p>
 <p>Add custom route with a pre defined context</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">routes</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/game/cricket-fielding-positions/</span>: 
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">custom-template</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">data</span>: <span style="color:#ae81ff">page.cricket-fielding-positions</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">collections</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">permalink</span>: <span style="color:#ae81ff">/{slug}/</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">index</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">taxonomies</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">/tag/{slug}/</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">author</span>: <span style="color:#ae81ff">/author/{slug}/</span>
-</span></span></code></pre></div><p>By specifying the data attribute, we are saying to ghost that push all data available for the cricket-fielding-positions page to this custom template. Now in the template you will have access to the page data like title, tags etc. Also you will be able to render the page with a <code>page template</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-handlebars" data-lang="handlebars"><span style="display:flex;"><span><span style="color:#75715e">{{!-- Special header.hbs partial to generate the &lt;header&gt; tag --}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#a6e22e">#page</span><span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span><span style="color:#66d9ef">&gt;</span> site-header<span style="color:#75715e">}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span><span style="color:#a6e22e">/page</span><span style="color:#75715e">}}</span>
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/game/cricket-fielding-positions/</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l">custom-template</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l">page.cricket-fielding-positions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">collections</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permalink</span><span class="p">:</span><span class="w"> </span><span class="l">/{slug}/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l">index</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">taxonomies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">/tag/{slug}/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">/author/{slug}/</span><span class="w">
+</span></span></span></code></pre></div><p>By specifying the data attribute, we are saying to ghost that push all data available for the cricket-fielding-positions page to this custom template. Now in the template you will have access to the page data like title, tags etc. Also you will be able to render the page with a <code>page template</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-handlebars" data-lang="handlebars"><span class="line"><span class="cl"><span class="c">{{!-- Special header.hbs partial to generate the &lt;header&gt; tag --}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="nf">#page</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">  </span><span class="cp">{{</span><span class="k">&gt;</span> <span class="nv">site-header</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="nf">/page</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-to-deploy-multiple-github-repos-on-single-netlify-site/how-to-deploy-multiple-github-repos-on-single-netlify-site/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

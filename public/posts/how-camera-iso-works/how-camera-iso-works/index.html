@@ -1,398 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="I don&rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="I don&rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.">
+
+<meta property="og:url" content="//localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="I don’t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="I don&rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><p>I don&rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.</p>
-<h1 id="the-question">The question</h1>
+      <div class="post-content">
+        
+        <p>I don&rsquo;t own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.</p>
+<h1 id="the-question">
+  The question
+  <a class="heading-link" href="#the-question">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>I understand that the captured light information is dependent on the lens size aka <em>aperture</em> and the <em>shutter</em> speed of the lens. But going by the fact that ISO modifies the sensitivity of the sensor, it would be safe to assume that it also contributes to the amount of light captured by the sensor.</p>
 <p>Aperture is controlled by altering the size of the opening. Shutter speed is controlled by changing the speed of the shutter. So basically both these things are mechanical.</p>
 <p>My question is what happens when I change the ISO setting on the camera?</p>
-<p>This <a href="https://photo.stackexchange.com/questions/2946/how-is-iso-implemented-in-digital-cameras">post</a> pretty much sums up what I want to know.</p>
-<h1 id="searching-for-answer">Searching for answer</h1>
+<p>This <a href="https://photo.stackexchange.com/questions/2946/how-is-iso-implemented-in-digital-cameras"  class="external-link" target="_blank" rel="noopener">post</a> pretty much sums up what I want to know.</p>
+<h1 id="searching-for-answer">
+  Searching for answer
+  <a class="heading-link" href="#searching-for-answer">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>With help from the stackoverflow question, I had some pointers on which I can start my search.</p>
-<p>Needless to say, there are not many helpful <a href="https://www.easybasicphotography.com/what-is-iso.html">articles</a> which may provide a direct answer. Most of the articles just end up saying - ISO changes sensitivity but not answering <em>how</em>. Maybe its because they just assume that somehow its a part of the camera as a package and nobody needs to know. In the abstraction world, its true but I wanted to dig into the abstraction.</p>
-<h1 id="answer">Answer</h1>
-<p>After searching and reading about ISO for hours, I finally tumbled upon one <a href="https://clarkvision.com/articles/iso/">article</a> which in my opinion is by far the most informative till now. I haven&rsquo;t yet understood everything but I think I got a preliminary answer to my question.</p>
+<p>Needless to say, there are not many helpful <a href="https://www.easybasicphotography.com/what-is-iso.html"  class="external-link" target="_blank" rel="noopener">articles</a> which may provide a direct answer. Most of the articles just end up saying - ISO changes sensitivity but not answering <em>how</em>. Maybe its because they just assume that somehow its a part of the camera as a package and nobody needs to know. In the abstraction world, its true but I wanted to dig into the abstraction.</p>
+<h1 id="answer">
+  Answer
+  <a class="heading-link" href="#answer">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>After searching and reading about ISO for hours, I finally tumbled upon one <a href="https://clarkvision.com/articles/iso/"  class="external-link" target="_blank" rel="noopener">article</a> which in my opinion is by far the most informative till now. I haven&rsquo;t yet understood everything but I think I got a preliminary answer to my question.</p>
 <blockquote>
 <p>Digital sensors don&rsquo;t change sensitivity</p>
 </blockquote>
 <p>Contradictory to my belief, there is so such thing as intensity for digital sensors. They have just one intensity which as we call - on/off. Light captured by the sensor is converted to digital values(rgb) using an <code>ADC(Analog to Digital converter)</code>. ADC itself is a big subject in Electronics engineering which require you to understand various mathematical transformations and approximations.</p>
 <p>It turns out that ISO is just the gain applied to this transformation. Now you would ask, isn&rsquo;t applying gain would mean changing the sensitivity? The gain is applied to the light already captured by the sensor which means that ISO does not change the amount of light the sensor captures. It just amplifies the signal that we get after processing the captured light.</p>
-<h1 id="more-iso--more-noise">More ISO = more noise?</h1>
+<h1 id="more-iso--more-noise">
+  More ISO = more noise?
+  <a class="heading-link" href="#more-iso--more-noise">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>A typical argument given to support the fact that ISO changes sensitivity is - On increasing the ISO, you get more noise in the picture. At first it seems a perfect fit, but then reading on about the reason behind it makes it clear that ISO is nothing but a signal gain.</p>
 <p>Apparently in most cameras not everything is manual by default. Even in Manual/Pro mode, the software is designed in such a way so that it compensates other things like shutter speed to maintain a good exposure. So if you increase the ISO, the amount of light captured is still the same, but the signal will be amplified. And due to a lower shutter speed, the amount of light that sensor receives is now less which produces noise. And with amplification the noise also gets amplified there by giving us an illusion that the noise is because of high ISO.</p>
 <p>If you keep shutter speed and aperture constant and just increase the ISO, the light captured will be same, but you will get a picture with amplified values which in turn would make it over exposed.</p>
 <p>I read all the top articles(as per DuckDuckGo) on ISO. It looks like not many people are aware of how it works. Many of them try to co relate it to the analog camera&rsquo;s film sensitivity which is altogether a different thing. Here are some sources that missed the point and can be misleading</p>
 <ul>
-<li><a href="https://digital-photography-school.com/iso-settings/">https://digital-photography-school.com/iso-settings/</a> - Explains about film ISO, but totallly misses the point for digital photography. Infact the first <a href="http://disq.us/p/2d8nlvi">comment</a> itself feels more informative than the article itself</li>
-<li><a href="https://www.digitalcameraworld.com/au/tutorials/camera-iso-settings-take-control-of-your-exposures-in-low-light">https://www.digitalcameraworld.com/au/tutorials/camera-iso-settings-take-control-of-your-exposures-in-low-light</a> - Looks a professional site, still no information on how ISO is implemented.</li>
-<li><a href="https://www.lmscope.com/en/Digital_Camera_Sensitivity_ISO_en.html">https://www.lmscope.com/en/Digital_Camera_Sensitivity_ISO_en.html</a> - Just touches about amplifier gain, but somehow it feels that that section was added later on.</li>
-<li><a href="https://shuttermuse.com/what-is-iso-in-photography/">https://shuttermuse.com/what-is-iso-in-photography/</a> - Says that on doubling the ISO, the amount of captured light also doubles</li>
-<li><a href="https://www.easybasicphotography.com/what-is-iso.html">https://www.easybasicphotography.com/what-is-iso.html</a> - Says ISO changes sensors ability to read and gather light</li>
+<li><a href="https://digital-photography-school.com/iso-settings/"  class="external-link" target="_blank" rel="noopener">https://digital-photography-school.com/iso-settings/</a> - Explains about film ISO, but totallly misses the point for digital photography. Infact the first <a href="http://disq.us/p/2d8nlvi"  class="external-link" target="_blank" rel="noopener">comment</a> itself feels more informative than the article itself</li>
+<li><a href="https://www.digitalcameraworld.com/au/tutorials/camera-iso-settings-take-control-of-your-exposures-in-low-light"  class="external-link" target="_blank" rel="noopener">https://www.digitalcameraworld.com/au/tutorials/camera-iso-settings-take-control-of-your-exposures-in-low-light</a> - Looks a professional site, still no information on how ISO is implemented.</li>
+<li><a href="https://www.lmscope.com/en/Digital_Camera_Sensitivity_ISO_en.html"  class="external-link" target="_blank" rel="noopener">https://www.lmscope.com/en/Digital_Camera_Sensitivity_ISO_en.html</a> - Just touches about amplifier gain, but somehow it feels that that section was added later on.</li>
+<li><a href="https://shuttermuse.com/what-is-iso-in-photography/"  class="external-link" target="_blank" rel="noopener">https://shuttermuse.com/what-is-iso-in-photography/</a> - Says that on doubling the ISO, the amount of captured light also doubles</li>
+<li><a href="https://www.easybasicphotography.com/what-is-iso.html"  class="external-link" target="_blank" rel="noopener">https://www.easybasicphotography.com/what-is-iso.html</a> - Says ISO changes sensors ability to read and gather light</li>
 </ul>
 <p>And last but not the least, an article straight from the manufacturer site</p>
 <ul>
-<li><a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/understanding-iso-sensitivity.html">https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/understanding-iso-sensitivity.html</a> - Totally non informative of how ISO works and makes an incorrect analogy with analog film grain.</li>
+<li><a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/understanding-iso-sensitivity.html"  class="external-link" target="_blank" rel="noopener">https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/understanding-iso-sensitivity.html</a> - Totally non informative of how ISO works and makes an incorrect analogy with analog film grain.</li>
 </ul>
-<h1 id="follow-up-questions">Follow up questions</h1>
+<h1 id="follow-up-questions">
+  Follow up questions
+  <a class="heading-link" href="#follow-up-questions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>After understanding the mechanism its clear how ISO works. But it raises more questions now</p>
 <ul>
 <li>Why its called ISO?</li>
 <li>What do the numbers suffixed with ISO - 100, 200 etc mean?</li>
 <li>If ISO is just signal amplification, is it part of the camera or its up to the device using the camera to implement the gain or is this setting exposed as a parameter to the device from the camera.</li>
 </ul>
-<h1 id="iso-for-film-speed">ISO for film speed</h1>
+<h1 id="iso-for-film-speed">
+  ISO for film speed
+  <a class="heading-link" href="#iso-for-film-speed">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Remember the cameras in which you had to change the film roll. In analog photography, besides aperture and shutter speed, film also had a characteristic called <em>speed</em> which determined how much light it can capture.</p>
-<p><a href="https://www.iso.org/home.html">ISO</a> is the organization which fixed the standard for film speed. Unfortunately the standard is <a href="https://www.iso.org/standard/11948.html">not free to read</a> but <a href="https://en.m.wikipedia.org/wiki/Film_speed#ISO">wikipedia</a> page has enough information. The standard for film speed is <code>ISO 5800:2001</code>. Every standard has a number associated with it. In fact every thing related to photography has been standardized by them if you look <a href="https://en.m.wikipedia.org/wiki/Film_speed#ISO">here</a>. Calling one of the aspect of photography as ISO is so misleading. And if you really want to use ISO, use it with the number like we have for dates - <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601</a>. Before reading all this I literally thought that in digital cameras ISO would be mean something like Input Signal Optimizer:-P</p>
-<p>The standard for digital photography is here - <a href="https://webstore.ansi.org/Standards/ISO/ISO122322019"><code>ISO 12232:2019</code></a>. It also requires a payment($110) if you want to read it. Otherwise you can refer the <a href="https://en.m.wikipedia.org/wiki/Film_speed#Digital_camera_ISO_speed_and_exposure_index">wiki</a> page for basic idea.</p>
+<p><a href="https://www.iso.org/home.html"  class="external-link" target="_blank" rel="noopener">ISO</a> is the organization which fixed the standard for film speed. Unfortunately the standard is <a href="https://www.iso.org/standard/11948.html"  class="external-link" target="_blank" rel="noopener">not free to read</a> but <a href="https://en.m.wikipedia.org/wiki/Film_speed#ISO"  class="external-link" target="_blank" rel="noopener">wikipedia</a> page has enough information. The standard for film speed is <code>ISO 5800:2001</code>. Every standard has a number associated with it. In fact every thing related to photography has been standardized by them if you look <a href="https://en.m.wikipedia.org/wiki/Film_speed#ISO"  class="external-link" target="_blank" rel="noopener">here</a>. Calling one of the aspect of photography as ISO is so misleading. And if you really want to use ISO, use it with the number like we have for dates - <a href="https://www.iso.org/iso-8601-date-and-time-format.html"  class="external-link" target="_blank" rel="noopener">ISO-8601</a>. Before reading all this I literally thought that in digital cameras ISO would be mean something like Input Signal Optimizer:-P</p>
+<p>The standard for digital photography is here - <a href="https://webstore.ansi.org/Standards/ISO/ISO122322019"  class="external-link" target="_blank" rel="noopener"><code>ISO 12232:2019</code></a>. It also requires a payment($110) if you want to read it. Otherwise you can refer the <a href="https://en.m.wikipedia.org/wiki/Film_speed#Digital_camera_ISO_speed_and_exposure_index"  class="external-link" target="_blank" rel="noopener">wiki</a> page for basic idea.</p>
 <p>Here is an excerpt from it</p>
 <blockquote>
 <p>For digital photo cameras (&ldquo;digital still cameras&rdquo;), an exposure index (EI) rating—commonly called ISO setting—is specified by the manufacturer such that the sRGB image files produced by the camera will have a lightness similar to what would be obtained with film of the same EI rating at the same exposure. The usual design is that the camera&rsquo;s parameters for interpreting the sensor data values into sRGB values are fixed, and a number of different EI choices are accommodated by varying the sensor&rsquo;s signal gain in the analog realm, prior to conversion to digital.</p>
 </blockquote>
-<h1 id="my-opinion">My opinion</h1>
+<h1 id="my-opinion">
+  My opinion
+  <a class="heading-link" href="#my-opinion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>To sum up you can say ISO is nothing but a gimmick. You can always process the data after capturing light by software. Its another thing where you would want this processing to be done - In the camera&rsquo;s electronics or outside camera.</p>
 <p>The take away is, instead of saying ISO this setting should have been called <code>Gain</code> or <code>Amplification</code> which would have resolved all the confusion.</p>
-<h1 id="pending-questions">Pending questions</h1>
+<h1 id="pending-questions">
+  Pending questions
+  <a class="heading-link" href="#pending-questions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Although I have understood the very basics of ISO, but I still don&rsquo;t have information of where the amplification is done. No article or answer had cited credible sources where I can read more about it. Some links are too old, some are broken.</p>
 <p>If ISO is just gain, we could capture the image as raw and probably apply the gain while post processing in photoshop etc. effectively changing the ISO number in the exif details of the photo?</p>
 <p>In analog photography ISO numbers meant something, but in digital it has no meaning, so can we altogether get rid of the numbers and just say <code>Gain</code> with values from <code>0</code> to <code>100</code>? Will it work?</p>
-<p>In fact it seems you <a href="https://www.sony.net/SonyInfo/News/Press/201807/18-060E/">can&rsquo;t even rely on the manufacturer</a> too for truth now.</p>
+<p>In fact it seems you <a href="https://www.sony.net/SonyInfo/News/Press/201807/18-060E/"  class="external-link" target="_blank" rel="noopener">can&rsquo;t even rely on the manufacturer</a> too for truth now.</p>
 <p>Lets hope I find something in future.</p>
 <p><strong>Update 27 jan 2021</strong>
-<a href="https://youtu.be/WEApLA-YNko">Here is another great video</a> by Bylan Bennet covering exactly what ISO is. I would also recommed checking out his other photography videos.</p>
+<a href="https://youtu.be/WEApLA-YNko"  class="external-link" target="_blank" rel="noopener">Here is another great video</a> by Bylan Bennet covering exactly what ISO is. I would also recommed checking out his other photography videos.</p>
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-authentication-works/how-authentication-works/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

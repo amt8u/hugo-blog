@@ -1,284 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="ExcerptLink to headingLets learn about authentication in depth. At least the depth that I can cover.
+NeedLink to headingIn one of my earlier posts, I covered the difference between authentication and authrorization. In this one, I will dig deep into authentication.
+IntroLink to headingThe Illusion of sessionLink to headingOnce you login into an application using your username and password, any page/link that you were not able to access now becomes accessible.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="">
+<meta name="twitter:description" content="ExcerptLink to headingLets learn about authentication in depth. At least the depth that I can cover.
+NeedLink to headingIn one of my earlier posts, I covered the difference between authentication and authrorization. In this one, I will dig deep into authentication.
+IntroLink to headingThe Illusion of sessionLink to headingOnce you login into an application using your username and password, any page/link that you were not able to access now becomes accessible.">
+
+<meta property="og:url" content="//localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="johndoe">
+  <meta property="og:description" content="ExcerptLink to headingLets learn about authentication in depth. At least the depth that I can cover.
+NeedLink to headingIn one of my earlier posts, I covered the difference between authentication and authrorization. In this one, I will dig deep into authentication.
+IntroLink to headingThe Illusion of sessionLink to headingOnce you login into an application using your username and password, any page/link that you were not able to access now becomes accessible.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title> - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Excerpt Lets learn about authentication in depth. At least the depth that I can cover.
-Need In one of my earlier posts, I covered the difference between authentication and authrorization. In this one, I will dig deep into authentication.
-Intro The Illusion of session Once you login into an application using your username and password, any page/link that you were not able to access now becomes accessible. For most of the web, the underlying protocol is HTTP which is stateless." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/how-passwords-are-sent/how-passwords-are-sent/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5"></h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="excerpt">Excerpt</h1>
+      <div class="post-content">
+        
+        <h1 id="excerpt">
+  Excerpt
+  <a class="heading-link" href="#excerpt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Lets learn about authentication in depth. At least the depth that I can cover.</p>
-<h1 id="need">Need</h1>
-<p>In one of my earlier posts, I covered  the difference between <a href="https://cybercafe.dev/authentication-vs-authorization/">authentication and authrorization</a>. In this one, I will dig <strong>deep</strong> into authentication.</p>
-<h1 id="intro">Intro</h1>
-<h1 id="the-illusion-of-session">The Illusion of session</h1>
+<h1 id="need">
+  Need
+  <a class="heading-link" href="#need">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>In one of my earlier posts, I covered  the difference between <a href="https://cybercafe.dev/authentication-vs-authorization/"  class="external-link" target="_blank" rel="noopener">authentication and authrorization</a>. In this one, I will dig <strong>deep</strong> into authentication.</p>
+<h1 id="intro">
+  Intro
+  <a class="heading-link" href="#intro">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h1 id="the-illusion-of-session">
+  The Illusion of session
+  <a class="heading-link" href="#the-illusion-of-session">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Once you login into an application using your username and password, any page/link that you were not able to access now becomes accessible. For most of the web, the underlying protocol is <code>HTTP</code> which is <code>stateless</code>. Which means that every request is independent and there is nothing in the connection that identifies who created the request.</p>
 <p>So if you login on chrome and firefox with different accounts on the same computer, and you visit your settings page, you are actually requesting the exact same page.</p>
 <p>For the server these are just same requests coming from same IP address and it cannot differentiate who initiated which request. But still somehow the correct page opens up in each browser.</p>
@@ -296,32 +238,50 @@ Intro The Illusion of session Once you login into an application using your user
 <blockquote>
 <p>Thats how the users see it as session while in the background there is no such session.</p>
 </blockquote>
-<h1 id="session-id">Session Id</h1>
+<h1 id="session-id">
+  Session Id
+  <a class="heading-link" href="#session-id">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>Mostly, the id we discussed in the above section is just a random unique value and nothing else. Unique only for the time its associated with your profile. Once it expires, it could repeat with other user&rsquo;s profile value. But of course, at that time you won&rsquo;t have the previous values with you. On every login, the server creates it and keeps a copy of
 it for validating future requests. The copy is maintained for a predefined period of time as per the server&rsquo;s policies. And that&rsquo;s why your session expires if you do not do any activity for sometime.</p>
-<p>So if, somebody, somehow manages to get your <code>token</code>, he/she/they can recreate your session in their computer. Without knowing the username/password the attacker is able to access your data. This technique is called <a href="https://en.wikipedia.org/wiki/Session_hijacking">session hijacking</a> and can easily be done if you are not connected via SSL connection. Anybody who can intercept your http request will be able to see your session id. How <code>SSL</code> prevents your request from being read by interceptor is a separate topic of discussion.</p>
+<p>So if, somebody, somehow manages to get your <code>token</code>, he/she/they can recreate your session in their computer. Without knowing the username/password the attacker is able to access your data. This technique is called <a href="https://en.wikipedia.org/wiki/Session_hijacking"  class="external-link" target="_blank" rel="noopener">session hijacking</a> and can easily be done if you are not connected via SSL connection. Anybody who can intercept your http request will be able to see your session id. How <code>SSL</code> prevents your request from being read by interceptor is a separate topic of discussion.</p>
 <blockquote>
 <p>Take your sessionId as seriously as you take your password.</p>
 </blockquote>
-<h1 id="http-authentication">HTTP authentication</h1>
-<p>The HTTP protocol defines how each request should be <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes">verified or authenticated</a>. But again its upto the server(the guys who create the platform) to implement how do they want to authenticate each request.</p>
+<h1 id="http-authentication">
+  HTTP authentication
+  <a class="heading-link" href="#http-authentication">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>The HTTP protocol defines how each request should be <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes"  class="external-link" target="_blank" rel="noopener">verified or authenticated</a>. But again its upto the server(the guys who create the platform) to implement how do they want to authenticate each request.</p>
 <p>You will find many schemes listed in the page, but most common ones are <code>basic</code> and <code>bearer</code>. You can read about them on the MDN page. But in simpler terms</p>
 <ul>
 <li><strong>basic</strong> - provide credentials with every request</li>
 <li><strong>bearer</strong> - provide a token with every request</li>
 </ul>
-<p>There is even an already defined <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate">header</a> in http protocol which says what all schemes are supported.</p>
+<p>There is even an already defined <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate"  class="external-link" target="_blank" rel="noopener">header</a> in http protocol which says what all schemes are supported.</p>
 <p>But again, its upto the server to manage how the authentication is done. Big companies like facebook, netflix will have many layers of protection to avoid authentication breaches.</p>
-<h1 id="encrypting-password-before-sending">Encrypting password before sending</h1>
+<h1 id="encrypting-password-before-sending">
+  Encrypting password before sending
+  <a class="heading-link" href="#encrypting-password-before-sending">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>I recently observed that a few sites encrypt the user password before sending it to the server even if you are on a SSL connection. Of course not everybody is doing that. The question is why do you need to encrypt your password if you are already on <code>https</code> connection which means that every request is always encrypted.</p>
-<p>I am not sure about this and there seems to be very <a href="https://duckduckgo.com/?q=encrypt+password+before+sending+to+server&amp;t=brave&amp;ia=web">less information</a> about it available online. There are few <a href="https://security.stackexchange.com/questions/133453/is-encryption-of-passwords-needed-for-an-https-website">outdated debates</a> but I didn&rsquo;t find any strong evidence to</p>
+<p>I am not sure about this and there seems to be very <a href="https://duckduckgo.com/?q=encrypt&#43;password&#43;before&#43;sending&#43;to&#43;server&amp;t=brave&amp;ia=web"  class="external-link" target="_blank" rel="noopener">less information</a> about it available online. There are few <a href="https://security.stackexchange.com/questions/133453/is-encryption-of-passwords-needed-for-an-https-website"  class="external-link" target="_blank" rel="noopener">outdated debates</a> but I didn&rsquo;t find any strong evidence to</p>
 <p>What I feel is that this helps in preventing credential theft from other techniques like installing malicious browser extentions. Sometimes people are also tricked into running javascript code which can inject functions in background and can intercept the login call even before its encrypted by the browser.</p>
 <p>Thats why you see a big warning when you open <code>console</code> on facebook.com.
-<img src="./images/how-passwords-are-sent/facebook_console.png" alt="facebook-console-warning"></p>
+<img alt="facebook-console-warning" src="./images/how-passwords-are-sent/facebook_console.png"></p>
 <p>The attackers are not totally wrong! At least someone is getting hacked :-P</p>
-<p>http header - MDN auth page <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization</a></p>
-<p>authenticatin shemees - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes">https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes</a></p>
-<p>HOBA - <a href="https://datatracker.ietf.org/doc/html/rfc7486#section-1.1">https://datatracker.ietf.org/doc/html/rfc7486#section-1.1</a>
+<p>http header - MDN auth page <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization"  class="external-link" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization</a></p>
+<p>authenticatin shemees - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes"  class="external-link" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes</a></p>
+<p>HOBA - <a href="https://datatracker.ietf.org/doc/html/rfc7486#section-1.1"  class="external-link" target="_blank" rel="noopener">https://datatracker.ietf.org/doc/html/rfc7486#section-1.1</a>
 take screenshot of point no. 7 which session that eventually a session cookie will be set</p>
 <p>bearer - simple way to say that i have a token and not credentials</p>
 <p>SSO
@@ -335,67 +295,93 @@ encrypted session-id
 url encoding
 base64 encoding
 encrypting</p>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-camera-iso-works/how-camera-iso-works/"
-      ><span class="mr-1.5">←</span><span></span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/how-to-add-custom-static-pages-to-ghost-blog/how-to-add-custom-static-pages-to-ghost-blog/"
-      ><span></span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>

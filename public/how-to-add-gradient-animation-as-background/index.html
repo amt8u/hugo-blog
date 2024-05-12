@@ -1,323 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  How to add gradient animation as site header in ghost blo · johndoe
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
 
 
+<meta name="author" content="amt8u">
+<meta name="description" content="Add simple background gradient animation to website header">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="How to add gradient animation as site header in ghost blo">
+<meta name="twitter:description" content="Add simple background gradient animation to website header">
+
+<meta property="og:url" content="//localhost:1313/how-to-add-gradient-animation-as-background/">
+  <meta property="og:site_name" content="johndoe">
+  <meta property="og:title" content="How to add gradient animation as site header in ghost blo">
+  <meta property="og:description" content="Add simple background gradient animation to website header">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-10-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-10-01T00:00:00+00:00">
 
 
 
 
+<link rel="canonical" href="//localhost:1313/how-to-add-gradient-animation-as-background/">
 
 
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
-  lang="en"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title>How to add gradient animation as site header in ghost blo - cybercafe.dev</title>
-
-  
-  <meta name="theme-color" />
 
   
   
-  
-  
-  <meta name="description" content="Using Presets There is a great tool to start with. Head over to below link and create your gradient config. You can always modify everything later on.
-https://www.gradient-animator.com/
-Add to your site If you are using a ghost instance, there are two ways
-Add to code injection Update the theme css files Code injection .css-selector { background: linear-gradient(308deg, #000000, #000000, #f75900, #000000); background-size: 800% 800%; -webkit-animation: z00md 21s ease infinite; -moz-animation: z00md 21s ease infinite; animation: z00md 21s ease infinite; } @-webkit-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @-moz-keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } @keyframes z00md { 0%{background-position:0% 14%} 50%{background-position:100% 87%} 100%{background-position:0% 14%} } Inside the site header code injection box, add a new style tag and just paste the above css directly." />
-  <meta name="author" content="amt8u" />
-  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
 
   
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/0166b1a7316fa3ce87a144e4f0cda911?s=160&amp;d=identicon" />
-  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
-  
-  
-  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
-  
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
-  
-  
 
-  
-  
-  <script
-    defer
-    src="http://localhost:1313/highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
-  
 
-  
-  
-  
+ 
 
-  
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-  
-  <meta name="generator" content="Hugo 0.125.7">
 
-  
-  
-  
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
 </head>
 
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
-      >cybercafe.dev</a
-    >
-    <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
 
-  <div
-    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
+
+
+
+<body class="preload-transitions colorscheme-auto">
   
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
 
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
 
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
     
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
+    <a class="navigation-title" href="//localhost:1313/">
+      johndoe
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/amt8u/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
 
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
 
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    
-    
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <div class="content">
       
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/amt8u/"
-        >About</a
-      >
-      
-    </nav>
-    
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/how-to-add-gradient-animation-as-background/">
+              How to add gradient animation as site header in ghost blo
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2020-10-01T00:00:00Z">
+                October 1, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
 
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
-    >
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/amt8u"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-16">
-    <h1 class="!my-0 pb-2.5">How to add gradient animation as site header in ghost blo</h1>
-
-    
-    <div class="text-sm antialiased opacity-60">
-      
-      <time>Oct 1, 2020</time>
-      
-      
-      
-      
-    </div>
-    
-  </header>
-
-  <section><h1 id="using-presets">Using Presets</h1>
+      <div class="post-content">
+        
+        <h1 id="using-presets">
+  Using Presets
+  <a class="heading-link" href="#using-presets">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>There is a great tool to start with. Head over to below link and create your gradient config. You can always modify everything later on.</p>
-<p><a href="https://www.gradient-animator.com/">https://www.gradient-animator.com/</a></p>
-<h1 id="add-to-your-site">Add to your site</h1>
+<p><a href="https://www.gradient-animator.com/"  class="external-link" target="_blank" rel="noopener">https://www.gradient-animator.com/</a></p>
+<h1 id="add-to-your-site">
+  Add to your site
+  <a class="heading-link" href="#add-to-your-site">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>If you are using a ghost instance, there are two ways</p>
 <ul>
 <li>Add to code injection</li>
 <li>Update the theme css files</li>
 </ul>
-<h1 id="code-injection">Code injection</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">css-selector</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: linear-gradient(<span style="color:#ae81ff">308</span><span style="color:#66d9ef">deg</span>, <span style="color:#ae81ff">#000000</span>, <span style="color:#ae81ff">#000000</span>, <span style="color:#ae81ff">#f75900</span>, <span style="color:#ae81ff">#000000</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-size</span>: <span style="color:#ae81ff">800</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">800</span><span style="color:#66d9ef">%</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">animation</span>: z00md <span style="color:#ae81ff">21</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">animation</span>: z00md <span style="color:#ae81ff">21</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">animation</span>: z00md <span style="color:#ae81ff">21</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span> <span style="color:#66d9ef">infinite</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">-webkit-keyframes</span> <span style="color:#f92672">z00md</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">-moz-keyframes</span> <span style="color:#f92672">z00md</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">z00md</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">87</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">%</span>}
-</span></span><span style="display:flex;"><span>}
+<h1 id="code-injection">
+  Code injection
+  <a class="heading-link" href="#code-injection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">css-selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">308</span><span class="kt">deg</span><span class="p">,</span> <span class="mh">#000000</span><span class="p">,</span> <span class="mh">#000000</span><span class="p">,</span> <span class="mh">#f75900</span><span class="p">,</span> <span class="mh">#000000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-size</span><span class="p">:</span> <span class="mi">800</span><span class="kt">%</span> <span class="mi">800</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">animation</span><span class="p">:</span> <span class="n">z00md</span> <span class="mi">21</span><span class="kt">s</span> <span class="kc">ease</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">animation</span><span class="p">:</span> <span class="n">z00md</span> <span class="mi">21</span><span class="kt">s</span> <span class="kc">ease</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">animation</span><span class="p">:</span> <span class="n">z00md</span> <span class="mi">21</span><span class="kt">s</span> <span class="kc">ease</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">-webkit-keyframes</span> <span class="nt">z00md</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span> <span class="mi">87</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">-moz-keyframes</span> <span class="nt">z00md</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span> <span class="mi">87</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">z00md</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span> <span class="mi">87</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="k">background-position</span><span class="p">:</span><span class="mi">0</span><span class="kt">%</span> <span class="mi">14</span><span class="kt">%</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Inside the site header code injection box, add a new style tag and just paste the above css directly.</p>
 <p>Just remember to change the <code>css-selector</code> to whichever element you would like to have the effect.</p>
 <p>You can always tweak the css properties directly to achieve the desired result. You can also try changing the animation properties to create some wonderful but pretty simple effects.</p>
-<h1 id="updating-theme">Updating theme</h1>
+<h1 id="updating-theme">
+  Updating theme
+  <a class="heading-link" href="#updating-theme">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>You can also edit your theme directly if you are using a custom theme. Just add the same css anywhere in the <code>style.css</code> file.</p>
 <p>Create a new zip version of the theme and upload it to your ghost installation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn zip
-</span></span></code></pre></div><h1 id="troubleshooting">Troubleshooting</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn zip
+</span></span></code></pre></div><h1 id="troubleshooting">
+  Troubleshooting
+  <a class="heading-link" href="#troubleshooting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
 <p>If your changes are not reflecting</p>
 <ul>
 <li>Try disabling cache in the browser and reloading the page</li>
@@ -328,67 +269,93 @@ Add to code injection Update the theme css files Code injection .css-selector { 
 <blockquote>
 <p>End</p>
 </blockquote>
-</section>
 
-  
-  
+      </div>
 
-  
-  
-  
-  
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/a-revisit-to-classic-comic-styled-game-xiii/"
-      ><span class="mr-1.5">←</span><span>A revisit to a classic game - XIII</span></a
-    >
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
     
+      2019 -
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/add-progressive-web-app-support-to-ghost-theme/"
-      ><span>Add PWA support to ghost blog</span><span class="ml-1.5">→</span></a
-    >
+    2024
+     amt8u 
+    ·
     
-  </nav>
-  
-  
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-</article>
-
-
-    </main>
-
-    <footer
-  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2024
-    <a class="link" href="http://localhost:1313/">cybercafe.dev</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >✎ Paper</a
-  >
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
 </footer>
 
-  </body>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
 </html>
