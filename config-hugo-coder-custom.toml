@@ -1,4 +1,4 @@
-baseURL = "amt8u-hugo-blog.netlify.app"
+baseURL = "https://amt8u-hugo-blog.netlify.app"
 title = "johndoe"
 theme = "hugo-coder-custom"
 languageCode = "en"
