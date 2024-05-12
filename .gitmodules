@@ -46,3 +46,15 @@
 [submodule "themes/gruvhugo"]
 	path = themes/gruvhugo
 	url = https://gitlab.com/avron/gruvhugo
+[submodule "themes/hugo-simple"]
+	path = themes/hugo-simple
+	url = https://github.com/maolonglong/hugo-simple.git
+[submodule "themes/hugo-coder"]
+	path = themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "themes/hugo-PaperMod"]
+	path = themes/hugo-PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/hugo-coder-custom"]
+	path = themes/hugo-coder-custom
+	url = https://github.com/amt8u/hugo-coder-custom.git

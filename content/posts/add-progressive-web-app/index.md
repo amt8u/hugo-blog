@@ -38,7 +38,7 @@ Create a new file in the root of your theme. You can give any name. Most of the 
 
 The display property handles how the app should be rendered. It has four options - `fullscreen`, `standalone`, `minimal-ui` and `browser`.
 
-```js
+```json
 {
     "name":"Cybercafe.dev",
     "short_name":"Cybercafe",
@@ -71,8 +71,8 @@ The display property handles how the app should be rendered. It has four options
 
   https://web.dev/install-criteria/
 
-  ```js
-  const PRECACHE = 'precache';
+```js
+const PRECACHE = 'precache';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
@@ -141,7 +141,7 @@ self.addEventListener('fetch', event => {
 Now that we have the `sw.js` and `manifest.webmanifest` handy, we need to tell the browser where to look for this. As we do with other resources like `css` we need to create a `link` tag with href to our manifest file. Note that I have shown the `<head>` section only below. Your `default.hbs` would have a lot of other code too.
 
 
-```handlebars
+```html
 <head>
 
     {{!-- Document Settings --}}
@@ -198,7 +198,7 @@ Now that everything is setup. Its time to build and run your app. Depending on t
 
 If you have a local ghost dev environment running and you have configured it to use local dev theme, you could just run below command and refresh the browser cache.
 
-```bash
+```sh
 yarn dev
 ```
 
@@ -210,10 +210,10 @@ yarn zip
 
 If everything runs fine, you should see a new action when you open your site on mobile browser - `Add to home screen`. You will be able to install your site as a native app on your device. And as you open various pages, they start getting cached. Try switching data/wifi off and load your app. You should still be able to navigate to the pages you visited. And for the rest of the URLs you should see the offline page which you created from ghost admin.
 
-![home-screen-icon](./images/add-progressive-web-app/home-screen-icon.jpg)
-![fullscreen-app](./images/add-progressive-web-app/fullscreen-app.jpg)
-![fullscreen-app-article](./images/add-progressive-web-app/fullscreen-app-article.jpg)
-![app-offline-page](./images/add-progressive-web-app/app-offline-page.jpg)
+. | .
+--- | ---
+![home-screen-icon](./images/home-screen-icon.jpg) | ![fullscreen-app](./images/fullscreen-app.jpg)
+![fullscreen-app-article](./images/fullscreen-app-article.jpg) | ![app-offline-page](./images/app-offline-page.jpg)
 
 
 # Things to note - My observations : may be wrong
@@ -246,7 +246,7 @@ Refresh service worker on demand
 
 # End note
 
-![lighthouse-score](./images/add-progressive-web-app/lighthouse-score.png)
+![lighthouse-score](./images/lighthouse-score.png)
 
 Progressive web apps is not just one property. Instead it is a set of techniques combined together to create a seamless user experience. Its still developing and will sure change in near future. Needless to say, not every platform supports every feature. Just be cautious about it.
 

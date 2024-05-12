@@ -1,10 +1,10 @@
 ---
 slug: amt8u
 date: 2019-01-01
-title: About me
+title: amt8u
 ---
 
-![z00md-logo](./z00md_logo.png)
+<img alt="amt8u-logo" src="./amt8u_logo.png" width="20%"/>
 
 I use this Blog as a medium to capture my thoughts, opinions and learnings. The purpose of this self hosted Blog was to understand various aspects of web hosting and simultaneously share my experiences with others. Being an engineer most of my articles would be around technology with occasional post on miscellaneous things.
 
