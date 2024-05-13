@@ -1,5 +1,16 @@
-# Excerpt
-I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
+---
+title : Learning Nodejs distributed systems Part 1
+url : learning-nodejs-distributed-systems-part-1
+summary : I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
+author: amt8u
+date : 2024-02-23
+draft : false
+cover : 
+    image: images/book-cover.jpg
+    caption : Learning Nodejs
+coverAlt : "learning-nodejs"
+tags : ['javascript']
+---
 
 ## JS is single threaded
 By nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can't write threads like Java. More on this later.
@@ -236,10 +247,10 @@ You should see below logs
 
 Now if you hit the below URL, you should see a dashboard
 
-![HAProxyDashboard](/images/learning-distributed-nodejs/HAProxyDashboard.png)
+![HAProxyDashboard](./images/HAProxyDashboard.png)
 
 If you setup HAProxy with multiple routes, you will see a dashboard like below
-![HAProxyDashboardMultiRoute](/images/learning-distributed-nodejs/HAProxyDashboardMultiRoute.png)
+![HAProxyDashboardMultiRoute](./images/HAProxyDashboardMultiRoute.png)
 
 #### HAProxy alternatives
 Nginx, ELB, Traefik, Kong Gateway.
@@ -280,7 +291,7 @@ haproxy -f ./haproxy/load-balance.cfg                       // start HAProxy
 
 Run below command multiple times to see that response is coming from api-1 and api-2 in round-robin method.
 
-![HAProxy](./images/learning-distributed-nodejs/HAProxySetup.png)
+![HAProxy](./images/HAProxySetup.png)
 
 If you close one of the processes, HAProxy will redirect the requests to remaining processes. Same can be observed on the HAProxy Dashboard page.
 

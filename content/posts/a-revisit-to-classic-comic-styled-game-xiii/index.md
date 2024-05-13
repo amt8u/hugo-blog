@@ -1,14 +1,21 @@
 ---
 title : A revisit to a classic game - XIII
 url : a-revisit-to-classic-comic-styled-game-xiii
-description : XIII
+summary : XIII
+author: amt8u
 date : 2021-01-05
 draft : false
+thumbnail : images/xiii.jpg
+cover : 
+    image: images/xiii.jpg
+    caption : XIII - A classic game
+coverAlt : "a-revisit-to-classic-comic-styled-game-xiii-cover"
+tags : ['gaming']
 ---
 
 
 # A post in 2020 for a 2003 game, why?
-![Loading](./images/Loading.png)
+
 XIII(Say 13) had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a [remake](https://www.microids.com/game-xiii/) of the original game.
 
 I didn't play the remake but I did saw a lot of videos talking about it. Apparently it was [not received positively](https://mspoweruser.com/xiii-game-remake-crowned-worst-xbox-game-of-2020/) by the gaming community. After looking at responses and watching the gameplay, even I can understand the reasons for that.
@@ -16,6 +23,8 @@ I didn't play the remake but I did saw a lot of videos talking about it. Apparen
 They just removed the most compelling feature of the game - the **comic style** gameplay. Moreover it had lot may graphics and audio issues. You can see yourself [here](https://www.youtube.com/watch?v=mI-OEhJXPng).
 
 But because of this worthless remake, the old version became more popular and even surpassed the number of copies sold if we go by this [tweet](https://twitter.com/Chris_Dring/status/1329732198468112390)
+
+![Loading](./images/Loading.png)
 
 # 2005 - When I played it
 I was pretty new to computers then. I used to loan complementary CDs that came with magazines such as `Digit`, `EFY` etc from libraries. Those CDs had everything which you need including the tools, utilities, game demos etc. The only internet that we had was in the cybercafes with [pitch dropping speeds](https://www.youtube.com/watch?v=BZvsrOciU_Q). I used to install each and everything that came with the CD. As I can remember, `XIII` came as a demo with only two levels - The beach and Carrington's cell. Because of its less demanding graphics, the game ran smoothly on my intel P4.

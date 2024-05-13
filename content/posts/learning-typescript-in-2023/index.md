@@ -1,5 +1,12 @@
-# Excerpt
-Learning typescript part 1 - Just making a post on learning typescript in 2023 from scratch.
+---
+title : Learning Typescript in 2023 part 1 - Basics
+url : learning-typescript-in-2023-part-1
+summary : Learning typescript part-1. Just making a post on learning typescript in 2023 from scratch.  
+author: amt8u
+date : 2023-05-13
+draft : false
+tags : ['typescript', 'javascript', 'nodejs']
+---
 
 # Why so late?
 TS was released when I started my career i.e. 2012. At that time I was doing the type checks with weird syntax using [picture clause](https://www.ibm.com/docs/en/cobol-zos/6.3?topic=clause-character-string-representation). After that I have worked on many projects, and incidentally I never got a chance to work on a project which uses typescript. I know that being a [front-end](https://www.reddit.com/r/ProgrammerHumor/comments/nzqzt8/look_if_youre_a_frontend_developer/) dev, I must learn all the technologies around it but there are just [too many things](https://roadmap.sh/frontend) to keep up. Now I do need to know so here goes my impressions on learning TS.

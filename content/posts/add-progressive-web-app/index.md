@@ -4,6 +4,10 @@ url : add-progressive-web-app-support-to-ghost-theme/
 description : Convert your ghost blog into a progressive web app. PWA enables your site to be installed on device and run as standalone native application instead of a browser.
 date : 2020-09-13
 draft : false
+thumbnail: images/fullscreen-app.jpg
+tags : ['Javascript', 'PWA']
+cover :
+ image : images/lighthouse-score.png
 ---
 
 # What is PWA?

@@ -4,6 +4,7 @@ url : how-to-add-gradient-animation-as-background
 description : Add simple background gradient animation to website header
 date : 2020-10-01
 draft : false
+thumbnail : "images/"
 ---
 
 # Using Presets

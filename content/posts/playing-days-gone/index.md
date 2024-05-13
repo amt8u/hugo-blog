@@ -1,10 +1,19 @@
-# Excerpt
-This is my experience of playing Days Gone including what did I enjoy and what I didn't like.
-
-![](./images/playing-days-gone/bike.png)
+---
+title : Playing days gone
+url : playing-days-gone-zombie-apocalypse-open-world-game
+summary : This is my experience of playing Days Gone including what did I enjoy and what I didn't like. 
+author: amt8u
+date : 2024-02-17
+draft : false
+tags : ['gaming']
+cover : 
+  image: images/cover.png
+---
 
 # Is it `good` or `bad`?
 And as they say - `It depends!` Being a casual gamer, I don't have much experience with many AAA titles. For someone who might have played all the open-world games, `Days Gone` may just be a run-of-the-mill game, but for someone like me who played games like GTA and Assasin's Creed, `Days Gone` brings in a breath of fresh air. There are many things that I can appreciate about the game.
+
+![days gone bike](./images/bike.png)
 
 # What do others say about `Days Gone`?
 * [IGN](https://in.ign.com/days-gone/134476/review/days-gone-review) mentions the game as repetitive and scrappy
@@ -19,7 +28,7 @@ And as they say - `It depends!` Being a casual gamer, I don't have much experien
 
 So in all, the general rating for the game is around the lower side, but (**with a big BUT**) the overall review on Steam is `92%` positive which is a big deal.
 
-![Steam review](./images/playing-days-gone/SteamReview.png)
+![Steam review](./images/SteamReview.png)
 
 I generally don't read reviews before playing a game as they tend to spoil(with spoilers:-D) it and also set a bias. I just watch 5-10 mins of gameplay on YouTube and if I feel, it's interesting, I get it or put it on my wishlist and wait for sale. 
 
@@ -37,13 +46,13 @@ Of course, it makes it a little challenging because of this approach. Sometimes 
    * And at last, you should not be on a mission
 If you look at it, it makes sense that you can save when you can take a rest which brings it closer to real life.
 * `Guns` - In GTA, you may equip yourself with 10 types of guns, but mostly you will use at most 3. One rifle, one sniper and one sidearm(for drivebys). 
-![Bike](./images/playing-days-gone/kill.png)
+![Bike](./images/kill.png)
 Days gone gives a lot of focus on the weapons. You have to choose the right one according to your gameplay style. For eg. it gives you a bolt action crossbow at the start but I completed the storyline without using it even once. I am more of a suppressor-armed sniper guy.
 
 * `Ammunition` - This game reminds me of [XIII](https://cybercafe.dev/a-revisit-to-classic-comic-styled-game-xiii/) which was unique in its genre. The thing that I liked is every bullet counts. You just don't go barage on enemies. You have to plan your actions based on the gun and ammunition you have in hand. You can even kill all enemies using stealth and do not need bullets for a few missions. You don't get the option of hiding the killed enemies though as you have in Assasin's Creed, but I guess, it doesn't need that. You can find ammunition all around the world, or you can pay with your hard-earned money
 
 * `Bike` - At the start of the game I didn't give much importance to the bike, but soon I realized that it is the most important element of the game. `Your bike is your bike`. 
-![Bike](./images/playing-days-gone/petrol.jpg) 
+![Bike](./images/petrol.jpg) 
 You need to refuel it, maintain it, upgrade it and most importantly always keep it nearby. Without the bike, you kind of become an NPC. All the animations involving the bike are visually appealing. Turning it on, getting off from it, doing a drift - all look fantastic. The headlight works well and looks good even on my RX580. To get better FPS, I do have to switch off the light at night times though:-(. I always thought what if in GTA, the cars had the concept of petrol? To my surprise, Days Gone did it. Your bike consumes fuel as you drive it. Initially, it was good, but later it was frustrating to refuel every time, but that was partly my fault. I realized quite late that the petrol tank can be upgraded too. Your bike takes damage when hit with an object and can become completely non-functional if you continue damaging it. You can get it repaired in the camp or using the scrap you find in the world.
 * `Suppressors` - Suppressors get damaged with use and you will have to buy a new one once they are utilized fully. So you have to keep in mind its usage while going for an ambush
 * `Graphics & Seasons` - In terms of visuals, it may be behind other games, but for me, it has got some good graphics. Terrain imagery, grass, water, and mountains all look great. And the cherry on top is the seasons. Heavy rains showers and snow look very beautiful even on my despicable RX580. I see some people complaining about frame drops, but then it depends on a lot of factors. As per Steam's listing, the recommended card for Days Gone is surprisingly my RX580.
@@ -64,7 +73,7 @@ You need to refuel it, maintain it, upgrade it and most importantly always keep 
 * `Animal bounty collection animation` - Another irritating bit is the cutscene that plays when you scalp any animal. First of all, the face that Deacon makes and second the fixed angle. It's ok if you want to keep the camera fixed, but at least have different visuals. It's a fixed 3-4 second scene that plays every time you collect animal bounty.
 * `Limited playable area` - Although not a great deal, every game has its own limits, but this game comes with a hard list of rules. Where all your character can go. You just can't jump anywhere if you are not supposed to. You can't climb any other wall, you can't swim across to another location. You may say that isn't it aligned with the realism that I appreciated at first. Yes but sometimes it is good to be able to jump on boxes and burn the zombies down.
 * `Slow cutscenes` - Another irritating thing is the long unskippable cutscenes like when Deacon goes with Sarah to a mountain. If you don't want any input from me, then what's the point of me controlling the character? 
-![Bike](./images/playing-days-gone/walk.jpg)
+![Bike](./images/walk.jpg)
 Just asking me to keep `W` pressed for like 5-10 minutes. It's ok if you make it a non-skippable cutscene, just let the character walk automatically. I can free myself from the keyboard and watch it comfortably.
 * `Nero checkpoints` - You will enjoy the first and probably the second Nero checkpoint but after that, it is almost the same. You go to the point, you find fuel for the generator, you disable the alarm, you start the generator, you enter the container, you inject Nero and increase your stamina or health or focus time. And there are like 50 or so points.
 

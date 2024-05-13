@@ -1,5 +1,15 @@
+---
+title : Learning Typescript in 2023 part 4 - Advanced typing 
+url : learning-typescript-in-2023-part-4-advanced-typing
+summary : In this article we will learn about some advanced typing constructs in TS.
+author: amt8u
+date : 2024-02-23
+draft : false
+tags : ['typescript', 'javascript', 'nodejs']
+---
+
 # Excerpt
-In this article we will learn about some advanced typing constructs in TS.
+
 
 # Intersection
 

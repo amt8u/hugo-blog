@@ -58,3 +58,33 @@
 [submodule "themes/hugo-coder-custom"]
 	path = themes/hugo-coder-custom
 	url = https://github.com/amt8u/hugo-coder-custom.git
+[submodule "themes/dot-org-hugo-theme"]
+	path = themes/dot-org-hugo-theme
+	url = https://github.com/cncf/dot-org-hugo-theme.git
+[submodule "themes/doks"]
+	path = themes/doks
+	url = https://github.com/gethyas/doks
+[submodule "themes/hugo-book"]
+	path = themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book.git
+[submodule "themes/congo"]
+	path = themes/congo
+	url = https://github.com/jpanther/congo
+[submodule "themes/saral"]
+	path = themes/saral
+	url = https://github.com/dipeshsingh253/saral
+[submodule "themes/vncnt-hugo"]
+	path = themes/vncnt-hugo
+	url = https://github.com/fncnt/vncnt-hugo.git
+[submodule "themes/hugo-theme-console"]
+	path = themes/hugo-theme-console
+	url = https://github.com/mrmierzejewski/hugo-theme-console
+[submodule "themes/holy"]
+	path = themes/holy
+	url = https://github.com/serkodev/holy
+[submodule "themes/seven"]
+	path = themes/seven
+	url = https://github.com/mrhelloboy/seven
+[submodule "themes/hugo-theme-cleanwhite"]
+	path = themes/hugo-theme-cleanwhite
+	url = https://github.com/zhaohuabing/hugo-theme-cleanwhite

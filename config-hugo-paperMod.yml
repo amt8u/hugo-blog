@@ -1,9 +1,9 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
-title: PaperMod
-copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
-paginate: 5
+baseURL: "https://amt8u-hugo-blog.netlify.app"
+title: cybercafe.dev
+copyright: "© [https://cybercafe.dev](https://cybercafe.dev)"
+paginate: 10
 theme: [hugo-PaperMod]
 
 enableInlineShortcodes: true
@@ -29,39 +29,39 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
+        - name: search
           url: search/
           weight: 10
-        - name: Tags
+        - name: tags
           url: tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        - name: author
+          url: amt8u/
+          weight: 10
+        - name: github
+          url: https://github.com/amt8u/
 
-  fr:
-    languageName: ":fr:"
+  hi:
+    languageName: "हिंदी"
     weight: 2
-    title: PaperModL2
+    title: cybercafe.dev
     taxonomies:
-      category: FRcategories
-      tag: FRtags
-      series: FRseries
+      category: HIcategories
+      tag: HItags
+      series: HIseries
     menu:
       main:
         - name: Archive
           url: archives/
           weight: 5
-        - name: FRTags
-          url: frtags
+        - name: HITags
+          url: hitags
           weight: 10
-        - name: FRCategories
-          url: frcategories
+        - name: HICategories
+          url: hicategories
           weight: 10
-        - name: FRSeries
-          url: frseries
+        - name: HISeries
+          url: hiseries
           weight: 10
         - name: NullLink
           url: "#"
@@ -82,25 +82,6 @@ languages:
             url: posts
           - name: Profile Mode
             url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
-
-  fa:
-    languagedirection: rtl
-    weight: 3
-    title: PaperMod RTL
-    taxonomies:
-      category: FAcategories
-      tag: FAtags
-      series: FAseries
-    menu:
-      main:
-        - name: FATags
-          url: fatags
-          weight: 10
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to RTL layout
 
 outputs:
   home:
@@ -133,7 +114,7 @@ params:
   profileMode:
     enabled: false
     title: PaperMod
-    imageUrl: "#"
+    imageUrl: "amt8u_logo.png"
     imageTitle: my image
     # imageWidth: 120
     # imageHeight: 120
@@ -144,32 +125,25 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "cybercafe.dev"
     Content: >
-      👋 Welcome to demo page of Hugo's theme PaperMod!
-
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
-
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
-
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+      - Welcome to "cybercafe.dev"
+      - I write my learnings and experiences here.
+      - I am using theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
 
   socialIcons:
     - name: github
       title: View Source on Github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: Discord
-      title: Join discord community
-      url: "https://discord.gg/ahpmTvhVmp"
+      url: "https://github.com/amt8u"
     - name: X
-      title: Share PaperMod on X/Twitter
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-    - name: KoFi
-      title: Buy me a Ko-Fi :)
-      url: "https://ko-fi.com/adityatelange"
+      title: Connect on X/Twitter
+      url: "https://twitter.com/amt8u"
+    - name: Youtube
+      title: Youtube
+      url: "https://youtube.com/@amt8u"
 
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/amt8u/hugo-blog/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -191,9 +165,9 @@ params:
   #     apple_touch_icon: "<link / abs url>"
   #     safari_pinned_tab: "<link / abs url>"
 
-  # cover:
+  cover:
   #     hidden: true # hide everywhere but not in structured data
-  #     hiddenInList: true # hide on list pages and home
+      hiddenInList: false # hide on list pages and home
   #     hiddenInSingle: true # hide on single page
 
   # fuseOpts:

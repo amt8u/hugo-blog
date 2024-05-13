@@ -1,5 +1,5 @@
 baseURL = "https://amt8u-hugo-blog.netlify.app"
-title = "johndoe"
+title = "cybercafe.dev"
 theme = "hugo-coder-custom"
 languageCode = "en"
 defaultContentLanguage = "en"

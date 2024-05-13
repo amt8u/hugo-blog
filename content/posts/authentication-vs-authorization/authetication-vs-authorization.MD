@@ -6,14 +6,11 @@ date : 2020-09-13
 draft : false
 ---
 
+TLDR;
+#### **Authentication** - Check if the person is allowed to enter the system
+#### **Authorization** - Check if the entered person is allowed to perform specfific operation
 
-# Authentication(प्रमाणीकरण) vs Authorization(प्राधिकरण)
-
-# TLDR;
-
-**Authentication** - Check if the person is allowed to enter the system
-
-**Authorization** - Check if the entered person is allowed to perform specfific operation
+<br/>
 
 # What others say about it
 
