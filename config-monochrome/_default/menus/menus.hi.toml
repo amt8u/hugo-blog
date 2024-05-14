@@ -1,0 +1,8 @@
+[[navbar]]
+  identifier = "लेख"
+  name = "लेख"
+  url = "/hi/"
+  weight = 1
+
+
+

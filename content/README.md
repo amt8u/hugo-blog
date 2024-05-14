@@ -1,3 +1,5 @@
+
+
 # blog
 I have started my [blog](https://cybercafe.dev) few months back. Initially I was using wordpress but then soon switched to [Ghostjs](https://ghostjs.org). I used to write in the ghost editor directly but after I got familiar with markdown, I guess I have never looked back. Markdown has all the options required for an article. The best part being the code highlighting. Coming from html and javascript world, it feels a little strqnge at first. 
 

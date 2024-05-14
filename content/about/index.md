@@ -2,6 +2,8 @@
 slug: amt8u
 date: 2019-01-01
 title: amt8u
+toc : false
+featured: true
 ---
 
 <img alt="amt8u-logo" src="./amt8u_logo.png" width="20%"/>

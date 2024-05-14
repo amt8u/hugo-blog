@@ -88,3 +88,48 @@
 [submodule "themes/hugo-theme-cleanwhite"]
 	path = themes/hugo-theme-cleanwhite
 	url = https://github.com/zhaohuabing/hugo-theme-cleanwhite
+[submodule "themes/hugo-theme-jane"]
+	path = themes/hugo-theme-jane
+	url = https://github.com/xianmin/hugo-theme-jane
+[submodule "themes/github-style"]
+	path = themes/github-style
+	url = https://github.com/MeiK2333/github-style
+[submodule "themes/hextra"]
+	path = themes/hextra
+	url = https://github.com/imfing/hextra
+[submodule "themes/compose"]
+	path = themes/compose
+	url = https://github.com/onweru/compose
+[submodule "themes/hugo-theme-stack"]
+	path = themes/hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack.git
+[submodule "themes/hugo-sustain"]
+	path = themes/hugo-sustain
+	url = https://github.com/suyundukov/hugo-sustain
+[submodule "themes/hugo_theme_pickles"]
+	path = themes/hugo_theme_pickles
+	url = https://github.com/mismith0227/hugo_theme_pickles
+[submodule "themes/hugo-black-and-light-theme"]
+	path = themes/hugo-black-and-light-theme
+	url = https://github.com/davidhampgonsalves/hugo-black-and-light-theme
+[submodule "themes/hugo-theme-monochrome"]
+	path = themes/hugo-theme-monochrome
+	url = https://github.com/kaiiiz/hugo-theme-monochrome.git
+[submodule "themes/poison"]
+	path = themes/poison
+	url = https://github.com/lukeorth/poison
+[submodule "themes/no-style-please"]
+	path = themes/no-style-please
+	url = https://github.com/g-hanwen/hugo-theme-nostyleplease
+[submodule "themes/hugo-ladder"]
+	path = themes/hugo-ladder
+	url = https://github.com/guangzhengli/hugo-theme-ladder
+[submodule "themes/hugo-vitae"]
+	path = themes/hugo-vitae
+	url = https://github.com/dataCobra/hugo-vitae
+[submodule "themes/maverick"]
+	path = themes/maverick
+	url = https://github.com/canhtran/maverick
+[submodule "themes/pehtheme-hugo"]
+	path = themes/pehtheme-hugo
+	url = https://github.com/fauzanmy/pehtheme-hugo

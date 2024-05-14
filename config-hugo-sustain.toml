@@ -1,0 +1,46 @@
+baseURL = "https://example.com/"
+languageCode = "en-US"
+title = "Chris Turner"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "amt8u_logo.png"
+  author = "amt8u"
+  description = "blog it is"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "amt8u"
+  Email         = "email@amt8u.com"
+  Twitter       = "amt8u"
+  LinkedIn      = "amt8u"
+  Stackoverflow = "amt8u"
+  Medium        = "amt8u"
+  Telegram      = "amt8u"
+
+## Main Menu
+[[menu.main]]
+  name = "posts"
+  weight = 100
+  identifier = "posts"
+  url = "/posts/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+[[menu.main]]
+  name = "author"
+  identifier = "author"
+  weight = 300
+  url = "/amt8u/"

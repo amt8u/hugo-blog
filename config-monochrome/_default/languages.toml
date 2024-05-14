@@ -1,0 +1,11 @@
+[en]
+contentDir = "content"
+languageName = "English"
+languageCode = "en"
+weight = 1
+
+[hi]
+contentDir = "content/hi"
+languageName = "hindi"
+languageCode = "hi"
+weight = 2

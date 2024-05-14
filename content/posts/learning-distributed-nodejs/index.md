@@ -5,7 +5,7 @@ summary : I read one of the best books for nodejs - Distributed systems with nod
 author: amt8u
 date : 2024-02-23
 draft : false
-cover : 
+bk_cover : 
     image: images/book-cover.jpg
     caption : Learning Nodejs
 coverAlt : "learning-nodejs"

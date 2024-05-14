@@ -2,10 +2,7 @@ title = "Hugo Xterm"
 languageCode = "en-us"
 baseurl = "https://manid2.github.io/hugo-xterm/"
 paginate = 20
-
-[module]
-  [[module.imports]]
-    path = "github.com/manid2/hugo-xterm"
+theme = "hugo-xterm"
 
 [params]
   centerTheme = true

@@ -6,7 +6,7 @@ date : 2020-09-13
 draft : false
 thumbnail: images/fullscreen-app.jpg
 tags : ['Javascript', 'PWA']
-cover :
+bk_cover :
  image : images/lighthouse-score.png
 ---
 

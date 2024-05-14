@@ -1,0 +1,183 @@
+# toml-docs-start main
+[main]
+    separator = "-"
+    description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
+    enableDarkMode = true
+    modes = ["light", "dark"]
+    canonifyAssetsURLs = false
+    endorse = true
+    footerBelowFold = false
+    loading = "lazy"
+    breakpoint = "md"
+    [main.externalLinks]
+        cue = false
+        tab = false
+    [main.build]
+        transpiler = "libsass"
+# toml-docs-end main
+
+
+# toml-docs-start debugging
+[debugging]
+    showJS = false
+    showSCSS = false
+    purgeHTMLComments = false
+# toml-docs-end debugging
+
+# toml-docs-start docs
+[docs]
+    github = "https://github.com/gethinode/hinode"
+    release = "https://github.com/gethinode/hinode/releases/tag/"
+    checkVersion = false
+# toml-docs-end docs
+
+# toml-docs-start home
+[home]
+    # sections = ["posts"]
+    fullCover = false
+    centerHeadline = false
+    style = ""
+    [home.feature]
+        orientation = "horizontal"
+        color = "primary"
+        width = 4
+        align = "start"
+# toml-docs-end home
+
+# toml-docs-start navigation
+[navigation]
+    anchor = true
+    logo = "/img/logo_icon.svg"
+    color = "body"
+    fixed = true
+    overlay = false
+    overlayMode = "dark"
+    horizontal = false
+    offset = "5.5rem"
+    search = true
+    searchModal = false
+    breadcrumb = true
+    toc = true
+    sidebar = true
+    size = "md"
+# toml-docs-end navigation
+
+# toml-docs-start messages
+[messages]
+    placement = "bottom-right"
+# toml-docs-end messages
+
+# toml-docs-start sharing
+[sharing]
+    enabled = true
+    sort = "weight"
+    reverse = false
+    webshare = true
+
+[[sharing.providers]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+    icon = "fab linkedin"
+    weight = 10
+
+[[sharing.providers]]
+    name = "Twitter"
+    url = "https://twitter.com/home?status={url}"
+    icon = "fab x-twitter"
+    weight = 20
+
+[[sharing.providers]]
+    name = "Facebook"
+    url = "https://www.facebook.com/sharer.php?u={url}"
+    icon = "fab facebook"
+    weight = 30
+
+[[sharing.providers]]
+    name = "WhatsApp"
+    url = "whatsapp://send?text={title}%20{url}"
+    icon = "fab whatsapp"
+    weight = 40
+
+[[sharing.providers]]
+    name = "email"
+    url = "{url}"
+    icon = "fas link"
+    weight = 50
+    clipboard = true
+# toml-docs-end sharing
+
+# toml-docs-start sections
+# [sections]
+#     [sections.posts]
+#         title = "Posts"
+#         sort = "date"
+#         reverse = true
+#         nested = true
+#         cols = 3
+#         color = ""
+#         padding = "0"
+#         header = "full"
+#         footer = "none"
+#         orientation = "stacked"
+#         style = "border-0 card-zoom card-body-margin"
+#         homepage = 3
+#         separator = true
+# toml-docs-end sections
+
+[favicon]
+    logo = "img/favicon.png"
+    sizes = [16, 32, 48]
+
+# toml-docs-start theme-colors
+[style]
+    primary = "#d43900"
+    secondary = "#6c757d"
+    success = "#198754"
+    info = "#0dcaf0"
+    warning = "#ffc107"
+    danger = "#dc3545"
+    light = "#f8f9fa"
+    dark = "#212529"
+# toml-docs-end theme-colors
+    themeOpacity = "10"
+    darkModeShade = "20%"
+    darkModeTint = "40%"
+# toml-docs-start font
+    themeFont = "Inter"
+    # themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" # external path
+    themeFontPath = "/fonts" # local path
+    themeFontPreload = "/fonts/inter-v12-latin-regular.woff2"
+    fontSizeBase = "1rem" # assumes the browser default, typically '16px'
+# toml-docs-end font
+# toml-docs-start build
+    purge = false
+# toml-docs-end build
+
+[schema]
+    type = "Organization"
+    name = "Hinode"
+    locale = "en-US"
+    # twitter = "https://twitter.com/gethinode"
+    # linkedIn = ""
+    github = "https://github.com/gethinode/hinode"
+    section = "blog"
+    [author]
+        name = "Mark Dumay"
+        # twitter = "https://twitter.com/markdumay"
+        linkedin = "https://www.linkedin.com/in/markdumay/"
+        github = "https://github.com/markdumay"
+    [logo]
+        url = "img/logo512x512.png"
+        width = 512
+        height = 512
+    [image]
+        url = "img/logo1280x640.png"
+        width = 1280
+        height = 640
+
+[opengraph]
+    images = ["logo.png"]
+    locale = "en_US"
+
+[links]
+    hinode = "https://gethinode.com"
