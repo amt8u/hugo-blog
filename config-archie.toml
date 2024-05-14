@@ -1,0 +1,47 @@
+baseURL = "https://amt8u-hugo-blog.netlify.app/"
+languageCode = "en-us"
+title = "cybercafe.dev"
+theme="archie"
+copyright = "© cybercafe.dev"
+pygmentsstyle = "github-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+[params]
+	mode="toggle"
+	useCDN=false
+	subtitle = "I write about my experiences here"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/amt8u"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/amt8u/"
+
+[[params.social]]
+name = "apps"
+icon = "external-link"
+url = "https://cybr.cafe"
+
+[[menu.main]]
+name = "home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "about"
+url = "/amt8u"
+weight = 3
+
+[[menu.main]]
+name = "tags"
+url = "/tags"
+weight = 4

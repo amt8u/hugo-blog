@@ -133,3 +133,21 @@
 [submodule "themes/pehtheme-hugo"]
 	path = themes/pehtheme-hugo
 	url = https://github.com/fauzanmy/pehtheme-hugo
+[submodule "themes/hugo-tranquilpeak-theme"]
+	path = themes/hugo-tranquilpeak-theme
+	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
+[submodule "themes/hugo-blox-builder"]
+	path = themes/hugo-blox-builder
+	url = https://github.com/HugoBlox/hugo-blox-builder
+[submodule "themes/archie"]
+	path = themes/archie
+	url = https://github.com/athul/archie
+[submodule "themes/terminal-hugo-theme"]
+	path = themes/terminal-hugo-theme
+	url = https://github.com/techbarrack/terminal-hugo-theme
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/techbarrack/terminal-hugo-theme
+[submodule "themes/ezhil"]
+	path = themes/ezhil
+	url = https://github.com/vividvilla/ezhil.git

@@ -89,10 +89,10 @@ But almost every site consists of multiple `http` calls. It could be a call to a
 
 This was all good for sites which do not need user data to process, or if needed, the user would have to enter it everytime on every page. I am sure people would get frustrated if they had to enter username and password after each click. To avoid this, the developers came up with a small mechanism by which the server can match each request to its respective client.
 
-* #### The server shall generate a unique number on the first call(when you enter your username and password on the login page) which the server will then keep a copy of(probably in a DB). And also pass the same number in the response of the that first request to the client.
-* #### The client receives the response and persists that number in some storage
-* #### The client attaches that number with each subsequent request for the same domain(website).
-* #### The server will now check for that unique number and would assume the request is from the same client. The unique number in the request determines who is the client irrespective of the source(IP address).
+* The server shall generate a unique number on the first call(when you enter your username and password on the login page) which the server will then keep a copy of(probably in a DB). And also pass the same number in the response of the that first request to the client.
+* The client receives the response and persists that number in some storage
+* The client attaches that number with each subsequent request for the same domain(website).
+* The server will now check for that unique number and would assume the request is from the same client. The unique number in the request determines who is the client irrespective of the source(IP address).
 
 And that some storage is what they call cookies.
 

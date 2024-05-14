@@ -23,7 +23,7 @@ enable_pagination = false
 
 # syntax highlight settings
 [syntax_highlight]
-lib = "prism.js" # "builtin" | "prism.js"
+lib = "builtin" # "builtin" | "prism.js"
 
     [syntax_highlight.builtin]
     enable_code_copy = true

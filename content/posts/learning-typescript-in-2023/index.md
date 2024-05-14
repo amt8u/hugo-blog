@@ -55,7 +55,7 @@ function add(x:number, y:number) {
 }
 console.log(add(2,4));
 ```
-![TS gone wrong](./images/learning-typescript-in-2023/adding-numbers.png)
+![TS gone wrong](./images/adding-numbers.png)
 # Type inference
 
 ```typescript
