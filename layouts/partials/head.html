@@ -1,0 +1,16 @@
+<header>
+	<div class="main">
+		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		<span id="view-mode-toggle" class="action" title="Expand to fit screen" onclick="toggleView()"></span>
+	</div>
+	<nav>
+		{{ range .Site.Menus.main }}
+		<a href="{{ .URL }}">{{ .Name }}</a>
+		{{ end }}
+		{{ if eq .Site.Params.mode "toggle" -}} |
+			<span class="action" id="dark-mode-toggle" onclick="toggleTheme()" ></span>
+		<script src="{{ .Site.BaseURL }}js/themetoggle.js"></script>
+		<script src="{{ .Site.BaseURL }}js/viewtoggle.js"></script>
+		{{ end }}
+	</nav>
+</header>

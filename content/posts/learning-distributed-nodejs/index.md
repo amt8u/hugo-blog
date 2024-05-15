@@ -66,7 +66,7 @@ In nodejs there are different phases of event loop.
 * **Timers** - callbacks scheduled using `setTimeout` and `setInterval`
 * **Pending** - Special system events like "net.Socket TCP socket throws an ECONNREFUSED error"
 
-Additionally there are two special micro task queues that can have callbacks added to them while a phase is running.
+Additionally, there are two special micro task queues that can have callbacks added to them while a phase is running.
 * **First microtask queue** - handles callbacks registered using `process.NextTick()`
 * **Second microtask queue** - handles promises that reject or resolve
 
@@ -83,10 +83,10 @@ setImmediate(() => console.log(1));
 Promise.resolve().then(() => console.log(2));
 process.nextTick(() => console.log(3));
 fs.readFile(__filename, () => {
-console.log(4);
-setTimeout(() => console.log(5));
-setImmediate(() => console.log(6));
-process.nextTick(() => console.log(7));
+    console.log(4);
+    setTimeout(() => console.log(5));
+    setImmediate(() => console.log(6));
+    process.nextTick(() => console.log(7));
 });
 console.log(8);
 ```
