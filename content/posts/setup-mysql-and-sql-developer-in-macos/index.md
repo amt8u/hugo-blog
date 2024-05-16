@@ -1,3 +1,14 @@
+---
+title : Setup mysql and SQL Developer on macos
+url : setup-mysql-and-sql-developer-on-macos
+summary : Setup mysql server community edition with oracle SQL Developer on MacOS.
+author: amt8u
+date : 2021-08-30
+draft : false
+tags : ['mysql']
+---
+
+
 # Excerpt
 Here is a mini guide to setup Mysql server community edition with oracle SQL Developer on MacOS.
 
@@ -22,22 +33,17 @@ Download the mysql connector from [Oracle-Base](https://oracle-base.com/articles
 Perform the steps as mentioned in the article. For easy access, I copied the steps here as well.
 
 * Download the latest "JDBC Driver for MySQL (Connector/J)" from [here](https://www.mysql.com/products/connector/). Click the "Download" link next to the "JDBC Driver for MySQL (Connector/J)", then select the platform independent version and download the zip file.
-
 * Unzip the connector. The resulting directory contains a "mysql-connector-java-8.0.23.jar" file.
-
 * Open SQL Developer and navigate to "Tools > Preferences > Database > Third Party JDBC Driver".
-
 * Click the "Add Entry..." button and highlight the "mysql-connector-java-8.0.23.jar" file and click the "Select" button. You may need to place the driver file in `.sqldeveloper` directory since it might not have access to other directories. You can always change the access from preferences though.
-
 * Click the "OK" button to exit the "Preferences" dialog.
-
 * When you create a new connection, the "Database Type" dropdown includes a MySQL option. On older versions of SQL Developer this used to appear as a tab. Enter the connection details and test the connection.
 
-![database-type](./images/setup-mysql-and-sql-developer-in-macos/database-type.png)
+![database-type](images/database-type.png)
 
 # Connect SQL Developer
 
-![database-type](./images/setup-mysql-and-sql-developer-in-macos/sql-developer.png)
+![database-type](images/sql-developer.png)
 
 Now we are ready to connect. Create a new connection and provide below details.
 
@@ -54,7 +60,7 @@ And a few commands also differ like creating and selecting the databases.
 
 # MySQL command line
 
-![database-type](./images/setup-mysql-and-sql-developer-in-macos/command-line.png)
+![database-type](images/command-line.png)
 
 By default mysql binaries are not added to PATH. So you won't be able to run `mysql` in the terminal from anywhere. You could navigate to the mysql folder and run mysql command line from there or you can add it to your PATH.
 

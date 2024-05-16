@@ -1,3 +1,13 @@
+---
+title : Win a tata nexon for free - a quick analysis of the scam
+url : win-a-tata-nexon-for-free-quick-analysis-of-scam
+summary : This article is about how people are scammed using simple sites and understanding a new technique that scammers employ to prevent fraud detection.
+author: amt8u
+date : 2021-10-06
+draft : false
+tags : ['scams']
+---
+
 # Excerpt
 This article is about how people are scammed using simple sites and new techniques that scammers employ to prevent fraud detection.
 
@@ -34,16 +44,16 @@ But recently I stumbled upon such a site with a slightly different technique. Ma
 If you look at the code using dev tools, generally you will find all the source code written in plain javascript and you can figure out easily why this is a scam. 
 
 But in this case I was intrigued as I didn't find any relevant js code. Neither a separate js file nor an embedded script in source html. Nothing much other than the google analytics scripts. Where are the questions and the whole text which says you have won the prize?
-![devtools-sources](./images/get-tata-nexon-ev-free/sources.png)
+![devtools-sources](./images/sources.png)
 
 At first I thought that that maybe now they really added a backend which would fetch the questions and validate the answers just like how real sites do.
 
 Just to check how it connects to the backend, I observed a unique request whose response was long list of characters that don't make any sense. Its not unusual to see these type of calls. Many regular sites do send and receive special keys like session ids, uuids, jwt tokens etc. But somehow it didn't feel right as why such a phony site will implement such kind of tech.
-![network](./images/get-tata-nexon-ev-free/network.png)
+![network](./images/network.png)
 
 Then I checked the origin of the request and where this response is getting consumed. I observed that the respones is being processed withtin the small script and it turns out that the response is actually `html` code encoded in `base64`. They are decoding the response and attaching it to the DOM as html.
 
-![encoded-html](./images/get-tata-nexon-ev-free/encoded-html.png)
+![encoded-html](./images/encoded-html.png)
 
 Insert dynamic html content to DOM
 ```js
@@ -90,19 +100,19 @@ function b64DecodeUnicode(str) {
 
 By just doing this I was able to recreate the whole html properly. The whole html is quite big, but you can see how it looks in below snapshot.
 
-![decoded-html](./images/get-tata-nexon-ev-free/decoded-html.png)
+![decoded-html](./images/decoded-html.png)
 
 On looking into the code, I found some chinese comments which indirectly says the origin of these scam sites. Even if the site is from some other region, at least the function written are of chinese origin which not necessarily means malicious activity. Its quite possible that the coder of the site have copied the functions from github or some other site.
 
-![chinese-comments](./images/get-tata-nexon-ev-free/chinese-comments.png)
+![chinese-comments](./images/chinese-comments.png)
 
 And finally I can see the fake questions.
 
-![questions](./images/get-tata-nexon-ev-free/questions.png)
+![questions](./images/questions.png)
 
 Although this is a fake site, yet they are persisting my **fake** progress so that I can refresh the page safely and would not lose the count:-D
 
-![cookie](./images/get-tata-nexon-ev-free/cookie.png)
+![cookie](./images/cookie.png)
 
 # Why this obfuscation?
 Majority of the times, the obfuscation is done so that the js code is not readable right away and make it difficult for the users to understand what is happening. Plus it also saves the transfer data since the code will be compressed and minified.
@@ -115,7 +125,7 @@ Obviously, the crawlers and fraud detection will improve in future and maybe thi
 
 Btw the domain is under some chinese cloud company and the site is still active. Probably scamming thousands of users as I am typing this.
 
-![v0s.com-whois](./images/get-tata-nexon-ev-free/cookie.png)
+![v0s.com-whois](./images/cookie.png)
 
 > End
 

@@ -1,5 +1,12 @@
-# Excerpt
-The excerpt for this article should not give you any context or should it.
+---
+title : The contextual bias
+url : the-contextual-bias
+summary : The excerpt for this article should not give you any context or should it.
+author: amt8u
+date : 2021-08-22
+draft : false
+tags : ['opinion']
+---
 
 # The problem
 People often watch various videos on social media platforms and complain about those who can be seen in it but not helping the victim.
@@ -24,8 +31,9 @@ Even before starting the video you already have read the **title** and possibly 
 # YouTube comments
 A good example of this can be seen in this video [Driver run over by own truck after trying to stop it using his body](https://www.youtube.com/watch?v=V9Rj4v0knL0&list=PLUtUP1YZ8ZHRf7wDwfDebWb8X-eAA7uiD&index=24). Lot of people commenting saying that instead of jumping in front, he could have easily climbed up in the truck and used the brakes. 
 
-![Youtube comment](./images/the-contextual-bias/youtube-comment.png)
-![Another Youtube comment](./images/the-contextual-bias/youtube-comment-2.png)
+![Youtube comment](images/youtube-comment.png)
+
+![Another Youtube comment](images/youtube-comment-2.png)
 
 When you are done watching the video, adding a comment like this is way easier said than done. When it is happening in real life, you get into a panic situation and might not be able to react efficiently. People are not trained to handle extreme situations such as panic braking, brake fail, steering malfunction, vehicle rolling back on hill etc. When this happens, your instinct comes into picture. If you have not practiced it enough, you will not be able to act(or react if you prefer) properly.
 

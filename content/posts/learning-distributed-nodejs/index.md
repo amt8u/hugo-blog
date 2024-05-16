@@ -12,7 +12,7 @@ coverAlt : "learning-nodejs"
 tags : ['javascript']
 ---
 
-## JS is single threaded
+# JS is single threaded
 By nature, JS as a high level language is single threaded. Though there is some internal multi threading, but as a user you can't write threads like Java. More on this later.
 
 As in example Maximum call stack in v8 is 15000 frames and after that you will get maximum call stack error which you might have seen writing some recursive function.

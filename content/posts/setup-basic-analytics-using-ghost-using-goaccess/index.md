@@ -1,5 +1,12 @@
-# Excerpt
-Setup basic analytics on your ghost blog using goaccess without using third party plugins which are now blocked by many browsers and ad blockers.
+---
+title : Setup simple analytics for Ghost blog using GoAccess
+url : setup-simple-analytics-for-ghost-blog-using-goaccess
+summary : How to setup native simple analytics on your ghost blog using GoAccess without third party plugins which could be blocked by many browsers and ad blockers.
+author: amt8u
+date : 2021-04-19
+draft : false
+tags : ['analytics']
+---
 
 # The need
 We all know how easy it is to create a google analytics account and integrate it with our sites. There are a couple of problems with these third party accounts 
@@ -45,9 +52,9 @@ mkdir /var/www/static/report
 ### Setup location in the server config. Add an entry in the `.conf` file of your nginx server. The conf will be located under `/var/www/ghost/system/files`. Edit the respective file according to your current config.
 
 ```bash
-	location /admin {
-        alias /var/www/static/report;
-    }
+location /admin {
+	alias /var/www/static/report;
+}
 ```
 
 ## Test run
@@ -60,8 +67,8 @@ sudo goaccess access.log -o /var/www/static/report/index.html --log-format=COMBI
 If required, you can also add permissions to the access.log so that other users can read the files too. But remember aftet log rotation, the permissions are reset because new logfile is created, while the existing one is renamed to `access.log.1`. 
 
 ```bash
-	cd /var/log/nginx
-	sudo chmod o+r access.log
+cd /var/log/nginx
+sudo chmod o+r access.log
 ```
 
 ## View report
@@ -121,6 +128,6 @@ GoAccess also provides real time reporting. You need to open up a `web-socket` w
 
 Here is a screnshot of the dashboard after setup.
 
-![GoAccessDashboard](./images/basic-analytics-using-goaccess/GoAccessTopBrowsers.png)
+![GoAccessDashboard](./images/GoAccessTopBrowsers.png)
 
 > End

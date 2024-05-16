@@ -1,5 +1,12 @@
-# Excerpt
-While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using nodejs http module having enough flexibility required for custom logic.
+---
+title : Creating simple mock server using nodejs
+url : creating-simple-mock-api-server-using-nodejs
+summary : While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using Nodejs native http module having enough flexibility required for custom logic.
+author: amt8u
+date : 2021-08-11
+draft : false
+tags : ['nodejs']
+---
 
 # When do we need mock server?
 Sometimes its not possible to connect to the backend even if you are using a proxy. Having mock-apis in hand just makes UI development easier. Sometimes you need to test your screens for various error scenarios like 404, 504 etc.
@@ -113,7 +120,7 @@ node mock-server.js
 
 # Output
 
-![Server running](./images/simple-mock-server-using-nodejs/mock-server-running.png)
+![Server running](./images/mock-server-running.png)
 
 # Alternatives
 
