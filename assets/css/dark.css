@@ -70,7 +70,7 @@ h6::before {
   content: "###### ";
 }
 
-a {
+a:not(:has(img)) {
   border-bottom: 1px solid var(--darkMaincolor);
   color: inherit;
 }
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .tags a {
-  border-bottom: 3px solid var(--darkMaincolor);
+  /*border-bottom: 3px solid var(--darkMaincolor);*/
 }
 .tags a:hover {
   background-color: var(--darkMaincolor);

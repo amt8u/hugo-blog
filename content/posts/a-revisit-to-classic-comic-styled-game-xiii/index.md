@@ -52,17 +52,12 @@ Just for the sake of nostalgia, I purchased the game on [steam](https://store.st
 Apart from the already mentioned comic-styled gameplay, there are other few things that caught my eyes
 
 * **Ambient audio** - Maybe its a basic thing now a days, but in those days, playing a game with such level of audio design was really an experience. All the envioronment sounds were in great detail. You feel it where you are. You will hear the breeze if you are in out on snow. You will hear the echo if you are in closed cells. The sound of boot taps with the Tap Tap Tap! when enemies come near or go away.
-
 * **Background Score** - Every game has some kind of background music. But this one had something different. Whenever you indulge in a fight, the music just sets the mood for it. I kind of feel, its something similar to what Alejandro did with [Birdman](https://www.imdb.com/title/tt2562232/). I am no musician, but I just liked this concept.
-
 * **Physics** - At first you might say that there was not much to expect in terms of physics as everything was a cel shaded sketch. But while playing I realised that even though the characters, objects and environment in itself were 2D, but the mechanics were indeed well implemented. 
 ![Kill](./images/Kill.png)
 One of the prime examples is recoil - Yes, the recoil was there and it felt real. Every weapon had its importance. Reloading the revolver every few shots! Breaking things like glasses, bottles, chairs etc. You could even take hostages and throw knives at the same time. Using a winch to go up and down and climb out. I don't know from which game it originated, but I guess hiding bodies was somthing unique. Its still a required tactic in Assasin's Creed.
-
 * **Inventory Management** - Somehow this game made the inventory management a lot of fun keeping it quite restrictive at the same place. You can only carry certain amount of ammo for each weapon. It really added a lot of excitement and the desire to search each and every corner of the location.
-
 * **Simple Menu** - Can't say if this is a feature or limitation, but certainly it was unique. Games with this level of complexity generally had lot of confguration options. But for XIII there was nothing. In fact there is no such settings as "Low"/ "Medium"/ "High". You can just confgure basic things like resolution etc.
-
 # Remake the remake?
 I think the developers just took a wrong design decision for the remake. Instead of having the dull 3d graphics, they should have just re-created the whole game to support 4k, better AI and maybe more checkpoints. The whole idea of the game revolves around the art style. It really looked like some comic came alive. If that is possible with an update, I guess we can give it another chance.
 

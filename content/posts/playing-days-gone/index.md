@@ -17,14 +17,14 @@ And as they say - `It depends!` Being a casual gamer, I don't have much experien
 
 # What do others say about `Days Gone`?
 * [IGN](https://in.ign.com/days-gone/134476/review/days-gone-review) mentions the game as repetitive and scrappy
-  > Days Gone loses its focus with `repetitive` missions, a meandering and thematically `unsatisfying` storyline, and an excess of bugs and busywork
+> Days Gone loses its focus with `repetitive` missions, a meandering and thematically `unsatisfying` storyline, and an excess of bugs and busywork
 * [PCGamer](https://www.pcgamer.com/days-gone-review/) rated it 63 with the below remarks
-  > dreary story, repetitive missions, `sluggish` controls, and `lifeless` world
+> dreary story, repetitive missions, `sluggish` controls, and `lifeless` world
 * [Metacritic](https://www.metacritic.com/game/days-gone/) gave it 71 on Metascore and `8.4`` user score. I believe the user score comes from public users.
 * [Gamesradar](https://www.gamesradar.com/days-gone-review/) also blames the game for its issues, `bugs` and several other factors
-  > may not hit the heights of recent Sony efforts like God of War or Spider-Man, but it suffers more from that expectation than it does its own rough edges. 
+>   may not hit the heights of recent Sony efforts like God of War or Spider-Man, but it suffers more from that expectation than it does its own rough edges. 
 * [The verge](https://www.theverge.com/2019/4/25/18514683/days-gone-review-ps4-open-world-zombie-game) reviews it as painfully generic
-  > The problem is that it’s all wrapped around a painfully `generic` zombie story, one that ultimately plays out like a dozen games you’ve experienced before
+> The problem is that it’s all wrapped around a painfully `generic` zombie story, one that ultimately plays out like a dozen games you’ve experienced before
 
 So in all, the general rating for the game is around the lower side, but (**with a big BUT**) the overall review on Steam is `92%` positive which is a big deal.
 
