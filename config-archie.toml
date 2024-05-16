@@ -9,7 +9,7 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="toggle"
 	useCDN=false
-	subtitle = "I write about my experiences here"
+	subtitle = "&#9829;"
 
 [[params.social]]
 name = "GitHub"
