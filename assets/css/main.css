@@ -284,6 +284,10 @@ footer {
   flex-wrap: wrap;
 }
 
+.list {
+  text-align: justify;
+}
+
 .list .title {
   font-weight: 500;
   margin: 0;
