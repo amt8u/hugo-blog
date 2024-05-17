@@ -13,11 +13,12 @@ html {
   /*font-family: 'Roboto Mono', monospace;*/
   font: 18px/1.4 Ubuntu,"Book Antiqua",Helvetica,Georgia,Arial,sans-serif;
   font-size: 15px;
-  line-height: 1.6em;
+  line-height: 1.8rem;
 }
 body{
   display: block;
   margin: 8px;
+  background-color: #f7f7f1;
 }
 nav a{
   margin: 0 5px;
@@ -97,22 +98,27 @@ a:not(:has(img)) {
   color: inherit;
   text-decoration: none;
 }
+a.logo:hover {
+  color: var(--maincolor);
+}
 a:hover {
     background-color: var(--hovercolor);
     color: #fff;
 }
-
 ul {
-  list-style: none;
-  padding-left: 2ch;
+  padding-left: 1rem;
 }
+/*ul {*/
+/*  list-style: none;*/
+/*  padding-left: 2ch;*/
+/*}*/
 ul li {
-  text-indent: -2ch;
+  /*text-indent: -2ch;*/
 }
-ul > li::before {
-  content: '* ';
-  font-weight: bold;
-}
+/*ul > li::before {*/
+/*  content: '* ';*/
+/*  font-weight: bold;*/
+/*}*/
 
 /* Images */
 img {
@@ -121,7 +127,7 @@ img {
 }
 
 section.list-item {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 figure {
@@ -143,6 +149,9 @@ figure img {
 
 @media screen and (max-width: 800px) {
   #view-mode-toggle {
+    display: none;
+  }
+  .description {
     display: none;
   }
 }
@@ -231,11 +240,21 @@ h4::before { color: var(--maincolor); content: '#### '; }
 h5::before { color: var(--maincolor); content: '##### '; }
 h6::before { color: var(--maincolor); content: '###### '; }
 
+.meta-wrapper {
+  text-align: center;
+}
+
 .meta {
   color: #999;
   letter-spacing: -0.5px;
   font-weight: 100;
   font-size: .8rem;
+}
+.meta-wrapper .post-tags ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer */
@@ -245,6 +264,8 @@ footer {
   border-top: 0.4rem dotted var(--bordercl);
   padding: 2rem 0rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .soc {
   display: flex;
@@ -260,8 +281,12 @@ footer {
   padding: var(--footer-padding);
   display: flex;
   justify-content: space-between;
-  width: 100%;
   flex-wrap: wrap;
+}
+
+.list .title {
+  font-weight: 500;
+  margin: 0;
 }
 
 /* Common */
@@ -285,7 +310,13 @@ article .title h1 {
   font-size: 1.8rem;
 }
 
+article ul li {
+  margin: .5rem 0;
+}
 
+article .meta-wrapper ul li {
+  margin: 0;
+}
 
 
 /* Callout */
@@ -313,9 +344,9 @@ article .title h1 {
 display: flex;
 justify-content: space-between;
 }
-.tags li::before{
-  content: "🏷 ";
-}
+/*.tags li::before{*/
+/*  content: "🏷 ";*/
+/*}*/
 .tags a{
   /*border-bottom: 3px solid var(--maincolor);*/
 }

@@ -27,21 +27,33 @@ icon = "external-link"
 url = "https://cybr.cafe"
 
 [[menu.main]]
-name = "home"
-url = "/"
+name = "javascript"
+url = "/tags/javascript"
 weight = 1
 
 [[menu.main]]
-name = "posts"
-url = "/posts"
+name = "gaming"
+url = "/tags/gaming"
 weight = 2
+
+[[menu.main]]
+name = "web"
+url = "/tags/web"
+weight = 3
+
+[[menu.main]]
+name = "all topics"
+url = "/tags"
+weight = 5
+
+[[menu.main]]
+name = "all posts"
+url = "/posts"
+weight = 8
 
 [[menu.main]]
 name = "about"
 url = "/amt8u"
-weight = 3
+weight = 10
 
-[[menu.main]]
-name = "tags"
-url = "/tags"
-weight = 4
+

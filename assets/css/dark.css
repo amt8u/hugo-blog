@@ -1,6 +1,6 @@
 body {
   color: #acacac;
-  background-color: #171717;
+  background-color: #111;
 }
 
 ::-moz-selection {
@@ -36,7 +36,9 @@ pre {
 blockquote {
   border-color: blue;
 }
-
+a.logo:hover {
+  color: var(--darkMaincolor);
+}
 h1,
 h2,
 h3,

@@ -3,7 +3,22 @@
 	<article>
 		<div class="title">
 			<div class="title">{{ .Title }}</div>
+		</div>
+		<div class="meta-wrapper">
 			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+			<div class="post-tags">
+				{{ if ne .Type "page" }}
+				{{ if gt .Params.tags 0 }}
+				<nav class="nav tags">
+					<ul class="tags">
+						{{ range .Params.tags }}
+						<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+						{{ end }}
+					</ul>
+				</nav>
+				{{ end }}
+				{{ end }}
+			</div>
 		</div>
 		{{ if isset .Params "tldr" }}
 		<div class="tldr">
@@ -15,19 +30,7 @@
 			{{ .Content }}
 		</section>
 
-		<div class="post-tags">
-			{{ if ne .Type "page" }}
-			{{ if gt .Params.tags 0 }}
-			<nav class="nav tags">
-				<ul class="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</nav>
-			{{ end }}
-			{{ end }}
-		</div>
+
 		{{- $.Scratch.Set "isDisqus" true -}}
 		<!-- Check if disqus short name is given -->
 		{{ if not .Site.DisqusShortname }}

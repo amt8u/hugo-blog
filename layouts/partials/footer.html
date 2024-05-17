@@ -5,11 +5,14 @@
     <a class="border"></a>
     {{- end -}}
   </div>
-  <div class="footer-info">
-    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }}
+  <div style="text-align:center">
     <a href="/terms">terms</a> |
     <a href="/privacy">data and privacy</a> |
     <a href="/contribute">contribute<i data-feather="arrow-right"></i></a>
+  </div>
+  <div class="footer-info">
+    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }}
+
   </div>
 </footer>
 {{ if not .Site.IsServer }}
