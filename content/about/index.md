@@ -14,7 +14,7 @@ Other than my professional work, I like to
 * Play games on my PC [#gaming](/tags/gaming)
 * Capture moments with my phone and camera [unsplash/@amt8u](https://unsplash.com/amt8u)
 * Play various sports
-* Read random tech articles [#list](/list)
+* Read random tech articles [links](/links)
 * Listen to unusual rhythmic songs
 * Argue with others(not like Arnab though!)
 

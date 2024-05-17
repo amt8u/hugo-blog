@@ -167,8 +167,9 @@ figure h4::before {
 
 /* Code blocks */
 code {
-  background-color: #f1f1f1;
+  background-color: #dedede;
   padding: .1em .4em;
+  border-radius: 2px;
 }
 
 pre {
