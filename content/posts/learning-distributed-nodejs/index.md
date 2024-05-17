@@ -73,7 +73,7 @@ Additionally, there are two special micro task queues that can have callbacks ad
 
 > Callbacks in the microtask queues take priority over callbacks in the phases's normal queue. Callbacks in next tick microtask queue run before callbacks in the promise microtask queue
 
-### When event looop gets to a phase, it will run all the callbacks in that phases's queue. Once all the callbacks in a given phase are exhausted, the event loop then moves to next phase`.
+When event looop gets to a phase, it will run all the callbacks in that phases's queue. Once all the callbacks in a given phase are exhausted, the event loop then moves to next phase.
 <br />
 
 Try coming up with the output before running the program and see if you understand the phases correctly.
@@ -93,13 +93,10 @@ console.log(8);
 
 The outputs 8 3 2 1 4 7 6 5. Surprisingly I got the answer right.
 
-Just a side note - `tick` is a complete pass, through the event loop. `setImmediate()` takes a tick to run, whereas `process.nextTick()` is more immediate - Confusing names!`
-
-And of course `async` and `await` are just syntactic sugar for code that uses nested callbacks.
+Just a side note - `tick` is a complete pass, through the event loop. `setImmediate()` takes a tick to run, whereas `process.nextTick()` is more immediate - Confusing names! And of course `async` and `await` are just syntactic sugar for code that uses nested callbacks.
 
 ## async and sync Callbacks
 If you are passing a callback to a function, make sure that the callback either runs asynchrounously or synchronously and not both.
-
 ```js
 function updateSomeValue(count, callbackFn) {
     if (count <= 0) {
