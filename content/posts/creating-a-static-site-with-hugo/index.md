@@ -36,8 +36,8 @@ The next popular option was [Hugo](https://gohugo.io). Did a crash course for hu
 
 Here are a few things that made me like Hugo
 * **Speed** - I never thought any dev application with live reload can be so much fast. You change your content, it reloads, you change your css, it reloads. But yes, sometimes you have to stop and restart the server, but once you have the setup running, it is quite fast. In fact right now I am using the dev server to see a live preview of my article. It actually shows how it will look in the browser.
-* **Dependencies** - The only dependencies for hugo are git, go and Dart Sass. Refer https://gohugo.io/installation/macos/#prerequisites. You don't npm install, update, 
-* **Themes** - Eventually I endup creating my own theme, but to start with you need to refer existing code. And with multiple themes, it becomes easier to refer code. https://themes.gohugo.io is a good place to get a feel of what Hugo can generate. I tried almost all the themes on my local setup to see which one is the best. At last, I ended up with [Archie theme](https://themes.gohugo.io/themes/archie/) which was not perfect but had all the basic things I wanted
+* **Dependencies** - The only dependencies for hugo are git, go and Dart Sass. Refer https://gohugo.io/installation/macos/#prerequisites. You don't need to npm install, npm update, npm list, npm last, npm lost, npm aaaaahhhh. 
+* **Themes** - Eventually I end up creating my own theme, but to start with, you need to refer existing code. Especially when you don't have experience in `Go`. With so many themes available, it becomes easier to refer existing code. https://themes.gohugo.io is a good place to get a feel of what Hugo can generate. I tried almost all the themes on my local setup to see which one is the best(best as in fills all my reqs). At last, I ended up with [Archie theme](https://themes.gohugo.io/themes/archie/) which was not perfect but had all the basic things I wanted
   * Simple layouts
   * Simple config
   * No complicated processing
@@ -52,7 +52,7 @@ Here are a few things that made me like Hugo
 I had to tweak many things to make it fit my needs.
 
 # Inspiration
-It is really difficult to find genuine content nowadays. Everyone wants to make their site a place to earn. And with all the [irritating Google Ads](https://cybercafe.dev/my-experience-with-google-ads/), the whole experience becomes messy. While learning Gatsby and Hugo, I tumbled upon https://512kb.club and went through many entries on this list. I found many websites, mostly blogs with genuinely good content without any bloat. I also saw some cool designs. I discovered that there is a specific term `small web` for these sites where you get real content and not commercial oriented bloat.
+It is really difficult to find genuine content nowadays. Everyone wants to make their site a place to earn. Google search and even DuckDuckGo don't search for what you are looking for. They provide you content for what they are getting money for, which is fair enough as I am not paying for using them. But because of this the objective of every website owner turns towards pushing the page to be at the top of the search. And with all the [irritating Google Ads](https://cybercafe.dev/my-experience-with-google-ads/), the whole experience becomes messy. While learning Gatsby and Hugo, I tumbled upon https://512kb.club and went through many entries on this list. I found a lot of sites, mostly blogs with genuinely good content without any bloat. I also saw some cool designs. I discovered that there is a specific term `small web` for these sites where you get real content and not commercial oriented bloat.
 
 * Coder theme  - https://qtrnn.io/2020/10/04/hello-world/
 * Plain and simple - https://nih.ar
