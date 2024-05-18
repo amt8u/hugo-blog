@@ -1,5 +1,12 @@
-# Intro
-We all know ==Javascript== is all about **objects** and **functions**. And an object is just a collection of properties. And of course every function is also a first class object so functions also can contain properties.
+---
+title : Javascript property descriptors
+url : javascript-property-descriptors
+summary : We all know Javascript is all about objects and functions. And an object is just a collection of properties. And of course every function
+author: amt8u
+date : 2020-02-03
+draft : false
+tags : ['javascript']
+---
 
 Below you can see a simple example of objects having properties and functions with properties.
 

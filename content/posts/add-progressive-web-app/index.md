@@ -5,9 +5,7 @@ description : Convert your ghost blog into a progressive web app. PWA enables yo
 date : 2020-09-13
 draft : false
 thumbnail: images/fullscreen-app.jpg
-tags : ['Javascript', 'PWA']
-bk_cover :
- image : images/lighthouse-score.png
+tags : ['javascript', 'pwa']
 ---
 
 # What is PWA?

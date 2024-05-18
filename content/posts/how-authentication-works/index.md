@@ -69,52 +69,52 @@ I am not sure about the use case of this approach and there seems to be very [le
 What I feel is - this helps in preventing credential theft from other techniques like installing malicious browser extentions. Sometimes people are also tricked into running javascript code which can inject functions in background and can intercept the login call even before its encrypted by the TLS session.
 
 Thats why you see a big warning when you open `console` on facebook.com.
-![facebook-console-warning](./images/how-authentication-works/facebook_console.png) 
+![facebook-console-warning](images/facebook_console.png) 
 Though the attackers are not totally wrong! At least someone is getting hacked :-P
 
 Here are some examples of how popular sites are sending user credentials to the server. Using a random username `asharma@gmail.com` and `cybercafe` as password. These are not actual values and of course will always lead to error.
 
 * **Facebook** - encrypts password using [tweetnacl](https://www.npmjs.com/package/tweetnacl). It also appends the timestamp(epoch) which changes the encrypted text everytime. 
   
-![facebook.com](./images/how-authentication-works/facebook.com.png)
+![facebook.com](images/facebook.com.png)
 
 * **Google** - encrypts the password and its not even clear which field contains the password
 * 
-![google.com](./images/how-authentication-works/google.com.png)
+![google.com](images/google.com.png)
 
 
 * **Amazon** - encrypts and sends the password in the encryptedPwd field in the form
   
-![amazon.com](./images/how-authentication-works/amazon.com.png)
+![amazon.com](images/amazon.com.png)
 
 
 * **Flipkart** - keeps it simple. The authentication is via a rest call `https://2.rome.api.flipkart.com/api/4/user/authenticate` without any encryption. In fact they keep the fieldNames also pretty clear. 
   
-![flipkart.com](./images/how-authentication-works/flipkart.com.png)
+![flipkart.com](images/flipkart.com.png)
 
 * **Apple** - also sends the credentials in plaintext. For some reason they send the "remember me" setting in query params as well as form. And the value is different in both. Not sure why are they doing this.
   
-![apple.com](./images/how-authentication-works/apple.com.png)
+![apple.com](images/apple.com.png)
 
 * **Twitter** - works like a SPA and everything is an api call unlike amazon. They might have some kind of task manager in the backend. `Login` might be just another task with some input. And yes, they don't encrypt password, but they don't send the password with the username. Insted they create a pre-auth token for the user and then send password with that token. The token then identifies the user in the backend and authenticates the user with the password.
   
-![twitter.com](./images/how-authentication-works/twitter.com.png)
+![twitter.com](images/twitter.com.png)
 
 * **Netflix** - No encryption on creds and also mentions clearly what all fields are getting passed with a `withFields` param.
   
-![netflix.com](./images/how-authentication-works/netflix.com.png)
+![netflix.com](images/netflix.com.png)
 
 * **Steam** - Being a very popular platform, they do need to take utmost care. They also encrypt the password. Not sure which algorightm they use.
   
-![steam.com](./images/how-authentication-works/steam.com.png)
+![steam.com](images/steam.com.png)
 
 * **Cybercafe.dev** - Well, since no one logs in to my blog other than me, there is no need to add overhead to encrypt password on browser. In fact this is not something that I can work on. This is something that the platform manages. In my case it is [Ghostjs](https://ghost.org/docs/staff/) Of course, the connection is over SSL so I am covered with the basics.
   
-![cybercafe.dev](./images/how-authentication-works/cybercafe.dev.png)
+![cybercafe.dev](images/cybercafe.dev.png)
 
 * **Dev.to** - does not encrypts the credentials, but they do have some additional authenticty token. Rest everything goes plaintext.
   
-![dev.to](./images/how-authentication-works/dev.to.png)
+![dev.to](images/dev.to.png)
 
 
 # JWT, sessionId, hash
