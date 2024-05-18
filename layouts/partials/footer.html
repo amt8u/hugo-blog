@@ -2,7 +2,6 @@
   <div style="display:flex">
     {{- range $index, $key := .Site.Params.Social -}}
     <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
-    <a class="border"></a>
     {{- end -}}
   </div>
   <div style="text-align:center">
@@ -11,7 +10,7 @@
     <a href="https://github.com/amt8u/hugo-blog">contribute<i data-feather="arrow-right"></i></a>
   </div>
   <div class="footer-info">
-    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }}
+    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
 
   </div>
 </footer>

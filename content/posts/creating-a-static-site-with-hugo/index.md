@@ -1,6 +1,6 @@
 ---
 title: Creating a static site with hugo
-slug: creating-a-static-site-with-hugo
+url: creating-a-static-site-with-hugo
 date: 2024-05-17
 summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website
 ---
@@ -9,24 +9,29 @@ summary: Why I chose hugo and what all I did to convert my ghostjs website to a 
 
 [Ghostjs](https://ghostjs.org) is a good platform for bloggers. The advantage for me was that it uses handlebar templates to render pages as it was getting difficult for me to learn php just to host pages. Plus it provided a clean and secure option (unlike WordPress) and I can write content in Markdown. 
 
-But nevertheless spending 5$ a month for a few static pages doesn't make much sense when you have other options. One popular option was github pages but somehow I couldn't continue with Jekyll. Installing ruby is so much hassle that there is a [dedicated paid service](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-1-install-homebrew-and-the-command-line-tools) to get ruby installed.
+| cybercafe.dev                                                                              | New site                                                                                                 |
+|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| ![cybercafe.dev](./images/cybercafe.dev.png)                                               | ![Hugo site](./images/amt8u-hugo-blog.netlify.app-homepage.png)                                          |
+| ![Article](./images/cybercafe.dev_playing-days-gone-zombie-apocalypse-open-world-game.png) | ![article](./images/amt8u-hugo-blog.netlify.app_playing-days-gone-zombie-apocalypse-open-world-game.png) |
+
+But anyway spending 5$ a month for a few static pages doesn't make much sense when you have better alternatives. One popular option was GitHub pages, but somehow I couldn't continue with Jekyll. Installing ruby is so much pain as described [here](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-1-install-homebrew-and-the-command-line-tools). There is even a [dedicated paid automation](https://www.rubyonmac.dev/?utm_campaign=install-ruby-guide) to get ruby installed.
 
 ## My requirements in order of priority
-* **Write in markdown** - Ever since I started writing Markdown, no other format made sense to me. Even if you don't do markdown to html conversion, the raw text itself is readable. It makes your content platform-agnostic. If you want to switch from Ghostjs to WordPress, you don't need to worry about losing embedded links etc. Just copy the text.
-* **Platform-agnostic** - Even if you are using mardown, there may be cases where some flavour of markdown is not supported in other platforms. Plus if you are using any feature like image gallery in ghostjs, you won't be easily able to replicate it in other systems.
-* **Auto deploy on push** - With Ghostjs, I had to go the admin UI, write the article, copy and paste images, update several meta details and then publish. For even a small change same process again. To my surprise their posts page doesn't have a search. You have to manually scroll and search for your published post. Since my main source of articles is the GitHub repo, I had to do multiple things. Sometimes I forget to commit the article etc. Thanks to GitHub actions workflow, I have to just commit and push my changes. The site gets auto build and deployed.
-* **Content to be stored in GitHub repo** - Again, didn't want myself tied to any system and also keep an easily accessible backup for all the content, best choice for now is GitHub.
-* **Write anywhere** - With systems such as WordPress and GhostJS, you have to write in their respective editors which maybe fine for some people. I should be able to write anywhere on any system and should not be dependent on internet.
-* **Minimum cost** - Of course everyone wants everything free, but [Ghostjs cloud pricing](https://ghost.org/pricing/) is a little on the steeper side and a VPS for running self-hosted ghost costs around 5$ a month. With platforms like Netlify which provide unlimited static sites for free, it makes a very good deal. Of course you will lose a few things here and there.
+* **Write in markdown** - Ever since I started writing Markdown, no other format made sense to me. Even if you don't do markdown to html conversion, the raw text itself is readable. It frees you from platform dependent features. If you want to switch from `Ghostjs` to `WordPress`, you don't need to worry about losing embedded links etc. Just copy the text.
+* **Platform-agnostic** - In some platforms, even if you are using Markdown, there may be cases where some flavour of it is not supported. If you are using features like image gallery in ghostjs, you won't be easily able to replicate it in other systems. I wanted to have my content completely `isolated` from the hosting and deployment perspective.
+* **Auto deploy on push** - With Ghostjs, I had to go the admin UI, write the article, copy and paste images, update several meta details and then publish. For even a small change same process again. To my surprise their posts page doesn't even have "search". You have to manually scroll and find for your published post. Since my main source of articles is the GitHub repo, I had to do multiple things. Sometimes I forget to commit the article, sometimes the content is not in sync with the deployed site. But that is fixed with providers like `Netlify` and `Vercel`. Thanks to GitHub actions workflow, I have to just commit and push my changes. The site gets auto build(Markdown to html) and deployed.
+* **Content to be stored in GitHub repo** - Again, didn't want myself tied to any system and also keep an easily accessible backup for all the content, best choice for now is `GitHub`.
+* **Write anywhere** - With systems such as WordPress and GhostJS, you have to write in their respective `editors` which maybe fine for some people. My requirement was that I should be able to write anywhere on any system and should not be dependent on internet.
+* **Minimum cost** - Self hosted ghostjs instance costs a minimum of 5$ a month and [Ghostjs cloud pricing](https://ghost.org/pricing/) is a little on the steeper side. Having a VPS for a few static pages doesn't make much sense. Yes, the platform has features that will be difficult to integrate with static sites, but I am not going to use them. With platforms like `Netlify` which provide unlimited static sites for `free`, it makes a very good deal. Of course, you will lose a few functions here and there.
 
 ## Best static site generator for `Markdown`.
 So I started looking out for the best SSG which I can quickly use. I already have my posts in Markdown format. I should be able to plug in the generator and go.
 
-It turns out that it's not that easy. Of course generating html from content is easy, but I wanted to have it as organized as I can so that it would be easier in future to add posts and pages.
+It turns out that it's not that trivial. Of course generating html from content is straight forward, but I wanted to have it `organized` as I can so that it would be easier in future to `migrate` or to add posts and pages.
 
 A popular place to find out all the generators is https://jamstack.org/generators/ But when you have 355 options, choice becomes more difficult.
 
-Having React experience and good knowledge of Javascript, I put my bet on [GatsbyJS](http://gatsbyjs.org/). But after completing a quick crash course I realized its not really what I was looking for. You have to first know `graphql` and then learn how to create optimized queries to be used in the pages. Plus every gatsby theme is different and expects content to be in different folder. I did not want my content to be based on framework so that in case tomorrow I want to switch, I should not be updating my markdown content.
+Having React experience and good knowledge of Javascript, I put my bet on [GatsbyJS](http://gatsbyjs.org/). But after completing a quick crash course I realized its not really what I was looking for. You have to first learn `graphql` and then understand how to create optimized queries to be used in the pages. Plus every gatsby theme is different and expects content to be in different structure. I did not want my content to be based on framework so that in case tomorrow I want to switch, I should not be updating my markdown content.
 
 Just to create a template I have to create a React application with properly structured components, created optimized graphql queries, understand various plugins like images, use a css system like css-modules etc. In the end I felt it was too much work, better lookout for alternative. And not to mention the terrible Gatsby [caching issues](https://stackoverflow.com/questions/61535548/need-to-gatsby-clean-with-essentially-every-code-change). I myself faced this multiple times while building simple components.
 
@@ -126,7 +131,7 @@ Sometimes I feel a quick index of the contents makes it really easy to find the 
 Tags are very commonly used to group content and almost all CMS provide this capability. Hugo also has its in built. The theme already had the template, I just made a few visual changes so that it looks better.
 
 ## Frontmatter
-This was something that I wasn't aware of up until I started learning Gatsby and Hugo. In the CMS world like ghostjs or wordpress, you embed the metadata to your article via their UI. This metadata gets stored in the DB with your article's content. But in Markdown where will you store that? Things like `tags`, `excerpt`, feature image, `slug`, date of publishing etc. All this info goes into Frontmatter. Not sure why its named as such. We can always call it markdown metadata.
+This was something that I wasn't aware of up until I started learning Gatsby and Hugo. In the CMS world like ghostjs or WordPress, you embed the metadata to your article via their UI. This metadata gets stored in the DB with your article's content. But in Markdown where will you store that? Things like `tags`, `excerpt`, feature image, `slug`, date of publishing etc. All this info goes into Frontmatter. Not sure why its named as such. We can always call it markdown metadata.
 
 This was one of the time taking task, but again it's a one time job and going forward I will always be adding it with new articles. For example the frontmatter for this post is below.
 
@@ -140,6 +145,12 @@ summary: Why I chose hugo and what all I did to convert my ghostjs website to a 
 ```
 
 ## Blazing fast
-And at last, I wanted the website to be not just super fast but blazing fast. I am not doing anything complicated. Everything is just plain simple text and images. I don't need to show rich content. I can just put up links and let the relevant platform render the content. Moreover, I myself hate inline content. I almost never play a YouTube video embedded inside another site. I open it up in a YouTube in a new window where I can use all the features that YouTube provides. Similarly for other content links are sufficient.
+And at last, I wanted the website to be not just superfast but blazing fast. I am not doing anything complicated. Everything is just plain simple text and images. I don't need to show rich content. I can just put up links and let the relevant platform render the content. Moreover, I myself hate inline content. I almost never play a YouTube video embedded inside another site. I open it up in a YouTube in a new window where I can use all the features that YouTube provides. Similarly for other content links are sufficient.
 
 
+## Lighthouse score
+Again, it is not necessary to have 100/100 in lighthouse score. But it certainly is a good tool to find out where all you can do the optimizations. Saving 200ms may not be a great deal here, but you get to see various techniques. I consider my blog a place to experiment and learn. Initial impressions looks good. But I see many areas of improvement. [Detailed snapshot ](/docs/amt8u-hugo-blog-netlify_initial_impressions.pdf) of lighthouse evaluation on 18 May 2024. Will implement the recommended changes as and when I get time.
+
+![Quick summary of the same](./images/lighthouse-score-initial-impressions-summary.png) 
+
+> End
