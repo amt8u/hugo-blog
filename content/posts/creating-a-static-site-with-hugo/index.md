@@ -124,6 +124,18 @@ But there is a big problem with that approach. `Cross site content` is not relia
 
 Earlier I used a library https://github.com/francoischalifour/medium-zoom to enable users to click on any image and zoom in context. It has some great features like auto zoom out on scroll and use responsive images for zoomed items. But I wanted to keep my blog free from libraries. A quick workaround I found is to convert the images into links so that on clicking on it, the user can see a full size version of it. And if needed, you can use the browser's zoom feature to enlarge it. The downside being that you navigate out of the article. But then a simple back button takes you back to the exact place you were on. Moreover by giving the fullwidth toggle, you can always zoom in images on the spot and toggle back to narrow mode to view text.
 
+## Box shadow on images
+If you look closely, there is a small shadow on all the images which makes it feel like the images are on top of the page. It's just a visual gimmick but looks good. You can go [too much creative](https://getcssscan.com/css-box-shadow-examples) in that direction, but I just wanted a plain simple shadow just to avoid the flat look. And you can also apply a border to create a frame kind of look. But that was becoming too cheesy so I commented it out. As always do remember to use `box-sizing` to avoid alignment issues coming out of padding and margins. You can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing).
+
+```css
+article img {
+    /* border: 2px ridge #151515; */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+```
+
 ## Table of contents
 Sometimes I feel a quick index of the contents makes it really easy to find the relevant paragraph. I can see that hugo also renders a TOC and some themes do utilize it. There is no TOC with the current theme, but it can easily be achieved with hugo. It's a `TODO` item on the list. 
 

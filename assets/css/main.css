@@ -7,7 +7,7 @@
 --callouctcolor:dodgerblue;
 --hovercolor:navy;
 --darkMaincolor: #006b17;
---maxWidth: 600px;
+--maxWidth: 800px;
 }
 
 html {
@@ -63,7 +63,7 @@ hr {
 }
 
 blockquote {
-  border-left: 3px solid var(--bordercl);
+  border-left: 3px solid var(--maincolor);
   color: #737373;
   margin: 0;
   padding-left: 1em;
@@ -143,7 +143,7 @@ figure img {
   max-height: 500px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   figure {
     padding: 0 40px;
   }

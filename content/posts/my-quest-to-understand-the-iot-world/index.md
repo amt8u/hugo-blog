@@ -5,7 +5,7 @@ summary : Now a days connecting multiple displays to a system is common and has 
 author: amt8u
 date : 2020-06-05
 draft : false
-tags : ['gaming']
+tags : ['iot']
 ---
 
 ![](images/photo-1571615754493-ff5d323d6526.jpeg)

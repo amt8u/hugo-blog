@@ -15,13 +15,15 @@ The first thing is as always Headings. There are many ways to create headings in
 
 You can convert any text into heading by adding # in front of the text. Total available levels are 6 but for the most part you will only need 3. But for completeness I will use all 6.
 
+## Formatting
+
 ```markdown
-#Heading 1
-##Heading 2
-###Heading 3
-#####Heading 4
-#####Heading 5
-######Heading 6
+# Heading 1
+## Heading 2
+### Heading 3
+##### Heading 4
+##### Heading 5
+###### Heading 6
 ```
 # Heading 1
 ## Heading 2
@@ -41,7 +43,7 @@ There are various ways to emphasize text. You can use * around the words to make
 *This text will become italic
 **This text will be bold
 ***This will be bold as well as italic
-The homepage for this blog is[here](http://seedocode.com)
+The homepage for this blog is[here](http://cybercafe.dev)
 ```
 
 *This text will become italic*
@@ -54,10 +56,12 @@ and
 
 The **homepage** for this blog is [here](https://cybercafe.dev/)
 
+
+## Images
 Though you can directly add an image to the post using the add image button, you can also add an image with similar syntax as you add a link.
 
 ``` markdown
-![MyArt](https://cybercafe.dev/content/images/size/w2000/2020/01/IMG_20200126_093318-3.jpg)
+![MyArt](images/IMG_20200126_093318-3.jpg)
 ```
 
 ![MyArt](images/IMG_20200126_093318-3.jpg)
@@ -66,7 +70,7 @@ Though you can directly add an image to the post using the add image button, you
 
 Lists are very difficult in plain html. Indentation never works as you would want. Some editors just ignore the whitespace and all your lists become plain lines
 
-``` markdown
+```markdown
 * First item
     * Second item
         * Second sub item
@@ -96,16 +100,17 @@ Lists are very difficult in plain html. Indentation never works as you would wan
 
 ## Quotes
 
+You can add a qoute by prefixing any line with `>` character
 ``` markdown
-You can add a qoute by prefixing any line with `>` character.
+> Once upon a time in cybercafe.dev
 ```
 
-> You can add a qoute by prefixing any line with > character
+> Once upon a time in cybercafe.dev
 
 ## Dividers
 If you want to have separation between your sections ,you can use `---` to create a divider like below
 
-<hr>
+---
 
 and here you can start a new section.
 
@@ -177,8 +182,18 @@ A time may come that you might need more power that markdown. For that time you 
 
 And yes you can be creative as much as you want!
 
-``` html    
-<input type="button" onclick="(function(){alert('You clicked just out of curiosity!')})()" style="font-size:25px; margin:5px; padding:30px; border:1px solid #ddd; border-radius:10px; cursor:pointer" name="DummyButton" value="Click here - Its more fancy!"/>
+```html    
+<input type="button" 
+       onclick="(function(){alert('You clicked just out of curiosity!')})()" 
+       style="font-size:25px; 
+           margin:5px; 
+           padding:30px; 
+           border:1px solid #ddd; 
+           border-radius:10px; 
+           cursor:pointer" 
+       name="DummyButton" 
+       value="Click here - Its more fancy!"
+/>
 ```
 
 <input type="button" onclick="(function(){alert('You clicked just out of curiosity!')})()" style="font-size:25px; margin:5px; padding:30px; border:1px solid #ddd; border-radius:10px; cursor:pointer" name="DummyButton" value="Click here - Its more fancy!"/>
