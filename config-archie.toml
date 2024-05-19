@@ -9,7 +9,7 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="toggle"
 	useCDN=false
-	subtitle = "&#9829; I write about my learning and experiences here. This is a statically generated site from markdown content. [Read how I converted my blog](/tags) from ghostjs hosted app to static pages."
+	subtitle = "&#9829; I write about my learning and experiences here. This is a statically generated site from markdown content. [Read how I converted my blog](/creating-a-static-site-with-hugo) from ghostjs hosted app to static pages."
 
 [[params.social]]
 name = "GitHub"
@@ -22,7 +22,7 @@ icon = "twitter"
 url = "https://twitter.com/amt8u/"
 
 [[params.social]]
-name = "apps"
+name = "playground"
 icon = "external-link"
 url = "https://cybr.cafe"
 
