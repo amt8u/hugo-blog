@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /* Markdown */
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); Markdown */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root{
 --maincolor: red;
 --bordercl:rebeccapurple;
@@ -11,7 +13,7 @@
 html {
   color: #232333;
   /*font-family: 'Roboto Mono', monospace;*/
-  font: 18px/1.4 Ubuntu,"Book Antiqua",Helvetica,Georgia,Arial,sans-serif;
+  font: 18px/1.4 Nunito,"Book Antiqua",Helvetica,Georgia,Arial,sans-serif;
   font-size: 15px;
   line-height: 1.8rem;
 }
