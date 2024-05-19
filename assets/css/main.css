@@ -23,7 +23,7 @@ body{
   background-color: #f7f7f1;
 }
 nav a{
-  margin: 0 5px;
+  /* margin: 0 5px; */
 }
 .content.fullwidth {
   max-width: 95%;

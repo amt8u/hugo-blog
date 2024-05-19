@@ -6,7 +6,7 @@
 	</div>
 	<nav>
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}">{{ .Name }}</a>
+		<a href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;
 		{{ end }}
 		{{ if eq .Site.Params.mode "toggle" -}}
 			<span class="action" id="dark-mode-toggle" onclick="toggleTheme()" ></span>
