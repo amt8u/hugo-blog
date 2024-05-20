@@ -107,7 +107,7 @@ After doing this, I faced one issue. Maybe because of other css properties of ca
 Medium zoom gives you some configuration options like background, setting offset etc. Check out those options on its [github](https://github.com/francoischalifour/medium-zoom) page.
 
 ## Case change
-Somehow I don't like that the author name is shown as all caps everywhere. Especially when you have a username like `z00md`. To remove this uppercase transform I had to remove the `text-transform` from the screen.css at two places.
+Somehow I don't like that the author name is shown as all caps everywhere. Especially when you have a username like `amt8u`. To remove this uppercase transform I had to remove the `text-transform` from the screen.css at two places.
 
 ```css
 .post-card-byline-content {

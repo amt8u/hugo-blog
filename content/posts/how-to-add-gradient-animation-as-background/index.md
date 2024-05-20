@@ -26,22 +26,22 @@ If you are using a ghost instance, there are two ways
     background: linear-gradient(308deg, #000000, #000000, #f75900, #000000);
     background-size: 800% 800%;
 
-    -webkit-animation: z00md 21s ease infinite;
-    -moz-animation: z00md 21s ease infinite;
-    animation: z00md 21s ease infinite;
+    -webkit-animation: moveit 21s ease infinite;
+    -moz-animation: moveit 21s ease infinite;
+    animation: moveit 21s ease infinite;
 }
 
-@-webkit-keyframes z00md {
+@-webkit-keyframes moveit {
     0%{background-position:0% 14%}
     50%{background-position:100% 87%}
     100%{background-position:0% 14%}
 }
-@-moz-keyframes z00md {
+@-moz-keyframes moveit {
     0%{background-position:0% 14%}
     50%{background-position:100% 87%}
     100%{background-position:0% 14%}
 }
-@keyframes z00md {
+@keyframes moveit {
     0%{background-position:0% 14%}
     50%{background-position:100% 87%}
     100%{background-position:0% 14%}

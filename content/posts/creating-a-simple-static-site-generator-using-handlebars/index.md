@@ -5,7 +5,7 @@ summary : How to create a simple html generator using handlebars and nodejs.
 author: amt8u
 date : 2020-11-10
 draft : false
-tags : ['nodejs', 'SSG']
+tags : ['nodejs', 'html']
 ---
 
 ## The need
@@ -137,6 +137,6 @@ Now that I can generate html from json, I also need a way to deploy the generate
 
 You can take a look at the generated page [here](https://cybr.cafe/arrow-functions)
 
-The sourcecode for this project is present on my [github account](https://github.com/z00md/static-quiz-generator)
+The sourcecode for this project is present on my [github account](https://github.com/amt8u/static-quiz-generator)
 
 > End

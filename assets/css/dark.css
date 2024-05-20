@@ -1,6 +1,6 @@
 body {
-  color: #acacac;
-  background-color: #111;
+  color: #cbcbcb;
+  background-color: #1c1c1c;
 }
 
 ::-moz-selection {
@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ddd;
+  /*color: #ddd;*/
 }
 /*h1::before {*/
 /*  color: var(--darkMaincolor);*/
@@ -89,7 +89,7 @@ a:hover {
   color: #ddd;
 }
 .site-description a:hover {
-  color: black;
+  /*color: black;*/
 }
 
 .tags a {
@@ -108,7 +108,9 @@ a:hover {
 nav a.active {
   color: var(--darkMaincolor);
 }
-
+article .meta-wrapper ul li {
+  color: var(--darkMaincolor);
+}
 .header nav,
 .footer {
   border-color: #333;

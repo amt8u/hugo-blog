@@ -18,6 +18,8 @@ tags: ['web', 'html']
 
 But anyway spending 5$ a month for a few static pages doesn't make much sense when you have better alternatives. One popular option was GitHub pages, but somehow I couldn't continue with Jekyll. Installing ruby is so much pain as described [here](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-1-install-homebrew-and-the-command-line-tools). There is even a [dedicated paid automation](https://www.rubyonmac.dev/?utm_campaign=install-ruby-guide) to get ruby installed.
 
+In one of my previous articles I briefly touched on the subject of [creating static quiz using handlebars templates](/creating-a-simple-static-site-generator-using-handlebars). That was an attempt to create some static Quiz to compliment my articles on various subjects. 
+
 ## My requirements in order of priority
 * **Write in markdown** - Ever since I started writing Markdown, no other format made sense to me. Even if you don't do markdown to html conversion, the raw text itself is readable. It frees you from platform dependent features. If you want to switch from `Ghostjs` to `WordPress`, you don't need to worry about losing embedded links etc. Just copy the text.
 * **Platform-agnostic** - In some platforms, even if you are using Markdown, there may be cases where some flavour of it is not supported. If you are using features like image gallery in ghostjs, you won't be easily able to replicate it in other systems. I wanted to have my content completely `isolated` from the hosting and deployment perspective.

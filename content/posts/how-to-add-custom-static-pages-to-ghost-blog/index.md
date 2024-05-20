@@ -70,7 +70,7 @@ Create a file in the theme directory with the `custom-template.hbs`. Add generic
 
 ```handlebars
 {{!--
-Author: z00md
+Author: amt8u
 Date: 28 July 2020
 This template is used for custom page. If you would like to render this as a page-template, 
 create a page with the same slug that this template will be using in the routes.yaml

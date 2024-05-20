@@ -359,7 +359,8 @@ article ul li {
 }
 
 article .meta-wrapper ul li {
-  margin: 0;
+  margin: 0 .2rem;
+  color: var(--maincolor);
 }
 
 

@@ -89,7 +89,7 @@ function App() {
 }
 ```
 
-* Add various functions to App. Please find the [github repo](https://github.com/z00md/map-game) for full function code.
+* Add various functions to App. Please find the [github repo](https://github.com/amt8u/map-game) for full function code.
 ```js
   function nextQuestion() {}
   function updateScore(answer) {}
@@ -129,7 +129,7 @@ If you would like to checkout a [Live demo](https://cybr.cafe/map-game/index.htm
 
 # Resources used for this demo app
 
-* [Github Repo](https://github.com/z00md/map-game) for this sample app
+* [Github Repo](https://github.com/amt8u/map-game) for this sample app
 * **SVG map of India** from [mapsvg.com](https://mapsvg.com/maps/india) used under [Creative Commons License](https://creativecommons.org/licenses/by/4.0/)
 * Create React App from [React](https://create-react-app.dev/docs/getting-started)
 * [Related article](https://medium.com/better-programming/create-react-app-and-svgs-70970ac715f2) about using svgs in React
