@@ -5,8 +5,9 @@
 		<span id="view-mode-toggle" class="action" title="Expand to fit screen" onclick="toggleView()"></span>
 	</div>
 	<nav>
+		{{ $currentPage := . }}
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;
+			<a class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
 		{{ end }}
 		{{ if eq .Site.Params.mode "toggle" -}}
 			<span class="action" id="dark-mode-toggle" onclick="toggleTheme()" ></span>

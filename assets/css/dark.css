@@ -47,38 +47,42 @@ h5,
 h6 {
   color: #ddd;
 }
-h1::before {
-  color: var(--darkMaincolor);
-  content: "# ";
-}
-h2::before {
-  color: var(--darkMaincolor);
-  content: "## ";
-}
-h3::before {
-  color: var(--darkMaincolor);
-  content: "### ";
-}
-h4::before {
-  color: var(--darkMaincolor);
-  content: "#### ";
-}
-h5::before {
-  color: var(--darkMaincolor);
-  content: "##### ";
-}
-h6::before {
-  color: var(--darkMaincolor);
-  content: "###### ";
-}
+/*h1::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "# ";*/
+/*}*/
+/*h2::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "## ";*/
+/*}*/
+/*h3::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "### ";*/
+/*}*/
+/*h4::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "#### ";*/
+/*}*/
+/*h5::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "##### ";*/
+/*}*/
+/*h6::before {*/
+/*  color: var(--darkMaincolor);*/
+/*  content: "###### ";*/
+/*}*/
 
 a:not(:has(img)) {
-  border-bottom: 1px solid var(--darkMaincolor);
+  /*border-bottom: 1px solid var(--darkMaincolor);*/
   color: inherit;
 }
 a:hover {
-  background-color: var(--darkMaincolor);
-  color: black;
+  /*background-color: var(--darkMaincolor);*/
+  color: var(--darkMaincolor)
+}
+
+.meta .tags {
+  color: var(--darkMaincolor);
 }
 
 .site-description a {
@@ -101,13 +105,17 @@ a:hover {
   text-decoration: none !important;
 }
 
+nav a.active {
+  color: var(--darkMaincolor);
+}
+
 .header nav,
 .footer {
   border-color: #333;
 }
 
 .highlight {
-  background-color: #333;
+  /*background-color: #333;*/
 }
 .soc:hover {
   color: black;

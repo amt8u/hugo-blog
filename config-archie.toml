@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "cybercafe.dev"
 theme="archie"
 copyright = "© cybercafe.dev"
-pygmentsstyle = "github-dark"
+pygmentsstyle = "xcode-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 [params]
@@ -28,32 +28,33 @@ url = "https://cybr.cafe"
 
 [[menu.main]]
 name = "javascript"
-url = "/tags/javascript"
+url = "/tags/javascript/"
 weight = 1
 
 [[menu.main]]
 name = "gaming"
-url = "/tags/gaming"
+url = "/tags/gaming/"
 weight = 2
 
 [[menu.main]]
 name = "web"
-url = "/tags/web"
+url = "/tags/web/"
 weight = 3
 
 [[menu.main]]
 name = "all topics"
-url = "/tags"
+url = "/tags/"
 weight = 5
 
 [[menu.main]]
 name = "all posts"
-url = "/posts"
+url = "/posts/"
 weight = 8
 
 [[menu.main]]
+identifier = "amt8u"
 name = "about"
-url = "/amt8u"
+url = "/amt8u/"
 weight = 10
 
 
