@@ -1,5 +1,5 @@
 body {
-  color: #cbcbcb;
+  color: var(--darkTextColor);
   background-color: #1c1c1c;
 }
 
@@ -96,8 +96,8 @@ a:hover {
   /*border-bottom: 3px solid var(--darkMaincolor);*/
 }
 .tags a:hover {
-  background-color: var(--darkMaincolor);
-  color: black;
+  /*background-color: var(--darkMaincolor);*/
+  color: var(--darkTextColor);
 }
 
 .site-title a {

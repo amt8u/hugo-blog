@@ -5,6 +5,8 @@
 --maincolor: red;
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
+--textColor: #232333;
+--darkTextColor: #cbcbcb;
 --hovercolor:navy;
 --darkMaincolor: #c66300;
 --maxWidth: 800px;
@@ -396,8 +398,8 @@ justify-content: space-between;
   /*border-bottom: 3px solid var(--maincolor);*/
 }
 .tags a:hover{
-  color:white;
-  background-color: var(--hovercolor);
+  color:var(--textColor);
+  /*background-color: var(--hovercolor);*/
 }
 svg{
   max-height: 15px;
