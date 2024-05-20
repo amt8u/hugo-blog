@@ -6,6 +6,7 @@ author: amt8u
 date : 2024-02-23
 draft : false
 tags : ['typescript', 'javascript', 'nodejs']
+thumbnail: images/typescript-logo.jpeg
 ---
 
 # Excerpt

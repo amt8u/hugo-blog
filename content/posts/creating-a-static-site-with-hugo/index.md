@@ -2,7 +2,9 @@
 title: Creating a static site with hugo
 url: creating-a-static-site-with-hugo
 date: 2024-05-17
-summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website
+summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website.
+thumbnail: images/hugo-logo.png
+tags: ['web', 'html']
 ---
 
 # Why?
@@ -80,9 +82,20 @@ There are may ways to achieve this. A great starting point is https://css-tricks
 
 First load the dark theme if user has `prefers-color-scheme` set to dark. This can be done in `header.html`.
 ```html
-{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") (eq .Site.Params.mode "toggle") -}}
+{{- if or (eq .Site.Params.mode "auto") 
+    (eq .Site.Params.mode "dark") 
+    (eq .Site.Params.mode "toggle") -}}
     {{ $darkstyle := resources.Get "css/dark.css" | fingerprint }}
-    <link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ $darkstyle.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} />
+    <link 
+            id="darkModeStyle" 
+            rel="stylesheet" 
+            type="text/css" 
+            href="{{ $darkstyle.Permalink }}" 
+            {{ if eq .Site.Params.mode "auto" }}
+                media="(prefers-color-scheme: dark)"
+            {{ end }} 
+            {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} 
+    />
 {{ end }}
 ```
 
@@ -116,6 +129,42 @@ Though thats the hard truth, but with simple pages having just text and images, 
 And for the cases where it is not sufficient, we have the flex layout. It a little complicated with so many properties but with the dev tools helper buttons, it has become really easy to work with.
 
 With options like `flex-wrap` and `justify-content` you can easily achieve responsive layout. Open devtools in responsive layout mode and try resizing the window from maximum to minimum. You will see that this website is readable even with a width of `100px`. And with the `fullWidth` option, you will appreciate your ultrawide monitor too.
+
+## Highlight active page
+Again something which is very easy in bootstrap world, it gave me some pain in hugo. To mark the menu as active when you are on respective page you can use below construct. 
+
+```html
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+    <a 
+      class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}" 
+      href="{{ .URL }}">{{ .Name }}
+    </a>
+{{ end }}
+```
+It took me around one hour with chatgpt and internet to realize that `.RelPermalink` returns the page's URL with a leading `/` irrespective of whatever value you have set in the `Menu` section of config. I had the url as `/amt8u` while the `.RelPermalink` returned `/amt8u/` and thus my comparisons were not working. There is helper function [isMenuCurrent](https://gohugo.io/methods/page/ismenucurrent/) available for the same, but I guess that also didn't work due to same reason. 
+```toml
+[[menu.main]]
+identifier = "amt8u"
+name = "about"
+url = "/amt8u"
+```
+
+## Feature & Thumbnail image
+It's true that images are heavy and slow down your website. Maybe that's the reason many of the hugo themes I saw do not have images for the listing page. I like to have a small thumbnail to represnt the content. It is just better visually. Well it is not that easy in hugo. Somehow it is not a popular thing I assume. It was difficult to find an article or source to add thumbnail images to hugo list pages. I had to find a theme where they are doing this. Tried to replicate the same. Here is my understanding.
+
+In the `index.html` where I am iterating over the posts, get the `image` type of resources which can be done by using `Resources.ByType` function. It returns all the page's resources. Use `.GetMatch` to find the particular image with an optional default "thumbnail" value. 
+
+```html
+{{- $images := .Resources.ByType "image" }}
+{{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumbnail*")}}
+{{ if $thumbnail }}
+    <img alt="feature-image" src="{{ $thumbnail.RelPermalink }}">
+{{ else }}
+    <img alt="feature-image" src="{{ $defaultThumbnail }}">
+{{ end }}
+```
+And in case thumbnail image is not preset, show a placeholder image from the static directory. Will write a separate post about how to handle resources in hugo sometime later as I feel I still don't understand it fully.
 
 ## Zoomable images
 One common issue I face with many blogs and simple websites is the lack of image handling. Someone did a great job and put a screenshot of the full window on the page, but there is no way to zoom in the image. You have to manually right-click on it, open in new tab and then view it properly. I understand that I should not target my blog as an image hosting system. For images there are `flicker`, `Unsplash` and many more. You can always link to them. Even you can embed images using these services directly into your page. 
@@ -152,7 +201,8 @@ This was one of the time taking task, but again it's a one time job and going fo
 title: Creating a static site with hugo
 slug: creating-a-static-site-with-hugo
 date: 2024-05-17
-summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website
+summary: Why I chose hugo and what all I did to 
+convert my ghostjs website to a static website
 ---
 ```
 

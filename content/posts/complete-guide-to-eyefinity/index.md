@@ -6,6 +6,7 @@ author: amt8u
 date : 2022-05-26
 draft : false
 tags : ['gaming']
+thumbnail : images/amd-eyefinity-three-monitor-setup.jpg
 ---
 
 # Really complete?

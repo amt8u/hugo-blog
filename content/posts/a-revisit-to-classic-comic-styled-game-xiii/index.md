@@ -6,9 +6,7 @@ author: amt8u
 date : 2021-01-05
 draft : false
 thumbnail : images/xiii.jpg
-bk_cover : 
-    image: images/xiii.jpg
-    caption : XIII - A classic game
+feature : images/xiii.jpg
 coverAlt : "a-revisit-to-classic-comic-styled-game-xiii-cover"
 tags : ['gaming']
 featured : true

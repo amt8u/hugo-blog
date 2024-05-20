@@ -6,6 +6,7 @@ author: amt8u
 date : 2022-10-30
 draft : false
 tags : ['aws', 'photos']
+thumbnail : images/camera-lens.jpg
 ---
 
 

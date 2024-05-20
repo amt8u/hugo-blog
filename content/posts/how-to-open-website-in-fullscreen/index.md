@@ -5,8 +5,7 @@ summary : In this article we will learn about how we can enable fullscreen in a 
 author: amt8u
 date : 2023-05-13
 draft : false
-bk_cover : 
-    image: images/fullscreen-black.png
+thumbnail: images/fullscreen-black.png
 tags : ['javascript','web']
 ---
 

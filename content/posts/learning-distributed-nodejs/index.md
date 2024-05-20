@@ -5,9 +5,7 @@ summary : I read one of the best books for nodejs - Distributed systems with nod
 author: amt8u
 date : 2024-02-23
 draft : false
-bk_cover : 
-    image: images/book-cover.jpg
-    caption : Learning Nodejs
+thumbnail: images/book-cover.jpg
 coverAlt : "learning-nodejs"
 tags : ['javascript']
 ---
@@ -47,8 +45,12 @@ Nodejs process will exit if there are no more tasks on the queue. Threre are man
 const t1 = setTimeout(() => {}, 1000000);
 const t2 = setTimeout(() => {}, 2000000);
 
-t1.unref(); // t1 timer is unreferenced. The callback can still run in 1000 seconds, but it won't keep the process alive.
-clearTimeout(t2); // t2 time has been cleared and will never run. It no longer keeps the process alive
+// t1 timer is unreferenced. 
+// The callback can still run in 1000 seconds, but it won't keep the process alive.
+t1.unref(); 
+
+// t2 time has been cleared and will never run. It no longer keeps the process alive
+clearTimeout(t2); 
 ```
 
 A point to note - `setTimeout()` returns an object in nodejs while in browsers it returns an integer and thats why we are able to call t1.unref() in nodejs.
@@ -142,12 +144,16 @@ cluster.on("disconnect", worker => {
 ```bash
 master pid=30839
 worker pid=30840
-(node:30840) [FSTDEP011] FastifyDeprecation: Variadic listen method is deprecated. Please use ".listen(optionsObject)" instead. The variadic signature will be removed in `fastify@5`.
+(node:30840) [FSTDEP011] FastifyDeprecation: Variadic listen method is deprecated. 
+Please use ".listen(optionsObject)" instead. 
+The variadic signature will be removed in `fastify@5`.
 (Use `node --trace-warnings ...` to show where the warning was created)
 Producer running at http://127.0.0.1:4000
 listening 1 127.0.0.1:4000
 worker pid=30841
-(node:30841) [FSTDEP011] FastifyDeprecation: Variadic listen method is deprecated. Please use ".listen(optionsObject)" instead. The variadic signature will be removed in `fastify@5`.
+(node:30841) [FSTDEP011] FastifyDeprecation: Variadic listen method is deprecated. 
+Please use ".listen(optionsObject)" instead. 
+The variadic signature will be removed in `fastify@5`.
 (Use `node --trace-warnings ...` to show where the warning was created)
 Producer running at http://127.0.0.1:4000
 listening 2 127.0.0.1:4000
@@ -210,7 +216,8 @@ $ haproxy -v
 HAProxy version 2.8.2-61a0f57 2023/08/09 - https://haproxy.org/
 Status: long-term supported branch - will stop receiving fixes around Q2 2028.
 Known bugs: http://www.haproxy.org/bugs/bugs-2.8.2.html
-Running on: Darwin 22.6.0 Darwin Kernel Version 22.6.0: Wed Jul  5 22:22:05 PDT 2023; root:xnu-8796.141.3~6/RELEASE_ARM64_T6000 arm64
+Running on: Darwin 22.6.0 Darwin Kernel Version 22.6.0: 
+Wed Jul  5 22:22:05 PDT 2023; root:xnu-8796.141.3~6/RELEASE_ARM64_T6000 arm64
 ```
 
 #### Start HAProxy
@@ -351,15 +358,28 @@ frontend inbound
 And test it out by using a curl command. You will need to use `--insecure` because the certificate is still self signed. If you use a certificate from a known CA, you do not need this flag. One of my earlier posts around related topic - [thisisunsafe](https://cybercafe.dev/thisisunsafe-bypassing-chrome-security-warnings/)
 
 ```bash
-15:49:57 distributed-nodejs $ curl --insecure https://localhost:3000/
-{"consumer_pid":42250,"producer_data":{"producer_pid":42054,"recipe":{"id":42,"name":"Chicken Tikka Masala","steps":"Throw it in a pot...","ingredients":[{"id":1,"name":"Chicken","quantity":"1 lb"},{"id":2,"name":"Sauce","quantity":"2 cups"}]}}}%
+distributed-nodejs $ curl --insecure https://localhost:3000/
+```
+
+```json
+{"consumer_pid":42250,"producer_data":
+	{"producer_pid":42054,"recipe":
+		{"id":42,
+		"name":"Chicken Tikka Masala",
+		"steps":"Throw it in a pot...",
+		"ingredients":[
+			{"id":1,"name":"Chicken","quantity":"1 lb"},
+			{"id":2,"name":"Sauce","quantity":"2 cups"}]
+		}
+	}
+}
 ```
 
 #### Rate limiting
 
 If you need to limit the server to handle only a max number of connections at a given time, use below to achieve it
 
-One way is to do this with the nodejs http server.
+One way is to do this with the NodeJs http server.
 
 ```js
 const http = require('http');
@@ -377,7 +397,7 @@ But this would mean a hard limit to all the servers that you start.
 
 Here HAProxy can help. It can queue the requests for the application as well. So the server not necessarily needs to be limited to a fixed number. This approach makes it easy to configure the scaling when you are using external tools for service orchestration like k8s etc.
 
-```js
+```yaml
 defaults
     maxconn 8
     mode http

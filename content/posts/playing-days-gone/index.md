@@ -6,8 +6,7 @@ author: amt8u
 date : 2024-02-17
 draft : false
 tags : ['gaming']
-bk_cover : 
-  image: images/cover.png
+thumbnail: images/cover.png
 ---
 
 # Is it `good` or `bad`?

@@ -6,6 +6,7 @@ author: amt8u
 date : 2023-05-06
 draft : false
 tags : ['scam', 'wfh']
+thumbnail: images/amt8u-keyboard.jpg
 ---
 
 ## New scam

@@ -6,6 +6,7 @@ author: amt8u
 date : 2022-06-19
 draft : false
 tags : ['gaming']
+thumbnail : images/20220619134151_1.jpg
 ---
 
 # Why

@@ -5,9 +5,7 @@ summary : This post is about my experience of using Hazard Lights or Double indi
 author: amt8u
 date : 2024-02-06
 draft : false
-bk_cover : 
-    image: hazard-light.jpeg
-coverAlt : "car-breakdown.jpg"
+thumbnail: images/hazard-light.jpeg
 tags : ['opinion','traffic']
 ---
 
@@ -47,9 +45,9 @@ I tried to search for rules around it and here are my findings
 
 As per the [Motor Vehicles (Driving) Regulations, 2017.](https://upload.indiacode.nic.in/showfile?actid=AC_CEN_30_42_00009_198859_1517807326286&type=regulation&filename=G.S.R.634(E)%2023.06.2017%20rules%20of%20road%20regulation%202017.pdf) you need to follow below guidelines
 
-![tunnel-guideline](./tunnel-guideline.png)
-![breakdown-guideline](./breakdown-guideline.png)
-![fog-guidelilne.png](./fog-guidelilne.png)
+![tunnel-guideline](./images/tunnel-guideline.png)
+![breakdown-guideline](./images/breakdown-guideline.png)
+![fog-guidelilne.png](./images/fog-guidelilne.png)
 
 You can check out all the rules on official India repository
 

@@ -6,6 +6,7 @@ author: amt8u
 date : 2023-05-13
 draft : false
 tags : ['typescript', 'javascript', 'nodejs']
+thumbnail: images/ts2.png
 ---
 
 # Why so late?
