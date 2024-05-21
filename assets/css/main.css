@@ -182,7 +182,8 @@ figure img {
     display: none;
   }
   section.list-item img {
-    width: var(--thumbSmall);
+    min-width: var(--thumbSmall);
+    max-width: var(--thumbSmall);
     height: var(--thumbSmall);
     object-fit: cover;
     border-radius: 2px;

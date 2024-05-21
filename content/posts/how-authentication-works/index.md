@@ -6,6 +6,7 @@ author: amt8u
 date : 2022-01-30
 draft : false
 tags : ['web']
+thumbnail: images/feature.jpg
 ---
 
 # Need
