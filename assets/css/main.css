@@ -30,6 +30,7 @@ body{
 }
 nav a{
   /* margin: 0 5px; */
+  text-decoration: none;
 }
 nav a.active {
   color: var(--maincolor);
@@ -60,7 +61,6 @@ svg {
 }
 
 p {
-  font-family: 'ubuntu', system-ui;
   line-height: 1.5;
   text-align: justify;
 }

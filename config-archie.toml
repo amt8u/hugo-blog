@@ -9,7 +9,7 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="toggle"
 	useCDN=false
-	subtitle = "&#9829; I write about my learning and experiences here. This is a statically generated site from markdown content. [Read more about how I migrated my blog](/creating-a-static-site-with-hugo) from self hosted GhostJs server to netlify hosted static pages using Hugo generator."
+	subtitle = "&#9829; I write about my learning and experiences here. This site is generated from markdown content. [Read more about how I migrated my blog](/creating-a-static-site-with-hugo) from `paid` ghost instance to `free` static site using Hugo generator."
 
 [[params.social]]
 name = "GitHub"

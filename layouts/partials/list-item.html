@@ -1,0 +1,23 @@
+<section class="list-item">
+    {{ $defaultThumbnail := "/placeholder-dark.png" }}
+    {{- $images := .Resources.ByType "image" }}
+    {{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumbnail*")}}
+    {{ if $thumbnail }}
+        <img alt="feature-image" src="{{ $thumbnail.RelPermalink }}">
+    {{ else }}
+        <img alt="feature-image" src="{{ $defaultThumbnail }}">
+    {{ end }}
+
+    <div>
+        <h2 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+        <div class="meta">
+            <span>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }} &nbsp;&nbsp;</span>
+            <span class="tags">
+                {{ range .Params.tags }}
+                    <span><a href="/tags/{{ . }}">{{ . }}</a>&nbsp;</span>
+                {{ end }}
+            </span>
+        </div>
+            {{ template "partials/pagedescription.html" . }}
+    </div>
+</section>

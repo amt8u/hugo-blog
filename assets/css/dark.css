@@ -21,11 +21,9 @@ hr {
   border-top: 3px dotted blue;
 }
 code {
-  background-color: #0a0a0a;
-  color: #ffc68a;
+  background-color: #151515;
+  color: #ab8965;
   text-decoration: auto;
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
 }
 pre {
   background-color: #272822;
@@ -72,10 +70,6 @@ h6 {
 /*  content: "###### ";*/
 /*}*/
 
-a:not(:has(img)) {
-  /*border-bottom: 1px solid var(--darkMaincolor);*/
-  color: inherit;
-}
 a:hover {
   /*background-color: var(--darkMaincolor);*/
   color: var(--darkMaincolor)

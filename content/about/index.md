@@ -6,9 +6,7 @@ toc : false
 featured: true
 ---
 
-<img alt="amt8u-logo" src="./amt8u_logo.png" width="20%"/>
-
-I use this Blog as a medium to capture my thoughts, opinions and learnings. The purpose of this self hosted Blog was to understand various aspects of web hosting and simultaneously share my experiences with others. Being an engineer most of my articles would be around technology with occasional post on miscellaneous things.
+I use this Blog as a medium to capture my **thoughts**, **opinions** and **learnings**. The purpose of this self hosted Blog was to understand various aspects of web hosting and simultaneously share my experiences with others. Being an engineer most of my articles would be around technology with occasional post on miscellaneous things.
 
 Other than my professional work, I like to 
 * Play games on my PC [#gaming](/tags/gaming)
