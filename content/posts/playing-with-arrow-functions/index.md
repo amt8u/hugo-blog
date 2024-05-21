@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-11-09
 draft : false
 tags : ['javascript', 'ES6']
+thumbnail : images/es6.png
 ---
 
 ## Quiz

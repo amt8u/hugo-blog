@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-01-23
 draft : false
 tags : ['photography']
+thumbnail : images/how-iso-works-feature.jpg
 ---
 
 I don't own a DSLR and still learning about very basics of photography. Just out of curiosity wanted to understand what it means actually to change the ISO setting in the camera. According to every beginners article on digital photography, changing ISO means changing the sensitivity of the camera sensor which effectively means changing the amount of light captured by the sensor. Though I am not an Electronics engineer, but I did study about how light is converted into voltages which ultimately is processed as rgb values and stored somewhere with/without compression.

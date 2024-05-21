@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-12-15
 draft : false
 tags : ['opinion', 'windows']
+thumbnail: images/keyboard.jpeg
 ---
 
 # Dirt cheap Windows license

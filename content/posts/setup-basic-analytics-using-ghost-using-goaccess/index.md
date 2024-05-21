@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-04-19
 draft : false
 tags : ['analytics']
+thumbnail : images/GoAccessTopbrowsers.png
 ---
 
 # The need

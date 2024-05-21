@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-03-27
 draft : false
 tags : ['nodejs']
+thumbnail : images/coding.jpg
 ---
 
 # Intro

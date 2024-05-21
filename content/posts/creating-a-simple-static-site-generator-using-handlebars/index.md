@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-11-10
 draft : false
 tags : ['nodejs', 'html']
+thumbnail : images/handlebars_logo.png
 ---
 
 ## The need

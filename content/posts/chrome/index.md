@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-01-27
 draft : false
 tags : ['web']
+thumbnail: images/mitchell-luo-jz4ca36oJ_M-unsplash.jpg
 ---
 
 # Chrome

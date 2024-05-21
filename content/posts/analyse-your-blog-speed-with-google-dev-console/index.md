@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-04-26
 draft : false
 tags : ['web']
+thumbnail: images/performance.jpg
 ---
 
 You have created a new website. Maybe a blog or a small ecommerce site or your portfolio with the projects you have worked on. You want to see how your site would behave in real world i.e. on the various browsers on different platforms like desktop/mobile/tablets etc.

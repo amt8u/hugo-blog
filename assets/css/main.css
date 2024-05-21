@@ -148,7 +148,8 @@ section.list-item {
 }
 
 section.list-item img {
-  width: var(--thumbLarge);
+  min-width: var(--thumbLarge);
+  max-width: var(--thumbLarge);
   height: var(--thumbLarge);
   object-fit: cover;
   border-radius: 4px;

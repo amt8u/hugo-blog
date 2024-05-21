@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-12-07
 draft : false
 tags : ['web', 'download']
+thumbnail : images/code.jpg
 ---
 
 # Problem about downloading in 2020? Really?

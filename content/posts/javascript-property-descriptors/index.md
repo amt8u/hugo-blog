@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-02-03
 draft : false
 tags : ['javascript']
+thumbnail: images/json-icon.png
 ---
 
 Below you can see a simple example of objects having properties and functions with properties.

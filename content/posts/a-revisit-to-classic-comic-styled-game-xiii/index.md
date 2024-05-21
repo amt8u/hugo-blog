@@ -7,7 +7,6 @@ date : 2021-01-05
 draft : false
 thumbnail : images/xiii.jpg
 feature : images/xiii.jpg
-coverAlt : "a-revisit-to-classic-comic-styled-game-xiii-cover"
 tags : ['gaming']
 featured : true
 ---

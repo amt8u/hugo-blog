@@ -5,6 +5,7 @@ description : After spending hours in configuring this blog its time to show som
 date : 2020-01-30
 draft : false
 tags : ['markdown']
+thumbnail: images/markdown-screenshot2.png
 ---
 
 # Learning Markdown
@@ -27,7 +28,6 @@ You can convert any text into heading by adding # in front of the text. Total av
 ```
 # Heading 1
 ## Heading 2
-
 ### Heading 3
 #### Heading 4
 ##### Heading 5

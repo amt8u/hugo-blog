@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-07-02
 draft : false
 tags : ['gaming', 'hosting']
+thumbnail: images/mudrunner-feature.png
 ---
 
 ![Mudrunner](images/2020.07.02-15.07-1.png)

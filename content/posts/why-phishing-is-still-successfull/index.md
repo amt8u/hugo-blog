@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-03-29
 draft : false
 tags : ['hacking']
+thumbnail : images/phishing-feature.jpeg
 ---
 
 Because technology is not easy. Average user doesn't know how websites work. Sometimes even developers can't recognize let alone the layman. Almost all big organizations publish phishing prevention tips and techniques quite frequently to their employess as well as customers but still [thousands of people get scammed daily](https://www.business-standard.com/article/news-ians/india-2nd-in-list-of-top-phishing-hosting-nations-report-119052300970_1.html). In this article I will take a deep dive into why I feel those tips are often not useful for the targeted audience. 

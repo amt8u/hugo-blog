@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-02-06
 draft : false
 tags : ['linux', 'ventoy']
+thumbnail : images/ubuntu-apps-1.png
 ---
 
 # Multi boot system

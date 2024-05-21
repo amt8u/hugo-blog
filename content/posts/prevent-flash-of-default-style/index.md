@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-10-07
 draft : false
 tags : ['html', 'css']
+thumbnail : images/amt8u-d3fMtEsHblc-unsplash.jpg
 ---
 
 ## FOUC

@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-08-30
 draft : false
 tags : ['mysql']
+thumbnail : images/amt8u-macbook.jpg
 ---
 
 # Why

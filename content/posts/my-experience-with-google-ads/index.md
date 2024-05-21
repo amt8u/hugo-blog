@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-11-16
 draft : false
 tags : ['google-ads', 'web']
+thumbnail : images/google-ads-feature.jpg
 ---
 
 # The need

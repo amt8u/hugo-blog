@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-11-02
 draft : false
 tags : ['hosting']
+thumbnail : images/feature.jpg
 ---
 
 # In built pdf viewer

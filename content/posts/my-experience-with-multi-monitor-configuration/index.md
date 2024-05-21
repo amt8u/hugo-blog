@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-06-05
 draft : false
 tags : ['gaming']
+thumbnail: images/IMG_20200604_230405-1.jpg
 ---
 
 # My experience with multi monitor  setup

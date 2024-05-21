@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-02-17
 draft : false
 tags : ['security', 'web']
+thumbnail : images/amt8u-this-is-unsafe-feature.jpg
 ---
 
 # Caution!  Caution!  Caution!

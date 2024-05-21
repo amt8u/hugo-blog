@@ -4,6 +4,7 @@ url : authentication-vs-authorization
 description : Authentication vs Authorization
 date : 2021-04-22
 draft : false
+thumbnail: images/authentication.jpg
 ---
 
 TLDR;

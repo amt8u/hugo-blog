@@ -6,6 +6,7 @@ author: amt8u
 date : 2021-08-11
 draft : false
 tags : ['nodejs']
+thumbnail : images/create-mock-server-using-nodejs.png
 ---
 
 # When do we need mock server?

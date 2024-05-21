@@ -5,6 +5,7 @@ description : Detailed study of recent phishing attack using fake paytm KYC mess
 date : 2020-07-14
 draft : false
 tags : ['web', 'security']
+thumbnail : "images/hacker.jpeg"
 ---
 
 ![Feature Image](https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

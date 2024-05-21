@@ -6,6 +6,7 @@ author: amt8u
 date : 2020-06-05
 draft : false
 tags : ['iot']
+thumbnail: images/photo-1571615754493-ff5d323d6526.jpeg
 ---
 
 ![](images/photo-1571615754493-ff5d323d6526.jpeg)
