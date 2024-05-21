@@ -12,6 +12,8 @@
 --maxWidth: 800px;
 --thumbLarge: 8rem;
 --thumbSmall: 5rem;
+--tableBorderColor: #dfe2e5;
+--tableBorderDarkColor: #333333;
 }
 
 html {
@@ -494,11 +496,11 @@ table {
 
 table th{
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 1px solid var(--tableBorderColor);
   font-size: large;
 }
 
 table td{
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 1px solid var(--tableBorderColor);
 }
