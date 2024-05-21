@@ -11,11 +11,6 @@ tags: ['web', 'html']
 
 [Ghostjs](https://ghostjs.org) is a good platform for bloggers. The advantage for me was that it uses handlebar templates to render pages as it was getting difficult for me to learn php just to host pages. Plus it provided a clean and secure option (unlike WordPress) and I can write content in Markdown. 
 
-| cybercafe.dev                                                                              | New site                                                                                                 |
-|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| ![cybercafe.dev](./images/cybercafe.dev.png)                                               | ![Hugo site](./images/amt8u-hugo-blog.netlify.app-homepage.png)                                          |
-| ![Article](./images/cybercafe.dev_playing-days-gone-zombie-apocalypse-open-world-game.png) | ![article](./images/amt8u-hugo-blog.netlify.app_playing-days-gone-zombie-apocalypse-open-world-game.png) |
-
 But anyway spending 5$ a month for a few static pages doesn't make much sense when you have better alternatives. One popular option was GitHub pages, but somehow I couldn't continue with Jekyll. Installing ruby is so much pain as described [here](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-1-install-homebrew-and-the-command-line-tools). There is even a [dedicated paid automation](https://www.rubyonmac.dev/?utm_campaign=install-ruby-guide) to get ruby installed.
 
 In one of my previous articles I briefly touched on the subject of [creating static quiz using handlebars templates](/creating-a-simple-static-site-generator-using-handlebars). That was an attempt to create some static Quiz to compliment my articles on various subjects. 
@@ -101,6 +96,12 @@ First load the dark theme if user has `prefers-color-scheme` set to dark. This c
 {{ end }}
 ```
 
+| Dark theme                                  | Light theme                                   |
+|---------------------------------------------|-----------------------------------------------|
+| ![dark-theme](images/dark-theme-mobile.png) | ![light-theme](images/light-theme-mobile.png) |
+
+
+
 And when user clicks on the toggle button, add or remove the dark theme stylesheet from DOM via js. Create a file in `static/js` directory. eg. `themetoggle.js`.
 ```js
 if (mode === "dark") {
@@ -117,18 +118,45 @@ localStorage.setItem("theme-storage", mode);
 
 I know that there is an [optimum width for pages which contain text](https://ux.stackexchange.com/questions/108801/what-is-the-best-number-of-paragraph-width-for-readability). But still sometimes I feel it's a wastage of space when you can utilize the same. It becomes more apparent when there is some content which makes it difficult to read with a limited width. And one of such is `code blocks`. M blog is focused on technology and is code heavy. The issue is that code is not wrapped like regular text. Lines are rendered as it is. And when a line is too long to fit in, a horizontal `scroll bar` comes up which looks really terrible, and also you have to now manually scroll the code block to see the long lines.
 
+| Fixed width                                          | Fluid width layout                                  |
+|------------------------------------------------------|-----------------------------------------------------|
+| ![Fixed width layout](images/fixed-width-layout.png) | ![Fluid width layout](images/full-width-layout.png) |
+
+
 Inspired from widgets in jira where you can quickly maximize a particular widget, so that it spans across the whole width of the viewport, I implemented a similar solution. Added a maximize button that you can see in the top right corner. On clicking of which the `max-width` changes to `95%`. Why 95? Because I wanted to keep that button always in view by making its position fixed. A little bit of space had to be reserved for it so that it doesn't overlap the main text.
 
+```js
+document.getElementsByClassName("content")[0].classList.add("fullwidth");
+```
+
 And just like how I am using `localStorage` to store the theme preference, I am storing this ultra-wide setting as well. So even after page refresh you get the same view. One caveat with this was that on mobile it doesn't make sense as you will never have viewport with width greater than 600, so I hid the toggle button on smaller devices.
+
+```js
+localStorage.setItem("view", mode);
+```
+
+Added a quick shortcut for this. On pressing "f" you can quickly toggle between the views.
+
+```js
+// Also attach a listener for quick action using "f" for fullscreen
+window.addEventListener("keypress", (e) => {
+    if (e.code === "KeyF") {
+        toggleView();
+    }
+})
+```
 
 And since it's just a CSS change without any javascript, it is as fast as lightning. No reloading of content and no flashes of default style.
 
 ## Responsive
 Responsive design is not easy to implement. You can say that you have to design your page for various devices. So to support 4 ranges for devices you will have to come up with 4 different designs which in turn means 4 different css files based on width of the viewport.
 
-Though thats the hard truth, but with simple pages having just text and images, you actually do not have to manually think of responsive elements. Responsiveness is baked in browsers since decades. Just put some text and resize the window. You will realize that text automatically rearranges itself. For images you will have to set a `width` and it also resizes itself based on viewport size.
+Though that's the hard truth, but with simple pages having just text and images, you actually do not have to manually think of responsive elements. Responsiveness is baked-in into the browsers since decades. Just put some text and resize the window. You will realize that text automatically rearranges itself. For images, you will have to set a `width` and it also resizes itself based on viewport size.
 
-And for the cases where it is not sufficient, we have the flex layout. It a little complicated with so many properties but with the dev tools helper buttons, it has become really easy to work with.
+![responsive](images/responsive.gif)
+
+And for the cases where it is not sufficient, we have the flex layout. It is a little complicated with so many properties but with the dev tools helper buttons, it has become really easy to work with.
+
 
 With options like `flex-wrap` and `justify-content` you can easily achieve responsive layout. Open devtools in responsive layout mode and try resizing the window from maximum to minimum. You will see that this website is readable even with a width of `100px`. And with the `fullWidth` option, you will appreciate your ultrawide monitor too.
 
@@ -166,6 +194,28 @@ In the `index.html` where I am iterating over the posts, get the `image` type of
     <img alt="feature-image" src="{{ $defaultThumbnail }}">
 {{ end }}
 ```
+Add a little bit of css to `img` so that images don't stretch. Mainly the magic is by `object-fit` set to `cover`.
+
+```css
+section.list-item img {
+  width: var(--thumbLarge);
+  height: var(--thumbLarge);
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-right: 2rem;
+}
+```
+There is one improvement pending though for this. Images are not yet processed and are downloaded as it is. So even if it is used as a thumbnail, the original full size image gets downloaded to the browser. There are various methods to circumvent this. 
+
+* Use responsive images using `srcset`
+* Have different set of images for different use case. Like a thumbnail version of each image.
+* Restrict images on mobile devices
+
+I will take this improvement later on after getting accustomed to how images are processed in hugo. For now, it works as I would be loading only around 5-10 images in the list page.
+
+![thumbnail-image](images/thumbnail-image.png)
+
 And in case thumbnail image is not preset, show a placeholder image from the static directory. Will write a separate post about how to handle resources in hugo sometime later as I feel I still don't understand it fully.
 
 ## Zoomable images
@@ -186,6 +236,13 @@ article img {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 ```
+The result is very minute but looks visually good.
+
+| Without box-shadow                                 | With box-shadow                              |
+|----------------------------------------------------|----------------------------------------------|
+| ![without-shadow](images/image-without-shadow.png) | ![with-shadow](images/image-with-shadow.png) |
+
+
 
 ## Table of contents
 Sometimes I feel a quick index of the contents makes it really easy to find the relevant paragraph. I can see that hugo also renders a TOC and some themes do utilize it. There is no TOC with the current theme, but it can easily be achieved with hugo. It's a `TODO` item on the list. 

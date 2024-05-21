@@ -9,9 +9,6 @@ tags : ['typescript', 'javascript', 'nodejs']
 thumbnail: images/typescript-logo.jpeg
 ---
 
-# Excerpt
-In this article we will learn about Typescript configuration and various options provided to make our life easier while coding.
-
 # watch mode
 Enabling watch mode with tsc compiler.
 ```shell

@@ -9,9 +9,6 @@ tags : ['typescript', 'javascript', 'nodejs']
 thumbnail: images/typescript-logo.jpeg
 ---
 
-# Excerpt
-
-
 # Intersection
 
 Build new types with intersecting types

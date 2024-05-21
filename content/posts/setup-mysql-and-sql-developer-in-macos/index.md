@@ -8,10 +8,6 @@ draft : false
 tags : ['mysql']
 ---
 
-
-# Excerpt
-Here is a mini guide to setup Mysql server community edition with oracle SQL Developer on MacOS.
-
 # Why
 Recently I wanted to refresh my **SQL** skills and needed a basic database setup on my Macbook Air. I remember from my school days that we could install oracle 6/7 free versions for personal use. Apparently oracle no longer offers free versions. Instead it(Oracle) now gives us `mysql` which is essentially the free one thereby eventually leading me to refresh not just "my sql" but "mysql" skills as well.
 

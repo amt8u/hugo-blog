@@ -8,9 +8,6 @@ draft : false
 tags : ['scams']
 ---
 
-# Excerpt
-This article is about how people are scammed using simple sites and new techniques that scammers employ to prevent fraud detection.
-
 # Bumper prize
 You might have seen sometimes people sharing apps and websites which claim to offer you a car if you answer a few questions correctly. You don't want to leave this opportunity and grab the gift before anyone else could. But eventually you endup just sharing the site to your 10 whatsapp friends.
 
