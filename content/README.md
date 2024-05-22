@@ -1,3 +1,7 @@
+---
+title: Read Me
+type: "post"
+---
 
 
 # blog

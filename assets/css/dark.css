@@ -170,3 +170,7 @@ article .meta-wrapper ul li {
 table th, table td{
   border: 1px solid var(--tableBorderDarkColor);
 }
+
+input#search-input {
+  background-color: var(--darkTextColor);
+}

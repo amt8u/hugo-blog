@@ -1,3 +1,9 @@
+---
+title: offline-page
+type: "post"
+---
+
+
 * Switch on your wifi/data
 * Check all network cables
 * Check if your wife has switched off the router :-P

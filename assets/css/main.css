@@ -517,3 +517,13 @@ table td{
   padding: 6px 13px;
   border: 1px solid var(--tableBorderColor);
 }
+
+input#search-input {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--tableBorderColor);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
