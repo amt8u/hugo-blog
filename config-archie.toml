@@ -1,6 +1,7 @@
 baseURL = "https://amt8u-hugo-blog.netlify.app/"
 languageCode = "en-us"
-title = "cybercafe.dev"
+title = "cybercafe.dev - A blog by amt8u"
+description = "Developer. Artist. Human. I write about my learnings, experiences and opinions. The more I write, the more I learn."
 theme="archie"
 copyright = "© cybercafe.dev"
 pygmentsstyle = "xcode-dark"
@@ -56,5 +57,16 @@ identifier = "amt8u"
 name = "about"
 url = "/amt8u/"
 weight = 10
+
+[[menu.main]]
+identifier = "search"
+name = "🔎"
+url = "/search/"
+weight = 11
+
+[outputs]
+  home = ["HTML", "JSON"]
+  page = ["HTML"]
+
 
 

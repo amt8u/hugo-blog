@@ -23,8 +23,9 @@ var savedView = localStorage.getItem("view") || "regular";
 setView(savedView);
 
 // Also attach a listener for quick action using "f" for fullscreen
+
 window.addEventListener("keypress", (e) => {
-    if (e.code === "KeyF") {
+    if (e.code === "KeyF" && e.target.tagName !== "INPUT") {
         toggleView();
     }
 })
