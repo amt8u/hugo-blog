@@ -104,6 +104,10 @@ blockquote {
     }
 }
 
+.posts a {
+  text-decoration: none;
+}
+
 a:not(:has(img)) {
   /*border-bottom: 1px solid var(--maincolor);*/
   color: inherit;
@@ -404,6 +408,13 @@ justify-content: space-between;
 .tags a:hover{
   color:var(--textColor);
   /*background-color: var(--hovercolor);*/
+}
+.tag-cloud .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-cloud .tag {
+  padding: 0 1rem;
 }
 svg{
   max-height: 15px;

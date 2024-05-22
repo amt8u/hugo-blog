@@ -42,12 +42,12 @@ url = "/tags/web/"
 weight = 3
 
 [[menu.main]]
-name = "all topics"
+name = "topics"
 url = "/tags/"
 weight = 5
 
 [[menu.main]]
-name = "all posts"
+name = "archive"
 url = "/posts/"
 weight = 8
 
