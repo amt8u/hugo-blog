@@ -10,6 +10,7 @@
 	{{- end -}}
 	{{- if isset .Site.Params "favicon" -}}
 	<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	{{- end -}}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +23,7 @@
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/twitter_cards.html" . -}}
 	{{ if and (isset .Site.Params "social") (.Site.Params.useCDN | default false) -}}
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	{{- else if or (isset .Site.Params "social") (eq .Site.Params.mode "toggle") -}}
 		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
