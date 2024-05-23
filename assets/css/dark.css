@@ -105,6 +105,11 @@ nav a.active {
 article .meta-wrapper ul li {
   color: var(--darkMaincolor);
 }
+
+article img {
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
 .header nav,
 .footer {
   border-color: #333;

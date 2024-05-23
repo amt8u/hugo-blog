@@ -1,6 +1,12 @@
 {{ define "main" }}
 <main>
 	<article>
+		{{ if .Params.thumbnail }}
+		  <div class="featured-image">
+			<img src="{{ .RelPermalink }}{{ .Params.thumbnail }}" alt="{{ .Title }}">
+		  </div>
+		{{ end }}
+
 		<div class="title">
 			<div class="title">{{ .Title }}</div>
 		</div>

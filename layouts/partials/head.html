@@ -7,10 +7,9 @@
 	<nav>
 		{{ $currentPage := . }}
 		{{ range .Site.Menus.main }}
-			<a class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+			<a class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &nbsp;</a>
 		{{ end }}
 		{{ if eq .Site.Params.mode "toggle" -}}
-			<span class="action" id="dark-mode-toggle" onclick="toggleTheme()" ></span>
 		<script src="{{ .Site.BaseURL }}js/themetoggle.js"></script>
 		<script src="{{ .Site.BaseURL }}js/viewtoggle.js"></script>
 		{{ end }}
