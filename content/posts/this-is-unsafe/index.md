@@ -16,9 +16,9 @@ Since this article is getting popular and I see many people referring to it as a
 # SSL Warnings
 Some browsers may complain about invalid certificate and block you when you try to visit a regular page even when the site has an `SSL` certificate installed. Apparently the security of any website depends on whether the certificate is from one of the trusted authorities. We shall see later what a trusted authority means.
 
-| Firefox                                                                              | Chrome                                                                             |
-|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| ![firefox-warning](https://cybercafe.dev/content/images/2021/02/firefox-warning.png) | ![chrome-warning](https://cybercafe.dev/content/images/2021/02/chrome-warning.png) |
+| Firefox                                        | Chrome                                       |
+|------------------------------------------------|----------------------------------------------|
+| ![firefox-warning](images/firefox-warning.png) | ![chrome-warning](images/chrome-warning.png) |
 
 This could be because of many reasons. Some of the common ones are
 * **Certificate expired** - Generally all SSL certificates have an expiry date even if you have purchased them from known CAs. In most paid systems, they auto-renew while in free services, you may need to manually renew them. Until then your visitors will receive a warning that your site is not secure.
