@@ -72,6 +72,7 @@ Will check in future if I can get the cloudflare working again.
 Do note that your site is now working for the new domain. But if you haven't removed the old url from your hosting, then your site will still work on the old domain. 
 
 That depends on you if you would like to keep it that way. The site would open with navigatino URLs with new domain while all posts with old domain which is not a good sight. I would urge you to remove your old domain from the ghost installation and maybe show a message that your site is now hosted on a different URL.
+
 ![seedocode-is-now-cybercafe.dev](images/Moved.png)
 
 > End
