@@ -129,9 +129,9 @@ Whenever in doubt, just quickly look out `whois` information for the domain. As 
 5. Registrant Name should be *One97 Communications Limited* 
 
 ## Fake websites
-| paytm-kyc                                | paytm.help                          | real paytm official                                                                |
-|------------------------------------------|-------------------------------------|------------------------------------------------------------------------------------|
-| ![](images/paytm-kyc_whois_snapshot.png) | ![](images/paytm.help_snapshot.png) | ![](https://cybercafe.dev/content/images/2020/07/paytm_offical_whois_snapshot.png) |
+| paytm-kyc                                | paytm.help                          | real paytm official                          |
+|------------------------------------------|-------------------------------------|----------------------------------------------|
+| ![](images/paytm-kyc_whois_snapshot.png) | ![](images/paytm.help_snapshot.png) | ![](images/paytm_offical_whois_snapshot.png) |
 
 ### HTML inspection
 
