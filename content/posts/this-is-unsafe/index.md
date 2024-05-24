@@ -7,6 +7,7 @@ date : 2021-02-17
 draft : false
 tags : ['security', 'web']
 thumbnail : images/amt8u-this-is-unsafe-feature.jpg
+images: ["images/amt8u-this-is-unsafe-feature.jpg"]
 ---
 
 # Caution!  Caution!  Caution!
@@ -29,7 +30,7 @@ This could be because of many reasons. Some of the common ones are
 # thisisunsafe - a bad idea?
 Some browsers will let you go through after clicking on the `Accept and Continue` button but in some situations they may not even give you an option to `Continue`. Chrome is one such browser(Ironically?). For those circumstances, there is a bypass available. 
 
-### Type `thisisunsafe` anywhere on the window and the browser will let you visit the page.
+Type **thisisunsafe** anywhere on the window and the browser will let you visit the page.
 
 The bypass adds a temporary exception for that particular domain to chrome's internal storage. You can remove this exception by clicking on the padlock icon and click `Re-enable Warnings` link. Same is true with Firefox albeit with slight change in the UI.
 

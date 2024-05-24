@@ -3,12 +3,12 @@
 	<article>
 		{{ if .Params.thumbnail }}
 		  <div class="featured-image">
-			<img src="{{ .RelPermalink }}{{ .Params.thumbnail }}" alt="{{ .Title }}">
+			<img title="{{ .Title }}" src="{{ .RelPermalink }}{{ .Params.thumbnail }}" alt="{{ .Title }}">
 		  </div>
 		{{ end }}
 
 		<div class="title">
-			<div class="title">{{ .Title }}</div>
+			<h1 class="title">{{ .Title }}</h1>
 		</div>
 		<div class="meta-wrapper">
 			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>

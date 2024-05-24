@@ -12,7 +12,7 @@ thumbnail : images/touch-typing-feature.jpg
 
 # What is touch typing?
 
-Just in case if you are not aware, touch typing means typing without looking at the keyboard. So that your eyes are on the screen and you don't switch between keyboard and screen all the time.
+Just in case if you are not aware, touch typing means typing **without** looking at the **keyboard**. So that your eyes are on the screen and you don't switch between keyboard and screen all the time.
 
 One thing that most people fail to understand is that when you learn touch typing - 
 
@@ -33,10 +33,10 @@ Well, I believe touch typing is one of those skills, that falls into the categor
 
 It does make you type faster and once you are comfortable, it is really more convinient. Just to point out some benefits
 
-* It reduces typos. Since your eyes are on the screen all the time, you can easily catch mistakes
-* It helps you in taking notes. In meetings or sessions, you can focus on the presenter while simultaneously take notes
-* It makes you type faster. That means spending less time while interacting with someone over chat. 
-* Combined with keyboard shortcuts, you could probably get rid of the mouse.
+* It reduces typos. Since your eyes are on the screen all the time, you can easily **catch mistakes**
+* It helps you in **taking notes**. In meetings or sessions, you can focus on the presenter while simultaneously take notes
+* It makes you type faster. That means spending **less time while interacting** with someone over chat. 
+* Combined with **keyboard shortcuts**, you could probably get rid of the mouse.
 
 # But why did I learn touch typing?
 
@@ -69,6 +69,10 @@ Here are some of my observations that might help you decide whether you want to 
 * **https://10fastfingers.com** This is more for practice than learning. It gives you many community created practice sets and top 1000 words. Come here to practice often.
 
 There are other services including paid ones. If I had the budget at that time, I would have bought a backlit keyboard instead of learning touch typing. Nevertheless now I think it was a good decision.
+
+* **https://typeracer.com** Online multiplayer game based on typing. It presents you with small paragraph everytime you start a race. A good area to practice.
+
+* **https://monkeytype.com** I believe it was a single person project a few years ago. Its a completely customizable minimal typing website. On top of that its completely free.
 
 > End
 
