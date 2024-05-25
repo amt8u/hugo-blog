@@ -1,7 +1,7 @@
 ---
 title : A revisit to a classic game - XIII
 url : a-revisit-to-classic-comic-styled-game-xiii
-summary : XIII
+summary : XIII(Say 13) had a place of its own in the gaming world. It was popular because of its comic styled artwork. Last year in November Microids released a remake of the original game.
 author: amt8u
 date : 2021-01-05
 draft : false
