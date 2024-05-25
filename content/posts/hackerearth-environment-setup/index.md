@@ -7,6 +7,7 @@ date : 2021-03-27
 draft : false
 tags : ['nodejs']
 thumbnail : images/coding.jpg
+images : ['images/coding.jpg']
 ---
 
 # Intro

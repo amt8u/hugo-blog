@@ -6,6 +6,7 @@ date : 2020-10-01
 draft : false
 tags: ['css']
 thumbnail : "images/cybercafe.dev-header.png"
+images : ["images/cybercafe.dev-header.png"]
 ---
 
 # Using Presets

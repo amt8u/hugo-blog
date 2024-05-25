@@ -6,6 +6,7 @@ date : 2020-01-30
 draft : false
 tags : ['markdown']
 thumbnail: images/markdown-screenshot2.png
+images: ['images/markdown-screenshot2.png']
 ---
 
 # Learning Markdown

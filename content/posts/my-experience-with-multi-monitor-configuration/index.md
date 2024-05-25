@@ -7,6 +7,7 @@ date : 2020-06-05
 draft : false
 tags : ['gaming']
 thumbnail: images/IMG_20200604_230405-1.jpg
+images: ['images/IMG_20200604_230405-1.jpg']
 ---
 
 Now a days connecting multiple displays to a system is common and has evolved a lot over the years. For example if you are connected to a projector, you can set your audience view to show presentation while your laptop screen can show you a different presenter view where you can control slides.

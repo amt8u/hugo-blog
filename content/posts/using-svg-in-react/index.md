@@ -7,6 +7,7 @@ date : 2021-01-09
 draft : false
 tags : ['react', 'svg']
 thumbnail : images/using-svg-feature.jpg
+images : ['images/using-svg-feature.jpg']
 ---
 
 # What's special about SVG with React

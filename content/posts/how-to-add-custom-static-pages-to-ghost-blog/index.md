@@ -6,6 +6,7 @@ date : 2020-07-28
 draft : false
 tags : ['ghostjs', 'html']
 thumbnail : "images/amt8u-bike.jpg"
+images : ["images/amt8u-bike.jpg"]
 ---
 
 ![Feature Image](https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

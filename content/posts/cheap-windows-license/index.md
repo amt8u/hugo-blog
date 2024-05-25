@@ -7,6 +7,7 @@ date : 2020-12-15
 draft : false
 tags : ['opinion', 'windows']
 thumbnail: images/keyboard.jpeg
+images: ['images/keyboard.jpeg']
 ---
 
 # Dirt cheap Windows license

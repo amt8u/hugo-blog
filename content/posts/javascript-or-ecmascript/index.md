@@ -7,6 +7,7 @@ date : 2020-01-26
 draft : false
 tags : ['javascript']
 thumbnail: images/es6.png
+images: ['images/es6.png']
 ---
 
 If you are an experienced web developer, probably you already know  what is the difference or similarity between `JS` and `ES`. But for a vast  majority of upcoming devs this is still confusing.

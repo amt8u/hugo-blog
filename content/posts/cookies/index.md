@@ -7,6 +7,7 @@ date : 2022-10-14
 draft : false
 tags : ['web', 'browsers']
 thumbnail : images/amt8u_keyboard.jpg
+images : ['images/amt8u_keyboard.jpg']
 ---
 
 # Should you accept or reject cookies?

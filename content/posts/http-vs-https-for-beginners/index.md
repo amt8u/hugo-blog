@@ -6,6 +6,7 @@ date : 2020-07-12
 draft : false
 tags : ['web', 'security']
 thumbnail : "images/http-vs-https-feature.jpg"
+images : ["images/http-vs-https-feature.jpg"]
 ---
 
 # What is http, https and why some sites start with www?

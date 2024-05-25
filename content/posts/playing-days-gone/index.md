@@ -7,6 +7,7 @@ date : 2024-02-17
 draft : false
 tags : ['gaming']
 thumbnail: images/cover.png
+images: ['images/cover.png']
 ---
 
 # Is it `good` or `bad`?

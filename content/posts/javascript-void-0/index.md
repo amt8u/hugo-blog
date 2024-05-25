@@ -7,6 +7,7 @@ date : 2020-10-01
 draft : false
 tags : ['javascript']
 thumbnail : "images/js.png"
+images : ["images/js.png"]
 ---
 
 # Where have I seen this?

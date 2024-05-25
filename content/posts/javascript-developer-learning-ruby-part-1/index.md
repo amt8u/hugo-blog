@@ -7,6 +7,7 @@ date : 2020-11-17
 draft : false
 tags : ['ruby']
 thumbnail : images/ruby-feature.jpg
+images : ['images/ruby-feature.jpg']
 ---
 
 # The need

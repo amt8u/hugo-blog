@@ -6,6 +6,7 @@ date : 2020-08-03
 draft : false
 tags : ['javascript']
 thumbnail : "images/understanding-iife-feature.jpg"
+images : ["images/understanding-iife-feature.jpg"]
 ---
 
 ![Feature Image](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

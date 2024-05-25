@@ -7,6 +7,7 @@ date : 2021-04-19
 draft : false
 tags : ['analytics']
 thumbnail : images/GoAccessTopbrowsers.png
+images : ['images/GoAccessTopbrowsers.png']
 ---
 
 # The need

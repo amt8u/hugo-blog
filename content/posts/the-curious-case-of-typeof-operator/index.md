@@ -7,6 +7,7 @@ date : 2020-04-26
 draft : false
 tags : ['javascript']
 thumbnail: images/question-mark.jpg
+images: ['images/question-mark.jpg']
 ---
 
 As we all know Javascript is weakly typed language and in general we don't consider the type beforehand and just `var` it. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types. This was okay till the scripts were small. But now a days scripts can be anywhere from 10 lines to 1000 lines of unwrapped, unformatted, minified code. 

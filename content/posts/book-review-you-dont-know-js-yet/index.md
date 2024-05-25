@@ -7,6 +7,7 @@ date : 2020-04-07
 draft : false
 tags : ['javascript']
 thumbnail: images/ydkjs_getting_started_small.jpg
+images: ['images/ydkjs_getting_started_small.jpg']
 ---
 
 Though I have read the previous editions of the series. Here is a formal review of the Book **You don't know JS** by Kyle Simpson. This review is also present on the book page on `Amazon.in`

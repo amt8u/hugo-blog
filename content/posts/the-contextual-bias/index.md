@@ -7,6 +7,7 @@ date : 2021-08-22
 draft : false
 tags : ['opinion']
 thumbnail : images/feature.jpeg
+images : ['images/feature.jpeg']
 ---
 
 # The problem

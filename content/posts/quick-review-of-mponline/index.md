@@ -7,6 +7,7 @@ date : 2020-01-27
 draft : false
 tags : ['web']
 thumbnail: images/login_menu_offscreen.png
+images: ['images/login_menu_offscreen.png']
 ---
 
 Recently we visited the Kanha tiger reserve which is located within Kanha region in Madhya Pradesh, India. The bookings can be done via government website. Though the booking experience was fine but there are some issues which I want to highlight. Looking at the files and static content I noticed more issues. 

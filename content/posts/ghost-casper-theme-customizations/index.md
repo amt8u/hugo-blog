@@ -7,6 +7,7 @@ date : 2020-07-07
 draft : false
 tags : ['ghostjs', 'javascript']
 thumbnail: images/ghost-customization-feature.jpg
+images: ['images/ghost-customization-feature.jpg']
 ---
 
 ## Do you need customizations?

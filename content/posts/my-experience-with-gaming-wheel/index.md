@@ -6,6 +6,7 @@ date : 2020-09-04
 draft : false
 tags : ['gaming']
 thumbnail : "images/amt8u-logitech-g29-gaming-wheel.jpg"
+images : ["images/amt8u-logitech-g29-gaming-wheel.jpg"]
 ---
 
 ![Feature Image](images/amt8u-logitech-g29-gaming-wheel.jpg)

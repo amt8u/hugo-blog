@@ -7,6 +7,7 @@ date : 2021-01-05
 draft : false
 thumbnail : images/xiii.jpg
 feature : images/xiii.jpg
+images: ['images/xiii.jpg']
 tags : ['gaming']
 featured : true
 ---

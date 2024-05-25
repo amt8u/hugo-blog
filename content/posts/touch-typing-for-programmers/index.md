@@ -7,6 +7,7 @@ date : 2020-11-20
 draft : false
 tags : ['opinion', 'typing']
 thumbnail : images/touch-typing-feature.jpg
+images : ['images/touch-typing-feature.jpg']
 ---
 
 

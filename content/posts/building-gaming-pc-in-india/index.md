@@ -7,6 +7,7 @@ date : 2020-12-19
 draft : false
 tags : ['gaming', 'pc']
 thumbnail: images/IMG_20200815_233156.jpg
+images: ['images/IMG_20200815_233156.jpg']
 ---
 
 # Why gaming PC?

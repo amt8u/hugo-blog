@@ -7,6 +7,7 @@ date : 2022-01-30
 draft : false
 tags : ['web']
 thumbnail: images/feature.jpg
+images: ['images/feature.jpg']
 ---
 
 # Need

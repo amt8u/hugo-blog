@@ -89,10 +89,6 @@ a:hover {
 .tags a {
   /*border-bottom: 3px solid var(--darkMaincolor);*/
 }
-.tags a:hover {
-  /*background-color: var(--darkMaincolor);*/
-  color: var(--darkTextColor);
-}
 
 .site-title a {
   color: white;

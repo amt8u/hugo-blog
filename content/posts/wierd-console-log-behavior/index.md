@@ -7,6 +7,7 @@ date : 2020-11-23
 draft : false
 tags : ['javascript']
 thumbnail : images/feature.jpg
+images : ['images/feature.jpg']
 ---
 
 

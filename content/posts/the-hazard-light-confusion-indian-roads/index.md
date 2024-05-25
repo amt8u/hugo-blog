@@ -6,6 +6,7 @@ author: amt8u
 date : 2024-02-06
 draft : false
 thumbnail: images/hazard-light.jpeg
+images: ['images/hazard-light.jpeg']
 tags : ['opinion','traffic']
 ---
 

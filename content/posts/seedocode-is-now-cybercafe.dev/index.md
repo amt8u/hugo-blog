@@ -7,6 +7,7 @@ date : 2020-07-03
 draft : false
 tags : ['ghostjs', 'hosting']
 thumbnail: images/seedocode-feature.jpg
+images: ['images/seedocode-feature.jpg']
 ---
 
 Migrating a site to another domain is always challenging. There are many places where you can mess up. 

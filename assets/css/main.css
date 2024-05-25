@@ -417,10 +417,7 @@ justify-content: space-between;
 .tags a{
   /*border-bottom: 3px solid var(--maincolor);*/
 }
-.tags a:hover{
-  color:var(--textColor);
-  /*background-color: var(--hovercolor);*/
-}
+
 .tag-cloud .tags {
   display: flex;
   flex-wrap: wrap;

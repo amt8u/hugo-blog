@@ -7,6 +7,7 @@ date : 2020-07-11
 draft : false
 tags : ['web']
 thumbnail: images/performance.png
+images: ['images/performance.png']
 ---
 
 The best place to start with is Chrome's `Lighthouse`. For older versions of chrome this is called `Audit` tab.

@@ -7,6 +7,7 @@ date : 2020-01-27
 draft : false
 tags : ['web']
 thumbnail: images/external-content.duckduckgo.com.png
+images: ['images/external-content.duckduckgo.com.png']
 ---
 
 # Duck Duck Go

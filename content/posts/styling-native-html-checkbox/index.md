@@ -7,6 +7,7 @@ date : 2020-10-11
 draft : false
 tags : ['html']
 thumbnail : images/checkbox-fullscreen.png
+images : ['images/checkbox-fullscreen.png']
 ---
 
 ## The need

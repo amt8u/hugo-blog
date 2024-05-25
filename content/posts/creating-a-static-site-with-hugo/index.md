@@ -4,6 +4,7 @@ url: creating-a-static-site-with-hugo
 date: 2024-05-17
 summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website.
 thumbnail: images/hugo-logo-big.png
+images: ['images/hugo-logo-big.png']
 tags: ['web', 'html']
 ---
 

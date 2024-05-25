@@ -6,7 +6,7 @@ author: amt8u
 date : 2024-02-23
 draft : false
 thumbnail: images/book-cover.jpg
-coverAlt : "learning-nodejs"
+images: ['images/book-cover.jpg']
 tags : ['javascript']
 ---
 

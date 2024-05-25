@@ -6,6 +6,7 @@ date : 2020-09-12
 draft : false
 tags : ['javascript']
 thumbnail : "images/understanding-hoisting-feature.jpg"
+images : ["images/understanding-hoisting-feature.jpg"]
 ---
 
 # Can you guess the output for the below program?

@@ -6,6 +6,7 @@ author: amt8u
 date : 2023-05-13
 draft : false
 thumbnail: images/amt8u-fullscreen-feature.jpg
+images: ['images/amt8u-fullscreen-feature.jpg']
 tags : ['javascript','web']
 ---
 

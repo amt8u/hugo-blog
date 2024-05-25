@@ -7,6 +7,7 @@ date : 2020-01-26
 draft : false
 tags : ['hosting']
 thumbnail: images/IMG_20200126_093318-2.jpg
+images: ['images/IMG_20200126_093318-2.jpg']
 ---
 
 ![painting-by-wife](images/IMG_20200126_093318-2.jpg)

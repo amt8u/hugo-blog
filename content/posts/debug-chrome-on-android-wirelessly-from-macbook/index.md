@@ -7,6 +7,7 @@ date : 2021-09-26
 draft : false
 tags : ['android']
 thumbnail : images/cybercafe.dev.macbook.jpg
+images : ['images/cybercafe.dev.macbook.jpg']
 ---
 
 # Need

@@ -7,6 +7,7 @@ date : 2021-10-06
 draft : false
 tags : ['scams']
 thumbnail: images/tata-nexon.jpg
+images: ['images/tata-nexon.jpg']
 ---
 
 # Bumper prize
