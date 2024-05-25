@@ -136,6 +136,7 @@ The road image you see in this photo gives you a live view when you change the o
 * [PPI Calculator](https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php)
 
 Here is a snapshot of how a perfect setup looks like.
+
 ![perfect multi monitor setup](images/perfect-multi-monitor-setup.jpg)
 
 *** ***Update 06 May 2024*** ***
