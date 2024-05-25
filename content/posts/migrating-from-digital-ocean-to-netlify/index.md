@@ -6,6 +6,7 @@ date : 2024-05-24T12:42:09.354Z
 draft : false
 tags : ['web', 'dns']
 thumbnail : "images/digital-ocean.png"
+og_image : "images/digital-ocean.png"
 ---
 
 # Cybercafe 2.0 is live
