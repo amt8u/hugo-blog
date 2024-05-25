@@ -20,7 +20,7 @@
 	{{ else }}
 		<meta property="og:image" content="{{ .Site.Params.og_image }}">
 	{{ end }}
-	<meta property="twitter:image" content="{{ absURL .RelPermalink }}{{ .Params.thumbnail }}">
+	<meta name="twitter:image" content="{{ absURL .RelPermalink }}{{ .Params.thumbnail }}">
 	{{ with .OutputFormats.Get "rss" -}}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
