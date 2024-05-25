@@ -12,7 +12,7 @@ images: ['images/seedocode-feature.jpg']
 
 Migrating a site to another domain is always challenging. There are many places where you can mess up. 
 
-I was searching for a more easy to remember domain since long. Finally my search ended and I got it from [Namecheap.com](https:/namecheap.com/). The `.dev` is a secured namespace and only works with `https://`. `.dev` also shows that this is a developer's blog and not a commercial site.
+I was searching for a more easy to remember domain since long. Finally my search ended and I got it from [Namecheap.com](https:/namecheap.com/). The `.dev` is a secured namespace and only works with https://. It also shows that this is a developer's blog and not a commercial site.
 
 Now its time to configure my blog to use the new domain name. You can find millions of tutorials to complete this migration for wordpress but for ghost I was not able to find a good comprehensive article anywhere. Maybe everybody is using Ghost's own platform([Ghost's prices](https://ghost.org/pricing/)) instead of self hosted. 
 
