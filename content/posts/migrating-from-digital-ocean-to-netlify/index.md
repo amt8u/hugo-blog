@@ -79,8 +79,14 @@ www.cybercafe.dev -> netlify dns
 
 Apart from this, two things that Netlify does automatically for you
 * Set up redirection for `www` subdomain.
+
+![netlify-auto-redirect-www](images/netlify-auto-redirect-www.png)
+
 * Automatic SSL certificate using `https://letsencrypt.org/`
 
+![cybercafe.dev-netlify-ssl-letsencrypt](images/netlify-ssl-letsencrypt.png)
+
+Once everything is setup, you should see the DNS setup screen as below
 ![cybercafe.dev-dns-change-successful](images/cybercafe.dev-dns-change-successful.png)
 
 # Wait for a few hours

@@ -29,6 +29,11 @@ name = "playground"
 icon = "external-link"
 url = "https://cybr.cafe"
 
+[[params.social]]
+name = "mail"
+icon = "mail"
+url = "mailto:hi@cybercafe.dev"
+
 [[menu.main]]
 name = "javascript"
 url = "/tags/javascript/"

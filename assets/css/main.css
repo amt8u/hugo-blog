@@ -189,7 +189,7 @@ figure img {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 870px) {
   #view-mode-toggle {
     display: none;
   }
@@ -377,6 +377,7 @@ article .title h1 {
 
 article ul li {
   margin: .5rem 0;
+  text-align: justify;
 }
 
 article .meta-wrapper ul li {
@@ -431,7 +432,7 @@ svg{
   max-height: 15px;
 }
 .soc:hover{
-  color: white;
+  /* color: white; */
 }
 .draft-label{
     color: var(--bordercl);

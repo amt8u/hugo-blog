@@ -119,7 +119,7 @@ article img {
   /*background-color: #333;*/
 }
 .soc:hover {
-  color: black;
+  /* color: black; */
 }
 .draft-label {
   color: var(--darkMaincolor);
