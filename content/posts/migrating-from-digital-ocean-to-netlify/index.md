@@ -5,7 +5,7 @@ summary : Final steps while migrating my DigitalOcean hosted website to Netlify.
 date : 2024-05-24T12:42:09.354Z
 draft : false
 tags : ['web', 'dns']
-images: ['images/email-icon.jpg']
+images: ['images/digital-ocean.png']
 thumbnail : "images/digital-ocean.png"
 ---
 
