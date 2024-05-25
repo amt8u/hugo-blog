@@ -4,6 +4,7 @@ url : forward-emails-from-custom-domain-to-gmail
 description : How to forward emails sent to your custom domain to your gmail
 date : 2024-05-25
 draft : false
+images: ['images/email-icon.jpg']
 thumbnail: images/email-icon.jpg
 tags : ['web', 'eamil']
 ---
