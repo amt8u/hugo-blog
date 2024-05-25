@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 	{{ if .Params.og_image }}
-		<meta property="og:image" content="{{ .RelPermalink }}{{ .Params.og_image | .absURL }}">
+		<meta property="og:image" content="{{ .RelPermalink }}{{ .Params.og_image }}">
 	{{ else }}
 		<meta property="og:image" content="{{ .Site.Params.og_image }}">
 	{{ end }}
