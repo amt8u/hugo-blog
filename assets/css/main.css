@@ -40,6 +40,12 @@ nav a.active {
 .content.fullwidth {
   max-width: 95%;
 }
+.content.fullwidth .toc {
+  opacity: 0;
+}
+.content.fullwidth #toc-toggle {
+  display: none;
+}
 article img {
   /*border: 2px solid #151515;*/
   width: 100%;
@@ -94,6 +100,13 @@ blockquote {
   right: 1%;
   top: 1rem;
 }
+
+#toc-toggle {
+  position: fixed;
+  right: 1%;
+  top: 3rem;
+}
+
 
 .logo {
   border: 0;
@@ -181,6 +194,18 @@ figure {
 
 figure img {
   max-height: 500px;
+}
+
+@media screen and (max-width: 1400px) {
+  #toc-toggle {
+    display: none;
+  }
+  aside.toc {
+    display: none;
+  }
+  aside.toc.show {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -535,4 +560,25 @@ input#search-input {
   border: 1px solid var(--tableBorderColor);
   font-size: 1.1rem;
   margin-bottom: 1rem;
+}
+
+aside.toc {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  width: 20%;
+  opacity: 0;
+  transition: .1s opacity ease-in;
+}
+
+.toc.show {
+  opacity: 1;
+}
+
+/*aside.toc:hover {*/
+/*  opacity:1;*/
+/*}*/
+
+.toc.hide {
+  display: none;
 }

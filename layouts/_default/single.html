@@ -32,6 +32,10 @@
 			{{ .Params.tldr }}
 		</div>{{ end }}
 
+		<aside class="toc">
+			<h3>On this page</h3>
+			{{ .TableOfContents }}
+		</aside>
 		<section class="body">
 			{{ .Content }}
 		</section>
@@ -47,5 +51,6 @@
 		{{- partial "disqus.html" . -}}
 		{{- end -}}
 	</article>
+	<script src="{{ .Site.BaseURL }}js/toc.js"></script>
 </main>
 {{ end }}

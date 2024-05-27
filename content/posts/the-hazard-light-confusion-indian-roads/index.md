@@ -13,9 +13,9 @@ tags : ['opinion','traffic']
 # The confusion
 I have seen very often people using Hazard lights(both turn indicators flashing simultaneously) to indicate multiple scenarios while driving. A quick search gives many articles and questions related to same.
 
-* https://www.reddit.com/r/CarsIndia/comments/15g4xth/using_hazard_lights_while_driving_in_rain/
-* https://www.reddit.com/r/CarsIndia/comments/10qn5mz/using_your_hazard_lights_to_indicate_youll_go/
-* https://www.reddit.com/r/mumbai/comments/vglmhr/hazard_lights_on_cars/
+https://www.reddit.com/r/CarsIndia/comments/15g4xth/using_hazard_lights_while_driving_in_rain/
+https://www.reddit.com/r/CarsIndia/comments/10qn5mz/using_your_hazard_lights_to_indicate_youll_go/
+https://www.reddit.com/r/mumbai/comments/vglmhr/hazard_lights_on_cars/
 
 The most common concern is, people tend to use HL in many circumstances where it's use is ambiguous - `Parking` on road, going `straight`, going into `tunnel`, low `visibility` etc.
 

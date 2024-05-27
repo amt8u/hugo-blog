@@ -76,5 +76,10 @@ weight = 11
   home = ["HTML", "JSON"]
   page = ["HTML"]
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 1
 
 

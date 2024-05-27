@@ -1,8 +1,9 @@
 <header>
 	<div class="main">
 		<a class="logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-		<span class="action" id="dark-mode-toggle" onclick="toggleTheme()" ></span>
+		<span id="dark-mode-toggle" class="action"  onclick="toggleTheme()" ></span>
 		<span id="view-mode-toggle" class="action" title="Expand to fit screen" onclick="toggleView()"></span>
+		<span id="toc-toggle" class="action" title="Table of contents" onclick="toggleTOC()"></span>
 	</div>
 	<nav>
 		{{ $currentPage := . }}
