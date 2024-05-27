@@ -34,21 +34,38 @@ There are some other flying games but they dont have any good training sessions 
 Being a very cheap option, first I purchased MSFS X on steam. Tried it out but, being an old generation game the graphics were not what I had in my mind. After waiting for some sale on steam, I got the [MSFS 2020](https://www.flightsimulator.com/) standard edition in `3k($75)`. It brings in the best combination of graphics and simulation.
 
 # Microsoft Flight Simulator 2020
-Here is a quick summary of what I liked about the simulator
+Here is a quick summary of what I `liked` about the simulator
 
-* **Training** - Several tutorials which start from very basic to IFR flying. There is a lot of scope here though. They can add more advanced tutorials on instrument and cockfit learning. Alternatively there are some more training options which you can purchase via [FS Academy](https://www.aerosoft.com/us/microsoft-flight-simulator/msfs-tools/3325/fs-academy-vfr-msfs) but not sure how good they are.
+## Training
 ![MSFS-training](images/training.jpg)
-* **Inventory** - The good thing is that in the standard edition, a large number of planes are available from your basic cessna to Boeing 747. Many of them are fitted with latest Garmin G1000. And of course, there is a market place where you can buy whatever you want.
+Several tutorials which start from very basic to IFR flying. There is a lot of scope here though. They can add more advanced tutorials on instrument and cockfit learning. Alternatively there are some more training options which you can purchase via [FS Academy](https://www.aerosoft.com/us/microsoft-flight-simulator/msfs-tools/3325/fs-academy-vfr-msfs) but not sure how good they are.
+
+
+## Inventory
 ![MSFS-planes](images/planes.jpg)
-* **Indian airports** - Couldn't check many airports, but I can see that even airports from small cities are present. Although I can't certify their accuracy in terms of the approaches and buildings, but you can recognise buildings while flying around in the city. Also, I cannot verify the level of details as I was unable to run MSFS on Ultra quality. In fact on Low and Medium I get around 30-40 fps only.
-* **Assist options** - There are many assist options available. You can configure whatever you want. But once accustomed, I would highly encourage to switch off them and be the real pilot. I am still learning taxiing, and thus enabled only that.
+The good thing is that in the standard edition, a large number of planes are available from your basic cessna to Boeing 747. Many of them are fitted with latest Garmin G1000. And of course, there is a market place where you can buy whatever you want.
+
+
+## Indian airports
+Couldn't check many airports, but I can see that even airports from small cities are present. Although I can't certify their accuracy in terms of the approaches and buildings, but you can recognise buildings while flying around in the city. Also, I cannot verify the level of details as I was unable to run MSFS on Ultra quality. In fact on Low and Medium I get around 30-40 fps only.
+
+## Assist options
 ![MSFS-assist-options](images/assist-options.jpg)
-* **Graphics** - The best thing about this sim is the graphics. From certain angles, sometimes it becomes diffcult to distinguish if its a screenshot or an actual photo.
+There are many assist options available. You can configure whatever you want. But once accustomed, I would highly encourage to switch off them and be the real pilot. I am still learning taxiing, and thus enabled only that.
+
+## Graphics
 ![MSFS-cessna-sea-view](images/cessna-top-sea-view.jpg)
-* **Weather** - With so much details on aircrafts and scenery, its expected to have a good weather system. Although I can't comment on the accuracy but it does have a intuitibe setup where you can create custom weather situation like heavy clouds with storm etc.
+The best thing about this sim is the graphics. From certain angles, sometimes it becomes diffcult to distinguish if its a screenshot or an actual photo.
+
+## Weather
 ![MSFS-a320-clouds](images/a320-clouds.jpg)
-* **Istrument panels** - Again, for a person like me, the panels look real and functionally work properly too. 
+With so much details on aircrafts and scenery, its expected to have a good weather system. Although I can't comment on the accuracy but it does have a intuitibe setup where you can create custom weather situation like heavy clouds with storm etc.
+
+
+## Istrument panels
 ![MSFS-instruments](images/instruments.jpg)
+Again, for a person like me, the panels look real and functionally work properly too. 
+
 
 
 # Can I fly?
