@@ -27,4 +27,6 @@ I think anybody who can `communicate` using any medium is an artist. Good or bad
 # Human.
 I believe in only one religion - `Humanity`. I learned many things. I made mistakes. Even now I might be making one! But it's all a part of the evolution. We are now because of how we managed to create large civilizations. Of course as everybody else I am still on my way to find the meaning of life.
 
+Contact me on hi@cybercafe.dev.
+
 > End
