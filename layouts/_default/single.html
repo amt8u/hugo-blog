@@ -11,9 +11,9 @@
 			<h1 class="title">{{ .Title }}</h1>
 		</div>
 		<div class="meta-wrapper">
-			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+			<div class="meta">Posted on {{ dateFormat "2 Jan 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 			{{ if .Lastmod}}
-				<div class="meta">Updated on {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
+				<div class="meta">Updated on {{ dateFormat "2 Jan 2006" .Lastmod }}</div>
 			{{ end }}
 			<div class="post-tags">
 				{{ if ne .Type "page" }}

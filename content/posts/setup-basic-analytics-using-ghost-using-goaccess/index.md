@@ -3,7 +3,8 @@ title : Setup simple analytics for Ghost blog using GoAccess
 url : setup-simple-analytics-for-ghost-blog-using-goaccess
 summary : How to setup native simple analytics on your ghost blog using GoAccess without third party plugins which could be blocked by many browsers and ad blockers.
 author: amt8u
-date : 2021-04-19
+date: '2021-04-19T13:42:09.000Z'
+lastmod: '2021-04-24T18:38:59.000Z'
 draft : false
 tags : ['analytics']
 thumbnail : images/GoAccessTopbrowsers.png

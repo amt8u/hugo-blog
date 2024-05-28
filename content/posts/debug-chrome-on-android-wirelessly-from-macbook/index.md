@@ -3,7 +3,8 @@ title : Debug chrome on android wirelessly from Macbook
 url : debug-android-chrome-wirelessly-from-macbook
 summary : Debug webapps on chrome for android wirelessly from your Macbook.
 author: amt8u
-date : 2021-09-26
+date: '2021-09-26T06:56:21.000Z'
+lastmod: '2021-09-26T07:14:38.000Z'
 draft : false
 tags : ['android']
 thumbnail : images/cybercafe.dev.macbook.jpg

@@ -2,7 +2,8 @@
 title : What is http, https and why some sites start with www?
 url : http-vs-https-for-beginners
 description : This article explains two common questions - What is the difference between http and https. Why do some websites start with www while some do not.
-date : 2020-07-12
+date: '2020-07-11T09:46:25.000Z'
+lastmod: '2022-07-08T17:29:06.000Z'
 draft : false
 tags : ['web', 'security']
 thumbnail : "images/http-vs-https-feature.jpg"

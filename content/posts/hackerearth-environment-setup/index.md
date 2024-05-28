@@ -3,7 +3,8 @@ title : Debug hackerearth challenges with nodejs
 url : easily-debug-hacker-earth-problems-with-nodejs
 summary : Setting up local environment to debug Hackerearth problems on local machine with standard input and file system
 author: amt8u
-date : 2021-03-27
+date: '2021-03-17T09:59:44.000Z'
+lastmod: '2021-03-17T10:21:50.000Z'
 draft : false
 tags : ['nodejs']
 thumbnail : images/coding.jpg

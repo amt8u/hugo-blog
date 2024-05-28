@@ -2,7 +2,8 @@
 title : Playing with markdown
 url : ghost-markdown-guide
 description : After spending hours in configuring this blog its time to show some creativity. But before that there is one more thing to learn Learning Markdown
-date : 2020-01-30
+date: '2020-01-30T09:46:10.000Z'
+lastmod: '2020-11-11T14:28:53.000Z'
 draft : false
 tags : ['markdown']
 thumbnail: images/markdown-screenshot2.png

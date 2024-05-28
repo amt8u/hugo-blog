@@ -3,7 +3,8 @@ title : "javascript : void (0)"
 url : javascript-void-0
 summary : Flash of Default Style is the issue which occurs when your user preferences take time to load and the web browser ends up showing the content with default styles for a flash of time.
 author: amt8u
-date : 2020-10-01
+date: '2020-10-01T12:28:21.000Z'
+lastmod: '2021-01-23T13:47:10.000Z'
 draft : false
 tags : ['javascript']
 thumbnail : "images/js.png"

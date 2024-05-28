@@ -3,7 +3,8 @@ title : Learning Nodejs distributed systems Part 1
 url : learning-nodejs-distributed-systems-part-1
 summary : I read one of the best books for nodejs - Distributed systems with node js by Thomas Hunter II. Documenting the learning here for quick reference.
 author: amt8u
-date : 2024-02-23
+date: '2024-02-23T08:32:19.000Z'
+lastmod: '2024-02-23T08:40:59.000Z'
 draft : false
 thumbnail: images/book-cover.jpg
 images: ['images/book-cover.jpg']

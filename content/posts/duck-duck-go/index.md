@@ -3,7 +3,8 @@ title : Duck Duck Go
 url : duck-duck-go
 summary :  DuckDuckGo (DDG) is an internet search engine [https://en.wikipedia.org/wiki/Web_search_engine] that emphasizes protecting searchers'
 author: amt8u
-date : 2020-01-27
+date : 2020-01-27T10:48:34.000Z
+lastmod: 2020-01-27T10:50:38.000Z
 draft : false
 tags : ['web']
 thumbnail: images/external-content.duckduckgo.com.png

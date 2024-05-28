@@ -3,7 +3,8 @@ title : Using SVG in React
 url : using-svg-in-react
 summary : There are many ways to use svg in React. We can directly use the svg as src in the img tag or we can create custom component to render the svg as paths in html. In this article we will create a simple React app using svg image.
 author: amt8u
-date : 2021-01-09
+date: '2021-01-09T16:50:15.000Z'
+lastmod: '2021-01-09T17:04:05.000Z'
 draft : false
 tags : ['react', 'svg']
 thumbnail : images/using-svg-feature.jpg

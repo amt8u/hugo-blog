@@ -3,6 +3,7 @@ title : Migrating from Digital Ocean to Netlify
 url : migrating-from-digital-ocean-to-netlify
 summary : Final steps while migrating my DigitalOcean hosted website to Netlify.
 date : 2024-05-24T12:42:09.354Z
+lastmod: 2024-05-24T12:42:09.354Z
 draft : false
 tags : ['web', 'dns']
 images: ['images/digital-ocean.png']

@@ -1,6 +1,8 @@
 ---
 title: offline-page
 type: "post"
+date: '2020-09-12T12:00:52.000Z'
+lastmod: '2020-09-13T06:17:22.000Z'
 ---
 
 

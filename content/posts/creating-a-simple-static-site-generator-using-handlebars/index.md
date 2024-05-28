@@ -3,7 +3,8 @@ title : Creating a simple static site generator using handlebars
 url : creating-a-simple-static-site-generator-using-handlebars
 summary : How to create a simple html generator using handlebars and nodejs.
 author: amt8u
-date : 2020-11-10
+date: '2020-11-10T17:46:01.000Z'
+lastmod: '2020-11-11T12:57:52.000Z'
 draft : false
 tags : ['nodejs', 'html']
 thumbnail : images/handlebars_logo.png

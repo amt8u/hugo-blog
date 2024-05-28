@@ -2,10 +2,12 @@
 title : Authentication vs Authorization
 url : authentication-vs-authorization
 description : Authentication vs Authorization
-date : 2021-04-22
+date: '2021-04-22T11:28:25.000Z'
+lastmod: '2021-04-24T18:40:05.000Z'
 draft : false
 thumbnail: images/authentication.jpg
 images: ['images/authentication.jpg']
+tags: ["security", "web"]
 ---
 
 TLDR;

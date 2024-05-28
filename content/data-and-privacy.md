@@ -3,7 +3,8 @@ title : Data & Privacy
 url : privacy
 summary : Data usage and privacy on this website.
 author: amt8u
-date : 2020-01-01
+date: '2021-04-25T12:22:42.000Z'
+lastmod: '2021-04-25T12:26:43.000Z'
 draft : false
 tags : ['privacy']
 ---

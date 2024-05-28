@@ -3,7 +3,8 @@ title : Using AWS S3 for photos backup
 url : using-aws-s3-for-photos-backup
 summary : Using AWS S3 as a cloud storage backup solution for personal photos and videos collection. A cheap alternative for apps like Google photos, unsplash, flickr, dropbox etc.  
 author: amt8u
-date : 2022-10-30
+date: '2022-10-30T07:23:57.000Z'
+lastmod: '2022-10-30T07:58:34.000Z'
 draft : false
 tags : ['aws', 'photos']
 thumbnail : images/camera-lens.jpg

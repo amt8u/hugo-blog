@@ -3,7 +3,8 @@ title : What is recursion?
 url : recursion
 summary : Learn recursion.
 author: amt8u
-date : 2020-09-15
+date: '2020-09-15T14:58:18.000Z'
+lastmod: '2020-09-15T15:38:04.000Z'
 draft : false
 tags : ['programming']
 thumbnail : "images/recursion.gif"

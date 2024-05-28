@@ -3,7 +3,8 @@ title : Playing days gone
 url : playing-days-gone-zombie-apocalypse-open-world-game
 summary : This is my experience of playing Days Gone including what did I enjoy and what I didn't like. 
 author: amt8u
-date : 2024-02-17
+date: '2024-02-16T19:36:50.000Z'
+lastmod: '2024-02-17T17:25:18.000Z'
 draft : false
 tags : ['gaming']
 thumbnail: images/cover.png

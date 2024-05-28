@@ -3,7 +3,8 @@ title : My take on cheap windows keys
 url : cheap-windows-keys
 summary : Have you ever wondered how some retailers offer Microsoft Windows at unbelievable prices like Rs 700(5$). In this post I shall try to explore the reasons for these deep discounts and there genuineness.
 author: amt8u
-date : 2020-12-15
+date: '2020-12-15T15:22:41.000Z'
+lastmod: '2021-02-10T13:50:03.000Z'
 draft : false
 tags : ['opinion', 'windows']
 thumbnail: images/keyboard.jpeg

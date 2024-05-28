@@ -3,7 +3,8 @@ title : My experience with google ads
 url : my-experience-with-google-ads
 summary : First time experience of Adding google ads to my website.
 author: amt8u
-date : 2020-11-16
+date: '2020-11-16T07:58:59.000Z'
+lastmod: '2020-11-16T11:32:30.000Z'
 draft : false
 tags : ['google-ads', 'web']
 thumbnail : images/google-ads-feature.jpg

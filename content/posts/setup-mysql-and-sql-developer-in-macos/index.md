@@ -3,7 +3,8 @@ title : Setup mysql and SQL Developer on macos
 url : setup-mysql-and-sql-developer-on-macos
 summary : Setup mysql server community edition with oracle SQL Developer on MacOS.
 author: amt8u
-date : 2021-08-30
+date: '2021-08-30T06:02:58.000Z'
+lastmod: '2021-08-30T06:30:01.000Z'
 draft : false
 tags : ['mysql']
 thumbnail : images/amt8u-macbook.jpg

@@ -3,7 +3,8 @@ title : Playing with arrow functions
 url : playing-with-arrow-functions
 summary : Arrow functions added in ES6 provide a good replacement for function expressions. But do you understand them completely? This is a small test to check it out.
 author: amt8u
-date : 2020-11-09
+date: '2020-11-08T11:46:34.000Z'
+lastmod: '2020-11-10T11:57:11.000Z'
 draft : false
 tags : ['javascript', 'ES6']
 thumbnail : images/es6.png

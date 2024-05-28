@@ -3,7 +3,8 @@ title : Creating simple mock server using nodejs
 url : creating-simple-mock-api-server-using-nodejs
 summary : While developing frontend apps we often need sample data. In this article I will share a very easy way to setup a mock-server using Nodejs native http module having enough flexibility required for custom logic.
 author: amt8u
-date : 2021-08-11
+date: '2021-08-11T15:40:49.000Z'
+lastmod: '2021-08-13T14:46:26.000Z'
 draft : false
 tags : ['nodejs']
 thumbnail : images/create-mock-server-using-nodejs.png

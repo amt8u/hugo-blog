@@ -3,7 +3,8 @@ title : FODS - Prevent flash of default style
 url : prevent-flash-of-default-style
 summary : Flash of Default Style is the issue which occurs when your user preferences take time to load and the web browser ends up showing the content with default styles for a flash of time.
 author: amt8u
-date : 2020-10-07
+date: '2020-10-07T06:11:26.000Z'
+lastmod: '2020-10-07T07:10:44.000Z'
 draft : false
 tags : ['html', 'css']
 thumbnail : images/amt8u-d3fMtEsHblc-unsplash.jpg

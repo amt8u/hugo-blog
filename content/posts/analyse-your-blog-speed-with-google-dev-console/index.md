@@ -3,7 +3,8 @@ title : Analyse your blog speed with google developer console
 url : analyse-your-blog-speed-with-google
 summary : You have created a new website. Maybe a blog or a small ecommerce site or your portfolio with the projects you have worked on. You want to see how your site would behave in real world i.e. on the various browsers on different platforms like desktop/mobile/tablets etc.
 author: amt8u
-date : 2020-04-26
+date: '2020-04-26T13:29:19.000Z'
+lastmod: '2020-04-27T04:05:15.000Z'
 draft : false
 tags : ['web']
 thumbnail: images/performance.jpg

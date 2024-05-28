@@ -2,7 +2,8 @@
 title : How to add custom static pages to ghost blog
 url : how-to-add-custom-static-pages-to-ghost-blog
 description : Ever in need of adding custom pages to your ghost blog integrated with your theme and menus. Here I present a step by step guide to add pages with minimal effort.
-date : 2020-07-28
+date: '2020-07-28T08:47:28.000Z'
+lastmod: '2022-04-17T07:02:32.000Z'
 draft : false
 tags : ['ghostjs', 'html']
 thumbnail : "images/amt8u-bike.jpg"

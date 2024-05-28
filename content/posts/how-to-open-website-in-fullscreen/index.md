@@ -3,7 +3,8 @@ title : How to open website in fullscreen
 url : how-to-open-website-in-fullscreen
 summary : In this article we will learn about how we can enable fullscreen in a web app. We will also learn its side effects and issues.
 author: amt8u
-date : 2023-05-13
+date: '2023-05-13T07:03:01.000Z'
+lastmod: '2023-05-13T07:05:45.000Z'
 draft : false
 thumbnail: images/amt8u-fullscreen-feature.jpg
 images: ['images/amt8u-fullscreen-feature.jpg']

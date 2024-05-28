@@ -3,7 +3,8 @@ title : How authentication works?
 url : how-authentication-works
 summary : Lets learn about **authentication** in depth. At least the shallow depth that I can cover.
 author: amt8u
-date : 2022-01-30
+date: '2022-01-30T08:43:06.000Z'
+lastmod: '2022-01-31T15:17:14.000Z'
 draft : false
 tags : ['web']
 thumbnail: images/feature.jpg

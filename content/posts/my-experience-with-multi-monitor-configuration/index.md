@@ -3,7 +3,8 @@ title : My experience with multi monitor setup
 url : my-experience-with-multi-monitor-configuration
 summary : Now a days connecting multiple displays to a system is common and has evolved a lot over the years. For example if you are connected
 author: amt8u
-date : 2020-06-05
+date: '2020-06-04T14:36:57.000Z'
+lastmod: '2020-06-05T13:22:28.000Z'
 draft : false
 tags : ['gaming']
 thumbnail: images/IMG_20200604_230405-1.jpg

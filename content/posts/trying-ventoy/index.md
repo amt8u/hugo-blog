@@ -3,7 +3,8 @@ title : Trying multi boot with Ventoy
 url : trying-multi-boot-with-ventoy
 summary : Ventoy is an open source tool to create multi boot USB drive with various operating systems like linux distros, windows etc. This post is about my experience of using the tool for the first time.
 author: amt8u
-date : 2021-02-06
+date: '2021-02-05T18:55:51.000Z'
+lastmod: '2021-04-24T18:39:14.000Z'
 draft : false
 tags : ['linux', 'ventoy']
 thumbnail : images/ubuntu-apps-1.png

@@ -3,7 +3,8 @@ title : Building a gaming PC in India
 url : building-a-gaming-pc-in-india/
 summary : This article is about my experience of building a gaming PC in India. It lists my journey from initial search to assembling all the parts at home.
 author: amt8u
-date : 2020-12-19
+date: '2020-12-17T19:36:31.000Z'
+lastmod: '2021-06-02T15:54:45.000Z'
 draft : false
 tags : ['gaming', 'pc']
 thumbnail: images/IMG_20200815_233156.jpg

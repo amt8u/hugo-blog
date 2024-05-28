@@ -3,7 +3,8 @@ title : A quick review of forest.mponline.gov.in
 url : quick-review-of-mponline
 summary : Recently we visited the Kanha tiger reserve which is located within Kanha region in Madhya Pradesh, India. The bookings can be done via government website.
 author: amt8u
-date : 2020-01-27
+date : 2020-01-27T13:55:49.000Z
+lastmod: '2020-04-27T04:21:45.000Z'
 draft : false
 tags : ['web']
 thumbnail: images/login_menu_offscreen.png

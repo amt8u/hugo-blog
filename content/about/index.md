@@ -1,6 +1,7 @@
 ---
 slug: amt8u
-date: 2019-01-01
+date: 2020-01-26T09:26:35.000Z
+lastmod: 2022-01-23T14:10:51.000Z
 title: amt8u
 toc : false
 featured: true

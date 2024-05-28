@@ -3,7 +3,8 @@ title : A complete guide to AMD eyefinity
 url : a-complete-guide-to-amd-eyefinity-multi-monitor-setup
 summary : Complete guide to using AMD eyefinity multimonitor setup
 author: amt8u
-date : 2022-05-26
+date: '2022-03-26T09:28:32.000Z'
+lastmod: '2024-05-06T07:05:10.000Z'
 draft : false
 tags : ['gaming']
 thumbnail : images/amd-eyefinity-three-monitor-setup.jpg

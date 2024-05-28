@@ -3,7 +3,8 @@ title : Should I accept or reject cookies?
 url : should-i-accept-or-reject-cookies
 summary : What is a cookie? Should you accept or reject them; Does it make any sense to reject a cookie? And are cookies really files? 
 author: amt8u
-date : 2022-10-14
+date: '2022-10-14T09:48:26.000Z'
+lastmod: '2022-10-14T09:52:44.000Z'
 draft : false
 tags : ['web', 'browsers']
 thumbnail : images/amt8u_keyboard.jpg

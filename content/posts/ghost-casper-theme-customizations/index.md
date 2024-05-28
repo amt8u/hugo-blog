@@ -3,7 +3,8 @@ title : Ghost casper theme customizations
 url : ghost-casper-theme-customizations
 summary : Here are a few things that everybody should do after setting up a new ghost blog. Some are optional and some are recommended. This list will expand with time.
 author: amt8u
-date : 2020-07-07
+date: '2020-07-07T06:50:21.000Z'
+lastmod: '2020-07-07T17:45:20.000Z'
 draft : false
 tags : ['ghostjs', 'javascript']
 thumbnail: images/ghost-customization-feature.jpg

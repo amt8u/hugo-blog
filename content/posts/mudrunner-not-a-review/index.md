@@ -3,7 +3,8 @@ title : Mudrunner - Not a review
 url : mudrunner-not-a-review
 summary : A brief review about a simulation game Mudrunner. Take this as more of a beginner's experience which might help people understand the game(**Simulator**).
 author: amt8u
-date : 2020-07-02
+date: '2020-07-02T09:46:57.000Z'
+lastmod: '2020-07-08T05:00:18.000Z'
 draft : false
 tags : ['gaming', 'hosting']
 thumbnail: images/mudrunner-feature.png

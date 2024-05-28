@@ -3,7 +3,8 @@ title : Why phishing is still successful?
 url : why-phishing-is-still-successful/
 summary : Almost all organisations spread awareness about phishing to their employees and customers but do they really help? Here is my opinion on why those prevention tips are not useful for people.
 author: amt8u
-date : 2021-03-29
+date: '2021-03-29T12:38:23.000Z'
+lastmod: '2021-03-29T12:51:17.000Z'
 draft : false
 tags : ['hacking']
 thumbnail : images/phishing-feature.jpeg

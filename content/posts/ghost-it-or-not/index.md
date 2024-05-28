@@ -3,7 +3,8 @@ title : Ghost it or not!
 url : ghost-it-or-not
 summary : "I always wanted to have a personal blog so I started looking out for options. One of the options was to create one. My requirement was just to have a working site where people can read articles and probably can comment on."
 author: amt8u
-date : 2020-01-26
+date : 2020-01-26T10:26:01.000Z
+lastmod : 2022-01-23T14:10:51.000Z
 draft : false
 tags : ['hosting']
 thumbnail: images/IMG_20200126_093318-2.jpg

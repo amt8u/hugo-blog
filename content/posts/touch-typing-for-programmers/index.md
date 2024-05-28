@@ -3,7 +3,8 @@ title : Do programmers need to learn touch typing?
 url : do-programmers-need-to-learn-touch-typing
 summary : Do programmers need to learn touch typing? In this article I will discuss about my experience learning touch typing as a programmer. What are the pros and cons if you want to write code.
 author: amt8u
-date : 2020-11-20
+date: '2020-11-20T07:09:27.000Z'
+lastmod: '2020-11-22T07:02:33.000Z'
 draft : false
 tags : ['opinion', 'typing']
 thumbnail : images/touch-typing-feature.jpg

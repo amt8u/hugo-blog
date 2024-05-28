@@ -3,7 +3,8 @@ title : The contextual bias
 url : the-contextual-bias
 summary : The excerpt for this article should not give you any context or should it.
 author: amt8u
-date : 2021-08-22
+date: '2021-08-22T06:40:55.000Z'
+lastmod: '2021-08-22T06:44:08.000Z'
 draft : false
 tags : ['opinion']
 thumbnail : images/feature.jpeg

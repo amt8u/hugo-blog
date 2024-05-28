@@ -3,7 +3,8 @@ title : "Book Review : You don't know JS yet"
 url : book-review-you-dont-know-js-yet
 summary : Though I have read the previous editions of the series. Here is a formal review of the Book "You don't know" JS by Kyle Simpson.
 author: amt8u
-date : 2020-04-07
+date: '2020-04-07T11:03:35.000Z'
+lastmod: '2020-04-11T06:22:58.000Z'
 draft : false
 tags : ['javascript']
 thumbnail: images/ydkjs_getting_started_small.jpg

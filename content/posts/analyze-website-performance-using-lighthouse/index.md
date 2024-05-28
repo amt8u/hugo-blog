@@ -3,7 +3,8 @@ title : Website performance analysis
 url : analyse-website-performance-using-lighthouse
 summary : Done setting up your website? Its time to analyse its performance. If you are a business, then probably you could afford an automation team which can build up various test scenarios. But what about if you are an independent blogger or can't afford to hire people to do performance testing on your website.
 author: amt8u
-date : 2020-07-11
+date: '2020-07-11T06:19:16.000Z'
+lastmod: '2020-07-12T06:42:57.000Z'
 draft : false
 tags : ['web']
 thumbnail: images/performance.png

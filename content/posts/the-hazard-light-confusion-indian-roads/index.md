@@ -3,7 +3,8 @@ title : The hazard light confusion on Indian roads
 url : the-hazard-light-confusion-on-indian-roads
 summary : This post is about my experience of using Hazard Lights or Double indicators (as what we call it in India) in traffic. I also present some authentic guidelines from Motor vehicle act.
 author: amt8u
-date : 2024-02-06
+date: '2024-02-06T07:10:48.000Z'
+lastmod: '2024-02-16T19:44:14.000Z'
 draft : false
 thumbnail: images/hazard-light.jpeg
 images: ['images/hazard-light.jpeg']

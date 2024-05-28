@@ -3,7 +3,8 @@ title : Learning to fly on Microsoft Flight Simulator
 url : learning-to-fly-on-microsoft-flight-simulator
 summary : Learning to fly on Microsoft Flight Simulator. From basic VFR in cessna to commercial IFR including VOR, ILS, RNAV and auto pilot.
 author: amt8u
-date : 2022-06-19
+date: '2022-06-19T08:15:19.000Z'
+lastmod: '2022-06-19T08:27:48.000Z'
 draft : false
 tags : ['gaming']
 thumbnail : images/20220619134151_1.jpg

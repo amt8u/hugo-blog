@@ -3,7 +3,8 @@ title : My quest to understand how IOT works?
 url : my-quest-to-understand-the-iot-world
 summary : Now a days connecting multiple displays to a system is common and has evolved a lot over the years. For example if you are connected
 author: amt8u
-date : 2020-06-05
+date: '2020-04-28T06:51:01.000Z'
+lastmod: '2020-07-05T20:46:41.000Z'
 draft : false
 tags : ['iot']
 thumbnail: images/photo-1571615754493-ff5d323d6526.jpeg

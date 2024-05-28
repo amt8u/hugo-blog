@@ -3,7 +3,8 @@ title : Weird console.log behaviour
 url : weird-console-log-behaviour/
 summary : In this article I shall try to explain the weird behaviour exhibited by console.log function. Logging values is not as easy as it sounds.
 author: amt8u
-date : 2020-11-23
+date: '2020-11-23T08:24:59.000Z'
+lastmod: '2020-11-23T08:40:43.000Z'
 draft : false
 tags : ['javascript']
 thumbnail : images/feature.jpg

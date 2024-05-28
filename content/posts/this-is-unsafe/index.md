@@ -3,7 +3,8 @@ title : "thisisunsafe - Bypassing chrome security warnings"
 url : thisisunsafe-bypassing-chrome-security-warnings
 summary : thisisunsafe is a way to bypass security errors on chrome. In this article I will discuss about its usage and implications.
 author: amt8u
-date : 2021-02-17
+date: '2021-02-17T18:17:04.000Z'
+lastmod: '2022-11-19T15:24:33.000Z'
 draft : false
 tags : ['security', 'web']
 thumbnail : images/amt8u-this-is-unsafe-feature.jpg

@@ -3,7 +3,8 @@ title : Learning Typescript in 2023 part 2 - Configuration
 url : learning-typescript-in-2023-part-2-configuration
 summary : In this article we will learn about Typescript configuration and various options provided to make our life easier while coding.  
 author: amt8u
-date : 2024-02-23
+date: '2024-02-23T08:21:39.000Z'
+lastmod: '2024-02-23T08:24:19.000Z'
 draft : false
 tags : ['typescript', 'javascript', 'nodejs']
 thumbnail: images/typescript-logo.jpeg

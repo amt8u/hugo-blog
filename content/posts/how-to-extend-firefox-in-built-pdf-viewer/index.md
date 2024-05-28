@@ -3,7 +3,8 @@ title : Extensions not working for firefox pdf viewer?
 url : how-to-extend-firefox-in-built-pdf-viewer
 summary : In built pdf viewer Unlike chrome, firefox comes with a very versatile pdf viewer. When you open pdf links in firefox, the viewer loads the
 author: amt8u
-date : 2020-11-02
+date: '2020-11-01T18:24:22.000Z'
+lastmod: '2020-11-01T19:44:35.000Z'
 draft : false
 tags : ['hosting']
 thumbnail : images/feature.jpg

@@ -2,7 +2,8 @@
 title : How to add gradient animation as site header in ghost blog
 url : how-to-add-gradient-animation-as-background
 description : Add simple background gradient animation to website header
-date : 2020-10-01
+date: '2020-10-01T12:00:57.000Z'
+lastmod: '2021-01-23T13:58:16.000Z'
 draft : false
 tags: ['css']
 thumbnail : "images/cybercafe.dev-header.png"

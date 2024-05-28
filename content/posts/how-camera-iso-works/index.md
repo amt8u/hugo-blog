@@ -3,7 +3,8 @@ title : Understanding ISO in digital photography
 url : understanding-iso-in-digital-photography/
 summary : Have you ever wondered what exactly changes when you modify the ISO setting in a digital camera?
 author: amt8u
-date : 2021-01-23
+date: '2021-01-23T04:28:14.000Z'
+lastmod: '2021-01-27T06:45:15.000Z'
 draft : false
 tags : ['photography']
 thumbnail : images/how-iso-works-feature.jpg

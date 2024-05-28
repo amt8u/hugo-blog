@@ -3,7 +3,8 @@ title : Terms & Conditions
 url : terms
 summary : Terms & Conditions for using this website.
 author: amt8u
-date : 2020-01-01
+date: '2021-04-25T12:21:00.000Z'
+lastmod: '2021-04-25T12:29:56.000Z'
 draft : false
 tags : ['terms']
 ---

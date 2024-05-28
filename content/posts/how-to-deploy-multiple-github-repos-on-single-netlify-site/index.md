@@ -3,7 +3,8 @@ title : How to deploy multiple github repos on single netlify site
 url : how-to-deploy-multiple-github-repos-on-single-netlify-site
 summary : Do you want to deploy multiple repositories under single hostname on netlify?
 author: amt8u
-date : 2020-11-08
+date: '2020-11-08T08:12:46.000Z'
+lastmod: '2022-05-14T17:06:05.000Z'
 draft : false
 tags : ['hosting']
 thumbnail : images/feature.jpg

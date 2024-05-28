@@ -2,7 +2,8 @@
 title : Understanding IIFE - Immediately Invoked Function Expression
 url : immediately-invoked-function-expression
 description : IIFE is an advanced design pattern used in Javascript. Because of the quirky syntax and how functions work in javascript, its a little difficult to understand concept.
-date : 2020-08-03
+date: '2020-08-03T05:23:00.000Z'
+lastmod: '2023-04-09T15:28:03.000Z'
 draft : false
 tags : ['javascript']
 thumbnail : "images/understanding-iife-feature.jpg"

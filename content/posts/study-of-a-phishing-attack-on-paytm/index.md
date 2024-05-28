@@ -2,7 +2,8 @@
 title : Study of a phishing attack
 url : study-of-a-phishing-attack-on-paytm
 description : Detailed study of recent phishing attack using fake paytm KYC message. This is an in-depth analysis from a developer's point of view.
-date : 2020-07-14
+date: '2020-07-14T11:01:52.000Z'
+lastmod: '2022-04-17T07:18:58.000Z'
 draft : false
 tags : ['web', 'security']
 thumbnail : "images/hacker.jpeg"

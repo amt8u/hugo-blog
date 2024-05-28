@@ -3,7 +3,8 @@ title : Are we safe on internet?
 url : are-we-safe-on-internet
 summary :  These days internet has become a part of our life. For every task, for every question we tend to resolve it via internet. For those
 author: amt8u
-date : 2020-01-26
+date : 2020-01-26T10:38:30.000Z
+lastmod: 2021-08-30T16:08:48.000Z
 draft : false
 tags : ['web']
 thumbnail: images/Https.png

@@ -3,7 +3,8 @@ title : The curious case of Javascript's typeof operator
 url : the-curious-case-of-typeof-operator
 summary : As we all know Javascript is weakly typed language and in general we don't consider the type beforehand and just var it. Variables in JavaScript
 author: amt8u
-date : 2020-04-26
+date: '2020-04-26T06:11:45.000Z'
+lastmod: '2020-07-09T18:01:32.000Z'
 draft : false
 tags : ['javascript']
 thumbnail: images/question-mark.jpg

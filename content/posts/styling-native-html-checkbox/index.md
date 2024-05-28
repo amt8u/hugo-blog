@@ -3,7 +3,8 @@ title : Styling native html checkbox
 url : styling-native-html-checkbox
 summary : How to style html native controls like checkbox with css. Native elements can be styled using appearance property and ::before pseudo element.
 author: amt8u
-date : 2020-10-11
+date: '2020-10-10T18:02:50.000Z'
+lastmod: '2023-05-13T07:13:10.000Z'
 draft : false
 tags : ['html']
 thumbnail : images/checkbox-fullscreen.png

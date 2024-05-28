@@ -3,7 +3,8 @@ title : Javascript developer learning Ruby part-1
 url : javascript-developer-learning-ruby-part-1
 summary : A Javascript developer learning ruby from scratch. In this article I will try to understand ruby and compare its features from a JS developer's perspective.
 author: amt8u
-date : 2020-11-17
+date: '2020-11-17T12:44:57.000Z'
+lastmod: '2020-11-17T12:54:13.000Z'
 draft : false
 tags : ['ruby']
 thumbnail : images/ruby-feature.jpg

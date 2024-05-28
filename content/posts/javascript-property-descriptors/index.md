@@ -3,7 +3,8 @@ title : Javascript property descriptors
 url : javascript-property-descriptors
 summary : We all know Javascript is all about objects and functions. And an object is just a collection of properties. And of course every function
 author: amt8u
-date : 2020-02-03
+date: '2020-02-03T10:33:02.000Z'
+lastmod: '2021-06-07T19:00:39.000Z'
 draft : false
 tags : ['javascript']
 thumbnail: images/json-icon.png

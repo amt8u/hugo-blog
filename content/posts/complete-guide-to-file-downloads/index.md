@@ -3,7 +3,8 @@ title : Complete guide to file download in browsers
 url : complete-guide-to-file-download-in-browsers/
 summary : Have you ever come across a requirement to create download functionality? This article will go over all the possible solutions.
 author: amt8u
-date : 2020-12-07
+date: '2020-12-07T10:53:04.000Z'
+lastmod: '2020-12-07T11:42:49.000Z'
 draft : false
 tags : ['web', 'download']
 thumbnail : images/code.jpg

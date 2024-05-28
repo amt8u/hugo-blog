@@ -3,7 +3,8 @@ title : Chrome
 url : chrome
 summary : Google Chrome is a cross-platform web browser developed by Google.
 author: amt8u
-date : 2020-01-27
+date : 2020-01-27T10:27:32.000Z
+lastmod: 2020-01-27T10:34:01.000Z
 draft : false
 tags : ['web']
 thumbnail: images/mitchell-luo-jz4ca36oJ_M-unsplash.jpg

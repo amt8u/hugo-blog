@@ -3,7 +3,8 @@ title : Javascript or Ecmascript?
 url : javascript-or-ecmascript
 summary : "Ever got confused when the interviewer asked: Have you worked on ES6?"
 author: amt8u
-date : 2020-01-26
+date : 2020-01-26T10:33:56.000Z
+lastmod: 2021-08-30T16:04:21.000Z
 draft : false
 tags : ['javascript']
 thumbnail: images/es6.png

@@ -3,7 +3,8 @@ title : Learning Typescript in 2023 part 3 - Classes and Interfaces
 url : learning-typescript-in-2023-part-3-classes-and-interfaces
 summary : In this article we will understand how we can build classes and interfaces in typescript 
 author: amt8u
-date : 2024-02-23
+date: '2024-02-23T08:25:08.000Z'
+lastmod: '2024-02-23T08:26:18.000Z'
 draft : false
 tags : ['typescript', 'javascript', 'nodejs']
 thumbnail: images/typescript-logo.jpeg

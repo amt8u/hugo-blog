@@ -3,7 +3,8 @@ title : Learning Typescript in 2023 part 1 - Basics
 url : learning-typescript-in-2023-part-1
 summary : Learning typescript part-1. Just making a post on learning typescript in 2023 from scratch.  
 author: amt8u
-date : 2023-05-13
+date: '2023-05-12T18:58:58.000Z'
+lastmod: '2023-05-12T19:31:46.000Z'
 draft : false
 tags : ['typescript', 'javascript', 'nodejs']
 thumbnail: images/ts2.png

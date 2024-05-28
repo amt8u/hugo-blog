@@ -3,7 +3,8 @@ title : Trending work from home and part time job scam
 url : trending-work-from-home-and-part-time-job-scam
 summary : In this article I discuss about the "modus operandi" for the ongoing Work from home scam which is mostly targetted to urban people.  
 author: amt8u
-date : 2023-05-06
+date: '2023-05-06T18:02:06.000Z'
+lastmod: '2023-05-09T04:48:33.000Z'
 draft : false
 tags : ['scam', 'wfh']
 thumbnail: images/amt8u-keyboard.jpg

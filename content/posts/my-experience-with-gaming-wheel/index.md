@@ -2,7 +2,8 @@
 title : My experience with a gaming wheel
 url : my-experience-with-gaming-wheel
 description : If you like to play fast-paced racing games and want to experience realistic handling and controls, the answer is a racing wheel. I will talk about my first hand experience of using a Logitech G29 wheel.
-date : 2020-09-04
+date: '2020-08-21T12:02:29.000Z'
+lastmod: '2022-04-17T06:33:47.000Z'
 draft : false
 tags : ['gaming']
 thumbnail : "images/amt8u-logitech-g29-gaming-wheel.jpg"

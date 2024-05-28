@@ -3,7 +3,8 @@ title : seedocode.com is now cybercafe.dev
 url : update-ghost-domain-url
 summary : A quick guide on how to update the domain name on a self hosted ghost blog with automatic SSL configuration.
 author: amt8u
-date : 2020-07-03
+date: '2020-07-03T11:13:56.000Z'
+lastmod: '2020-07-03T13:35:19.000Z'
 draft : false
 tags : ['ghostjs', 'hosting']
 thumbnail: images/seedocode-feature.jpg

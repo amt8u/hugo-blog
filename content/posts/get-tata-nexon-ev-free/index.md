@@ -3,7 +3,8 @@ title : Win a tata nexon for free - a quick analysis of the scam
 url : win-a-tata-nexon-for-free-quick-analysis-of-scam
 summary : This article is about how people are scammed using simple sites and understanding a new technique that scammers employ to prevent fraud detection.
 author: amt8u
-date : 2021-10-06
+date: '2021-10-06T07:58:32.000Z'
+lastmod: '2021-10-06T09:41:02.000Z'
 draft : false
 tags : ['scams']
 thumbnail: images/tata-nexon.jpg
