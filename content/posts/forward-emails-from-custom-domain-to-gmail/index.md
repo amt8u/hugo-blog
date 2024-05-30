@@ -7,7 +7,7 @@ lastmod: 2024-05-25
 draft : false
 images: ['images/email-icon.jpg']
 thumbnail: images/email-icon.jpg
-tags : ['web', 'eamil']
+tags : ['web', 'email']
 ---
 
 # Why?

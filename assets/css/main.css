@@ -132,6 +132,10 @@ blockquote {
   text-decoration: none;
 }
 
+.posts h2.title {
+  margin: 0;
+}
+
 a:not(:has(img)) {
   /*border-bottom: 1px solid var(--maincolor);*/
   color: inherit;
