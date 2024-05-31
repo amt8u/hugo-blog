@@ -577,6 +577,10 @@ aside.toc {
   transition: .1s opacity ease-in;
 }
 
+aside.toc li {
+    text-align: left;
+}
+
 .toc.show {
   opacity: 1;
 }
