@@ -1,261 +1,202 @@
 ---
 title: Creating a static site with hugo
 url: creating-a-static-site-with-hugo
-date: 2024-05-17
-lastmod: 2024-05-17
+date: 2024-05-18
 summary: Why I chose hugo and what all I did to convert my ghostjs website to a static website.
-thumbnail: images/hugo-logo-big.png
-images: ['images/hugo-logo-big.png']
+thumbnail: images/amt8u-macbook-earphones.jpg
+images: ['images/amt8u-macbook-earphones.jpg']
 tags: ['web', 'html']
 ---
 
-# Why?
+Before starting the setup process if you are interested, read [why I chose Hugo over GatsBy for my blog](/why-hugo-static-site-generator-for-blog/).
 
-My blog was running on self hosted [Ghostjs](https://ghostjs.org) instance since 2020. It is a good platform for bloggers. The advantage for me was that it uses handlebar templates which I was already familiar with. Moreover it provided a clean and secure option ([unlike WordPress](https://blog.sucuri.net/2022/01/why-are-wordpress-sites-targeted-by-hackers.html)) and I can write content in `Markdown`. 
+# Installation
+Go through https://gohugo.io/installation/macos/.
 
-But anyway spending 5$ a month for a few static pages doesn't make much sense when you have better alternatives. One popular option was GitHub pages, but somehow I couldn't continue with Jekyll. Installing ruby is so much pain as described [here](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-1-install-homebrew-and-the-command-line-tools). There is even a [dedicated paid automation](https://www.rubyonmac.dev/?utm_campaign=install-ruby-guide) to get ruby installed.
+There are two versions. The extended version provides support for webp images and other things. Better to install that.
 
-In one of my previous articles I briefly touched on the subject of [creating static quiz using handlebars templates](/creating-a-simple-static-site-generator-using-handlebars). That was an attempt to create some static pages to compliment my articles on various subjects. 
+On Mac you just need to install using brew
 
-## My requirements in order of priority
-* **Write in markdown** - Ever since I started writing Markdown, no other format made sense to me. Even if you don't do markdown to html conversion, the raw text itself is readable enough. It frees you from platform dependent features. If you want to switch from `Ghostjs` to `WordPress`, you don't need to worry about losing embedded links etc. Just copy the text.
-* **Platform-agnostic** - In some platforms, even if you are using Markdown, there may be cases where some flavour of markdown is not supported by the other platform. If you are using features like image gallery in ghostjs, you won't be easily able to replicate it in other systems. I wanted to have my content completely `isolated` from the hosting and deployment perspective.
-* **Auto deploy on push** - With Ghostjs, I had to go the admin UI, write the article, copy and paste images, update several meta details and then publish. For even a small change same process again. To my surprise their posts page doesn't even have "search". You have to manually scroll and find for your published post. Since my main source of articles is the GitHub repo, I had to do multiple things. Sometimes I forget to commit the article, sometimes the content is not in sync with the deployed site. But that is fixed with providers like `Netlify` and `Vercel`. Thanks to GitHub actions workflow, I have to just commit and push my changes. The site gets auto build(Markdown to html) and deployed.
-* **Content to be stored in GitHub repo** - Again, didn't want myself tied to any system and also keep an easily accessible backup for all the content, best choice for now is `GitHub`.
-* **Write anywhere** - With systems such as WordPress and GhostJS, you have to write in their respective `editors` which maybe fine for some people. My requirement was that I should be able to write anywhere on any system and should not be dependent on internet.
-* **Minimum cost** - Self hosted ghostjs instance costs a minimum of 5$ a month and [Ghostjs cloud pricing](https://ghost.org/pricing/) is a little on the steeper side. Having a VPS for a few static pages doesn't make much sense. Yes, the platform has features that will be difficult to integrate with static sites, but I am not going to use them. With platforms like `Netlify` which provide unlimited static sites for `free`, it makes a very good deal. Of course, you will lose a few functions here and there.
-
-## Best static site generator for `Markdown`.
-So I started looking out for the best SSG which I can quickly use. I already have my posts in Markdown format. I should be able to plug in the generator and go.
-
-It turns out that it's not that trivial. Of course generating html from content is straight forward, but I wanted to have it `organized` as I can so that it would be easier in future to `migrate` or to add posts and pages.
-
-A popular place to find out all the generators is https://jamstack.org/generators/ But when you have 355 options, choice becomes more difficult.
-
-Having React experience and good knowledge of Javascript, I put my bet on [GatsbyJS](http://gatsbyjs.org/). But after completing a quick crash course I realized its not really what I was looking for. You have to first learn `graphql` and then understand how to create optimized queries to be used in the pages. Plus every gatsby theme is different and expects content to be in different structure. I did not want my content to be based on framework so that in case tomorrow I want to switch, I should not be updating my markdown content.
-
-Just to create a template I have to create a React application with properly structured components, created optimized graphql queries, understand various plugins like images, use a css system like css-modules etc. In the end I felt it was too much work, better lookout for alternative. And not to mention the terrible Gatsby [caching issues](https://stackoverflow.com/questions/61535548/need-to-gatsby-clean-with-essentially-every-code-change). I myself faced this multiple times while building simple components.
-
-The next popular option was [Hugo](https://gohugo.io). Did a crash course for hugo as well from [LinkedIn](https://www.linkedin.com/learning/learning-static-site-building-with-hugo-2/), but it wasn't enough to understand the nitty gritties. It was more of a getting started kind of thing. 
-
-# Why Hugo?
-
-Here are a few things that made me like Hugo
-* **Speed** - I never thought any dev application with live reload can be so much fast. You change your content, it reloads, you change your css, it reloads. But yes, sometimes you have to stop and restart the server, but once you have the setup running, it is quite fast. In fact right now I am using the dev server to see a live preview of my article. It actually shows how it will look in the browser.
-* **Dependencies** - The only dependencies for hugo are git, go and Dart Sass. Refer https://gohugo.io/installation/macos/#prerequisites. You don't need to npm install, npm update, npm list, npm last, npm lost, npm aaaaahhhh. 
-* **Themes** - Eventually I end up creating my own theme, but to start with, you need to refer existing code. Especially when you don't have experience in `Go`. With so many themes available, it becomes easier to refer existing code. https://themes.gohugo.io is a good place to get a feel of what Hugo can generate. I tried almost all the themes on my local setup to see which one is the best(best as in fills all my reqs). At last, I ended up with [Archie theme](https://themes.gohugo.io/themes/archie/) which was not perfect but had all the basic things I wanted
-  * Simple layouts
-  * Simple config
-  * No complicated processing
-  * No npm dependencies
-  * Dark mode toggle(Although it wasn't mentioned in the theme docs, but I found it in the code)
-  * No sass, just plain simple css
-  * No integration bloatware
-  * Responsive
-  * Had a programmer feel to it
-  * Syntax highlighting for code with support for multiple styles(More on that later)
-
-I had to tweak many things to make it fit my needs.
-
-# Inspiration
-It is really difficult to find genuine content nowadays. Everyone wants to make their site a place to earn. **Google** search and even **DuckDuckGo** don't search for what you are looking for. They provide you content for what they are getting money for, which is fair enough as I am not paying for using them. But because of this, the objective of every website owner turns towards pushing the page to be at the top of the search. And with all the [irritating Google Ads](https://cybercafe.dev/my-experience-with-google-ads/), the whole experience becomes messy. While learning Gatsby and Hugo, I tumbled upon https://512kb.club and went through many entries on this list. I found a lot of sites, mostly blogs with genuinely good content without any bloat. I also saw some cool designs. I discovered that there is a specific term `small web` for these sites where you get real content and not commercially oriented bloat.
-
-* Coder theme  - https://qtrnn.io/2020/10/04/hello-world/
-* Plain and simple - https://nih.ar
-* Dark and simple - https://www.stchris.net
-* Retro look - https://devcara.com
-* Best ***ing website - https://bestmotherfucking.website/
-* Terminal style - https://gaikanomer9.com
-* Small web - https://erikjohannes.no/posts/20231122-places-to-discover-the-small-web/
-* Another small web catalog - https://blogs.hn
-* Interesting reads - https://nikhilism.com/post/
-* Something what I also do - https://jasonthai.me/blog/2019/07/18/changes-i-made-for-my-blogs-theme/
-
-# Enhancements done
-
-## Toggle-able dark theme
-
-Most of the available themes were either dark or based on `prefers-color-scheme` property. I wanted to have the functionality to let the user choose. Sometimes the user want to see the site with light colors and if we don't give that override, the only way is to change the system setting which is of course a tedious task. I believe the `prefers-color-scheme` should be taken as a hint that user desires for dark theme, but there should always be an option to override.
-
-There are may ways to achieve this. A great starting point is https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ though ironically I did not see dark mode on csstricks.com :-D. Since the theme I was using(archie) already had this(though undocumented), I used that approach - "Load the dark theme stylesheet on demand". 
-
-First load the dark theme if user has `prefers-color-scheme` set to dark. This can be done in `header.html`.
-```html
-{{- if or (eq .Site.Params.mode "auto") 
-    (eq .Site.Params.mode "dark") 
-    (eq .Site.Params.mode "toggle") -}}
-    {{ $darkstyle := resources.Get "css/dark.css" | fingerprint }}
-    <link 
-            id="darkModeStyle" 
-            rel="stylesheet" 
-            type="text/css" 
-            href="{{ $darkstyle.Permalink }}" 
-            {{ if eq .Site.Params.mode "auto" }}
-                media="(prefers-color-scheme: dark)"
-            {{ end }} 
-            {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} 
-    />
-{{ end }}
+```bash
+brew install hugo
 ```
 
-| Dark theme                                  | Light theme                                   |
-|---------------------------------------------|-----------------------------------------------|
-| ![dark-theme](images/dark-theme-mobile.png) | ![light-theme](images/light-theme-mobile.png) |
+Got one issue installing hugo while running terminal in rosetta.
 
-
-
-And when user clicks on the toggle button, add or remove the dark theme stylesheet from DOM via js. Create a file in `static/js` directory. eg. `themetoggle.js`.
-```js
-if (mode === "dark") {
-    document.getElementById("darkModeStyle").true = false;
-}
+```shell
+Error: Cannot install under Rosetta 2 in ARM default prefix (/opt/homebrew)!
+To rerun under ARM use:
+    arch -arm64 brew install ...
+To install under x86_64, install Homebrew into /usr/local.
 ```
 
-Since it's a static site, there is no easy way to store the user setting on the server, you can use `localStorage` to remember the setting on the system
-```js
-localStorage.setItem("theme-storage", mode);
+Once installation is done, verify by checking hugo version
+
+```shell
+$ hugo version
+hugo v0.125.6+extended darwin/arm64 BuildDate=2024-05-05T10:52:52Z VendorInfo=brew`
 ```
 
-## Ultra wide mode
+# Create new site
 
-I know that there is an [optimum width for pages which contain text](https://ux.stackexchange.com/questions/108801/what-is-the-best-number-of-paragraph-width-for-readability). But still sometimes I feel it's a wastage of space when you can utilize the same. It becomes more apparent when there is some content which makes it difficult to read with a limited width. And one of such is `code blocks`. M blog is focused on technology and is code heavy. The issue is that code is not wrapped like regular text. Lines are rendered as it is. And when a line is too long to fit in, a horizontal `scroll bar` comes up which looks really terrible, and also you have to now manually scroll the code block to see the long lines.
+Use the hugo command to create a new site. It will set up the default directories.
 
-| Fixed width                                          | Fluid width layout                                  |
-|------------------------------------------------------|-----------------------------------------------------|
-| ![Fixed width layout](images/fixed-width-layout.png) | ![Fluid width layout](images/full-width-layout.png) |
+```shell
+$ hugo new site test-create
+Congratulations! Your new Hugo site was created in /Users/amupadhyay/projects/learn-hugo/Exercise Files/test-create.
 
+Just a few more steps...
 
-Inspired from widgets in jira where you can quickly maximize a particular widget, so that it spans across the whole width of the viewport, I implemented a similar solution. Added a maximize button that you can see in the top right corner. On clicking of which the `max-width` changes to `95%`. Why 95? Because I wanted to keep that button always in view by making its position fixed. A little bit of space had to be reserved for it so that it doesn't overlap the main text.
+1. Change the current directory to /Users/amt8u/projects/learn-hugo/Exercise Files/test-create.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Or, install a theme from https://themes.gohugo.io/
+3. Edit hugo.toml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>/<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
 
-```js
-document.getElementsByClassName("content")[0].classList.add("fullwidth");
+See documentation at https://gohugo.io/.
 ```
 
-And just like how I am using `localStorage` to store the theme preference, I am storing this ultra-wide setting as well. So even after page refresh you get the same view. One caveat with this was that on mobile it doesn't make sense as you will never have viewport with width greater than 600, so I hid the toggle button on smaller devices.
+# Themes
+There are many ways to add a theme to your site.
 
-```js
-localStorage.setItem("view", mode);
+* Git submodule
+* Hugo module
+* Copy paste
+
+Hugo module is the recommended approach, but I chose git submodule so that any change in the base theme can also be tracked. You can create forks of base theme and manage them independently.
+
+You can also copy the templates to your root directory and that should also work.
+
+Once you chose a theme, copy its link from the theme page by right clicking on the `Download` button or you can goto the github page and copy the repo url.
+Add the theme as a submodule in your site. Do take care about the directories names, as removing the submodule is not as easy as adding.
+
+```shell
+$ git submodule add https://github.com/adityatelange/hugo-PaperMod themes/papermod
 ```
 
-Added a quick shortcut for this. On pressing "f" you can quickly toggle between the views.
+Your site root should already have a file `hugo.toml` or `config.toml`. `hugo.toml` is the latest naming convention. Both should work, but do note the difference. More details https://gohugo.io/getting-started/configuration/.
 
-```js
-// Also attach a listener for quick action using "f" for fullscreen
-window.addEventListener("keypress", (e) => {
-    if (e.code === "KeyF") {
-        toggleView();
-    }
-})
+Generally every theme will have an `exampleSite` directory. It will contain an example(:-D) of site with some content as per the theme. There will be a config file. Copy it to your root directory or pick the items in the config file and paste them into your `hugo.toml`. You can actually use any file as a config file and start the server with custom files.
+
+To test out multiple themes simultaneously, what I did was to create config files with theme names and got rid of the base `hugo.toml` just to avoid confusion.
+
+My structure looks like this
+
+![hugo-themes-local](images/hugo-themes-local.png)
+
+# Server
+There are two ways to start the server
+
+* hugo server
+* hugo
+
+The first one starts a local dev server which watches all the files in your site. It reloads if there is a change detected. 
+
+If you want to use a different theme, you just need to change the `theme` in hugo.toml. 
+
+```
+baseURL = "https://cybercafe.dev"
+languageCode = "en-us"
+title = "cybercafe.dev"
+copyright = "© cybercafe.dev"
 ```
 
-And since it's just a CSS change without any javascript, it is as fast as lightning. No reloading of content and no flashes of default style.
+But since every theme had a different kind of configuration, I used below approach to start the server with custom theme
 
-## Responsive
-Responsive design is not easy to implement. You can say that you have to design your page for various devices. So to support 4 ranges for devices you will have to come up with 4 different designs which in turn means 4 different css files based on width of the viewport.
-
-Though that's the hard truth, but with simple pages having just text and images, you actually do not have to manually think of responsive elements. Responsiveness is baked-in into the browsers since decades. Just put some text and resize the window. You will realize that text automatically rearranges itself. For images, you will have to set a `width` and it also resizes itself based on viewport size.
-
-![responsive](images/responsive.gif)
-
-And for the cases where it is not sufficient, we have the flex layout. It is a little complicated with so many properties but with the dev tools helper buttons, it has become really easy to work with.
-
-
-With options like `flex-wrap` and `justify-content` you can easily achieve responsive layout. Open devtools in responsive layout mode and try resizing the window from maximum to minimum. You will see that this website is readable even with a width of `100px`. And with the `fullWidth` option, you will appreciate your ultrawide monitor too.
-
-## Highlight active page
-Again something which is very easy in bootstrap world, it gave me some pain in hugo. To mark the menu as active when you are on respective page you can use below construct. 
-
-```html
-{{ $currentPage := . }}
-{{ range .Site.Menus.main }}
-    <a 
-      class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}" 
-      href="{{ .URL }}">{{ .Name }}
-    </a>
-{{ end }}
-```
-It took me around one hour with chatgpt and internet to realize that `.RelPermalink` returns the page's URL with a leading `/` irrespective of whatever value you have set in the `Menu` section of config. I had the url as `/amt8u` while the `.RelPermalink` returned `/amt8u/` and thus my comparisons were not working. There is helper function [isMenuCurrent](https://gohugo.io/methods/page/ismenucurrent/) available for the same, but I guess that also didn't work due to same reason. 
-```toml
-[[menu.main]]
-identifier = "amt8u"
-name = "about"
-url = "/amt8u"
+```shell
+hugo server --config config-archie.toml
 ```
 
-## Feature & Thumbnail image
-It's true that images are heavy and slow down your website. Maybe that's the reason many of the hugo themes I saw do not have images for the listing page. I like to have a small thumbnail to represnt the content. It is just better visually. Well it is not that easy in hugo. Somehow it is not a popular thing I assume. It was difficult to find an article or source to add thumbnail images to hugo list pages. I had to find a theme where they are doing this. Tried to replicate the same. Here is my understanding.
+Occasionally, the live reload was not working. Maybe there is some caching that prevents it.
 
-In the `index.html` where I am iterating over the posts, get the `image` type of resources which can be done by using `Resources.ByType` function. It returns all the page's resources. Use `.GetMatch` to find the particular image with an optional default "thumbnail" value. 
+* On layout changes - On changing layout files, sometimes it won't reload the site. I have to close the server and restart
+* On css change - You may need to clear browser cache, or just keep the dev tools open with `Disable cache` switched on
+* On saving - Sometimes when I save and then make a change quickly and save again, it stops reloading. Maybe throttling the changes to prevent processing
 
-```html
-{{- $images := .Resources.ByType "image" }}
-{{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumbnail*")}}
-{{ if $thumbnail }}
-    <img alt="feature-image" src="{{ $thumbnail.RelPermalink }}">
-{{ else }}
-    <img alt="feature-image" src="{{ $defaultThumbnail }}">
-{{ end }}
+There is an option `disableFastRender` which may work. Haven't tried it yet extensively.
+
+You can mix and match configs, like `hugo --config a.toml, b.ymal, c.json`. And when your site becomes large enough, managing config in one file becomes complicated. You can divide the config into multiple files by creating a `config` directory and placing the files with same name as the top level config options.
+
+Few common things that you would do after copying the config file from theme
+
+* Edit title
+* Edit social links like twitter, fb, insta etc.
+* Remove some integrations like analytics, disqus etc. if not needed
+
+Once the server starts up, you should see something like below
+
+```shell
+Watching for changes in /Users/amt8u/projects/learn-hugo/Exercise Files/test-create/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/amt8u/projects/learn-hugo/Exercise Files/test-create/hugo.toml
+Start building sites …
+hugo v0.125.6+extended darwin/arm64 BuildDate=2024-05-05T10:52:52Z VendorInfo=brew
+
+
+                   | EN
+-------------------+-----
+  Pages            |  8
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     | 14
+  Processed images |  0
+  Aliases          |  1
+  Cleaned          |  0
+
+Built in 36 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
 ```
-Add a little bit of css to `img` so that images don't stretch. Mainly the magic is by `object-fit` set to `cover`.
 
-```css
-section.list-item img {
-  width: var(--thumbLarge);
-  height: var(--thumbLarge);
-  object-fit: cover;
-  border-radius: 4px;
-  margin-top: 2px;
-  margin-right: 2rem;
-}
+And of course visiting `localhost:1313` on any browser should bring the site up.
+
+![first-start-server](images/first-start-server.png)
+
+If you have configured the theme correctly and created content in the required structure, you should see a perfectly working site including navigation etc.
+
+In my case the content was in `posts` directory but that theme needed it to be inside `post` directly. Hence, no posts on the screen.
+
+If you don't see anything or an empty page like this, checkout the `public` directory in your root. All the generated html go there, so in case your page is not there, it's a hugo issue and not a cache issue.
+
+# Create pages
+
+If you have existing markdown content, you may see that hugo is converting them to html pages automatically. And everytime you create/update a new `.md` file inside content directory, hugo converts it too. So its basically about creating or updating `.md` files.
+
+But there is a small hugo utility which allows you to create new content using predefined templates which helps you create the `frontmatter`. Of course you can add frontmatter manually in the markdown, but with automatic way, its more convenient.
+
+## Using archtypes
+
+When you run this command, hugo creates a new file for you
+
+```shell
+hugo new post/hello-world.md
 ```
-There is one improvement pending though for this. Images are not yet processed and are downloaded as it is. So even if it is used as a thumbnail, the original full size image gets downloaded to the browser. There are various methods to circumvent this. 
 
-* Use responsive images using `srcset`
-* Have different set of images for different use case. Like a thumbnail version of each image.
-* Restrict images on mobile devices
+Archtypes are frontmatter templates. So instead of you writing frontmatter manually, you use templates. It makes it easy to add values. For e.g. you don't need to manually enter the full ISO string for date. It will do it for you. One more reason for the same is, if you have multiple people working on the same site, all will have consistent frontmatter.
 
-I will take this improvement later on after getting accustomed to how images are processed in hugo. For now, it works as I would be loading only around 5-10 images in the list page.
+By default, the page gets created as a draft. There is a flag in the frontmatter which specifies whether that page is ready to publish. So when you run your hugo server, it skips the pages which are draft. And in case you want to see the draft pages as well, you can use the flag `-D` while starting the server.
 
-![thumbnail-image](images/thumbnail-image.png)
+Visit https://gohugo.io/content-management/front-matter/ to see what all frontmatter can do. Do note that frontmatter is supported in yaml, toml and json.
 
-And in case thumbnail image is not preset, show a placeholder image from the static directory. Will write a separate post about how to handle resources in hugo sometime later as I feel I still don't understand it fully.
-
-## Zoomable images
-One common issue I face with many blogs and simple websites is the lack of image handling. Someone did a great job and put a screenshot of the full window on the page, but there is no way to zoom in the image. You have to manually right-click on it, open in new tab and then view it properly. I understand that I should not target my blog as an image hosting system. For images there are `flicker`, `Unsplash` and many more. You can always link to them. Even you can embed images using these services directly into your page. 
-
-But there is a big problem with that approach. `Cross site content` is not reliable. Many companies restrict network traffic and popular sites like `Unsplash`, `YouTube` are blocked. Plus cross site embeds make your pages heavy. A simple example is `disqus` commenting system. Once you add it to your site, it starts [making requests to third party ad services](https://cybercafe.dev/ghost-casper-theme-customizations/#disqusalternative). And that's why I migrated towards Hyvortalk(which also is not currently working due to exceeding limits). Fortunately markdown handles images well. I can easily include the image in the markdown file. It shows up correctly in GitHub and also gets rendered into the generated html without url hacks. No more fidling with image storage. One downside though is my deployed size becomes large which is fine as I won't be adding thousands of images. Maybe around 4-5 per article.
-
-Earlier I used a library https://github.com/francoischalifour/medium-zoom to enable users to click on any image and zoom in context. It has some great features like auto zoom out on scroll and use responsive images for zoomed items. But I wanted to keep my blog free from libraries. A quick workaround I found is to convert the images into links so that on clicking on it, the user can see a full size version of it. And if needed, you can use the browser's zoom feature to enlarge it. The downside being that you navigate out of the article. But then a simple back button takes you back to the exact place you were on. Moreover by giving the fullwidth toggle, you can always zoom in images on the spot and toggle back to narrow mode to view text.
-
-## Box shadow on images
-If you look closely, there is a small shadow on all the images which makes it feel like the images are on top of the page. It's just a visual gimmick but looks good. You can go [too much creative](https://getcssscan.com/css-box-shadow-examples) in that direction, but I just wanted a plain simple shadow just to avoid the flat look. And you can also apply a border to create a frame kind of look. But that was becoming too cheesy so I commented it out. As always do remember to use `box-sizing` to avoid alignment issues coming out of padding and margins. You can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing).
-
-```css
-article img {
-    /* border: 2px ridge #151515; */
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
-}
-```
-The result is very minute but looks visually good.
-
-| Without box-shadow                                 | With box-shadow                              |
-|----------------------------------------------------|----------------------------------------------|
-| ![without-shadow](images/image-without-shadow.png) | ![with-shadow](images/image-with-shadow.png) |
-
-
-
-## Table of contents
-Sometimes I feel a quick index of the contents makes it really easy to find the relevant paragraph. I can see that hugo also renders a TOC and some themes do utilize it. There is no TOC with the current theme, but it can easily be achieved with hugo. It's a `TODO` item on the list. 
-
-## Tags
-Tags are very commonly used to group content and almost all CMS provide this capability. Hugo also has its in built. The theme already had the template, I just made a few visual changes so that it looks better.
+| Format | symbol |
+|--------|--------|
+| yaml   | - - -  |
+| toml   | +++    |
+| json   | {}     |
 
 ## Frontmatter
+
 This was something that I wasn't aware of up until I started learning Gatsby and Hugo. In the CMS world like ghostjs or WordPress, you embed the metadata to your article via their UI. This metadata gets stored in the DB with your article's content. But in Markdown where will you store that? Things like `tags`, `excerpt`, feature image, `slug`, date of publishing etc. All this info goes into Frontmatter. Not sure why its named as such. We can always call it markdown metadata.
 
 This was one of the time taking task, but again it's a one time job and going forward I will always be adding it with new articles. For example the frontmatter for this post is below.
+
+When I was writing my posts on GhostJs, I used to keep the excerpt as the first heading inside the markdown file. I was moving into the right direction but didn't think that there was an existing solution for this problem.
+
+`Frontmatter` is not included in the generated content. I might have realized it late, but it is quite popular and almost all static site generators support it. So basically you are storing page's information like `author`, `tags`, `url`, `createdAt` etc. in the page itself.
 
 ```markdown
 ---
@@ -267,13 +208,178 @@ convert my ghostjs website to a static website
 ---
 ```
 
-## Blazing fast
-And at last, I wanted the website to be not just superfast but blazing fast. I am not doing anything complicated. Everything is just plain simple text and images. I don't need to show rich content. I can just put up links and let the relevant platform render the content. Moreover, I myself hate inline content. I almost never play a YouTube video embedded inside another site. I open it up in a YouTube in a new window where I can use all the features that YouTube provides. Similarly for other content links are sufficient.
 
 
-## Lighthouse score
-Again, it is not necessary to have 100/100 in lighthouse score. But it certainly is a good tool to find out where all you can do the optimizations. Saving 200ms may not be a great deal here, but you get to see various techniques. I consider my blog a place to experiment and learn. Initial impressions looks good. But I see many areas of improvement. [Detailed snapshot ](/docs/amt8u-hugo-blog-netlify_initial_impressions.pdf) of lighthouse evaluation on 18 May 2024. Will implement the recommended changes as and when I get time.
+Since it's not a Database, you can always mess it up, so be sure to properly check the key and values. For e.g. missing a `created` date may result in page with a different date. It depends on how you are consuming the values in the templates.
 
-![Quick summary of the same](./images/lighthouse-score-initial-impressions-summary.png) 
+A quick example of frontmatter from one of my posts
+
+```markdown
+---
+title : Forward emails from custom domain to gmail
+url : forward-emails-from-custom-domain-to-gmail
+description : How to forward emails sent to your custom domain to your gmail
+date : 2024-05-25
+lastmod: 2024-05-25
+draft : false
+images: ['images/email-icon.jpg']
+thumbnail: images/email-icon.jpg
+tags : ['web', 'email']
+---
+```
+
+## Static pages
+
+Perhaps it should be called singular pages since we are using `static` for other type of content. [See below](#static-content) Use `hugo new about.md` to create a static page. Static pages are the ones that are not part of the blog articles. Generally **About**, **Company**, **Terms**, **Contact us** fall in this category.
+
+## Static content
+
+Static content and static pages are different. Static content means files such as images, pdfs, videos or anything that you don't want Hugo to process, but to make it available in the published version as it is. You can even create a html page in static content. 
+
+Once you copy any required files to the static directory, those are available everywhere on the site. In the config you can use it where needed like
+
+```toml
+[params]
+    site_author = "Batman"
+    site_description = "The joker chronicles"
+    avatar = "img/batman.png"
+    header_background = "image/joker-max.jpg"
+```
+
+You can also use them in your markdown pages by referring them using the regular markdown links
+
+```markdown
+![image-from-static-directory](/amt8u-keyboard.jpg)
+```
+![This is an image from static content](/amt8u-keyboard.jpg)
+
+## 404 page
+
+When user lands on a URL for which there is no page, users will see `404` Not found. Some themes may have a `404` page by default. You can update it if needed.
+
+Else you can create your own custom page. In the `layouts` directory create a new template `404.html`. Add whatever content you would like. you can add the navigation header and footer so even 404 page will look good.
+
+```html
+<!DOCTYPE html>
+<html>
+	{{ partial "header.html" . }}
+	<body>
+		<div class="content">
+			{{ partial "head.html" . }}
+			<main>
+                <h1>404 - Page not found</h1>
+				<p>I don't have the page you are looking for. 
+					Go to <a href="/">homepage</a> or 
+					<a href="/search">search</a> for something.</p>
+			</main>
+			{{ partial "footer.html" . }}
+		</div>
+
+	</body>
+</html>
+```
+So when someone lands up on a non-existing link, they will see the below page
+
+![404-image-cybercafe](images/404-image-cybercafe.png)
+
+# Deploy
+So when you think your site is ready, you deploy right!
+
+Well, in simple words, `deploy` means copying the generated html pages and putting it on a `server` accessible on the internet. Its upto you, where to deploy.
+
+Of course with popular frameworks you get convenient ways to do that. There are several [platforms that hugo supports](https://gohugo.io/categories/hosting-and-deployment/).
+
+Since I was already familiar with Netlify and have a few other sites deployed on it, it was the best option. Refer [hosting-on-netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) for complete details. The crux is 
+
+1. Create a netlify account
+2. Create a netlify site
+3. Add your github repo to your netlify site
+4. Now push your changes, and see action!
+
+The 4th step is what makes this process special. When you have a connected repository, you don't need to do anything to deploy. Github will notify netlify that repo has changed, build your site. Netlify will run the build and put the generated html to the publicly accessible place for you automatically.
+
+That means once the setup is done, your workflow for content creation is
+
+1. Create or Update a markdown file in your repo locally
+2. Commit and push the change to repository
+
+And that's it. No logging in to your site cPanel and start a deployment process.
+
+Just to give more insight, the build process is actually happening on the Netlify's server. You don't have direct access to it, but internally Netlify allocates space, installs the required `hugo` version and any dependencies. Netlify also tries to [detect the framework automatically](https://docs.netlify.com/frameworks/hugo/#automatic-framework-detection) and set up a few basic commands like `hugo`. 
+
+* Build command: `hugo`
+* Publish directory: `public`
+
+Do note that there is a small catch related to `themes`.
+
+> Hugo themes work by default on Netlify. Like any continuous integration system, however, Netlify can’t use a theme installed by the git clone method. Instead, you should install a Hugo theme for your site as a git submodule.
+
+# A few more steps
+
+Since I already have all the content in markdown in one repository, just to be on the safer side, I thought to duplicate it first and then start the whole hugo process in that. To my surprise, duplicating a repo is not as easy as I thought.
+
+## Copy repository
+
+You need to follow https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository to create a clone of your repo in your account.
+
+* First clone the original one
+
+```
+git clone --bare https://github.com/amt8u/blog.git
+```
+
+* Then push to new repo
+```
+git push --mirror https://github.com/amt8u/hugo-blog.git
+```
+
+## Copy content
+
+All my markdown posts were plain `.md` files directly in the repo. I had to move all of them to a new folder `content` which is fine, but I had to create a directory for each post as well. Somehow files present in the `posts` directory are not processed properly. Was getting issues in the URLs - All the post urls were generating as `localhost:1313/posts/some-article`. Had to rename the file to `index.md`. Once that is done, pages were generating with all proper urls - `localhost:1313/some-article`.
+
+Since my blog was already indexed, I wanted to keep the URLs intact for each post. For achieving that you have couple of options
+
+* Directory names - Keep the names of the directory exactly the same as the URL that you want
+* `url` in frontmatter - Add a property in frontmatter. This overrides the default directory based url
+
+## Copy images
+Most of the themes were using images from `static` folder which was easy, but I didn't want my images to be separate from my content. I wanted to have a structure like below. And when you use an image inside your md file like `![some-alt-text](images/filename)`, hugo will process it.
+
+```yaml
+root/
+	content/
+		posts/
+			creating-html-using-css/
+				index.md
+				images/
+```
+
+For **Feature images** I had one issue though. I wanted to show a thumbnail for each post on the listing page. Tried to check but not many themes were doing this. Maybe it's not a good idea to load images for your list page. It will slow down the rendering and in case you are using images from outside, it may not work.
+
+I will be keeping my images in the repo and will use those. Though there are image processing plugins available in hugo to create compressed versions, for now I am just manually creating small images to be used for thumbnails.
+
+Images inside content are considered as resources. While compilation, the contents inside single post makes up a page bundle. For adding a thumbnail or even a feature image, you have to locate it in the page bundle and create an url for it.
+
+See [More details on](/customizing-hugo-theme-for-blog/#feature--thumbnail-image) for more details.
+
+## Theme related issues
+
+Though it's quite easy to install a theme, but there are few things to keep in mind
+
+All themes go inside `/themes` directory. Whenever you clone or add a git submodule, keep this in mind. I accidentally added the theme as submodule in the root of my site. Once the submodule is added, it is [not that easy to remove](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218). 
+
+```shell
+git submodule deinit -f hugo-paper
+rm -rf .git/modules/hugo-paper
+git rm -f hugo-paper
+```
+
+And then reinstall in the correct folder. Either `cd` into the folder or you can also pass the directory in the command directly
+
+```shell
+git submodule add https://github.com/nanxiaobei/hugo-paper themes/hugo-paper
+```
+
+This was all about the initial steps taken to create a hugo blog using my existing content. Next step [Customizations](/customizing-hugo-theme-for-blog/).
 
 > End
