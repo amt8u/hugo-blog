@@ -218,4 +218,13 @@ Again, it is not necessary to have 100/100 in lighthouse score. But it certainly
 
 ![Quick summary of the same](./images/lighthouse-score-initial-impressions-summary.png) 
 
+# Hotkeys
+Well, a blog doesn't need hotkeys. There is not much to do other than read. But since I implemented three actions which the user can interact with, I added hotkeys for those as well. Just to support my blazing fast blog :-D.
+
+`f` - Toggle between full width vs narrow width
+
+`t` - Toggle between light and dark theme
+
+`c` - Toggle the table of contents. 
+
 > End

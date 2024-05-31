@@ -25,7 +25,7 @@ setTOC(savedView);
 // Also attach a listener for quick action using "f" for fullscreen
 
 window.addEventListener("keypress", (e) => {
-    if (e.code === "KeyT" && e.target.tagName !== "INPUT") {
+    if (e.code === "KeyC" && e.target.tagName !== "INPUT") {
         toggleTOC();
     }
 })
