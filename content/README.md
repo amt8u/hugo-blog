@@ -1,6 +1,6 @@
 ---
 title: Read Me
-type: "post"xc 
+type: "post"
 ---
 
 # Readme
