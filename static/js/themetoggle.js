@@ -9,6 +9,10 @@ function setTheme(mode) {
         document.getElementById("dark-mode-toggle").innerHTML = "<i data-feather=\"moon\"></i>";
         feather.replace()
     }
+    // const zoom = mediumZoom('img');
+    window.mediumZoomInstance?.update({background: mode === "dark" ? "#000" : "#f7f7f1"})
+    // zoom.detach();
+    //mediumZoom('img', {background: mode === "dark" ? "#000" : "#fff"});
 }
 
 function toggleTheme() {

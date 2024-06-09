@@ -575,6 +575,12 @@ aside.toc {
   width: 20%;
   opacity: 0;
   transition: .1s opacity ease-in;
+  height: calc(100vh - 10rem);
+  overflow: auto;
+  scrollbar-width: none;
+  background: linear-gradient(to bottom, #f7f7f2, #ececec, #f7f7f2);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 aside.toc li {
