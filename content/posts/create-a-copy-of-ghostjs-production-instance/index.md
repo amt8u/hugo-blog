@@ -1,6 +1,7 @@
 ---
 title : Create a local copy of Ghost JS production site
 summary : How to replicate a ghostjs production installation including images
+url : create-a-copy-of-ghostjs-production-instance
 author: amt8u
 date: '2024-06-09T17:54:22.876Z'
 draft : false
