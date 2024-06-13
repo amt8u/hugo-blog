@@ -4,7 +4,7 @@ url : thisisunsafe-bypassing-chrome-security-warnings
 summary : thisisunsafe is a way to bypass security errors on chrome. In this article I will discuss about its usage and implications.
 author: amt8u
 date: '2021-02-17T18:17:04.000Z'
-lastmod: '2022-11-19T15:24:33.000Z'
+lastmod: '2024-06-13T05:32:40.857Z'
 draft : false
 tags : ['security', 'web']
 thumbnail : images/amt8u-this-is-unsafe-feature.jpg
@@ -125,6 +125,8 @@ In situations where you need to use this bypass almost now and then. For examle 
 ## Chromium interstitial
 
 As a side note, the warning screens that block you from visiting the pages are called `interstitials`. And the template for this is present in chromium [code](https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.html).
+
+## Article updates
 
 **Update on 26 feb 2021**
 
