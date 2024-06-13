@@ -28,13 +28,22 @@ This could be because of many reasons. Some of the common ones are
 * **Self hosted CA** - As always you can create your own Certificate Authority for your local network. This generally is done inside a corporate network to issue certificates to internal sites. This way you can install unlimited certificates and save yourself from spending thousands of dollars. But obviously the browsers do not know about your own CA, unless you tell the browser explicitly. We shall see how to do that later on.
 
 
-# thisisunsafe - a bad idea?
+# `thisisunsafe` - a bad idea?
 Some browsers will let you go through after clicking on the `Accept and Continue` button but in some situations they may not even give you an option to `Continue`. Chrome is one such browser(Ironically?). For those circumstances, there is a bypass available. 
 
-Type **thisisunsafe** anywhere on the window and the browser will let you visit the page.
+## Where to type?
+Type the below text exactly as it is shown(without spaces) anywhere on the window and the browser will let you visit the page. You don't need to focus on any field. Just click anywhere on the window and start typing.
 
+```html
+thisisunsafe
+```
+
+Sometimes it's not apparent instantly as there is no feedback that you have entered the bypass. If you have typed in correctly, chrome should reload the window automatically.
+
+## Type again everytime?
 The bypass adds a temporary exception for that particular domain to chrome's internal storage. You can remove this exception by clicking on the padlock icon and click `Re-enable Warnings` link. Same is true with Firefox albeit with slight change in the UI.
 
+## Why it exists?
 The bypass has been put deliberately(obviously :-P) by the chrome dev team. This can be seen in the code as well inside [handleKeypress()](https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.js) function.
 
 ```js
@@ -65,39 +74,31 @@ You can see that the keyword is put as a base64 encoded string. [`window.atob()`
 window.atob('dGhpc2lzdW5zYWZl')
 "thisisunsafe"
 ```
+## `badidea` - previous bypass term
 
-Earlier this bypass keyword was used to be `badidea`, but they updated it as its been taken as a method of abuse. This is noted in the [commit here](https://chromium.googlesource.com/chromium/src/+/d8fc089b62cd4f8d907acff6fb3f5ff58f168697).
+Earlier this bypass keyword was used to be `badidea`, (probably for some time it was "thisisnotsafe") but they updated it as it's been taken as a method of abuse. This is noted in the commit on chromium source code here - 
 
-```
-Rotate the interstitial bypass keyword
+[https://chromium.googlesource.com/chromium/src/+/d8fc089b62cd4f8d907acff6fb3f5ff58f168697](https://chromium.googlesource.com/chromium/src/+/d8fc089b62cd4f8d907acff6fb3f5ff58f168697).
 
-The security interstitial bypass keyword hasn't changed in two years and
-awareness of the bypass has been increased in blogs and social media.
-Rotate the keyword to help prevent misuse.
-
-Bug: 797344
-Change-Id: I76213b05cc0fe8f23882123d0aeef668652dd89d
-Reviewed-on: https://chromium-review.googlesource.com/860418
-Reviewed-by: Adrienne Porter Felt <felt@chromium.org>
-Commit-Queue: Eric Lawrence <elawrence@chromium.org>
-Cr-Commit-Position: refs/heads/master@{#528371}
-```
+![thisisunsafe-bypass-commitj](images/rotate-bypass-commit.png)
 
 Here is the [stackoverflow answer](https://stackoverflow.com/questions/35274659/when-you-use-badidea-or-thisisunsafe-to-bypass-a-chrome-certificate-hsts-err/35275060#35275060) by [Barry](https://stackoverflow.com/users/2144578/barry-pollard) from where I picked up the above info.
 
-The author also suggested to setup certificates properly instead of using the bypass everytime. He also mentioned about a bug where caching does not work properly with SSL errors. While caching issues can be dealt with, but SSL errors needs to be taken seriously.
+The author also suggested to set up certificates properly instead of using the bypass everytime. He also mentioned a bug where caching does not work properly with SSL errors. While caching issues may not pose a serious threat, but SSL errors needs to be taken seriously.
 
-Though you have the bypass available but that doesn't mean you start abusing it. You may use it in case
-* You are testing your own sites
-* You are inside a corporate network and accessing internal sites
+## Is it safe to use?
+
+Of course not, that's the whole point of naming it as `thisisunsafe`. The bypass is meant to be used for situations like
+* You are testing your own sites. 
+* You are inside a corporate network and accessing internal sites.
 * You are browsing some static site which does not take any inputs like passwords etc.
 
-So now you can make out when its a `goodidea` or a `badidea` :-D
+Now you can tell when it's a `good idea` or a `bad idea` :-D
 
 I hope they will rotate the bypass keyword again soon as this one is gaining popularity and people have started abusing it. I don't know if somebody from chrome team will read this, but here is my suggestion - `dangerous`. 
 
 # Testing local sites
-Chromium project has a [page](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins#TOC-Testing-Powerful-Features) which suggests alternatives to test features which require secure origins.
+Chromium project has a page which suggests [alternatives to test features which require secure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins#TOC-Testing-Powerful-Features).
 
 Here is a snapshot from the page for testing secure origins witthout a commercial CA.
 
@@ -120,7 +121,8 @@ In situations where you need to use this bypass almost now and then. For examle 
 
 <hr />
 
-# Chromium interstitial
+# Additional information
+## Chromium interstitial
 
 As a side note, the warning screens that block you from visiting the pages are called `interstitials`. And the template for this is present in chromium [code](https://chromium.googlesource.com/chromium/src/+/master/components/security_interstitials/core/browser/resources/interstitial_large.html).
 
@@ -138,6 +140,12 @@ Once done, the browser will accept the connection as secure and you will no long
 * Improved the section where I am listing the common reasons for SSL errors
 * Added section linking to pages which describe how to install custom root Certificate
 * Updated feature image to one of my own clicks - https://unsplash.com/photos/VodtXdFNjqA
+
+**Update on 13 Jun 2024**
+* Improved grammar(using chatgpt :-P)
+* Replaced chromium commit text with actual snapshot
+* Altered some headings to improve TOC
+* Added more details on where to type
 
 > End
 
