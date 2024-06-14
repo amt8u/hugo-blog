@@ -4,6 +4,7 @@ summary : How to replicate a ghostjs production installation including images
 url : create-a-copy-of-ghostjs-production-instance
 author: amt8u
 date: '2024-06-09T17:54:22.876Z'
+lastmod: '2024-06-14T18:47:16.640Z'
 draft : false
 tags : ['web', 'javascript', 'hosting']
 thumbnail : images/ghostjs-download.png
@@ -100,18 +101,29 @@ Once all the content is copied, restart ghost and see the magic.
 # Backup a few things
 Before completely destroying the droplet I wanted to keep some files for future references as I have done many experiments and learned many things on the same VPS. A few things that had to get were
 
-* **Nginx config** - I experimented with nginx a lot on this server. Created an elastic server(though short lived), subdomain with basic authentication, local files served directly without any kind of server. It would be a good idea to keep a copy of all that.
-* **Cron Config** - I added a simple tool to do basic analytics on the ghost logs. Read more about it on https://cybercafe.dev/setup-simple-analytics-for-ghost-blog-using-goaccess/. Had to learn cron for this. Wanted to keep a copy of it for reference as it was my first ever cron. It helped me understand how important is your security on any open server. Looking at the logs I could say that daily there were hundreds of attempts from attackers targetting the site for vulnerabilities.
+## Nginx config
 
-    ```powershell
-    sudo crontab -l
-    16 0 * * * "/etc/letsencrypt"/acme.sh --cron --home "/etc/letsencrypt" > /dev/null
-    */5 * * * * goaccess /var/log/nginx/access.log -o /var/www/static/report/index.html --log-format=COMBINED
-    ```
+I experimented with nginx a lot on this server. Created an elastic server(though short lived), subdomain with basic authentication, local files served directly without any kind of server. It would be a good idea to keep a copy of all that.
+
+## Cron Config
+I added a simple tool to do basic analytics on the ghost logs. Read more about it on https://cybercafe.dev/setup-simple-analytics-for-ghost-blog-using-goaccess/. Had to learn cron for this. Wanted to keep a copy of it for reference as it was my first ever cron. It helped me understand how important is your security on any open server. Looking at the logs I could say that daily there were hundreds of attempts from attackers targetting the site for vulnerabilities.
+
+```shell
+sudo crontab -l
+16 0 * * * "/etc/letsencrypt"/acme.sh --cron --home "/etc/letsencrypt" > /dev/null
+*/5 * * * * goaccess /var/log/nginx/access.log -o /var/www/static/report/index.html --log-format=COMBINED
+```
 
 Look at all the 404 URLs that I was recieving daily on the server. Looks like `php` is attacker's favorite framework :-P.
 
 ![404-not-found-hits](./images/404-not-found-hits.png)
+
+## `/www` directory
+Backup all the files present inside `/var/www` folder. This will include all the files that were served by the nginx server. 
+
+```shell
+scp -r z00md@68.183.93.172:/var/www/ .
+```
 
 # Drop the droplet
 
