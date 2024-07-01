@@ -129,6 +129,9 @@ scp -r z00md@68.183.93.172:/var/www/ .
 
 Once your local copy is up and running, its time to pull the plug on the droplet. Turning off the droplet doesn't make sense as it still continues billing on the same rate which makes sense as resources are still reserved for you. It is time to say good bye to my first VPS.
 
+![destroy-droplet](images/destroy-droplet.png)
+![destory-confirmation](images/destroy-confirmation.png)
+
 # References
 
 https://forum.ghost.org/t/proper-process-to-create-a-duplicate-local-site/33933
