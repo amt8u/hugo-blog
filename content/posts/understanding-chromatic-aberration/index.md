@@ -4,7 +4,7 @@ url : understanding-chromatic-aberration
 summary : Lets understand why we see purple or green lines around edges in bright daylight photos. And how can we prevent that from happening.
 author: amt8u
 date: '2024-08-15T19:54:34.291Z'
-draft : true
+draft : false
 tags : ['photography']
 thumbnail : images/canon-lens.jpg
 images : ['images/canon-lens.jpg']
