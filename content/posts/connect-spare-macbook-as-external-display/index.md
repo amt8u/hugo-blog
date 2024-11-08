@@ -1,7 +1,7 @@
 ---
 title : Connect a spare macbook as an external display for your Primary Mac wirelessly
 url : how-to-connect-spare-macbook-as-external-display-wireless
-summary :  A quick guide to connect your spare macbook as external display to your other macbook wirelessly. Apple’s AirPlay technology enables you to use a second Mac as an external display, though options like Luna Display and Sidecar (for iPad) also exist. 
+summary :  A quick guide to connect your spare macbook as external display to your other macbook wirelessly.
 author: amt8u
 date : 2024-11-08T05:01:16.533Z
 lastmod: 2024-11-08T05:01:16.533Z
@@ -35,7 +35,9 @@ Apple itself somehow doesn't market this feature. Not sure why thoug. But here a
 
 * Two compatible Mac devices running macOS Monterey or later.
 * Wi-Fi network (both Macs should be on the same network).
-* AirPlay (for native macOS screen sharing) or third-party software like Luna Display or Deskreen if using an older macOS version.
+* AirPlay (for native macOS screen sharing)
+
+There are other software solutions available like Luna and Deskreen, but I didn't try those.
 
 # Connection process
 
