@@ -82,6 +82,7 @@ Here are some things that I learned
 * **ILS Approach** - On a sim, its really difficult to judge the depth of the view unless you have a high end VR. Thus ILS is somewhat necessary in the sim world, when you are landing. Its a system of various frequencies which helps align the aircraft horizontally and vertically. This is a guidance system but it still can't land the plame fully automatically. Somewhere before the touchdown you need to switch to manual from auto pilot. Not sure if that is something that may change in future. A very good explanation of how ILS works, is available on [youtube by FlightInsight](https://www.youtube.com/watch?v=taqMkdXL3Xg&list=PLUtUP1YZ8ZHThgyWxYWrDsp1QssFZUge5&index=2). A good tutorial on the same with MSFS by [Kip on the ground](https://www.youtube.com/watch?v=wxMrLBDKydM&list=PLUtUP1YZ8ZHThgyWxYWrDsp1QssFZUge5&index=4&t=247s).
 * **Flight Plan** - [Ajay Devgn can memorize a flight plan in 30 seconds](https://www.imdb.com/title/tt11460992) but not everybody, so they built a system which pilots can use to literally plan their journey. The flight plan is kind of a route in goodle maps but with pre-defined waypoints and a very un-intuitive interface on the panel. Alternatively, you can enter a flight plan using the game's main menu. Of course you can alter and change everything once you are in the cockpit. I am yet to learn how to do that in an A320.
 * **Scenery** - Even if you cannot land, its a good experience flying around the beautiful landscapes. You can use the world map to enter any point in the world and enjoy the natural scenery.
-![MSFS-scenery](images/cessna-scenery.jpg)
+
+	![MSFS-scenery](images/cessna-scenery.jpg)
 
 > End

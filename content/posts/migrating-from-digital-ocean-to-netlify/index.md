@@ -27,7 +27,7 @@ Well, there were a couple of strong reasons.
   * Ghost Members - Ghost membership based system was introduced after I started using GhostJS. It is good to have a feature like this, but I am not yet famous enough to have members
 * **Security** - The other reason is maintenance. Since you own the server, it becomes an overhead to keep it updated all the time. I could see that hackers try to exploit your site as much as possible. I can see hundreds of 404 requests coming in for various urls like `/admin`, `/login` etc. Although GhostJS is fairly good in terms of preventing these attacks as most of it is targeted to php based sites, but still there is always a chance of someone exploiting a vulnerability in your server. With static sites you are just totally safe.  
 
-In my previous post [Creating a static site with hugo](https://cybercafe-dev.netlify.app/creating-a-static-site-with-hugo/), I listed all the steps needed to be done to convert the site from GhostJS to **Hugo**.
+In my previous post [Creating a static site with hugo](https://cybercafe.dev/creating-a-static-site-with-hugo/), I listed all the steps needed to be done to convert the site from GhostJS to **Hugo**.
 
 You can deploy and see the site in production using a netlify subdomain. Once you are happy with the overall performance, it's time to say goodbye to **Digital Ocean**. 
 
