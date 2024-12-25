@@ -7,14 +7,14 @@ date : 2024-11-27T05:01:16.533Z
 lastmod: 2024-11-27T05:01:16.533Z
 draft : true
 tags : ['macbook', 'mirroring']
-thumbnail: images/macbook-as-external-display.jpeg
-images: ['images/macbook-as-external-display.jpeg']
+thumbnail: images/amt8u-desktop-three-monitors-thumbnail.JPG
+images: ['images/amt8u-desktop-three-monitors-thumbnail.JPG']
 ---
 
 # Why another post about this?
 In one of my previous article, I wrote about [how to connect a space Macbook as an external display to a Macbook Pro](https://cybercafe.dev/how-to-connect-spare-macbook-as-external-display-wireless/). 
 
-This is a subsequent result of that but had to make this an independent post for better SEO, so it could help those who need this but are'nt aware of.
+This is a subsequent result of that but had to make this an independent post for better SEO, so it could help those who need this but are'nt aware of. 
 
 # How many can I connect?
 As per the [specs](https://support.apple.com/en-in/111901) **Macbook Pro 2021 16 inch** simultaneously supports full native resolution on the **built-in display** at 1 billion colors and:
@@ -67,6 +67,11 @@ Fortunately, I had one spare `FireTV stick` 2nd generation which was lying unuse
 * Firemirror - https://www.amazon.com/FireMirror-AirPlay-Mirroring-Supports-Spotify/dp/B0BZDC5MJZ. Again 5 min limitaiton after using first set of free minutes.
 * Dualscreen - No nonsense app. For configuration features you need to pay. It says that please purchase access to remove ads, but I haven't seen any ad while mirroring.
 * Airplay Cast and many others. - You can hit and try but I didn't have time. For me Dual screen is working for now. Will update if I find a better one.
+
+# End result
+And here is a snapshot of how the setup looks like. The leftmost one is airplay driven. You can see the hanging **firetv-stick** in the black silhouette😏. I moved the netlify and server logs terminals to that window which does not need much interaction but needs constant viewing.
+
+![amt8u-desktop-three-monitors-macbook-pro.JPG](images/amt8u-desktop-three-monitors-macbook-pro.JPG)
 
 # Cons of this approach
 
