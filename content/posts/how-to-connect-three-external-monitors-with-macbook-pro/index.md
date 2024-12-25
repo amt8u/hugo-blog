@@ -3,9 +3,9 @@ title : How to connect three external monitors with Macbook Pro 2021 model
 url : how-to-connect-three-external-monitors-with-macbook-pro
 summary :  Connect 3 external displays to Macbook pro without DP Link dock
 author: amt8u
-date : 2024-11-27T05:01:16.533Z
-lastmod: 2024-11-27T05:01:16.533Z
-draft : true
+date : 2024-12-25T11:19:25.981Z
+lastmod: 2024-12-25T11:19:25.981Z
+draft : false
 tags : ['macbook', 'mirroring']
 thumbnail: images/amt8u-desktop-three-monitors-thumbnail.JPG
 images: ['images/amt8u-desktop-three-monitors-thumbnail.JPG']
