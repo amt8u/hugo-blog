@@ -1,6 +1,9 @@
 # My blog in hugo
 Read https://cybercafe.dev/why-hugo-static-site-generator-for-blog/ for details
 
+# Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/56b6ef1b-4b4a-4dc5-897f-c10ba037e76f/deploy-status)](https://app.netlify.com/sites/cybercafe-dev/deploys)
+
 # Start server
 
 Start the server with the config-archie theme. Currently, I am using this theme with extensive modifications. All the modifications are under `/layouts` directory.
