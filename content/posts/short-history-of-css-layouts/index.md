@@ -2,7 +2,7 @@
 title : Short history of css layouts
 url : short-history-of-css-layouts
 date: '2025-03-17T05:00:42.540Z'
-summary : A short history of css layout mechanisms to understand the evolution of creating responsible UI
+summary : A short history of css layout mechanisms to understand the evolution of creating responsive UI
 author: amt8u
 tags : ['css']
 draft : false
