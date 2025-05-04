@@ -6,8 +6,8 @@ author: amt8u
 date: '2025-05-04T10:56:10.688Z'
 draft : false
 tags : ['AI', 'llm']
-thumbnail : "images/ollama.jpg"
-images : ["images/ollama.jpg"]
+thumbnail : "images/ollama-on-ubuntu.jpg"
+images : ["images/ollama-on-ubuntu.jpg"]
 ---
 
 # Why 
