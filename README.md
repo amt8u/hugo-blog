@@ -11,6 +11,7 @@ Start the server with the config-archie theme. Currently, I am using this theme 
 
 # Create a post
 You can use hugo command `hugo new post/hello-world.md` to bootstrap a new post, or just add a new directory under `/content/posts/`.
+
 * Create an `index.md` file.
 * Add frontmatter like below
 ```yaml
