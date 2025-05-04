@@ -3,11 +3,6 @@
     {{- range $index, $key := .Site.Params.Social -}}
     <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
     {{- end -}}
-    <div>
-      <a href="https://app.netlify.com/sites/cybercafe-dev/deploys">
-        <img src="https://api.netlify.com/api/v1/badges/56b6ef1b-4b4a-4dc5-897f-c10ba037e76f/deploy-status" alt="Netlify Status">
-      </a>
-    </div>
   </div>
   <div style="text-align:center">
     <a href="/terms">terms</a> |
@@ -17,7 +12,11 @@
   </div>
   <div class="footer-info">
     {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
-
+  </div>
+  <div>
+    <a href="https://app.netlify.com/sites/cybercafe-dev/deploys">
+      <img src="https://api.netlify.com/api/v1/badges/56b6ef1b-4b4a-4dc5-897f-c10ba037e76f/deploy-status" alt="Netlify Status">
+    </a>
   </div>
 </footer>
 {{ if not .Site.IsServer }}
