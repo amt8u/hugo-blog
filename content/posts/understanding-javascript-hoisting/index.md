@@ -28,6 +28,8 @@ To know the actual answer you can go to the bottom of the post. If you are start
 
 To start with, hoisting is defined by the dictionary as *Hoisting to raise or lift, especially by some mechanical appliance* which basically means *to move up*.
 
+And its not just developers like me, even the brilliant of minds cannot decipher this concept - [Least favorite programming language - by computerphile](https://youtu.be/03lRzf7iSiU?si=UmaAmt3IUmjzp-Gr&t=27)
+
 `Hoisting` is JavaScript's default behavior of moving declarations to the top.*
 > w3schools.com
 
@@ -255,5 +257,6 @@ Essentially what he wants to say is
   * `call before declare` - Again not clear why it would be needed, but I suppose it also boils down to the same reason. You would want to associate the functions with the DOM as and when you see them in the DOM attributes like `onclick`. So that it doesn't matter whether you keep your script at the top or bottom of the page.
 
 So the confusion I mentioned above in the [Got it](https://cybercafe.dev/understanding-javascript-hoisting/#gotit section actually is kind of a bug in the language. Maybe in later versions it should have been fixed, but to prevent the internet from going down, they kept it and now we are facing the consequences of that.
+
 
 > End
