@@ -4,7 +4,7 @@ url : where-to-write-code
 summary : Do you find yourself in situation where you cannot decide where to write the code? In a class method, static method, base method or a utility method outside class. Lets explore how we can decide that.
 author: amt8u
 date: '2025-07-29T14:06:26.621Z'
-draft : true
+draft : false
 thumbnail: images/question-mark.jpg
 images: ['images/question-mark.jpg']
 tags : ['programming']
