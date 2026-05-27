@@ -6,8 +6,10 @@ date: '2026-05-27T09:49:00+05:30'
 draft : false
 tags : ['review', 'watch', 'casio', 'g-shock']
 thumbnail : "images/casio-g-shock-gbx-100.jpg"
-images : ["images/casio-g-shock-gbx-100.jpg"]
+images : ["images/casio-g-shock-gbx-100.jpeg"]
 ---
+
+![casio-g-shock-gbx-100](./images/feature.jpeg)
 
 # The requirement
 
@@ -16,7 +18,7 @@ There were two kinds of watches up until now
 * Smart watch - One day battery life, at max 7 days based on features etc.
 * Dumb watch - Years of battery but lack of features that I need
 
-My simple requirement was a step tracker with at least 30 days of battery. Heart rate etc. can be bonus. Also it should be cheaper. Less than 20k Rs (approx $250). And it should have a readable display.
+My simple requirement was a `step tracker` with at least `30 days` of battery. Heart rate etc. can be bonus. Also it should be `cheaper`. Less than `20k Rs` (approx $250). And it should have a readable `display`.
 
 After looking around here and there for sometime, a friend of mine suggested a casio model with step tracker. I understand that its popular and classic but somehow I did't like the design of it.
 
@@ -57,6 +59,9 @@ There is support to show notifications from your phone(of course after pairing t
 * Very limited memory. Only last 10 notifications are stored on watch
 * Slight delay - It takes around 1-2 seconds before the notirfication comes to the watch
 * No way to reply or ack. 
+
+| ![](./images/notification-home.jpeg) | ![](./images/notifications.jpeg) | ![](./images/outlook.jpeg) |
+|:---:|:---:|:---:|
 
 Now that I have listed donw the problems, let me convert them all to pros. Actually in a way, just able to see the notification title and sender is actually a great help. With hundreds of notifications daily, it becomes really a taxing activity to move the mobile from your pocket, unlock it and then check out the notification just to see that it was **Dominos giving your Rs 50 off** :-D. 
 
@@ -105,6 +110,9 @@ As per Casio, the battery life is 1 year with all features enabled and if you sw
 
 ### Activity Tracking
 ### Moon and Tide phases
+
+![](./images/tides-and-moon.jpeg)
+
 Not for me, but it came in complementary so I am not complaining.
 
 ### 200m Water Resistance
@@ -112,3 +120,12 @@ Not for me, but it came in complementary so I am not complaining.
 You can ring your phone from the watch if you in bluetooth range. Quite a useful thing if you tend to forget where you have put your phone
 ### World time
 As it is with any other watch, you can set dual time display
+
+# Important links
+
+* **Product Page**: [https://www.casio.com/in/watches/gshock/product.GBX-100NS-1/](https://www.casio.com/in/watches/gshock/product.GBX-100NS-1/)
+* **Product Page on official online store**: [https://casiostore.bhawar.com/products/casio-g-shock-gbx-100ns-1dr-mens-watch](https://casiostore.bhawar.com/products/casio-g-shock-gbx-100ns-1dr-mens-watch)
+* **Manual**: [https://www.casio.com/content/dam/casio/global/support/manuals/watches/pdf/34/3482/qw3482_EN.pdf](https://www.casio.com/content/dam/casio/global/support/manuals/watches/pdf/34/3482/qw3482_EN.pdf)
+* **Online Manual**: [https://support.casio.com/global/en/wat/manual/3482_en/VPCVSYbkozufdv.html#VPCVMLbejymabl](https://support.casio.com/global/en/wat/manual/3482_en/VPCVSYbkozufdv.html#VPCVMLbejymabl)
+
+> End
