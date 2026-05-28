@@ -1,12 +1,13 @@
 ---
 title : The Real Review of Casio G-Shock GBX-100
 url : casio-g-shock-gbx-100-review
-description : An honest review of the Casio G-Shock GBX-100..
+description : A real-world review of the Casio G-Shock GBX-100 — MIP display, step counter, 1-year battery life, notifications, and whether it is worth buying in India at Rs 12000.
 date: '2026-05-27T09:49:00+05:30'
 draft : false
 tags : ['review', 'watch', 'casio', 'g-shock']
+keywords : ['casio g-shock gbx-100 review', 'gbx-100 india', 'g-shock step counter', 'mip display watch', 'casio watch battery life']
 thumbnail : "images/casio-g-shock-gbx-100.jpg"
-images : ["images/casio-g-shock-gbx-100.jpeg"]
+images : ["images/casio-g-shock-gbx-100.jpg"]
 ---
 
 ![casio-g-shock-gbx-100](./images/feature.jpeg)
@@ -41,7 +42,7 @@ I initially wanted to buy `GBD-200` but in the store I liked the `GBX-100` more.
 
 # First impressions
 
-| ![](./images/IMG_8220.jpeg) | ![](./images/IMG_8096.jpeg) | ![](./images/IMG_8093.jpeg) |
+| ![Casio G-Shock GBX-100 front view](./images/IMG_8220.jpeg) | ![Casio G-Shock GBX-100 side view](./images/IMG_8096.jpeg) | ![Casio G-Shock GBX-100 display close-up](./images/IMG_8093.jpeg) |
 |:---:|:---:|:---:|
 
 # Major features
@@ -60,7 +61,7 @@ There is support to show notifications from your phone(of course after pairing t
 * Slight delay - It takes around 1-2 seconds before the notirfication comes to the watch
 * No way to reply or ack. 
 
-| ![](./images/notification-home.jpeg) | ![](./images/notifications.jpeg) | ![](./images/outlook.jpeg) |
+| ![G-Shock GBX-100 notification home screen](./images/notification-home.jpeg) | ![G-Shock GBX-100 notifications list](./images/notifications.jpeg) | ![G-Shock GBX-100 Outlook email notification](./images/outlook.jpeg) |
 |:---:|:---:|:---:|
 
 Now that I have listed donw the problems, let me convert them all to pros. Actually in a way, just able to see the notification title and sender is actually a great help. With hundreds of notifications daily, it becomes really a taxing activity to move the mobile from your pocket, unlock it and then check out the notification just to see that it was **Dominos giving your Rs 50 off** :-D. 
@@ -111,7 +112,7 @@ As per Casio, the battery life is 1 year with all features enabled and if you sw
 ### Activity Tracking
 ### Moon and Tide phases
 
-![](./images/tides-and-moon.jpeg)
+![Casio G-Shock GBX-100 moon and tide phase display](./images/tides-and-moon.jpeg)
 
 Not for me, but it came in complementary so I am not complaining.
 
