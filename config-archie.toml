@@ -14,6 +14,7 @@ pygmentscodefencesguesssyntax = true
 	twitter_cards = true
 	images = ["amt8u_logo.png"]
 	og_image = "placeholder-dark.png"
+	favicon = "amt8u_logo.png"
 
 [[params.social]]
 name = "GitHub"
@@ -82,4 +83,6 @@ weight = 11
     ordered = false
     startLevel = 1
 
-
+[taxonomies]
+    category = 'categories'
+    tag = 'tags'
