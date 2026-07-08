@@ -44,15 +44,9 @@
 		</section>
 
 
-		{{- $.Scratch.Set "isDisqus" true -}}
-		<!-- Check if disqus short name is given -->
-		{{ if not .Site.DisqusShortname }}
-		{{- $.Scratch.Set "isDisqus" false -}}
-		{{ end }}
-
-		{{- if eq ($.Scratch.Get "isDisqus") true -}}
+		{{ if site.Config.Services.Disqus.Shortname }}
 		{{- partial "disqus.html" . -}}
-		{{- end -}}
+		{{ end }}
 	</article>
 	<script src="{{ .Site.BaseURL }}js/toc.js"></script>
 </main>
