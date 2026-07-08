@@ -4,10 +4,10 @@ url : learning-effective-typescript
 summary : Learnings from Effective Typescript book.
 date : 2026-07-08T04:57:46.238Z
 lastmod: 2026-07-08T04:57:46.238Z
-draft : true
-tags : ['web', 'dns']
-images: ['images/TS.png']
-thumbnail : "images/TS.png"
+draft : false
+tags : ['typescript', 'javascript', 'code']
+images: ['images/feature.jpg']
+thumbnail : "images/feature.jpg"
 ---
 
 # Why this book?
@@ -136,5 +136,113 @@ By default when you start a new TS project, it sets up with `strict`. YOu can be
 
 # Item 3: Generated code do not contain type definition
 
-Type checking happens at compile time, but at runtime there is no information of types. So you can't do a conditional check on a type at runtime.
+Type checking happens at compile time, but at runtime there is no information of types. So you can't do a conditional check on a type at runtime. The `instanceOf` operator checks at JS prototype chain but cannot determine the TS type. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof. 
 
+```ts
+interface Square {
+    width: number;
+}
+
+interface Reactangle extends Square {
+    height: number;
+}
+
+type Shape = Square | Rectangle;
+
+function calculateArea(shape: Shape) {
+    if (shape instanceOf Rectangle) {
+        // Rectangle only refers to a type but is being used as a value here
+    }
+}
+
+```
+
+Then you would ask how to determine types at runtime?
+
+One option is to use something which is available at runtime like `height` property.
+
+```js
+function calculateArea(shape: Shape) {
+    if ('height' in shape) { // Check by property
+        return shape.width * shape.height;
+    } else {
+        // do something when height is not there, which means its not a rectangle
+    }
+}
+```
+
+Another option is to add a `tag` to explicitly store the type
+
+```ts
+interface Square {
+    kind: 'square';
+    width: numner;
+}
+```
+
+Though this works, but personally I would not like this as it introduces more breaking points. Peole will forget adding tags and it will endup in messy code.
+
+## Code with type errors
+
+TSC compiler compiles and also translates to javascript. Its worth noting that even if the compilation fails, js code can be generated which can run without any problems.
+
+In case you want no js code to be generated when TS compilation fails, use option `noEmitOnError` which would effectively stop your build and your application.
+
+## Type operations cannot affect runtime values
+
+Here you are just asserting that the return value should bw a number. But its not actually converting the value. Obviously because TS construct is not there at runtime. This is sometimes inaccurately called as `casting`.
+
+```ts
+function asNumber(val: number | string): number {
+    return val as number;
+}
+```
+
+Instead, you would need to use JS construct to convert the value to a number.
+
+```ts
+function asNumber(val: number | string): number {
+    return Number(val);
+}
+```
+
+## Runtime types can change from what it was declared
+
+Even if you have declared the value to be a boolean. At runtime it can have a string. For e.g if its coming from an api call and the api sends a string instead of a boolean. More on this later
+
+```ts
+function setLightSwitch(value: boolean) {
+    case true:
+        turnOn();
+    case false:
+        turnOff();
+    default:
+        console.log("Na ho payega");
+}
+```
+
+## Function overloading based on types
+
+In languages like `C++` you can overload a function with varying types. But in `TS` you can't do that because runtime behaviour is different. In javascript there is no parameter based function overloading. Though you can evaluate the args and based on that you can perform logic.
+
+in `TS` you can provide multiple type signatures, but only a single implementation
+
+```ts
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any) {
+    return a + b;
+    }
+const three = add(1, 2);
+    // ^? const three: number
+const twelve = add('1', '2');
+    // ^? const twelve: string
+```
+
+## TS types on runtime performance
+
+TS types don't exist in generated code, so no performance penalty if you use types.
+
+But the code generation itself becomes a step and may take time based on your target. For e.g converting generator functions to a very old JS version can endup creating helper functions. But this would still happen if you write new ES code and use babel to transpile so technically not a TS related problem.
+
+# Item 4: Get comfortable with Structural Typing
