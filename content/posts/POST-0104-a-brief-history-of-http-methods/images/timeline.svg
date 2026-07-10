@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Timeline of HTTP method registrations from 1991 to 2026">
+  <style>
+    .bg     { fill: #fcfcfb; }
+    .ink1   { fill: #0b0b0b; }
+    .ink2   { fill: #52514e; }
+    .ink3   { fill: #898781; }
+    .accent { fill: #2a78d6; }
+    .spine  { stroke: #c3c2b7; }
+    .dot    { fill: #2a78d6; stroke: #fcfcfb; }
+    @media (prefers-color-scheme: dark) {
+      .bg     { fill: #1a1a19; }
+      .ink1   { fill: #ffffff; }
+      .ink2   { fill: #c3c2b7; }
+      .ink3   { fill: #898781; }
+      .accent { fill: #3987e5; }
+      .spine  { stroke: #383835; }
+      .dot    { fill: #3987e5; stroke: #1a1a19; }
+    }
+    text { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; }
+    .year { font-size: 15px; font-weight: 700; }
+    .methods { font-size: 13.5px; font-weight: 600; }
+    .note { font-size: 12px; }
+    .footer { font-size: 11px; }
+  </style>
+
+  <rect class="bg" width="800" height="800"/>
+
+  <text class="title ink1" x="40" y="58">A Brief History of HTTP Methods</text>
+  <text class="subtitle ink2" x="40" y="84">40 registered methods &#183; 35 years &#183; 1991 &#8594; 2026</text>
+
+  <!-- spine -->
+  <line class="spine" x1="150" y1="132" x2="150" y2="748" stroke-width="2"/>
+
+  <!-- 1991 -->
+  <circle class="dot" cx="150" cy="150" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="155" text-anchor="end">1991</text>
+  <text class="methods mono accent" x="172" y="147">GET</text>
+  <text class="note ink2" x="172" y="164">HTTP/0.9 &#8212; the web begins with a single method</text>
+
+  <!-- 1996 -->
+  <circle class="dot" cx="150" cy="202" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="207" text-anchor="end">1996</text>
+  <text class="methods mono accent" x="172" y="199">POST &#183; HEAD</text>
+  <text class="note ink2" x="172" y="216">HTTP/1.0 &#8212; submit data, fetch metadata only</text>
+
+  <!-- 1997 -->
+  <circle class="dot" cx="150" cy="254" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="259" text-anchor="end">1997</text>
+  <text class="methods mono accent" x="172" y="251">PUT &#183; DELETE &#183; OPTIONS &#183; TRACE &#183; CONNECT</text>
+  <text class="note ink2" x="172" y="268">HTTP/1.1 &#8212; the read&#8211;write web (LINK &amp; UNLINK drafted, then dropped)</text>
+
+  <!-- 1999 -->
+  <circle class="dot" cx="150" cy="306" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="311" text-anchor="end">1999</text>
+  <text class="methods mono accent" x="172" y="303">PROPFIND &#183; PROPPATCH &#183; MKCOL &#183; COPY &#183; MOVE &#183; LOCK &#183; UNLOCK</text>
+  <text class="note ink2" x="172" y="320">WebDAV &#8212; file operations over HTTP</text>
+
+  <!-- 2002 -->
+  <circle class="dot" cx="150" cy="358" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="363" text-anchor="end">2002</text>
+  <text class="methods mono accent" x="172" y="355">REPORT &#183; SEARCH &#183; CHECKIN &#183; CHECKOUT &#183; MERGE <tspan class="ink3">+ 7 more</tspan></text>
+  <text class="note ink2" x="172" y="372">WebDAV versioning &#8212; git before git</text>
+
+  <!-- 2003 -->
+  <circle class="dot" cx="150" cy="410" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="415" text-anchor="end">2003</text>
+  <text class="methods mono accent" x="172" y="407">ORDERPATCH</text>
+  <text class="note ink2" x="172" y="424">reorder the members of a collection</text>
+
+  <!-- 2004 -->
+  <circle class="dot" cx="150" cy="462" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="467" text-anchor="end">2004</text>
+  <text class="methods mono accent" x="172" y="459">ACL</text>
+  <text class="note ink2" x="172" y="476">access control &#8212; chmod for the web</text>
+
+  <!-- 2006 -->
+  <circle class="dot" cx="150" cy="514" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="519" text-anchor="end">2006</text>
+  <text class="methods mono accent" x="172" y="511">MKREDIRECTREF &#183; UPDATEREDIRECTREF</text>
+  <text class="note ink2" x="172" y="528">redirect reference resources</text>
+
+  <!-- 2007 -->
+  <circle class="dot" cx="150" cy="566" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="571" text-anchor="end">2007</text>
+  <text class="methods mono accent" x="172" y="563">BIND &#183; REBIND &#183; UNBIND &#183; MKCALENDAR</text>
+  <text class="note ink2" x="172" y="580">many URIs, one resource &#8212; and CalDAV calendars</text>
+
+  <!-- 2010 -->
+  <circle class="dot" cx="150" cy="618" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="623" text-anchor="end">2010</text>
+  <text class="methods mono accent" x="172" y="615">PATCH</text>
+  <text class="note ink2" x="172" y="632">partial updates, finally &#8212; stop re-sending the whole object</text>
+
+  <!-- 2022 -->
+  <circle class="dot" cx="150" cy="670" r="5" stroke-width="2"/>
+  <text class="year ink1" x="132" y="675" text-anchor="end">2022</text>
+  <text class="methods mono accent" x="172" y="667">PRI &#183; *</text>
+  <text class="note ink2" x="172" y="684">protocol plumbing &#8212; HTTP/2 preface and the registry wildcard</text>
+
+  <!-- 2026 (emphasized) -->
+  <circle class="dot" cx="150" cy="722" r="7" stroke-width="2"/>
+  <text class="year ink1" x="132" y="727" text-anchor="end">2026</text>
+  <text class="methods mono accent" x="172" y="719" font-size="15px">QUERY</text>
+  <text class="note ink2" x="172" y="736">safe, cacheable fetch with a body &#8212; the gap between GET and POST, closed</text>
+
+  <text class="footer ink3" x="40" y="780">source: IANA HTTP Method Registry &#183; iana.org/assignments/http-methods</text>
+</svg>
