@@ -5,7 +5,7 @@ summary : There are 40 http methods and I bet you only know about 8. Here is a b
 author: amt8u
 date: '2026-07-10T13:11:04.000Z'
 lastmod: '2026-07-10T13:11:04.000Z'
-draft : true
+draft : false
 thumbnail : images/timeline.svg
 images: ['images/timeline.svg']
 tags : []
