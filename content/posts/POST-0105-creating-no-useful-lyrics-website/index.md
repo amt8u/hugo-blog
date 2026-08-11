@@ -19,6 +19,8 @@ With the availability of AI recently, I thought I should give it a try and build
 
 ![homepage](./images/homepage.png)
 
+You can check it out at [https://vedicode.in](https://vedicode.in)
+
 # The setup
 Hosting lyrics is an easy task, but I wanted them to be available in Hindi and English for easier consumption.
 
