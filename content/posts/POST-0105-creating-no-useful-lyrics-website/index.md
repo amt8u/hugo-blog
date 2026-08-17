@@ -107,4 +107,51 @@ Since I intend to open this for public, I should have a mechanism to receive fee
 
 `hi@vedicode.in` -> `***@cybercafe.dev`
 
+
+# *(update 12 aug 2026)* - Domain suspended
+
+Today my domain got suspended. Initially I thought that the suspension is by Hostinger. But it was them, but the [NIXI](https://nixi.in/) - National Internet Exchange of India.
+
+Very unsual for me as I have been working with domains since long, but it seems that NIXI - The registrar is very serious about `.in` domains.
+
+![domain-suspended](./images/domain-suspended.png)
+
+Though the name and phone number provided at the time of registration were correct, but I guess, they want the address to be also accurate.
+
+On further checking, which I thought would have been a straight forward thing, apparently there is no way to contact them other than the mail [support@nixi.in](support@nixi.in).
+
+As I understand, there could be around thousands of registration daily. Checkout [https://registry.in/domain-creates](https://registry.in/domain-creates)
+
+On 3rd aug you can see [https://registry.in/system/files/domain-creates_2026-08-03.pdf](https://registry.in/system/files/domain-creates_2026-08-03.pdf) domains registered.
+
+![](./images/domains-registered.png)
+
+There was no clarity as why NIXI suspended the domain. Ideally they should clearly mark where we can go and check the reason of suspension. Otherwise we are just blind.
+
+Though there is a list of common reasons, but no way to know exactly.
+
+And on top of that, there is no way to raise issues. At least I wasn't able to find any.
+
+Finally submitted a contact form - https://registry.in/contact-us which I believe created a ticket in the background as I received an email with a ticket number.
+
+Tried contacting support with the same, but no response.
+
+On the complaint page(https://registry.in/complain), they have a new email id which doesn't work
+
+![nixi-complain](./images/nixi-complaint.-page.png)
+
+![](./images/nixi-user-does-not-exit.png)
+
+I also called on one of the phone numbers. Was able to reach someone who said that NIXI has a long queque as many domains are registered, so please wait for a few days.
+
+Didn't try but found one page with some more information - https://nixi.in/nc-contact/
+
+![](./images/nixi-contacts.png)
+
+
+# *(update 17 aug 2026)* - Domain reactivated
+Finally after 4-5 mails and submitting the KYC via mail, received response that domain has been reactivated today.
+
+![nixi-response](./images/nixi-response.png)
+
 > End
