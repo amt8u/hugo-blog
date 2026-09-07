@@ -5,7 +5,7 @@ summary : A post about Google Search Cheat Sheet.
 author: amt8u
 date: '2026-09-07T13:38:55.000Z'
 lastmod: '2026-09-07T13:38:55.000Z'
-draft : true
+draft : false
 thumbnail : images/placeholder.png
 images: ['images/placeholder.png']
 tags : []
